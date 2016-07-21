@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package api;
+
+option java_multiple_files = true;
+
+message AddLeadRequest {
+    string leadName = 1;
+    string leadMobile = 2; 
+}
+
+
+message AddLeadResponse {
+    enum Status {
+        UNKNOWN = 0;
+        SUCCESS = 1;
+        FAILURE = 2;
+        NO_ACCOUNT = 3;
+        PASSWORD_INCORRECT = 4;
+        ALREADY_EXISTS = 5;
+    }
+    Status status = 1;
+
+}

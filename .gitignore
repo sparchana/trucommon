@@ -1,0 +1,5 @@
+**~
+tools/*
+!tools/*.tar.gz
+!tools/*.zip
+!tools/*.rar
