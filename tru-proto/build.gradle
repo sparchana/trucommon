@@ -1,0 +1,38 @@
+apply plugin: 'java'
+
+sourceCompatibility = 1.6
+version = '1.0.0'
+def mod = 'tru-proto'
+group = 'in.trujobs.proto'
+def reposPath = "repos/$group/$mod/$version"
+def home = System.getProperty("user.home")
+println(home)
+jar {
+    manifest {
+        attributes (
+		"Implementation-Title": "Truserver Common",
+                "Implementation-Version": version	
+	)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.+'
+    compile 'com.google.protobuf:protobuf-java:3.0.0-beta-2'
+}
+
+test {
+    systemProperties 'property': 'value'
+}
+
+uploadArchives {
+    repositories {
+       flatDir {
+           dirs "$reposPath"
+       }
+    }
+}
