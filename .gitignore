@@ -1,4 +1,7 @@
 **~
+tru-proto/build/*
+tru-proto/.idea
+tru-proto/.gradle
 tools/*
 !tools/*.tar.gz
 !tools/*.zip
