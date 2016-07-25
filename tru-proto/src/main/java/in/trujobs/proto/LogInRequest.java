@@ -4,19 +4,19 @@
 package in.trujobs.proto;
 
 /**
- * Protobuf type {@code in.trujobs.proto.AddLeadRequest}
+ * Protobuf type {@code in.trujobs.proto.LogInRequest}
  */
-public  final class AddLeadRequest extends
+public  final class LogInRequest extends
     com.google.protobuf.GeneratedMessage implements
-    // @@protoc_insertion_point(message_implements:in.trujobs.proto.AddLeadRequest)
-    AddLeadRequestOrBuilder {
-  // Use AddLeadRequest.newBuilder() to construct.
-  private AddLeadRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    // @@protoc_insertion_point(message_implements:in.trujobs.proto.LogInRequest)
+    LogInRequestOrBuilder {
+  // Use LogInRequest.newBuilder() to construct.
+  private LogInRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-  private AddLeadRequest() {
-    leadName_ = "";
-    leadMobile_ = "";
+  private LogInRequest() {
+    candidateMobile_ = "";
+    candidatePassword_ = "";
   }
 
   @java.lang.Override
@@ -24,7 +24,7 @@ public  final class AddLeadRequest extends
   getUnknownFields() {
     return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
   }
-  private AddLeadRequest(
+  private LogInRequest(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
     this();
@@ -46,13 +46,13 @@ public  final class AddLeadRequest extends
           case 10: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            leadName_ = s;
+            candidateMobile_ = s;
             break;
           }
           case 18: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            leadMobile_ = s;
+            candidatePassword_ = s;
             break;
           }
         }
@@ -69,78 +69,78 @@ public  final class AddLeadRequest extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_AddLeadRequest_descriptor;
+    return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_LogInRequest_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_AddLeadRequest_fieldAccessorTable
+    return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_LogInRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            in.trujobs.proto.AddLeadRequest.class, in.trujobs.proto.AddLeadRequest.Builder.class);
+            in.trujobs.proto.LogInRequest.class, in.trujobs.proto.LogInRequest.Builder.class);
   }
 
-  public static final int LEADNAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object leadName_;
+  public static final int CANDIDATEMOBILE_FIELD_NUMBER = 1;
+  private volatile java.lang.Object candidateMobile_;
   /**
-   * <code>optional string leadName = 1;</code>
+   * <code>optional string candidateMobile = 1;</code>
    */
-  public java.lang.String getLeadName() {
-    java.lang.Object ref = leadName_;
+  public java.lang.String getCandidateMobile() {
+    java.lang.Object ref = candidateMobile_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      leadName_ = s;
+      candidateMobile_ = s;
       return s;
     }
   }
   /**
-   * <code>optional string leadName = 1;</code>
+   * <code>optional string candidateMobile = 1;</code>
    */
   public com.google.protobuf.ByteString
-      getLeadNameBytes() {
-    java.lang.Object ref = leadName_;
+      getCandidateMobileBytes() {
+    java.lang.Object ref = candidateMobile_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      leadName_ = b;
+      candidateMobile_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
   }
 
-  public static final int LEADMOBILE_FIELD_NUMBER = 2;
-  private volatile java.lang.Object leadMobile_;
+  public static final int CANDIDATEPASSWORD_FIELD_NUMBER = 2;
+  private volatile java.lang.Object candidatePassword_;
   /**
-   * <code>optional string leadMobile = 2;</code>
+   * <code>optional string candidatePassword = 2;</code>
    */
-  public java.lang.String getLeadMobile() {
-    java.lang.Object ref = leadMobile_;
+  public java.lang.String getCandidatePassword() {
+    java.lang.Object ref = candidatePassword_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      leadMobile_ = s;
+      candidatePassword_ = s;
       return s;
     }
   }
   /**
-   * <code>optional string leadMobile = 2;</code>
+   * <code>optional string candidatePassword = 2;</code>
    */
   public com.google.protobuf.ByteString
-      getLeadMobileBytes() {
-    java.lang.Object ref = leadMobile_;
+      getCandidatePasswordBytes() {
+    java.lang.Object ref = candidatePassword_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      leadMobile_ = b;
+      candidatePassword_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -159,11 +159,11 @@ public  final class AddLeadRequest extends
 
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getLeadNameBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 1, leadName_);
+    if (!getCandidateMobileBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 1, candidateMobile_);
     }
-    if (!getLeadMobileBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 2, leadMobile_);
+    if (!getCandidatePasswordBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 2, candidatePassword_);
     }
   }
 
@@ -172,64 +172,64 @@ public  final class AddLeadRequest extends
     if (size != -1) return size;
 
     size = 0;
-    if (!getLeadNameBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(1, leadName_);
+    if (!getCandidateMobileBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(1, candidateMobile_);
     }
-    if (!getLeadMobileBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(2, leadMobile_);
+    if (!getCandidatePasswordBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(2, candidatePassword_);
     }
     memoizedSize = size;
     return size;
   }
 
   private static final long serialVersionUID = 0L;
-  public static in.trujobs.proto.AddLeadRequest parseFrom(
+  public static in.trujobs.proto.LogInRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static in.trujobs.proto.AddLeadRequest parseFrom(
+  public static in.trujobs.proto.LogInRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static in.trujobs.proto.AddLeadRequest parseFrom(byte[] data)
+  public static in.trujobs.proto.LogInRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static in.trujobs.proto.AddLeadRequest parseFrom(
+  public static in.trujobs.proto.LogInRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static in.trujobs.proto.AddLeadRequest parseFrom(java.io.InputStream input)
+  public static in.trujobs.proto.LogInRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return PARSER.parseFrom(input);
   }
-  public static in.trujobs.proto.AddLeadRequest parseFrom(
+  public static in.trujobs.proto.LogInRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return PARSER.parseFrom(input, extensionRegistry);
   }
-  public static in.trujobs.proto.AddLeadRequest parseDelimitedFrom(java.io.InputStream input)
+  public static in.trujobs.proto.LogInRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return PARSER.parseDelimitedFrom(input);
   }
-  public static in.trujobs.proto.AddLeadRequest parseDelimitedFrom(
+  public static in.trujobs.proto.LogInRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return PARSER.parseDelimitedFrom(input, extensionRegistry);
   }
-  public static in.trujobs.proto.AddLeadRequest parseFrom(
+  public static in.trujobs.proto.LogInRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return PARSER.parseFrom(input);
   }
-  public static in.trujobs.proto.AddLeadRequest parseFrom(
+  public static in.trujobs.proto.LogInRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -240,7 +240,7 @@ public  final class AddLeadRequest extends
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(in.trujobs.proto.AddLeadRequest prototype) {
+  public static Builder newBuilder(in.trujobs.proto.LogInRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   public Builder toBuilder() {
@@ -255,25 +255,25 @@ public  final class AddLeadRequest extends
     return builder;
   }
   /**
-   * Protobuf type {@code in.trujobs.proto.AddLeadRequest}
+   * Protobuf type {@code in.trujobs.proto.LogInRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:in.trujobs.proto.AddLeadRequest)
-      in.trujobs.proto.AddLeadRequestOrBuilder {
+      // @@protoc_insertion_point(builder_implements:in.trujobs.proto.LogInRequest)
+      in.trujobs.proto.LogInRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_AddLeadRequest_descriptor;
+      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_LogInRequest_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_AddLeadRequest_fieldAccessorTable
+      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_LogInRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              in.trujobs.proto.AddLeadRequest.class, in.trujobs.proto.AddLeadRequest.Builder.class);
+              in.trujobs.proto.LogInRequest.class, in.trujobs.proto.LogInRequest.Builder.class);
     }
 
-    // Construct using in.trujobs.proto.AddLeadRequest.newBuilder()
+    // Construct using in.trujobs.proto.LogInRequest.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -289,55 +289,55 @@ public  final class AddLeadRequest extends
     }
     public Builder clear() {
       super.clear();
-      leadName_ = "";
+      candidateMobile_ = "";
 
-      leadMobile_ = "";
+      candidatePassword_ = "";
 
       return this;
     }
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_AddLeadRequest_descriptor;
+      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_LogInRequest_descriptor;
     }
 
-    public in.trujobs.proto.AddLeadRequest getDefaultInstanceForType() {
-      return in.trujobs.proto.AddLeadRequest.getDefaultInstance();
+    public in.trujobs.proto.LogInRequest getDefaultInstanceForType() {
+      return in.trujobs.proto.LogInRequest.getDefaultInstance();
     }
 
-    public in.trujobs.proto.AddLeadRequest build() {
-      in.trujobs.proto.AddLeadRequest result = buildPartial();
+    public in.trujobs.proto.LogInRequest build() {
+      in.trujobs.proto.LogInRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
       return result;
     }
 
-    public in.trujobs.proto.AddLeadRequest buildPartial() {
-      in.trujobs.proto.AddLeadRequest result = new in.trujobs.proto.AddLeadRequest(this);
-      result.leadName_ = leadName_;
-      result.leadMobile_ = leadMobile_;
+    public in.trujobs.proto.LogInRequest buildPartial() {
+      in.trujobs.proto.LogInRequest result = new in.trujobs.proto.LogInRequest(this);
+      result.candidateMobile_ = candidateMobile_;
+      result.candidatePassword_ = candidatePassword_;
       onBuilt();
       return result;
     }
 
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof in.trujobs.proto.AddLeadRequest) {
-        return mergeFrom((in.trujobs.proto.AddLeadRequest)other);
+      if (other instanceof in.trujobs.proto.LogInRequest) {
+        return mergeFrom((in.trujobs.proto.LogInRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(in.trujobs.proto.AddLeadRequest other) {
-      if (other == in.trujobs.proto.AddLeadRequest.getDefaultInstance()) return this;
-      if (!other.getLeadName().isEmpty()) {
-        leadName_ = other.leadName_;
+    public Builder mergeFrom(in.trujobs.proto.LogInRequest other) {
+      if (other == in.trujobs.proto.LogInRequest.getDefaultInstance()) return this;
+      if (!other.getCandidateMobile().isEmpty()) {
+        candidateMobile_ = other.candidateMobile_;
         onChanged();
       }
-      if (!other.getLeadMobile().isEmpty()) {
-        leadMobile_ = other.leadMobile_;
+      if (!other.getCandidatePassword().isEmpty()) {
+        candidatePassword_ = other.candidatePassword_;
         onChanged();
       }
       onChanged();
@@ -352,11 +352,11 @@ public  final class AddLeadRequest extends
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      in.trujobs.proto.AddLeadRequest parsedMessage = null;
+      in.trujobs.proto.LogInRequest parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (in.trujobs.proto.AddLeadRequest) e.getUnfinishedMessage();
+        parsedMessage = (in.trujobs.proto.LogInRequest) e.getUnfinishedMessage();
         throw e;
       } finally {
         if (parsedMessage != null) {
@@ -366,140 +366,140 @@ public  final class AddLeadRequest extends
       return this;
     }
 
-    private java.lang.Object leadName_ = "";
+    private java.lang.Object candidateMobile_ = "";
     /**
-     * <code>optional string leadName = 1;</code>
+     * <code>optional string candidateMobile = 1;</code>
      */
-    public java.lang.String getLeadName() {
-      java.lang.Object ref = leadName_;
+    public java.lang.String getCandidateMobile() {
+      java.lang.Object ref = candidateMobile_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        leadName_ = s;
+        candidateMobile_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>optional string leadName = 1;</code>
+     * <code>optional string candidateMobile = 1;</code>
      */
     public com.google.protobuf.ByteString
-        getLeadNameBytes() {
-      java.lang.Object ref = leadName_;
+        getCandidateMobileBytes() {
+      java.lang.Object ref = candidateMobile_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        leadName_ = b;
+        candidateMobile_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>optional string leadName = 1;</code>
+     * <code>optional string candidateMobile = 1;</code>
      */
-    public Builder setLeadName(
+    public Builder setCandidateMobile(
         java.lang.String value) {
       if (value == null) {
     throw new NullPointerException();
   }
   
-      leadName_ = value;
+      candidateMobile_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>optional string leadName = 1;</code>
+     * <code>optional string candidateMobile = 1;</code>
      */
-    public Builder clearLeadName() {
+    public Builder clearCandidateMobile() {
       
-      leadName_ = getDefaultInstance().getLeadName();
+      candidateMobile_ = getDefaultInstance().getCandidateMobile();
       onChanged();
       return this;
     }
     /**
-     * <code>optional string leadName = 1;</code>
+     * <code>optional string candidateMobile = 1;</code>
      */
-    public Builder setLeadNameBytes(
+    public Builder setCandidateMobileBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
       
-      leadName_ = value;
+      candidateMobile_ = value;
       onChanged();
       return this;
     }
 
-    private java.lang.Object leadMobile_ = "";
+    private java.lang.Object candidatePassword_ = "";
     /**
-     * <code>optional string leadMobile = 2;</code>
+     * <code>optional string candidatePassword = 2;</code>
      */
-    public java.lang.String getLeadMobile() {
-      java.lang.Object ref = leadMobile_;
+    public java.lang.String getCandidatePassword() {
+      java.lang.Object ref = candidatePassword_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        leadMobile_ = s;
+        candidatePassword_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>optional string leadMobile = 2;</code>
+     * <code>optional string candidatePassword = 2;</code>
      */
     public com.google.protobuf.ByteString
-        getLeadMobileBytes() {
-      java.lang.Object ref = leadMobile_;
+        getCandidatePasswordBytes() {
+      java.lang.Object ref = candidatePassword_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        leadMobile_ = b;
+        candidatePassword_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>optional string leadMobile = 2;</code>
+     * <code>optional string candidatePassword = 2;</code>
      */
-    public Builder setLeadMobile(
+    public Builder setCandidatePassword(
         java.lang.String value) {
       if (value == null) {
     throw new NullPointerException();
   }
   
-      leadMobile_ = value;
+      candidatePassword_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>optional string leadMobile = 2;</code>
+     * <code>optional string candidatePassword = 2;</code>
      */
-    public Builder clearLeadMobile() {
+    public Builder clearCandidatePassword() {
       
-      leadMobile_ = getDefaultInstance().getLeadMobile();
+      candidatePassword_ = getDefaultInstance().getCandidatePassword();
       onChanged();
       return this;
     }
     /**
-     * <code>optional string leadMobile = 2;</code>
+     * <code>optional string candidatePassword = 2;</code>
      */
-    public Builder setLeadMobileBytes(
+    public Builder setCandidatePasswordBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
       
-      leadMobile_ = value;
+      candidatePassword_ = value;
       onChanged();
       return this;
     }
@@ -514,27 +514,27 @@ public  final class AddLeadRequest extends
     }
 
 
-    // @@protoc_insertion_point(builder_scope:in.trujobs.proto.AddLeadRequest)
+    // @@protoc_insertion_point(builder_scope:in.trujobs.proto.LogInRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:in.trujobs.proto.AddLeadRequest)
-  private static final in.trujobs.proto.AddLeadRequest DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:in.trujobs.proto.LogInRequest)
+  private static final in.trujobs.proto.LogInRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new in.trujobs.proto.AddLeadRequest();
+    DEFAULT_INSTANCE = new in.trujobs.proto.LogInRequest();
   }
 
-  public static in.trujobs.proto.AddLeadRequest getDefaultInstance() {
+  public static in.trujobs.proto.LogInRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<AddLeadRequest>
-      PARSER = new com.google.protobuf.AbstractParser<AddLeadRequest>() {
-    public AddLeadRequest parsePartialFrom(
+  private static final com.google.protobuf.Parser<LogInRequest>
+      PARSER = new com.google.protobuf.AbstractParser<LogInRequest>() {
+    public LogInRequest parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       try {
-        return new AddLeadRequest(input, extensionRegistry);
+        return new LogInRequest(input, extensionRegistry);
       } catch (RuntimeException e) {
         if (e.getCause() instanceof
             com.google.protobuf.InvalidProtocolBufferException) {
@@ -546,16 +546,16 @@ public  final class AddLeadRequest extends
     }
   };
 
-  public static com.google.protobuf.Parser<AddLeadRequest> parser() {
+  public static com.google.protobuf.Parser<LogInRequest> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<AddLeadRequest> getParserForType() {
+  public com.google.protobuf.Parser<LogInRequest> getParserForType() {
     return PARSER;
   }
 
-  public in.trujobs.proto.AddLeadRequest getDefaultInstanceForType() {
+  public in.trujobs.proto.LogInRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

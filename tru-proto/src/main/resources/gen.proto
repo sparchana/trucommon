@@ -4,26 +4,33 @@ package in.trujobs.proto;
 
 option java_multiple_files = true;
 
-message AddLeadRequest {
-    string leadName = 1;
-    string leadMobile = 2; 
-}
-
 message TestMessage {
 	string testName = 1;
 	string testPage = 2;
 }
 
 
-message AddLeadResponse {
+message LogInRequest {
+    string candidateMobile = 1;
+    string candidatePassword = 2; 
+}
+
+message LogInResponse {
     enum Status {
-        UNKNOWN = 0;
+	UNKNOWN = 0;
         SUCCESS = 1;
         FAILURE = 2;
-        NO_ACCOUNT = 3;
-        PASSWORD_INCORRECT = 4;
-        ALREADY_EXISTS = 5;
+        NO_USER = 3;
+        WRONG_PASSWORD = 4;
     }
     Status status = 1;
-
+    int64 leadId = 2;
+    int64 candidateId = 3;
+    int32 candidateGender = 4;
+    string candidateFirstName = 5;
+    string candidateLastName = 6;
+    int32 candidateIsAssessed = 7;
+    string session_id = 8;
+    int64 session_expiry_millis = 9;
 }
+
