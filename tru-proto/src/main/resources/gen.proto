@@ -9,6 +9,11 @@ message AddLeadRequest {
     string leadMobile = 2; 
 }
 
+message TestMessage {
+	string testName = 1;
+	string testPage = 2;
+}
+
 
 message AddLeadResponse {
     enum Status {
