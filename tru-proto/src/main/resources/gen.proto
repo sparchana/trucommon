@@ -66,3 +66,12 @@ message ResetPasswordResponse {
     int32 otp = 2;
 }
 
+message JobRoleResponse {
+    repeated JobRole jobRole = 1;
+}
+
+message JobRole {
+    string jobRoleId = 1;
+    string jobRoleName = 2;
+}
+

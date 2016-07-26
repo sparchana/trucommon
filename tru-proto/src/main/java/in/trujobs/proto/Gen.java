@@ -43,6 +43,16 @@ public final class Gen {
   static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_in_trujobs_proto_ResetPasswordResponse_fieldAccessorTable;
+  static com.google.protobuf.Descriptors.Descriptor
+    internal_static_in_trujobs_proto_JobRoleResponse_descriptor;
+  static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_in_trujobs_proto_JobRoleResponse_fieldAccessorTable;
+  static com.google.protobuf.Descriptors.Descriptor
+    internal_static_in_trujobs_proto_JobRole_descriptor;
+  static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_in_trujobs_proto_JobRole_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -75,7 +85,10 @@ public final class Gen {
       "nse\022>\n\006status\030\001 \001(\0162..in.trujobs.proto.R" +
       "esetPasswordResponse.Status\022\013\n\003otp\030\002 \001(\005" +
       "\"@\n\006Status\022\013\n\007UNKNOWN\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007" +
-      "FAILURE\020\002\022\017\n\013USER_EXISTS\020\003B\002P\001b\006proto3"
+      "FAILURE\020\002\022\017\n\013USER_EXISTS\020\003\"=\n\017JobRoleRes" +
+      "ponse\022*\n\007jobRole\030\001 \003(\0132\031.in.trujobs.prot" +
+      "o.JobRole\"1\n\007JobRole\022\021\n\tjobRoleId\030\001 \001(\t\022" +
+      "\023\n\013jobRoleName\030\002 \001(\tB\002P\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -131,6 +144,18 @@ public final class Gen {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_ResetPasswordResponse_descriptor,
         new java.lang.String[] { "Status", "Otp", });
+    internal_static_in_trujobs_proto_JobRoleResponse_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_in_trujobs_proto_JobRoleResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_in_trujobs_proto_JobRoleResponse_descriptor,
+        new java.lang.String[] { "JobRole", });
+    internal_static_in_trujobs_proto_JobRole_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_in_trujobs_proto_JobRole_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_in_trujobs_proto_JobRole_descriptor,
+        new java.lang.String[] { "JobRoleId", "JobRoleName", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
