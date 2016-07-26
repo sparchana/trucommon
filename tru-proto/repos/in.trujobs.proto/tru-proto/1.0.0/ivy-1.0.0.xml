@@ -4,7 +4,7 @@
 		module="tru-proto"
 		revision="1.0.0"
 		status="integration"
-		publication="20160725160557"
+		publication="20160726150508"
 	/>
 	<configurations>
 		<conf name="archives" visibility="public" description="Configuration for archive artifacts."/>

@@ -23,6 +23,26 @@ public final class Gen {
   static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_in_trujobs_proto_LogInResponse_fieldAccessorTable;
+  static com.google.protobuf.Descriptors.Descriptor
+    internal_static_in_trujobs_proto_SignUpRequest_descriptor;
+  static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_in_trujobs_proto_SignUpRequest_fieldAccessorTable;
+  static com.google.protobuf.Descriptors.Descriptor
+    internal_static_in_trujobs_proto_SignUpResponse_descriptor;
+  static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_in_trujobs_proto_SignUpResponse_fieldAccessorTable;
+  static com.google.protobuf.Descriptors.Descriptor
+    internal_static_in_trujobs_proto_ResetPasswordRequest_descriptor;
+  static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_in_trujobs_proto_ResetPasswordRequest_fieldAccessorTable;
+  static com.google.protobuf.Descriptors.Descriptor
+    internal_static_in_trujobs_proto_ResetPasswordResponse_descriptor;
+  static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_in_trujobs_proto_ResetPasswordResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -35,16 +55,27 @@ public final class Gen {
       "\n\tgen.proto\022\020in.trujobs.proto\"1\n\013TestMes" +
       "sage\022\020\n\010testName\030\001 \001(\t\022\020\n\010testPage\030\002 \001(\t" +
       "\"B\n\014LogInRequest\022\027\n\017candidateMobile\030\001 \001(" +
-      "\t\022\031\n\021candidatePassword\030\002 \001(\t\"\336\002\n\rLogInRe" +
+      "\t\022\031\n\021candidatePassword\030\002 \001(\t\"\362\002\n\rLogInRe" +
       "sponse\0226\n\006status\030\001 \001(\0162&.in.trujobs.prot" +
       "o.LogInResponse.Status\022\016\n\006leadId\030\002 \001(\003\022\023" +
       "\n\013candidateId\030\003 \001(\003\022\027\n\017candidateGender\030\004" +
       " \001(\005\022\032\n\022candidateFirstName\030\005 \001(\t\022\031\n\021cand" +
       "idateLastName\030\006 \001(\t\022\033\n\023candidateIsAssess" +
       "ed\030\007 \001(\005\022\022\n\nsession_id\030\010 \001(\t\022\035\n\025session_",
-      "expiry_millis\030\t \001(\003\"P\n\006Status\022\013\n\007UNKNOWN" +
-      "\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007FAILURE\020\002\022\013\n\007NO_USER\020" +
-      "\003\022\022\n\016WRONG_PASSWORD\020\004B\002P\001b\006proto3"
+      "expiry_millis\030\t \001(\003\022\022\n\nminProfile\030\n \001(\005\"" +
+      "P\n\006Status\022\013\n\007UNKNOWN\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007F" +
+      "AILURE\020\002\022\013\n\007NO_USER\020\003\022\022\n\016WRONG_PASSWORD\020" +
+      "\004\"-\n\rSignUpRequest\022\014\n\004name\030\001 \001(\t\022\016\n\006mobi" +
+      "le\030\002 \001(\t\"\224\001\n\016SignUpResponse\0227\n\006status\030\001 " +
+      "\001(\0162\'.in.trujobs.proto.SignUpResponse.St" +
+      "atus\022\024\n\014generatedOtp\030\002 \001(\005\"3\n\006Status\022\013\n\007" +
+      "UNKNOWN\020\000\022\013\n\007SUCCESS\020\001\022\017\n\013USER_EXISTS\020\003\"" +
+      "8\n\024ResetPasswordRequest\022\016\n\006mobile\030\001 \001(\t\022" +
+      "\020\n\010password\030\002 \001(\t\"\246\001\n\025ResetPasswordRespo",
+      "nse\022>\n\006status\030\001 \001(\0162..in.trujobs.proto.R" +
+      "esetPasswordResponse.Status\022\013\n\003otp\030\002 \001(\005" +
+      "\"@\n\006Status\022\013\n\007UNKNOWN\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007" +
+      "FAILURE\020\002\022\017\n\013USER_EXISTS\020\003B\002P\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -75,7 +106,31 @@ public final class Gen {
     internal_static_in_trujobs_proto_LogInResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_LogInResponse_descriptor,
-        new java.lang.String[] { "Status", "LeadId", "CandidateId", "CandidateGender", "CandidateFirstName", "CandidateLastName", "CandidateIsAssessed", "SessionId", "SessionExpiryMillis", });
+        new java.lang.String[] { "Status", "LeadId", "CandidateId", "CandidateGender", "CandidateFirstName", "CandidateLastName", "CandidateIsAssessed", "SessionId", "SessionExpiryMillis", "MinProfile", });
+    internal_static_in_trujobs_proto_SignUpRequest_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_in_trujobs_proto_SignUpRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_in_trujobs_proto_SignUpRequest_descriptor,
+        new java.lang.String[] { "Name", "Mobile", });
+    internal_static_in_trujobs_proto_SignUpResponse_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_in_trujobs_proto_SignUpResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_in_trujobs_proto_SignUpResponse_descriptor,
+        new java.lang.String[] { "Status", "GeneratedOtp", });
+    internal_static_in_trujobs_proto_ResetPasswordRequest_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_in_trujobs_proto_ResetPasswordRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_in_trujobs_proto_ResetPasswordRequest_descriptor,
+        new java.lang.String[] { "Mobile", "Password", });
+    internal_static_in_trujobs_proto_ResetPasswordResponse_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_in_trujobs_proto_ResetPasswordResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_in_trujobs_proto_ResetPasswordResponse_descriptor,
+        new java.lang.String[] { "Status", "Otp", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

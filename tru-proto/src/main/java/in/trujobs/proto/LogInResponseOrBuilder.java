@@ -70,4 +70,9 @@ public interface LogInResponseOrBuilder extends
    * <code>optional int64 session_expiry_millis = 9;</code>
    */
   long getSessionExpiryMillis();
+
+  /**
+   * <code>optional int32 minProfile = 10;</code>
+   */
+  int getMinProfile();
 }

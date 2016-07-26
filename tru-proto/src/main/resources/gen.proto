@@ -32,5 +32,37 @@ message LogInResponse {
     int32 candidateIsAssessed = 7;
     string session_id = 8;
     int64 session_expiry_millis = 9;
+    int32 minProfile = 10;
+}
+
+message SignUpRequest {
+    string name = 1;
+    string mobile = 2; 
+}
+
+message SignUpResponse {
+    enum Status {
+	UNKNOWN = 0;
+        SUCCESS = 1;
+        USER_EXISTS = 3;
+    }
+    Status status = 1;
+    int32 generatedOtp = 2;
+}
+
+message ResetPasswordRequest {
+    string mobile = 1;
+    string password = 2;
+}
+
+message ResetPasswordResponse {
+    enum Status {
+	UNKNOWN = 0;
+        SUCCESS = 1;
+        FAILURE = 2;
+        USER_EXISTS = 3;
+	}
+    Status status = 1;
+    int32 otp = 2;
 }
 

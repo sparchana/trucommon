@@ -24,6 +24,7 @@ public  final class LogInResponse extends
     candidateIsAssessed_ = 0;
     sessionId_ = "";
     sessionExpiryMillis_ = 0L;
+    minProfile_ = 0;
   }
 
   @java.lang.Override
@@ -97,6 +98,11 @@ public  final class LogInResponse extends
           case 72: {
 
             sessionExpiryMillis_ = input.readInt64();
+            break;
+          }
+          case 80: {
+
+            minProfile_ = input.readInt32();
             break;
           }
         }
@@ -405,6 +411,15 @@ public  final class LogInResponse extends
     return sessionExpiryMillis_;
   }
 
+  public static final int MINPROFILE_FIELD_NUMBER = 10;
+  private int minProfile_;
+  /**
+   * <code>optional int32 minProfile = 10;</code>
+   */
+  public int getMinProfile() {
+    return minProfile_;
+  }
+
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -443,6 +458,9 @@ public  final class LogInResponse extends
     }
     if (sessionExpiryMillis_ != 0L) {
       output.writeInt64(9, sessionExpiryMillis_);
+    }
+    if (minProfile_ != 0) {
+      output.writeInt32(10, minProfile_);
     }
   }
 
@@ -483,6 +501,10 @@ public  final class LogInResponse extends
     if (sessionExpiryMillis_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(9, sessionExpiryMillis_);
+    }
+    if (minProfile_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(10, minProfile_);
     }
     memoizedSize = size;
     return size;
@@ -613,6 +635,8 @@ public  final class LogInResponse extends
 
       sessionExpiryMillis_ = 0L;
 
+      minProfile_ = 0;
+
       return this;
     }
 
@@ -644,6 +668,7 @@ public  final class LogInResponse extends
       result.candidateIsAssessed_ = candidateIsAssessed_;
       result.sessionId_ = sessionId_;
       result.sessionExpiryMillis_ = sessionExpiryMillis_;
+      result.minProfile_ = minProfile_;
       onBuilt();
       return result;
     }
@@ -688,6 +713,9 @@ public  final class LogInResponse extends
       }
       if (other.getSessionExpiryMillis() != 0L) {
         setSessionExpiryMillis(other.getSessionExpiryMillis());
+      }
+      if (other.getMinProfile() != 0) {
+        setMinProfile(other.getMinProfile());
       }
       onChanged();
       return this;
@@ -1092,6 +1120,32 @@ public  final class LogInResponse extends
     public Builder clearSessionExpiryMillis() {
       
       sessionExpiryMillis_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private int minProfile_ ;
+    /**
+     * <code>optional int32 minProfile = 10;</code>
+     */
+    public int getMinProfile() {
+      return minProfile_;
+    }
+    /**
+     * <code>optional int32 minProfile = 10;</code>
+     */
+    public Builder setMinProfile(int value) {
+      
+      minProfile_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional int32 minProfile = 10;</code>
+     */
+    public Builder clearMinProfile() {
+      
+      minProfile_ = 0;
       onChanged();
       return this;
     }
