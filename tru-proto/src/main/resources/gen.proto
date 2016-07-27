@@ -75,3 +75,15 @@ message JobRole {
     string jobRoleName = 2;
 }
 
+message JobPostResponse {
+    repeated JobPost jobPost = 1;
+}
+
+message JobPost {
+    int64 jobPostId = 1;
+    string jobPostTitle = 2;
+    string jobPostCompanyName = 3;
+    int64 jobPostMinSalary = 4;
+    int64 jobPostMaxSalary = 5;
+}
+

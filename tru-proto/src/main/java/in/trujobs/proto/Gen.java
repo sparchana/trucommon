@@ -53,6 +53,16 @@ public final class Gen {
   static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_in_trujobs_proto_JobRole_fieldAccessorTable;
+  static com.google.protobuf.Descriptors.Descriptor
+    internal_static_in_trujobs_proto_JobPostResponse_descriptor;
+  static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_in_trujobs_proto_JobPostResponse_fieldAccessorTable;
+  static com.google.protobuf.Descriptors.Descriptor
+    internal_static_in_trujobs_proto_JobPost_descriptor;
+  static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_in_trujobs_proto_JobPost_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -88,7 +98,12 @@ public final class Gen {
       "FAILURE\020\002\022\017\n\013USER_EXISTS\020\003\"=\n\017JobRoleRes" +
       "ponse\022*\n\007jobRole\030\001 \003(\0132\031.in.trujobs.prot" +
       "o.JobRole\"1\n\007JobRole\022\021\n\tjobRoleId\030\001 \001(\t\022" +
-      "\023\n\013jobRoleName\030\002 \001(\tB\002P\001b\006proto3"
+      "\023\n\013jobRoleName\030\002 \001(\t\"=\n\017JobPostResponse\022" +
+      "*\n\007jobPost\030\001 \003(\0132\031.in.trujobs.proto.JobP" +
+      "ost\"\202\001\n\007JobPost\022\021\n\tjobPostId\030\001 \001(\003\022\024\n\014jo" +
+      "bPostTitle\030\002 \001(\t\022\032\n\022jobPostCompanyName\030\003",
+      " \001(\t\022\030\n\020jobPostMinSalary\030\004 \001(\003\022\030\n\020jobPos" +
+      "tMaxSalary\030\005 \001(\003B\002P\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -156,6 +171,18 @@ public final class Gen {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_JobRole_descriptor,
         new java.lang.String[] { "JobRoleId", "JobRoleName", });
+    internal_static_in_trujobs_proto_JobPostResponse_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_in_trujobs_proto_JobPostResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_in_trujobs_proto_JobPostResponse_descriptor,
+        new java.lang.String[] { "JobPost", });
+    internal_static_in_trujobs_proto_JobPost_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_in_trujobs_proto_JobPost_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_in_trujobs_proto_JobPost_descriptor,
+        new java.lang.String[] { "JobPostId", "JobPostTitle", "JobPostCompanyName", "JobPostMinSalary", "JobPostMaxSalary", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
