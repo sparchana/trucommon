@@ -20,6 +20,9 @@ public  final class JobPost extends
     jobPostCompanyName_ = "";
     jobPostMinSalary_ = 0L;
     jobPostMaxSalary_ = 0L;
+    jobPostLocality_ = java.util.Collections.emptyList();
+    jobPostCompanyLogo_ = "";
+    vacancies_ = 0;
   }
 
   @java.lang.Override
@@ -73,6 +76,51 @@ public  final class JobPost extends
             jobPostMaxSalary_ = input.readInt64();
             break;
           }
+          case 50: {
+            if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              jobPostLocality_ = new java.util.ArrayList<in.trujobs.proto.Locality>();
+              mutable_bitField0_ |= 0x00000020;
+            }
+            jobPostLocality_.add(input.readMessage(in.trujobs.proto.Locality.parser(), extensionRegistry));
+            break;
+          }
+          case 58: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            jobPostCompanyLogo_ = s;
+            break;
+          }
+          case 66: {
+            in.trujobs.proto.Experience.Builder subBuilder = null;
+            if (jobPostExperience_ != null) {
+              subBuilder = jobPostExperience_.toBuilder();
+            }
+            jobPostExperience_ = input.readMessage(in.trujobs.proto.Experience.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(jobPostExperience_);
+              jobPostExperience_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 74: {
+            in.trujobs.proto.TimeShift.Builder subBuilder = null;
+            if (jobPostShift_ != null) {
+              subBuilder = jobPostShift_.toBuilder();
+            }
+            jobPostShift_ = input.readMessage(in.trujobs.proto.TimeShift.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(jobPostShift_);
+              jobPostShift_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 80: {
+
+            vacancies_ = input.readInt32();
+            break;
+          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -82,6 +130,9 @@ public  final class JobPost extends
           new com.google.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this));
     } finally {
+      if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+        jobPostLocality_ = java.util.Collections.unmodifiableList(jobPostLocality_);
+      }
       makeExtensionsImmutable();
     }
   }
@@ -97,6 +148,7 @@ public  final class JobPost extends
             in.trujobs.proto.JobPost.class, in.trujobs.proto.JobPost.Builder.class);
   }
 
+  private int bitField0_;
   public static final int JOBPOSTID_FIELD_NUMBER = 1;
   private long jobPostId_;
   /**
@@ -192,6 +244,126 @@ public  final class JobPost extends
     return jobPostMaxSalary_;
   }
 
+  public static final int JOBPOSTLOCALITY_FIELD_NUMBER = 6;
+  private java.util.List<in.trujobs.proto.Locality> jobPostLocality_;
+  /**
+   * <code>repeated .in.trujobs.proto.Locality jobPostLocality = 6;</code>
+   */
+  public java.util.List<in.trujobs.proto.Locality> getJobPostLocalityList() {
+    return jobPostLocality_;
+  }
+  /**
+   * <code>repeated .in.trujobs.proto.Locality jobPostLocality = 6;</code>
+   */
+  public java.util.List<? extends in.trujobs.proto.LocalityOrBuilder> 
+      getJobPostLocalityOrBuilderList() {
+    return jobPostLocality_;
+  }
+  /**
+   * <code>repeated .in.trujobs.proto.Locality jobPostLocality = 6;</code>
+   */
+  public int getJobPostLocalityCount() {
+    return jobPostLocality_.size();
+  }
+  /**
+   * <code>repeated .in.trujobs.proto.Locality jobPostLocality = 6;</code>
+   */
+  public in.trujobs.proto.Locality getJobPostLocality(int index) {
+    return jobPostLocality_.get(index);
+  }
+  /**
+   * <code>repeated .in.trujobs.proto.Locality jobPostLocality = 6;</code>
+   */
+  public in.trujobs.proto.LocalityOrBuilder getJobPostLocalityOrBuilder(
+      int index) {
+    return jobPostLocality_.get(index);
+  }
+
+  public static final int JOBPOSTCOMPANYLOGO_FIELD_NUMBER = 7;
+  private volatile java.lang.Object jobPostCompanyLogo_;
+  /**
+   * <code>optional string jobPostCompanyLogo = 7;</code>
+   */
+  public java.lang.String getJobPostCompanyLogo() {
+    java.lang.Object ref = jobPostCompanyLogo_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      jobPostCompanyLogo_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>optional string jobPostCompanyLogo = 7;</code>
+   */
+  public com.google.protobuf.ByteString
+      getJobPostCompanyLogoBytes() {
+    java.lang.Object ref = jobPostCompanyLogo_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      jobPostCompanyLogo_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int JOBPOSTEXPERIENCE_FIELD_NUMBER = 8;
+  private in.trujobs.proto.Experience jobPostExperience_;
+  /**
+   * <code>optional .in.trujobs.proto.Experience jobPostExperience = 8;</code>
+   */
+  public boolean hasJobPostExperience() {
+    return jobPostExperience_ != null;
+  }
+  /**
+   * <code>optional .in.trujobs.proto.Experience jobPostExperience = 8;</code>
+   */
+  public in.trujobs.proto.Experience getJobPostExperience() {
+    return jobPostExperience_ == null ? in.trujobs.proto.Experience.getDefaultInstance() : jobPostExperience_;
+  }
+  /**
+   * <code>optional .in.trujobs.proto.Experience jobPostExperience = 8;</code>
+   */
+  public in.trujobs.proto.ExperienceOrBuilder getJobPostExperienceOrBuilder() {
+    return getJobPostExperience();
+  }
+
+  public static final int JOBPOSTSHIFT_FIELD_NUMBER = 9;
+  private in.trujobs.proto.TimeShift jobPostShift_;
+  /**
+   * <code>optional .in.trujobs.proto.TimeShift jobPostShift = 9;</code>
+   */
+  public boolean hasJobPostShift() {
+    return jobPostShift_ != null;
+  }
+  /**
+   * <code>optional .in.trujobs.proto.TimeShift jobPostShift = 9;</code>
+   */
+  public in.trujobs.proto.TimeShift getJobPostShift() {
+    return jobPostShift_ == null ? in.trujobs.proto.TimeShift.getDefaultInstance() : jobPostShift_;
+  }
+  /**
+   * <code>optional .in.trujobs.proto.TimeShift jobPostShift = 9;</code>
+   */
+  public in.trujobs.proto.TimeShiftOrBuilder getJobPostShiftOrBuilder() {
+    return getJobPostShift();
+  }
+
+  public static final int VACANCIES_FIELD_NUMBER = 10;
+  private int vacancies_;
+  /**
+   * <code>optional int32 vacancies = 10;</code>
+   */
+  public int getVacancies() {
+    return vacancies_;
+  }
+
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -219,6 +391,21 @@ public  final class JobPost extends
     if (jobPostMaxSalary_ != 0L) {
       output.writeInt64(5, jobPostMaxSalary_);
     }
+    for (int i = 0; i < jobPostLocality_.size(); i++) {
+      output.writeMessage(6, jobPostLocality_.get(i));
+    }
+    if (!getJobPostCompanyLogoBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 7, jobPostCompanyLogo_);
+    }
+    if (jobPostExperience_ != null) {
+      output.writeMessage(8, getJobPostExperience());
+    }
+    if (jobPostShift_ != null) {
+      output.writeMessage(9, getJobPostShift());
+    }
+    if (vacancies_ != 0) {
+      output.writeInt32(10, vacancies_);
+    }
   }
 
   public int getSerializedSize() {
@@ -243,6 +430,25 @@ public  final class JobPost extends
     if (jobPostMaxSalary_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(5, jobPostMaxSalary_);
+    }
+    for (int i = 0; i < jobPostLocality_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(6, jobPostLocality_.get(i));
+    }
+    if (!getJobPostCompanyLogoBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(7, jobPostCompanyLogo_);
+    }
+    if (jobPostExperience_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(8, getJobPostExperience());
+    }
+    if (jobPostShift_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(9, getJobPostShift());
+    }
+    if (vacancies_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(10, vacancies_);
     }
     memoizedSize = size;
     return size;
@@ -351,6 +557,7 @@ public  final class JobPost extends
     }
     private void maybeForceBuilderInitialization() {
       if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        getJobPostLocalityFieldBuilder();
       }
     }
     public Builder clear() {
@@ -364,6 +571,28 @@ public  final class JobPost extends
       jobPostMinSalary_ = 0L;
 
       jobPostMaxSalary_ = 0L;
+
+      if (jobPostLocalityBuilder_ == null) {
+        jobPostLocality_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000020);
+      } else {
+        jobPostLocalityBuilder_.clear();
+      }
+      jobPostCompanyLogo_ = "";
+
+      if (jobPostExperienceBuilder_ == null) {
+        jobPostExperience_ = null;
+      } else {
+        jobPostExperience_ = null;
+        jobPostExperienceBuilder_ = null;
+      }
+      if (jobPostShiftBuilder_ == null) {
+        jobPostShift_ = null;
+      } else {
+        jobPostShift_ = null;
+        jobPostShiftBuilder_ = null;
+      }
+      vacancies_ = 0;
 
       return this;
     }
@@ -387,11 +616,35 @@ public  final class JobPost extends
 
     public in.trujobs.proto.JobPost buildPartial() {
       in.trujobs.proto.JobPost result = new in.trujobs.proto.JobPost(this);
+      int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       result.jobPostId_ = jobPostId_;
       result.jobPostTitle_ = jobPostTitle_;
       result.jobPostCompanyName_ = jobPostCompanyName_;
       result.jobPostMinSalary_ = jobPostMinSalary_;
       result.jobPostMaxSalary_ = jobPostMaxSalary_;
+      if (jobPostLocalityBuilder_ == null) {
+        if (((bitField0_ & 0x00000020) == 0x00000020)) {
+          jobPostLocality_ = java.util.Collections.unmodifiableList(jobPostLocality_);
+          bitField0_ = (bitField0_ & ~0x00000020);
+        }
+        result.jobPostLocality_ = jobPostLocality_;
+      } else {
+        result.jobPostLocality_ = jobPostLocalityBuilder_.build();
+      }
+      result.jobPostCompanyLogo_ = jobPostCompanyLogo_;
+      if (jobPostExperienceBuilder_ == null) {
+        result.jobPostExperience_ = jobPostExperience_;
+      } else {
+        result.jobPostExperience_ = jobPostExperienceBuilder_.build();
+      }
+      if (jobPostShiftBuilder_ == null) {
+        result.jobPostShift_ = jobPostShift_;
+      } else {
+        result.jobPostShift_ = jobPostShiftBuilder_.build();
+      }
+      result.vacancies_ = vacancies_;
+      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
@@ -424,6 +677,45 @@ public  final class JobPost extends
       if (other.getJobPostMaxSalary() != 0L) {
         setJobPostMaxSalary(other.getJobPostMaxSalary());
       }
+      if (jobPostLocalityBuilder_ == null) {
+        if (!other.jobPostLocality_.isEmpty()) {
+          if (jobPostLocality_.isEmpty()) {
+            jobPostLocality_ = other.jobPostLocality_;
+            bitField0_ = (bitField0_ & ~0x00000020);
+          } else {
+            ensureJobPostLocalityIsMutable();
+            jobPostLocality_.addAll(other.jobPostLocality_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.jobPostLocality_.isEmpty()) {
+          if (jobPostLocalityBuilder_.isEmpty()) {
+            jobPostLocalityBuilder_.dispose();
+            jobPostLocalityBuilder_ = null;
+            jobPostLocality_ = other.jobPostLocality_;
+            bitField0_ = (bitField0_ & ~0x00000020);
+            jobPostLocalityBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 getJobPostLocalityFieldBuilder() : null;
+          } else {
+            jobPostLocalityBuilder_.addAllMessages(other.jobPostLocality_);
+          }
+        }
+      }
+      if (!other.getJobPostCompanyLogo().isEmpty()) {
+        jobPostCompanyLogo_ = other.jobPostCompanyLogo_;
+        onChanged();
+      }
+      if (other.hasJobPostExperience()) {
+        mergeJobPostExperience(other.getJobPostExperience());
+      }
+      if (other.hasJobPostShift()) {
+        mergeJobPostShift(other.getJobPostShift());
+      }
+      if (other.getVacancies() != 0) {
+        setVacancies(other.getVacancies());
+      }
       onChanged();
       return this;
     }
@@ -449,6 +741,7 @@ public  final class JobPost extends
       }
       return this;
     }
+    private int bitField0_;
 
     private long jobPostId_ ;
     /**
@@ -662,6 +955,575 @@ public  final class JobPost extends
     public Builder clearJobPostMaxSalary() {
       
       jobPostMaxSalary_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private java.util.List<in.trujobs.proto.Locality> jobPostLocality_ =
+      java.util.Collections.emptyList();
+    private void ensureJobPostLocalityIsMutable() {
+      if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+        jobPostLocality_ = new java.util.ArrayList<in.trujobs.proto.Locality>(jobPostLocality_);
+        bitField0_ |= 0x00000020;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilder<
+        in.trujobs.proto.Locality, in.trujobs.proto.Locality.Builder, in.trujobs.proto.LocalityOrBuilder> jobPostLocalityBuilder_;
+
+    /**
+     * <code>repeated .in.trujobs.proto.Locality jobPostLocality = 6;</code>
+     */
+    public java.util.List<in.trujobs.proto.Locality> getJobPostLocalityList() {
+      if (jobPostLocalityBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(jobPostLocality_);
+      } else {
+        return jobPostLocalityBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.Locality jobPostLocality = 6;</code>
+     */
+    public int getJobPostLocalityCount() {
+      if (jobPostLocalityBuilder_ == null) {
+        return jobPostLocality_.size();
+      } else {
+        return jobPostLocalityBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.Locality jobPostLocality = 6;</code>
+     */
+    public in.trujobs.proto.Locality getJobPostLocality(int index) {
+      if (jobPostLocalityBuilder_ == null) {
+        return jobPostLocality_.get(index);
+      } else {
+        return jobPostLocalityBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.Locality jobPostLocality = 6;</code>
+     */
+    public Builder setJobPostLocality(
+        int index, in.trujobs.proto.Locality value) {
+      if (jobPostLocalityBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureJobPostLocalityIsMutable();
+        jobPostLocality_.set(index, value);
+        onChanged();
+      } else {
+        jobPostLocalityBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.Locality jobPostLocality = 6;</code>
+     */
+    public Builder setJobPostLocality(
+        int index, in.trujobs.proto.Locality.Builder builderForValue) {
+      if (jobPostLocalityBuilder_ == null) {
+        ensureJobPostLocalityIsMutable();
+        jobPostLocality_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        jobPostLocalityBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.Locality jobPostLocality = 6;</code>
+     */
+    public Builder addJobPostLocality(in.trujobs.proto.Locality value) {
+      if (jobPostLocalityBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureJobPostLocalityIsMutable();
+        jobPostLocality_.add(value);
+        onChanged();
+      } else {
+        jobPostLocalityBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.Locality jobPostLocality = 6;</code>
+     */
+    public Builder addJobPostLocality(
+        int index, in.trujobs.proto.Locality value) {
+      if (jobPostLocalityBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureJobPostLocalityIsMutable();
+        jobPostLocality_.add(index, value);
+        onChanged();
+      } else {
+        jobPostLocalityBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.Locality jobPostLocality = 6;</code>
+     */
+    public Builder addJobPostLocality(
+        in.trujobs.proto.Locality.Builder builderForValue) {
+      if (jobPostLocalityBuilder_ == null) {
+        ensureJobPostLocalityIsMutable();
+        jobPostLocality_.add(builderForValue.build());
+        onChanged();
+      } else {
+        jobPostLocalityBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.Locality jobPostLocality = 6;</code>
+     */
+    public Builder addJobPostLocality(
+        int index, in.trujobs.proto.Locality.Builder builderForValue) {
+      if (jobPostLocalityBuilder_ == null) {
+        ensureJobPostLocalityIsMutable();
+        jobPostLocality_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        jobPostLocalityBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.Locality jobPostLocality = 6;</code>
+     */
+    public Builder addAllJobPostLocality(
+        java.lang.Iterable<? extends in.trujobs.proto.Locality> values) {
+      if (jobPostLocalityBuilder_ == null) {
+        ensureJobPostLocalityIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, jobPostLocality_);
+        onChanged();
+      } else {
+        jobPostLocalityBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.Locality jobPostLocality = 6;</code>
+     */
+    public Builder clearJobPostLocality() {
+      if (jobPostLocalityBuilder_ == null) {
+        jobPostLocality_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+      } else {
+        jobPostLocalityBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.Locality jobPostLocality = 6;</code>
+     */
+    public Builder removeJobPostLocality(int index) {
+      if (jobPostLocalityBuilder_ == null) {
+        ensureJobPostLocalityIsMutable();
+        jobPostLocality_.remove(index);
+        onChanged();
+      } else {
+        jobPostLocalityBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.Locality jobPostLocality = 6;</code>
+     */
+    public in.trujobs.proto.Locality.Builder getJobPostLocalityBuilder(
+        int index) {
+      return getJobPostLocalityFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.Locality jobPostLocality = 6;</code>
+     */
+    public in.trujobs.proto.LocalityOrBuilder getJobPostLocalityOrBuilder(
+        int index) {
+      if (jobPostLocalityBuilder_ == null) {
+        return jobPostLocality_.get(index);  } else {
+        return jobPostLocalityBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.Locality jobPostLocality = 6;</code>
+     */
+    public java.util.List<? extends in.trujobs.proto.LocalityOrBuilder> 
+         getJobPostLocalityOrBuilderList() {
+      if (jobPostLocalityBuilder_ != null) {
+        return jobPostLocalityBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(jobPostLocality_);
+      }
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.Locality jobPostLocality = 6;</code>
+     */
+    public in.trujobs.proto.Locality.Builder addJobPostLocalityBuilder() {
+      return getJobPostLocalityFieldBuilder().addBuilder(
+          in.trujobs.proto.Locality.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.Locality jobPostLocality = 6;</code>
+     */
+    public in.trujobs.proto.Locality.Builder addJobPostLocalityBuilder(
+        int index) {
+      return getJobPostLocalityFieldBuilder().addBuilder(
+          index, in.trujobs.proto.Locality.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.Locality jobPostLocality = 6;</code>
+     */
+    public java.util.List<in.trujobs.proto.Locality.Builder> 
+         getJobPostLocalityBuilderList() {
+      return getJobPostLocalityFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        in.trujobs.proto.Locality, in.trujobs.proto.Locality.Builder, in.trujobs.proto.LocalityOrBuilder> 
+        getJobPostLocalityFieldBuilder() {
+      if (jobPostLocalityBuilder_ == null) {
+        jobPostLocalityBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            in.trujobs.proto.Locality, in.trujobs.proto.Locality.Builder, in.trujobs.proto.LocalityOrBuilder>(
+                jobPostLocality_,
+                ((bitField0_ & 0x00000020) == 0x00000020),
+                getParentForChildren(),
+                isClean());
+        jobPostLocality_ = null;
+      }
+      return jobPostLocalityBuilder_;
+    }
+
+    private java.lang.Object jobPostCompanyLogo_ = "";
+    /**
+     * <code>optional string jobPostCompanyLogo = 7;</code>
+     */
+    public java.lang.String getJobPostCompanyLogo() {
+      java.lang.Object ref = jobPostCompanyLogo_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        jobPostCompanyLogo_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>optional string jobPostCompanyLogo = 7;</code>
+     */
+    public com.google.protobuf.ByteString
+        getJobPostCompanyLogoBytes() {
+      java.lang.Object ref = jobPostCompanyLogo_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        jobPostCompanyLogo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>optional string jobPostCompanyLogo = 7;</code>
+     */
+    public Builder setJobPostCompanyLogo(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      jobPostCompanyLogo_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional string jobPostCompanyLogo = 7;</code>
+     */
+    public Builder clearJobPostCompanyLogo() {
+      
+      jobPostCompanyLogo_ = getDefaultInstance().getJobPostCompanyLogo();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional string jobPostCompanyLogo = 7;</code>
+     */
+    public Builder setJobPostCompanyLogoBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      jobPostCompanyLogo_ = value;
+      onChanged();
+      return this;
+    }
+
+    private in.trujobs.proto.Experience jobPostExperience_ = null;
+    private com.google.protobuf.SingleFieldBuilder<
+        in.trujobs.proto.Experience, in.trujobs.proto.Experience.Builder, in.trujobs.proto.ExperienceOrBuilder> jobPostExperienceBuilder_;
+    /**
+     * <code>optional .in.trujobs.proto.Experience jobPostExperience = 8;</code>
+     */
+    public boolean hasJobPostExperience() {
+      return jobPostExperienceBuilder_ != null || jobPostExperience_ != null;
+    }
+    /**
+     * <code>optional .in.trujobs.proto.Experience jobPostExperience = 8;</code>
+     */
+    public in.trujobs.proto.Experience getJobPostExperience() {
+      if (jobPostExperienceBuilder_ == null) {
+        return jobPostExperience_ == null ? in.trujobs.proto.Experience.getDefaultInstance() : jobPostExperience_;
+      } else {
+        return jobPostExperienceBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>optional .in.trujobs.proto.Experience jobPostExperience = 8;</code>
+     */
+    public Builder setJobPostExperience(in.trujobs.proto.Experience value) {
+      if (jobPostExperienceBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        jobPostExperience_ = value;
+        onChanged();
+      } else {
+        jobPostExperienceBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <code>optional .in.trujobs.proto.Experience jobPostExperience = 8;</code>
+     */
+    public Builder setJobPostExperience(
+        in.trujobs.proto.Experience.Builder builderForValue) {
+      if (jobPostExperienceBuilder_ == null) {
+        jobPostExperience_ = builderForValue.build();
+        onChanged();
+      } else {
+        jobPostExperienceBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <code>optional .in.trujobs.proto.Experience jobPostExperience = 8;</code>
+     */
+    public Builder mergeJobPostExperience(in.trujobs.proto.Experience value) {
+      if (jobPostExperienceBuilder_ == null) {
+        if (jobPostExperience_ != null) {
+          jobPostExperience_ =
+            in.trujobs.proto.Experience.newBuilder(jobPostExperience_).mergeFrom(value).buildPartial();
+        } else {
+          jobPostExperience_ = value;
+        }
+        onChanged();
+      } else {
+        jobPostExperienceBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <code>optional .in.trujobs.proto.Experience jobPostExperience = 8;</code>
+     */
+    public Builder clearJobPostExperience() {
+      if (jobPostExperienceBuilder_ == null) {
+        jobPostExperience_ = null;
+        onChanged();
+      } else {
+        jobPostExperience_ = null;
+        jobPostExperienceBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <code>optional .in.trujobs.proto.Experience jobPostExperience = 8;</code>
+     */
+    public in.trujobs.proto.Experience.Builder getJobPostExperienceBuilder() {
+      
+      onChanged();
+      return getJobPostExperienceFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>optional .in.trujobs.proto.Experience jobPostExperience = 8;</code>
+     */
+    public in.trujobs.proto.ExperienceOrBuilder getJobPostExperienceOrBuilder() {
+      if (jobPostExperienceBuilder_ != null) {
+        return jobPostExperienceBuilder_.getMessageOrBuilder();
+      } else {
+        return jobPostExperience_ == null ?
+            in.trujobs.proto.Experience.getDefaultInstance() : jobPostExperience_;
+      }
+    }
+    /**
+     * <code>optional .in.trujobs.proto.Experience jobPostExperience = 8;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        in.trujobs.proto.Experience, in.trujobs.proto.Experience.Builder, in.trujobs.proto.ExperienceOrBuilder> 
+        getJobPostExperienceFieldBuilder() {
+      if (jobPostExperienceBuilder_ == null) {
+        jobPostExperienceBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            in.trujobs.proto.Experience, in.trujobs.proto.Experience.Builder, in.trujobs.proto.ExperienceOrBuilder>(
+                getJobPostExperience(),
+                getParentForChildren(),
+                isClean());
+        jobPostExperience_ = null;
+      }
+      return jobPostExperienceBuilder_;
+    }
+
+    private in.trujobs.proto.TimeShift jobPostShift_ = null;
+    private com.google.protobuf.SingleFieldBuilder<
+        in.trujobs.proto.TimeShift, in.trujobs.proto.TimeShift.Builder, in.trujobs.proto.TimeShiftOrBuilder> jobPostShiftBuilder_;
+    /**
+     * <code>optional .in.trujobs.proto.TimeShift jobPostShift = 9;</code>
+     */
+    public boolean hasJobPostShift() {
+      return jobPostShiftBuilder_ != null || jobPostShift_ != null;
+    }
+    /**
+     * <code>optional .in.trujobs.proto.TimeShift jobPostShift = 9;</code>
+     */
+    public in.trujobs.proto.TimeShift getJobPostShift() {
+      if (jobPostShiftBuilder_ == null) {
+        return jobPostShift_ == null ? in.trujobs.proto.TimeShift.getDefaultInstance() : jobPostShift_;
+      } else {
+        return jobPostShiftBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>optional .in.trujobs.proto.TimeShift jobPostShift = 9;</code>
+     */
+    public Builder setJobPostShift(in.trujobs.proto.TimeShift value) {
+      if (jobPostShiftBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        jobPostShift_ = value;
+        onChanged();
+      } else {
+        jobPostShiftBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <code>optional .in.trujobs.proto.TimeShift jobPostShift = 9;</code>
+     */
+    public Builder setJobPostShift(
+        in.trujobs.proto.TimeShift.Builder builderForValue) {
+      if (jobPostShiftBuilder_ == null) {
+        jobPostShift_ = builderForValue.build();
+        onChanged();
+      } else {
+        jobPostShiftBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <code>optional .in.trujobs.proto.TimeShift jobPostShift = 9;</code>
+     */
+    public Builder mergeJobPostShift(in.trujobs.proto.TimeShift value) {
+      if (jobPostShiftBuilder_ == null) {
+        if (jobPostShift_ != null) {
+          jobPostShift_ =
+            in.trujobs.proto.TimeShift.newBuilder(jobPostShift_).mergeFrom(value).buildPartial();
+        } else {
+          jobPostShift_ = value;
+        }
+        onChanged();
+      } else {
+        jobPostShiftBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <code>optional .in.trujobs.proto.TimeShift jobPostShift = 9;</code>
+     */
+    public Builder clearJobPostShift() {
+      if (jobPostShiftBuilder_ == null) {
+        jobPostShift_ = null;
+        onChanged();
+      } else {
+        jobPostShift_ = null;
+        jobPostShiftBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <code>optional .in.trujobs.proto.TimeShift jobPostShift = 9;</code>
+     */
+    public in.trujobs.proto.TimeShift.Builder getJobPostShiftBuilder() {
+      
+      onChanged();
+      return getJobPostShiftFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>optional .in.trujobs.proto.TimeShift jobPostShift = 9;</code>
+     */
+    public in.trujobs.proto.TimeShiftOrBuilder getJobPostShiftOrBuilder() {
+      if (jobPostShiftBuilder_ != null) {
+        return jobPostShiftBuilder_.getMessageOrBuilder();
+      } else {
+        return jobPostShift_ == null ?
+            in.trujobs.proto.TimeShift.getDefaultInstance() : jobPostShift_;
+      }
+    }
+    /**
+     * <code>optional .in.trujobs.proto.TimeShift jobPostShift = 9;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        in.trujobs.proto.TimeShift, in.trujobs.proto.TimeShift.Builder, in.trujobs.proto.TimeShiftOrBuilder> 
+        getJobPostShiftFieldBuilder() {
+      if (jobPostShiftBuilder_ == null) {
+        jobPostShiftBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            in.trujobs.proto.TimeShift, in.trujobs.proto.TimeShift.Builder, in.trujobs.proto.TimeShiftOrBuilder>(
+                getJobPostShift(),
+                getParentForChildren(),
+                isClean());
+        jobPostShift_ = null;
+      }
+      return jobPostShiftBuilder_;
+    }
+
+    private int vacancies_ ;
+    /**
+     * <code>optional int32 vacancies = 10;</code>
+     */
+    public int getVacancies() {
+      return vacancies_;
+    }
+    /**
+     * <code>optional int32 vacancies = 10;</code>
+     */
+    public Builder setVacancies(int value) {
+      
+      vacancies_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional int32 vacancies = 10;</code>
+     */
+    public Builder clearVacancies() {
+      
+      vacancies_ = 0;
       onChanged();
       return this;
     }

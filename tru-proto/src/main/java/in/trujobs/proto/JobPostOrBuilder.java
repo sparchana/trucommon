@@ -41,4 +41,69 @@ public interface JobPostOrBuilder extends
    * <code>optional int64 jobPostMaxSalary = 5;</code>
    */
   long getJobPostMaxSalary();
+
+  /**
+   * <code>repeated .in.trujobs.proto.Locality jobPostLocality = 6;</code>
+   */
+  java.util.List<in.trujobs.proto.Locality> 
+      getJobPostLocalityList();
+  /**
+   * <code>repeated .in.trujobs.proto.Locality jobPostLocality = 6;</code>
+   */
+  in.trujobs.proto.Locality getJobPostLocality(int index);
+  /**
+   * <code>repeated .in.trujobs.proto.Locality jobPostLocality = 6;</code>
+   */
+  int getJobPostLocalityCount();
+  /**
+   * <code>repeated .in.trujobs.proto.Locality jobPostLocality = 6;</code>
+   */
+  java.util.List<? extends in.trujobs.proto.LocalityOrBuilder> 
+      getJobPostLocalityOrBuilderList();
+  /**
+   * <code>repeated .in.trujobs.proto.Locality jobPostLocality = 6;</code>
+   */
+  in.trujobs.proto.LocalityOrBuilder getJobPostLocalityOrBuilder(
+      int index);
+
+  /**
+   * <code>optional string jobPostCompanyLogo = 7;</code>
+   */
+  java.lang.String getJobPostCompanyLogo();
+  /**
+   * <code>optional string jobPostCompanyLogo = 7;</code>
+   */
+  com.google.protobuf.ByteString
+      getJobPostCompanyLogoBytes();
+
+  /**
+   * <code>optional .in.trujobs.proto.Experience jobPostExperience = 8;</code>
+   */
+  boolean hasJobPostExperience();
+  /**
+   * <code>optional .in.trujobs.proto.Experience jobPostExperience = 8;</code>
+   */
+  in.trujobs.proto.Experience getJobPostExperience();
+  /**
+   * <code>optional .in.trujobs.proto.Experience jobPostExperience = 8;</code>
+   */
+  in.trujobs.proto.ExperienceOrBuilder getJobPostExperienceOrBuilder();
+
+  /**
+   * <code>optional .in.trujobs.proto.TimeShift jobPostShift = 9;</code>
+   */
+  boolean hasJobPostShift();
+  /**
+   * <code>optional .in.trujobs.proto.TimeShift jobPostShift = 9;</code>
+   */
+  in.trujobs.proto.TimeShift getJobPostShift();
+  /**
+   * <code>optional .in.trujobs.proto.TimeShift jobPostShift = 9;</code>
+   */
+  in.trujobs.proto.TimeShiftOrBuilder getJobPostShiftOrBuilder();
+
+  /**
+   * <code>optional int32 vacancies = 10;</code>
+   */
+  int getVacancies();
 }

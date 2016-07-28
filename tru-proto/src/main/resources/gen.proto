@@ -85,5 +85,46 @@ message JobPost {
     string jobPostCompanyName = 3;
     int64 jobPostMinSalary = 4;
     int64 jobPostMaxSalary = 5;
+    repeated Locality jobPostLocality = 6;
+    string jobPostCompanyLogo = 7;
+    Experience jobPostExperience = 8;
+    TimeShift jobPostShift = 9;
+    int32 vacancies = 10;
 }
 
+message JobPostDetailRequest{
+    int64 jobPostId = 1;
+}
+
+message Locality {
+    int64 localityId = 1;
+    string localityName = 2;
+}
+
+message Experience {
+    int64 experienceId = 1;
+    string experienceType = 2;
+}
+
+message TimeShift {
+    int64 timeShiftId = 1;
+    string timeShiftName = 2;
+}
+
+message ApplyJobRequest{
+    string candidateMobile = 1;
+    int64 jobPostId = 2;
+    int64 localityId = 3;
+}
+
+message ApplyJobResponse{
+    enum Status {
+	UNKNOWN = 0;
+        SUCCESS = 1;
+        FAILURE = 2;
+        ALREADY_APPLIED = 3;
+        NO_CANDIDATE = 4;
+        NO_JOB = 5;
+    }
+    Status status = 1;
+}
