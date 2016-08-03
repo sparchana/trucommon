@@ -8,26 +8,26 @@ public interface JobRoleResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .in.trujobs.proto.JobRole jobRole = 1;</code>
+   * <code>repeated .in.trujobs.proto.JobRoleObject jobRole = 1;</code>
    */
-  java.util.List<in.trujobs.proto.JobRole> 
+  java.util.List<in.trujobs.proto.JobRoleObject> 
       getJobRoleList();
   /**
-   * <code>repeated .in.trujobs.proto.JobRole jobRole = 1;</code>
+   * <code>repeated .in.trujobs.proto.JobRoleObject jobRole = 1;</code>
    */
-  in.trujobs.proto.JobRole getJobRole(int index);
+  in.trujobs.proto.JobRoleObject getJobRole(int index);
   /**
-   * <code>repeated .in.trujobs.proto.JobRole jobRole = 1;</code>
+   * <code>repeated .in.trujobs.proto.JobRoleObject jobRole = 1;</code>
    */
   int getJobRoleCount();
   /**
-   * <code>repeated .in.trujobs.proto.JobRole jobRole = 1;</code>
+   * <code>repeated .in.trujobs.proto.JobRoleObject jobRole = 1;</code>
    */
-  java.util.List<? extends in.trujobs.proto.JobRoleOrBuilder> 
+  java.util.List<? extends in.trujobs.proto.JobRoleObjectOrBuilder> 
       getJobRoleOrBuilderList();
   /**
-   * <code>repeated .in.trujobs.proto.JobRole jobRole = 1;</code>
+   * <code>repeated .in.trujobs.proto.JobRoleObject jobRole = 1;</code>
    */
-  in.trujobs.proto.JobRoleOrBuilder getJobRoleOrBuilder(
+  in.trujobs.proto.JobRoleObjectOrBuilder getJobRoleOrBuilder(
       int index);
 }

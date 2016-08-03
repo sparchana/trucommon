@@ -4,19 +4,19 @@
 package in.trujobs.proto;
 
 /**
- * Protobuf type {@code in.trujobs.proto.TimeShift}
+ * Protobuf type {@code in.trujobs.proto.CompanyTypeObject}
  */
-public  final class TimeShift extends
+public  final class CompanyTypeObject extends
     com.google.protobuf.GeneratedMessage implements
-    // @@protoc_insertion_point(message_implements:in.trujobs.proto.TimeShift)
-    TimeShiftOrBuilder {
-  // Use TimeShift.newBuilder() to construct.
-  private TimeShift(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    // @@protoc_insertion_point(message_implements:in.trujobs.proto.CompanyTypeObject)
+    CompanyTypeObjectOrBuilder {
+  // Use CompanyTypeObject.newBuilder() to construct.
+  private CompanyTypeObject(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-  private TimeShift() {
-    timeShiftId_ = 0L;
-    timeShiftName_ = "";
+  private CompanyTypeObject() {
+    companyTypeId_ = 0L;
+    companyTypeName_ = "";
   }
 
   @java.lang.Override
@@ -24,7 +24,7 @@ public  final class TimeShift extends
   getUnknownFields() {
     return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
   }
-  private TimeShift(
+  private CompanyTypeObject(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
     this();
@@ -45,13 +45,13 @@ public  final class TimeShift extends
           }
           case 8: {
 
-            timeShiftId_ = input.readInt64();
+            companyTypeId_ = input.readInt64();
             break;
           }
           case 18: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            timeShiftName_ = s;
+            companyTypeName_ = s;
             break;
           }
         }
@@ -68,53 +68,53 @@ public  final class TimeShift extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_TimeShift_descriptor;
+    return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_CompanyTypeObject_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_TimeShift_fieldAccessorTable
+    return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_CompanyTypeObject_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            in.trujobs.proto.TimeShift.class, in.trujobs.proto.TimeShift.Builder.class);
+            in.trujobs.proto.CompanyTypeObject.class, in.trujobs.proto.CompanyTypeObject.Builder.class);
   }
 
-  public static final int TIMESHIFTID_FIELD_NUMBER = 1;
-  private long timeShiftId_;
+  public static final int COMPANYTYPEID_FIELD_NUMBER = 1;
+  private long companyTypeId_;
   /**
-   * <code>optional int64 timeShiftId = 1;</code>
+   * <code>optional int64 companyTypeId = 1;</code>
    */
-  public long getTimeShiftId() {
-    return timeShiftId_;
+  public long getCompanyTypeId() {
+    return companyTypeId_;
   }
 
-  public static final int TIMESHIFTNAME_FIELD_NUMBER = 2;
-  private volatile java.lang.Object timeShiftName_;
+  public static final int COMPANYTYPENAME_FIELD_NUMBER = 2;
+  private volatile java.lang.Object companyTypeName_;
   /**
-   * <code>optional string timeShiftName = 2;</code>
+   * <code>optional string companyTypeName = 2;</code>
    */
-  public java.lang.String getTimeShiftName() {
-    java.lang.Object ref = timeShiftName_;
+  public java.lang.String getCompanyTypeName() {
+    java.lang.Object ref = companyTypeName_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      timeShiftName_ = s;
+      companyTypeName_ = s;
       return s;
     }
   }
   /**
-   * <code>optional string timeShiftName = 2;</code>
+   * <code>optional string companyTypeName = 2;</code>
    */
   public com.google.protobuf.ByteString
-      getTimeShiftNameBytes() {
-    java.lang.Object ref = timeShiftName_;
+      getCompanyTypeNameBytes() {
+    java.lang.Object ref = companyTypeName_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      timeShiftName_ = b;
+      companyTypeName_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -133,11 +133,11 @@ public  final class TimeShift extends
 
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (timeShiftId_ != 0L) {
-      output.writeInt64(1, timeShiftId_);
+    if (companyTypeId_ != 0L) {
+      output.writeInt64(1, companyTypeId_);
     }
-    if (!getTimeShiftNameBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 2, timeShiftName_);
+    if (!getCompanyTypeNameBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 2, companyTypeName_);
     }
   }
 
@@ -146,65 +146,65 @@ public  final class TimeShift extends
     if (size != -1) return size;
 
     size = 0;
-    if (timeShiftId_ != 0L) {
+    if (companyTypeId_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(1, timeShiftId_);
+        .computeInt64Size(1, companyTypeId_);
     }
-    if (!getTimeShiftNameBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(2, timeShiftName_);
+    if (!getCompanyTypeNameBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(2, companyTypeName_);
     }
     memoizedSize = size;
     return size;
   }
 
   private static final long serialVersionUID = 0L;
-  public static in.trujobs.proto.TimeShift parseFrom(
+  public static in.trujobs.proto.CompanyTypeObject parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static in.trujobs.proto.TimeShift parseFrom(
+  public static in.trujobs.proto.CompanyTypeObject parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static in.trujobs.proto.TimeShift parseFrom(byte[] data)
+  public static in.trujobs.proto.CompanyTypeObject parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static in.trujobs.proto.TimeShift parseFrom(
+  public static in.trujobs.proto.CompanyTypeObject parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static in.trujobs.proto.TimeShift parseFrom(java.io.InputStream input)
+  public static in.trujobs.proto.CompanyTypeObject parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return PARSER.parseFrom(input);
   }
-  public static in.trujobs.proto.TimeShift parseFrom(
+  public static in.trujobs.proto.CompanyTypeObject parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return PARSER.parseFrom(input, extensionRegistry);
   }
-  public static in.trujobs.proto.TimeShift parseDelimitedFrom(java.io.InputStream input)
+  public static in.trujobs.proto.CompanyTypeObject parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return PARSER.parseDelimitedFrom(input);
   }
-  public static in.trujobs.proto.TimeShift parseDelimitedFrom(
+  public static in.trujobs.proto.CompanyTypeObject parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return PARSER.parseDelimitedFrom(input, extensionRegistry);
   }
-  public static in.trujobs.proto.TimeShift parseFrom(
+  public static in.trujobs.proto.CompanyTypeObject parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return PARSER.parseFrom(input);
   }
-  public static in.trujobs.proto.TimeShift parseFrom(
+  public static in.trujobs.proto.CompanyTypeObject parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -215,7 +215,7 @@ public  final class TimeShift extends
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(in.trujobs.proto.TimeShift prototype) {
+  public static Builder newBuilder(in.trujobs.proto.CompanyTypeObject prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   public Builder toBuilder() {
@@ -230,25 +230,25 @@ public  final class TimeShift extends
     return builder;
   }
   /**
-   * Protobuf type {@code in.trujobs.proto.TimeShift}
+   * Protobuf type {@code in.trujobs.proto.CompanyTypeObject}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:in.trujobs.proto.TimeShift)
-      in.trujobs.proto.TimeShiftOrBuilder {
+      // @@protoc_insertion_point(builder_implements:in.trujobs.proto.CompanyTypeObject)
+      in.trujobs.proto.CompanyTypeObjectOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_TimeShift_descriptor;
+      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_CompanyTypeObject_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_TimeShift_fieldAccessorTable
+      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_CompanyTypeObject_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              in.trujobs.proto.TimeShift.class, in.trujobs.proto.TimeShift.Builder.class);
+              in.trujobs.proto.CompanyTypeObject.class, in.trujobs.proto.CompanyTypeObject.Builder.class);
     }
 
-    // Construct using in.trujobs.proto.TimeShift.newBuilder()
+    // Construct using in.trujobs.proto.CompanyTypeObject.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -264,54 +264,54 @@ public  final class TimeShift extends
     }
     public Builder clear() {
       super.clear();
-      timeShiftId_ = 0L;
+      companyTypeId_ = 0L;
 
-      timeShiftName_ = "";
+      companyTypeName_ = "";
 
       return this;
     }
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_TimeShift_descriptor;
+      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_CompanyTypeObject_descriptor;
     }
 
-    public in.trujobs.proto.TimeShift getDefaultInstanceForType() {
-      return in.trujobs.proto.TimeShift.getDefaultInstance();
+    public in.trujobs.proto.CompanyTypeObject getDefaultInstanceForType() {
+      return in.trujobs.proto.CompanyTypeObject.getDefaultInstance();
     }
 
-    public in.trujobs.proto.TimeShift build() {
-      in.trujobs.proto.TimeShift result = buildPartial();
+    public in.trujobs.proto.CompanyTypeObject build() {
+      in.trujobs.proto.CompanyTypeObject result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
       return result;
     }
 
-    public in.trujobs.proto.TimeShift buildPartial() {
-      in.trujobs.proto.TimeShift result = new in.trujobs.proto.TimeShift(this);
-      result.timeShiftId_ = timeShiftId_;
-      result.timeShiftName_ = timeShiftName_;
+    public in.trujobs.proto.CompanyTypeObject buildPartial() {
+      in.trujobs.proto.CompanyTypeObject result = new in.trujobs.proto.CompanyTypeObject(this);
+      result.companyTypeId_ = companyTypeId_;
+      result.companyTypeName_ = companyTypeName_;
       onBuilt();
       return result;
     }
 
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof in.trujobs.proto.TimeShift) {
-        return mergeFrom((in.trujobs.proto.TimeShift)other);
+      if (other instanceof in.trujobs.proto.CompanyTypeObject) {
+        return mergeFrom((in.trujobs.proto.CompanyTypeObject)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(in.trujobs.proto.TimeShift other) {
-      if (other == in.trujobs.proto.TimeShift.getDefaultInstance()) return this;
-      if (other.getTimeShiftId() != 0L) {
-        setTimeShiftId(other.getTimeShiftId());
+    public Builder mergeFrom(in.trujobs.proto.CompanyTypeObject other) {
+      if (other == in.trujobs.proto.CompanyTypeObject.getDefaultInstance()) return this;
+      if (other.getCompanyTypeId() != 0L) {
+        setCompanyTypeId(other.getCompanyTypeId());
       }
-      if (!other.getTimeShiftName().isEmpty()) {
-        timeShiftName_ = other.timeShiftName_;
+      if (!other.getCompanyTypeName().isEmpty()) {
+        companyTypeName_ = other.companyTypeName_;
         onChanged();
       }
       onChanged();
@@ -326,11 +326,11 @@ public  final class TimeShift extends
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      in.trujobs.proto.TimeShift parsedMessage = null;
+      in.trujobs.proto.CompanyTypeObject parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (in.trujobs.proto.TimeShift) e.getUnfinishedMessage();
+        parsedMessage = (in.trujobs.proto.CompanyTypeObject) e.getUnfinishedMessage();
         throw e;
       } finally {
         if (parsedMessage != null) {
@@ -340,97 +340,97 @@ public  final class TimeShift extends
       return this;
     }
 
-    private long timeShiftId_ ;
+    private long companyTypeId_ ;
     /**
-     * <code>optional int64 timeShiftId = 1;</code>
+     * <code>optional int64 companyTypeId = 1;</code>
      */
-    public long getTimeShiftId() {
-      return timeShiftId_;
+    public long getCompanyTypeId() {
+      return companyTypeId_;
     }
     /**
-     * <code>optional int64 timeShiftId = 1;</code>
+     * <code>optional int64 companyTypeId = 1;</code>
      */
-    public Builder setTimeShiftId(long value) {
+    public Builder setCompanyTypeId(long value) {
       
-      timeShiftId_ = value;
+      companyTypeId_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>optional int64 timeShiftId = 1;</code>
+     * <code>optional int64 companyTypeId = 1;</code>
      */
-    public Builder clearTimeShiftId() {
+    public Builder clearCompanyTypeId() {
       
-      timeShiftId_ = 0L;
+      companyTypeId_ = 0L;
       onChanged();
       return this;
     }
 
-    private java.lang.Object timeShiftName_ = "";
+    private java.lang.Object companyTypeName_ = "";
     /**
-     * <code>optional string timeShiftName = 2;</code>
+     * <code>optional string companyTypeName = 2;</code>
      */
-    public java.lang.String getTimeShiftName() {
-      java.lang.Object ref = timeShiftName_;
+    public java.lang.String getCompanyTypeName() {
+      java.lang.Object ref = companyTypeName_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        timeShiftName_ = s;
+        companyTypeName_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>optional string timeShiftName = 2;</code>
+     * <code>optional string companyTypeName = 2;</code>
      */
     public com.google.protobuf.ByteString
-        getTimeShiftNameBytes() {
-      java.lang.Object ref = timeShiftName_;
+        getCompanyTypeNameBytes() {
+      java.lang.Object ref = companyTypeName_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        timeShiftName_ = b;
+        companyTypeName_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>optional string timeShiftName = 2;</code>
+     * <code>optional string companyTypeName = 2;</code>
      */
-    public Builder setTimeShiftName(
+    public Builder setCompanyTypeName(
         java.lang.String value) {
       if (value == null) {
     throw new NullPointerException();
   }
   
-      timeShiftName_ = value;
+      companyTypeName_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>optional string timeShiftName = 2;</code>
+     * <code>optional string companyTypeName = 2;</code>
      */
-    public Builder clearTimeShiftName() {
+    public Builder clearCompanyTypeName() {
       
-      timeShiftName_ = getDefaultInstance().getTimeShiftName();
+      companyTypeName_ = getDefaultInstance().getCompanyTypeName();
       onChanged();
       return this;
     }
     /**
-     * <code>optional string timeShiftName = 2;</code>
+     * <code>optional string companyTypeName = 2;</code>
      */
-    public Builder setTimeShiftNameBytes(
+    public Builder setCompanyTypeNameBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
       
-      timeShiftName_ = value;
+      companyTypeName_ = value;
       onChanged();
       return this;
     }
@@ -445,27 +445,27 @@ public  final class TimeShift extends
     }
 
 
-    // @@protoc_insertion_point(builder_scope:in.trujobs.proto.TimeShift)
+    // @@protoc_insertion_point(builder_scope:in.trujobs.proto.CompanyTypeObject)
   }
 
-  // @@protoc_insertion_point(class_scope:in.trujobs.proto.TimeShift)
-  private static final in.trujobs.proto.TimeShift DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:in.trujobs.proto.CompanyTypeObject)
+  private static final in.trujobs.proto.CompanyTypeObject DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new in.trujobs.proto.TimeShift();
+    DEFAULT_INSTANCE = new in.trujobs.proto.CompanyTypeObject();
   }
 
-  public static in.trujobs.proto.TimeShift getDefaultInstance() {
+  public static in.trujobs.proto.CompanyTypeObject getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<TimeShift>
-      PARSER = new com.google.protobuf.AbstractParser<TimeShift>() {
-    public TimeShift parsePartialFrom(
+  private static final com.google.protobuf.Parser<CompanyTypeObject>
+      PARSER = new com.google.protobuf.AbstractParser<CompanyTypeObject>() {
+    public CompanyTypeObject parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       try {
-        return new TimeShift(input, extensionRegistry);
+        return new CompanyTypeObject(input, extensionRegistry);
       } catch (RuntimeException e) {
         if (e.getCause() instanceof
             com.google.protobuf.InvalidProtocolBufferException) {
@@ -477,16 +477,16 @@ public  final class TimeShift extends
     }
   };
 
-  public static com.google.protobuf.Parser<TimeShift> parser() {
+  public static com.google.protobuf.Parser<CompanyTypeObject> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<TimeShift> getParserForType() {
+  public com.google.protobuf.Parser<CompanyTypeObject> getParserForType() {
     return PARSER;
   }
 
-  public in.trujobs.proto.TimeShift getDefaultInstanceForType() {
+  public in.trujobs.proto.CompanyTypeObject getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

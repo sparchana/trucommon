@@ -4,19 +4,19 @@
 package in.trujobs.proto;
 
 /**
- * Protobuf type {@code in.trujobs.proto.JobRole}
+ * Protobuf type {@code in.trujobs.proto.TimeShiftObject}
  */
-public  final class JobRole extends
+public  final class TimeShiftObject extends
     com.google.protobuf.GeneratedMessage implements
-    // @@protoc_insertion_point(message_implements:in.trujobs.proto.JobRole)
-    JobRoleOrBuilder {
-  // Use JobRole.newBuilder() to construct.
-  private JobRole(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    // @@protoc_insertion_point(message_implements:in.trujobs.proto.TimeShiftObject)
+    TimeShiftObjectOrBuilder {
+  // Use TimeShiftObject.newBuilder() to construct.
+  private TimeShiftObject(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-  private JobRole() {
-    jobRoleId_ = "";
-    jobRoleName_ = "";
+  private TimeShiftObject() {
+    timeShiftId_ = 0L;
+    timeShiftName_ = "";
   }
 
   @java.lang.Override
@@ -24,7 +24,7 @@ public  final class JobRole extends
   getUnknownFields() {
     return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
   }
-  private JobRole(
+  private TimeShiftObject(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
     this();
@@ -43,16 +43,15 @@ public  final class JobRole extends
             }
             break;
           }
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
+          case 8: {
 
-            jobRoleId_ = s;
+            timeShiftId_ = input.readInt64();
             break;
           }
           case 18: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            jobRoleName_ = s;
+            timeShiftName_ = s;
             break;
           }
         }
@@ -69,78 +68,53 @@ public  final class JobRole extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_JobRole_descriptor;
+    return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_TimeShiftObject_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_JobRole_fieldAccessorTable
+    return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_TimeShiftObject_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            in.trujobs.proto.JobRole.class, in.trujobs.proto.JobRole.Builder.class);
+            in.trujobs.proto.TimeShiftObject.class, in.trujobs.proto.TimeShiftObject.Builder.class);
   }
 
-  public static final int JOBROLEID_FIELD_NUMBER = 1;
-  private volatile java.lang.Object jobRoleId_;
+  public static final int TIMESHIFTID_FIELD_NUMBER = 1;
+  private long timeShiftId_;
   /**
-   * <code>optional string jobRoleId = 1;</code>
+   * <code>optional int64 timeShiftId = 1;</code>
    */
-  public java.lang.String getJobRoleId() {
-    java.lang.Object ref = jobRoleId_;
+  public long getTimeShiftId() {
+    return timeShiftId_;
+  }
+
+  public static final int TIMESHIFTNAME_FIELD_NUMBER = 2;
+  private volatile java.lang.Object timeShiftName_;
+  /**
+   * <code>optional string timeShiftName = 2;</code>
+   */
+  public java.lang.String getTimeShiftName() {
+    java.lang.Object ref = timeShiftName_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      jobRoleId_ = s;
+      timeShiftName_ = s;
       return s;
     }
   }
   /**
-   * <code>optional string jobRoleId = 1;</code>
+   * <code>optional string timeShiftName = 2;</code>
    */
   public com.google.protobuf.ByteString
-      getJobRoleIdBytes() {
-    java.lang.Object ref = jobRoleId_;
+      getTimeShiftNameBytes() {
+    java.lang.Object ref = timeShiftName_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      jobRoleId_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int JOBROLENAME_FIELD_NUMBER = 2;
-  private volatile java.lang.Object jobRoleName_;
-  /**
-   * <code>optional string jobRoleName = 2;</code>
-   */
-  public java.lang.String getJobRoleName() {
-    java.lang.Object ref = jobRoleName_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      jobRoleName_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>optional string jobRoleName = 2;</code>
-   */
-  public com.google.protobuf.ByteString
-      getJobRoleNameBytes() {
-    java.lang.Object ref = jobRoleName_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      jobRoleName_ = b;
+      timeShiftName_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -159,11 +133,11 @@ public  final class JobRole extends
 
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getJobRoleIdBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 1, jobRoleId_);
+    if (timeShiftId_ != 0L) {
+      output.writeInt64(1, timeShiftId_);
     }
-    if (!getJobRoleNameBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 2, jobRoleName_);
+    if (!getTimeShiftNameBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 2, timeShiftName_);
     }
   }
 
@@ -172,64 +146,65 @@ public  final class JobRole extends
     if (size != -1) return size;
 
     size = 0;
-    if (!getJobRoleIdBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(1, jobRoleId_);
+    if (timeShiftId_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(1, timeShiftId_);
     }
-    if (!getJobRoleNameBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(2, jobRoleName_);
+    if (!getTimeShiftNameBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(2, timeShiftName_);
     }
     memoizedSize = size;
     return size;
   }
 
   private static final long serialVersionUID = 0L;
-  public static in.trujobs.proto.JobRole parseFrom(
+  public static in.trujobs.proto.TimeShiftObject parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static in.trujobs.proto.JobRole parseFrom(
+  public static in.trujobs.proto.TimeShiftObject parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static in.trujobs.proto.JobRole parseFrom(byte[] data)
+  public static in.trujobs.proto.TimeShiftObject parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static in.trujobs.proto.JobRole parseFrom(
+  public static in.trujobs.proto.TimeShiftObject parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static in.trujobs.proto.JobRole parseFrom(java.io.InputStream input)
+  public static in.trujobs.proto.TimeShiftObject parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return PARSER.parseFrom(input);
   }
-  public static in.trujobs.proto.JobRole parseFrom(
+  public static in.trujobs.proto.TimeShiftObject parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return PARSER.parseFrom(input, extensionRegistry);
   }
-  public static in.trujobs.proto.JobRole parseDelimitedFrom(java.io.InputStream input)
+  public static in.trujobs.proto.TimeShiftObject parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return PARSER.parseDelimitedFrom(input);
   }
-  public static in.trujobs.proto.JobRole parseDelimitedFrom(
+  public static in.trujobs.proto.TimeShiftObject parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return PARSER.parseDelimitedFrom(input, extensionRegistry);
   }
-  public static in.trujobs.proto.JobRole parseFrom(
+  public static in.trujobs.proto.TimeShiftObject parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return PARSER.parseFrom(input);
   }
-  public static in.trujobs.proto.JobRole parseFrom(
+  public static in.trujobs.proto.TimeShiftObject parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -240,7 +215,7 @@ public  final class JobRole extends
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(in.trujobs.proto.JobRole prototype) {
+  public static Builder newBuilder(in.trujobs.proto.TimeShiftObject prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   public Builder toBuilder() {
@@ -255,25 +230,25 @@ public  final class JobRole extends
     return builder;
   }
   /**
-   * Protobuf type {@code in.trujobs.proto.JobRole}
+   * Protobuf type {@code in.trujobs.proto.TimeShiftObject}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:in.trujobs.proto.JobRole)
-      in.trujobs.proto.JobRoleOrBuilder {
+      // @@protoc_insertion_point(builder_implements:in.trujobs.proto.TimeShiftObject)
+      in.trujobs.proto.TimeShiftObjectOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_JobRole_descriptor;
+      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_TimeShiftObject_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_JobRole_fieldAccessorTable
+      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_TimeShiftObject_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              in.trujobs.proto.JobRole.class, in.trujobs.proto.JobRole.Builder.class);
+              in.trujobs.proto.TimeShiftObject.class, in.trujobs.proto.TimeShiftObject.Builder.class);
     }
 
-    // Construct using in.trujobs.proto.JobRole.newBuilder()
+    // Construct using in.trujobs.proto.TimeShiftObject.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -289,55 +264,54 @@ public  final class JobRole extends
     }
     public Builder clear() {
       super.clear();
-      jobRoleId_ = "";
+      timeShiftId_ = 0L;
 
-      jobRoleName_ = "";
+      timeShiftName_ = "";
 
       return this;
     }
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_JobRole_descriptor;
+      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_TimeShiftObject_descriptor;
     }
 
-    public in.trujobs.proto.JobRole getDefaultInstanceForType() {
-      return in.trujobs.proto.JobRole.getDefaultInstance();
+    public in.trujobs.proto.TimeShiftObject getDefaultInstanceForType() {
+      return in.trujobs.proto.TimeShiftObject.getDefaultInstance();
     }
 
-    public in.trujobs.proto.JobRole build() {
-      in.trujobs.proto.JobRole result = buildPartial();
+    public in.trujobs.proto.TimeShiftObject build() {
+      in.trujobs.proto.TimeShiftObject result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
       return result;
     }
 
-    public in.trujobs.proto.JobRole buildPartial() {
-      in.trujobs.proto.JobRole result = new in.trujobs.proto.JobRole(this);
-      result.jobRoleId_ = jobRoleId_;
-      result.jobRoleName_ = jobRoleName_;
+    public in.trujobs.proto.TimeShiftObject buildPartial() {
+      in.trujobs.proto.TimeShiftObject result = new in.trujobs.proto.TimeShiftObject(this);
+      result.timeShiftId_ = timeShiftId_;
+      result.timeShiftName_ = timeShiftName_;
       onBuilt();
       return result;
     }
 
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof in.trujobs.proto.JobRole) {
-        return mergeFrom((in.trujobs.proto.JobRole)other);
+      if (other instanceof in.trujobs.proto.TimeShiftObject) {
+        return mergeFrom((in.trujobs.proto.TimeShiftObject)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(in.trujobs.proto.JobRole other) {
-      if (other == in.trujobs.proto.JobRole.getDefaultInstance()) return this;
-      if (!other.getJobRoleId().isEmpty()) {
-        jobRoleId_ = other.jobRoleId_;
-        onChanged();
+    public Builder mergeFrom(in.trujobs.proto.TimeShiftObject other) {
+      if (other == in.trujobs.proto.TimeShiftObject.getDefaultInstance()) return this;
+      if (other.getTimeShiftId() != 0L) {
+        setTimeShiftId(other.getTimeShiftId());
       }
-      if (!other.getJobRoleName().isEmpty()) {
-        jobRoleName_ = other.jobRoleName_;
+      if (!other.getTimeShiftName().isEmpty()) {
+        timeShiftName_ = other.timeShiftName_;
         onChanged();
       }
       onChanged();
@@ -352,11 +326,11 @@ public  final class JobRole extends
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      in.trujobs.proto.JobRole parsedMessage = null;
+      in.trujobs.proto.TimeShiftObject parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (in.trujobs.proto.JobRole) e.getUnfinishedMessage();
+        parsedMessage = (in.trujobs.proto.TimeShiftObject) e.getUnfinishedMessage();
         throw e;
       } finally {
         if (parsedMessage != null) {
@@ -366,140 +340,97 @@ public  final class JobRole extends
       return this;
     }
 
-    private java.lang.Object jobRoleId_ = "";
+    private long timeShiftId_ ;
     /**
-     * <code>optional string jobRoleId = 1;</code>
+     * <code>optional int64 timeShiftId = 1;</code>
      */
-    public java.lang.String getJobRoleId() {
-      java.lang.Object ref = jobRoleId_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        jobRoleId_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
+    public long getTimeShiftId() {
+      return timeShiftId_;
     }
     /**
-     * <code>optional string jobRoleId = 1;</code>
+     * <code>optional int64 timeShiftId = 1;</code>
      */
-    public com.google.protobuf.ByteString
-        getJobRoleIdBytes() {
-      java.lang.Object ref = jobRoleId_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        jobRoleId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>optional string jobRoleId = 1;</code>
-     */
-    public Builder setJobRoleId(
-        java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
-      jobRoleId_ = value;
+    public Builder setTimeShiftId(long value) {
+      
+      timeShiftId_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>optional string jobRoleId = 1;</code>
+     * <code>optional int64 timeShiftId = 1;</code>
      */
-    public Builder clearJobRoleId() {
+    public Builder clearTimeShiftId() {
       
-      jobRoleId_ = getDefaultInstance().getJobRoleId();
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>optional string jobRoleId = 1;</code>
-     */
-    public Builder setJobRoleIdBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
-      jobRoleId_ = value;
+      timeShiftId_ = 0L;
       onChanged();
       return this;
     }
 
-    private java.lang.Object jobRoleName_ = "";
+    private java.lang.Object timeShiftName_ = "";
     /**
-     * <code>optional string jobRoleName = 2;</code>
+     * <code>optional string timeShiftName = 2;</code>
      */
-    public java.lang.String getJobRoleName() {
-      java.lang.Object ref = jobRoleName_;
+    public java.lang.String getTimeShiftName() {
+      java.lang.Object ref = timeShiftName_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        jobRoleName_ = s;
+        timeShiftName_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>optional string jobRoleName = 2;</code>
+     * <code>optional string timeShiftName = 2;</code>
      */
     public com.google.protobuf.ByteString
-        getJobRoleNameBytes() {
-      java.lang.Object ref = jobRoleName_;
+        getTimeShiftNameBytes() {
+      java.lang.Object ref = timeShiftName_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        jobRoleName_ = b;
+        timeShiftName_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>optional string jobRoleName = 2;</code>
+     * <code>optional string timeShiftName = 2;</code>
      */
-    public Builder setJobRoleName(
+    public Builder setTimeShiftName(
         java.lang.String value) {
       if (value == null) {
     throw new NullPointerException();
   }
   
-      jobRoleName_ = value;
+      timeShiftName_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>optional string jobRoleName = 2;</code>
+     * <code>optional string timeShiftName = 2;</code>
      */
-    public Builder clearJobRoleName() {
+    public Builder clearTimeShiftName() {
       
-      jobRoleName_ = getDefaultInstance().getJobRoleName();
+      timeShiftName_ = getDefaultInstance().getTimeShiftName();
       onChanged();
       return this;
     }
     /**
-     * <code>optional string jobRoleName = 2;</code>
+     * <code>optional string timeShiftName = 2;</code>
      */
-    public Builder setJobRoleNameBytes(
+    public Builder setTimeShiftNameBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
       
-      jobRoleName_ = value;
+      timeShiftName_ = value;
       onChanged();
       return this;
     }
@@ -514,27 +445,27 @@ public  final class JobRole extends
     }
 
 
-    // @@protoc_insertion_point(builder_scope:in.trujobs.proto.JobRole)
+    // @@protoc_insertion_point(builder_scope:in.trujobs.proto.TimeShiftObject)
   }
 
-  // @@protoc_insertion_point(class_scope:in.trujobs.proto.JobRole)
-  private static final in.trujobs.proto.JobRole DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:in.trujobs.proto.TimeShiftObject)
+  private static final in.trujobs.proto.TimeShiftObject DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new in.trujobs.proto.JobRole();
+    DEFAULT_INSTANCE = new in.trujobs.proto.TimeShiftObject();
   }
 
-  public static in.trujobs.proto.JobRole getDefaultInstance() {
+  public static in.trujobs.proto.TimeShiftObject getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<JobRole>
-      PARSER = new com.google.protobuf.AbstractParser<JobRole>() {
-    public JobRole parsePartialFrom(
+  private static final com.google.protobuf.Parser<TimeShiftObject>
+      PARSER = new com.google.protobuf.AbstractParser<TimeShiftObject>() {
+    public TimeShiftObject parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       try {
-        return new JobRole(input, extensionRegistry);
+        return new TimeShiftObject(input, extensionRegistry);
       } catch (RuntimeException e) {
         if (e.getCause() instanceof
             com.google.protobuf.InvalidProtocolBufferException) {
@@ -546,16 +477,16 @@ public  final class JobRole extends
     }
   };
 
-  public static com.google.protobuf.Parser<JobRole> parser() {
+  public static com.google.protobuf.Parser<TimeShiftObject> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<JobRole> getParserForType() {
+  public com.google.protobuf.Parser<TimeShiftObject> getParserForType() {
     return PARSER;
   }
 
-  public in.trujobs.proto.JobRole getDefaultInstanceForType() {
+  public in.trujobs.proto.TimeShiftObject getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

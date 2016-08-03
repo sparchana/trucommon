@@ -3,8 +3,8 @@
 
 package in.trujobs.proto;
 
-public interface ExperienceOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:in.trujobs.proto.Experience)
+public interface ExperienceObjectOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:in.trujobs.proto.ExperienceObject)
     com.google.protobuf.MessageOrBuilder {
 
   /**

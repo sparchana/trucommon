@@ -67,46 +67,63 @@ message ResetPasswordResponse {
 }
 
 message JobRoleResponse {
-    repeated JobRole jobRole = 1;
+    repeated JobRoleObject jobRole = 1;
 }
 
-message JobRole {
-    string jobRoleId = 1;
+message JobRoleObject {
+    int64 jobRoleId = 1;
     string jobRoleName = 2;
+    string jobRoleIcon = 3;
 }
 
 message JobPostResponse {
-    repeated JobPost jobPost = 1;
+    repeated JobPostObject jobPost = 1;
 }
 
-message JobPost {
+message JobPostObject {
     int64 jobPostId = 1;
     string jobPostTitle = 2;
     string jobPostCompanyName = 3;
     int64 jobPostMinSalary = 4;
     int64 jobPostMaxSalary = 5;
-    repeated Locality jobPostLocality = 6;
+    repeated LocalityObject jobPostLocality = 6;
     string jobPostCompanyLogo = 7;
-    Experience jobPostExperience = 8;
-    TimeShift jobPostShift = 9;
+    ExperienceObject jobPostExperience = 8;
+    TimeShiftObject jobPostShift = 9;
     int32 vacancies = 10;
+    string jobPostDescription = 11;
+    string jobPostIncentives = 12;
+    string jobPostMinRequirements = 13;
+    string jobPostAddress = 14;
+    int32 jobPostWorkFromHome = 15;
+    string jobPostWorkingDays = 16;
+    EducationObject education = 17;
+    JobRoleObject jobRole = 18;
+    int64 jobPostCreationMillis = 19;
+    int32 jobPostStartTime = 20;
+    int32 jobPostEndTime = 21;
 }
 
 message JobPostDetailRequest{
     int64 jobPostId = 1;
 }
 
-message Locality {
+message LocalityObject {
     int64 localityId = 1;
     string localityName = 2;
 }
 
-message Experience {
+message ExperienceObject {
     int64 experienceId = 1;
     string experienceType = 2;
 }
 
-message TimeShift {
+message EducationObject {
+    int64 educationId = 1;
+    string educationName = 2;
+}
+
+message TimeShiftObject {
     int64 timeShiftId = 1;
     string timeShiftName = 2;
 }
@@ -128,3 +145,83 @@ message ApplyJobResponse{
     }
     Status status = 1;
 }
+
+message AddJobRoleRequest {
+    string candidateMobile = 1;
+    int64 jobRolePrefOneId = 2;
+    int64 jobRolePrefTwoId = 3;
+    int64 jobRolePrefThreeId = 4;
+}
+
+message AddJobRoleResponse{
+    enum Status {
+	UNKNOWN = 0;
+        SUCCESS = 1;
+        FAILURE = 2;
+    }
+    Status status = 1;
+}
+
+message CandidateInformationRequest{
+    string candidateMobile = 1;
+}
+
+message GetCandidateInformationResponse{
+    enum Status {
+	UNKNOWN = 0;
+        SUCCESS = 1;
+        FAILURE = 2;
+    }
+    Status status = 1;
+    CandidateObject candidate = 2;
+}
+
+message CandidateObject {
+    int64 candidateId = 1;
+    string candidateFirstName = 2;
+    string candidateLastName = 3;
+    int32 candidateIsAssessed = 4;
+    int32 candidateMinProfileComplete = 5;
+    int32 candidateGender = 6;
+    string candidateMobile = 7;
+    int32 candidateAge = 8;
+    LocalityObject candidateHomelocality = 9;
+    repeated LocalityObject candidateLocationPref = 10;
+    repeated JobRoleObject candidateJobRolePref = 11;
+    TimeShiftObject candidateTimeShiftPref = 12;
+    int32 candidateTotalExperience = 13;
+}
+
+message GetJobPostDetailsRequest {
+    int64 jobPostId = 1;
+}
+
+message GetJobPostDetailsResponse {
+    enum Status {
+	UNKNOWN = 0;
+        SUCCESS = 1;
+        NO_JOB = 2;
+    }
+    Status status = 1;
+    JobPostObject jobPost = 2;
+    CompanyObject company = 3;
+}
+
+message CompanyObject {
+    int64 companyId = 1;
+    string companyName = 2;
+    string companyEmployeeCount = 3;
+    string companyWebsite = 4;
+    string companyDescription = 5;
+    string companyAddress = 6;
+    string companyLogo = 7;
+    CompanyTypeObject companyType = 9;
+    LocalityObject companyLocality = 10;
+    repeated JobPostObject companyOtherJobs = 11;
+}
+
+message CompanyTypeObject {
+    int64 companyTypeId = 1;
+    string companyTypeName = 2;	
+}
+
