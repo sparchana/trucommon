@@ -9,20 +9,90 @@ public final class Gen {
       com.google.protobuf.ExtensionRegistry registry) {
   }
   static com.google.protobuf.Descriptors.Descriptor
-    internal_static_in_trujobs_proto_AddLeadRequest_descriptor;
-  static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_in_trujobs_proto_AddLeadRequest_fieldAccessorTable;
-  static com.google.protobuf.Descriptors.Descriptor
     internal_static_in_trujobs_proto_TestMessage_descriptor;
   static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_in_trujobs_proto_TestMessage_fieldAccessorTable;
   static com.google.protobuf.Descriptors.Descriptor
-    internal_static_in_trujobs_proto_AddLeadResponse_descriptor;
+    internal_static_in_trujobs_proto_LogInRequest_descriptor;
   static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_in_trujobs_proto_AddLeadResponse_fieldAccessorTable;
+      internal_static_in_trujobs_proto_LogInRequest_fieldAccessorTable;
+  static com.google.protobuf.Descriptors.Descriptor
+    internal_static_in_trujobs_proto_LogInResponse_descriptor;
+  static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_in_trujobs_proto_LogInResponse_fieldAccessorTable;
+  static com.google.protobuf.Descriptors.Descriptor
+    internal_static_in_trujobs_proto_SignUpRequest_descriptor;
+  static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_in_trujobs_proto_SignUpRequest_fieldAccessorTable;
+  static com.google.protobuf.Descriptors.Descriptor
+    internal_static_in_trujobs_proto_SignUpResponse_descriptor;
+  static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_in_trujobs_proto_SignUpResponse_fieldAccessorTable;
+  static com.google.protobuf.Descriptors.Descriptor
+    internal_static_in_trujobs_proto_ResetPasswordRequest_descriptor;
+  static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_in_trujobs_proto_ResetPasswordRequest_fieldAccessorTable;
+  static com.google.protobuf.Descriptors.Descriptor
+    internal_static_in_trujobs_proto_ResetPasswordResponse_descriptor;
+  static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_in_trujobs_proto_ResetPasswordResponse_fieldAccessorTable;
+  static com.google.protobuf.Descriptors.Descriptor
+    internal_static_in_trujobs_proto_JobRoleResponse_descriptor;
+  static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_in_trujobs_proto_JobRoleResponse_fieldAccessorTable;
+  static com.google.protobuf.Descriptors.Descriptor
+    internal_static_in_trujobs_proto_JobRole_descriptor;
+  static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_in_trujobs_proto_JobRole_fieldAccessorTable;
+  static com.google.protobuf.Descriptors.Descriptor
+    internal_static_in_trujobs_proto_JobPostResponse_descriptor;
+  static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_in_trujobs_proto_JobPostResponse_fieldAccessorTable;
+  static com.google.protobuf.Descriptors.Descriptor
+    internal_static_in_trujobs_proto_JobPost_descriptor;
+  static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_in_trujobs_proto_JobPost_fieldAccessorTable;
+  static com.google.protobuf.Descriptors.Descriptor
+    internal_static_in_trujobs_proto_JobPostDetailRequest_descriptor;
+  static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_in_trujobs_proto_JobPostDetailRequest_fieldAccessorTable;
+  static com.google.protobuf.Descriptors.Descriptor
+    internal_static_in_trujobs_proto_Locality_descriptor;
+  static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_in_trujobs_proto_Locality_fieldAccessorTable;
+  static com.google.protobuf.Descriptors.Descriptor
+    internal_static_in_trujobs_proto_Experience_descriptor;
+  static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_in_trujobs_proto_Experience_fieldAccessorTable;
+  static com.google.protobuf.Descriptors.Descriptor
+    internal_static_in_trujobs_proto_TimeShift_descriptor;
+  static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_in_trujobs_proto_TimeShift_fieldAccessorTable;
+  static com.google.protobuf.Descriptors.Descriptor
+    internal_static_in_trujobs_proto_ApplyJobRequest_descriptor;
+  static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_in_trujobs_proto_ApplyJobRequest_fieldAccessorTable;
+  static com.google.protobuf.Descriptors.Descriptor
+    internal_static_in_trujobs_proto_ApplyJobResponse_descriptor;
+  static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_in_trujobs_proto_ApplyJobResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -32,15 +102,55 @@ public final class Gen {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\tgen.proto\022\020in.trujobs.proto\"6\n\016AddLead" +
-      "Request\022\020\n\010leadName\030\001 \001(\t\022\022\n\nleadMobile\030" +
-      "\002 \001(\t\"1\n\013TestMessage\022\020\n\010testName\030\001 \001(\t\022\020" +
-      "\n\010testPage\030\002 \001(\t\"\270\001\n\017AddLeadResponse\0228\n\006" +
-      "status\030\001 \001(\0162(.in.trujobs.proto.AddLeadR" +
-      "esponse.Status\"k\n\006Status\022\013\n\007UNKNOWN\020\000\022\013\n" +
-      "\007SUCCESS\020\001\022\013\n\007FAILURE\020\002\022\016\n\nNO_ACCOUNT\020\003\022" +
-      "\026\n\022PASSWORD_INCORRECT\020\004\022\022\n\016ALREADY_EXIST" +
-      "S\020\005B\002P\001b\006proto3"
+      "\n\tgen.proto\022\020in.trujobs.proto\"1\n\013TestMes" +
+      "sage\022\020\n\010testName\030\001 \001(\t\022\020\n\010testPage\030\002 \001(\t" +
+      "\"B\n\014LogInRequest\022\027\n\017candidateMobile\030\001 \001(" +
+      "\t\022\031\n\021candidatePassword\030\002 \001(\t\"\362\002\n\rLogInRe" +
+      "sponse\0226\n\006status\030\001 \001(\0162&.in.trujobs.prot" +
+      "o.LogInResponse.Status\022\016\n\006leadId\030\002 \001(\003\022\023" +
+      "\n\013candidateId\030\003 \001(\003\022\027\n\017candidateGender\030\004" +
+      " \001(\005\022\032\n\022candidateFirstName\030\005 \001(\t\022\031\n\021cand" +
+      "idateLastName\030\006 \001(\t\022\033\n\023candidateIsAssess" +
+      "ed\030\007 \001(\005\022\022\n\nsession_id\030\010 \001(\t\022\035\n\025session_",
+      "expiry_millis\030\t \001(\003\022\022\n\nminProfile\030\n \001(\005\"" +
+      "P\n\006Status\022\013\n\007UNKNOWN\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007F" +
+      "AILURE\020\002\022\013\n\007NO_USER\020\003\022\022\n\016WRONG_PASSWORD\020" +
+      "\004\"-\n\rSignUpRequest\022\014\n\004name\030\001 \001(\t\022\016\n\006mobi" +
+      "le\030\002 \001(\t\"\224\001\n\016SignUpResponse\0227\n\006status\030\001 " +
+      "\001(\0162\'.in.trujobs.proto.SignUpResponse.St" +
+      "atus\022\024\n\014generatedOtp\030\002 \001(\005\"3\n\006Status\022\013\n\007" +
+      "UNKNOWN\020\000\022\013\n\007SUCCESS\020\001\022\017\n\013USER_EXISTS\020\003\"" +
+      "8\n\024ResetPasswordRequest\022\016\n\006mobile\030\001 \001(\t\022" +
+      "\020\n\010password\030\002 \001(\t\"\246\001\n\025ResetPasswordRespo",
+      "nse\022>\n\006status\030\001 \001(\0162..in.trujobs.proto.R" +
+      "esetPasswordResponse.Status\022\013\n\003otp\030\002 \001(\005" +
+      "\"@\n\006Status\022\013\n\007UNKNOWN\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007" +
+      "FAILURE\020\002\022\017\n\013USER_EXISTS\020\003\"=\n\017JobRoleRes" +
+      "ponse\022*\n\007jobRole\030\001 \003(\0132\031.in.trujobs.prot" +
+      "o.JobRole\"1\n\007JobRole\022\021\n\tjobRoleId\030\001 \001(\t\022" +
+      "\023\n\013jobRoleName\030\002 \001(\t\"=\n\017JobPostResponse\022" +
+      "*\n\007jobPost\030\001 \003(\0132\031.in.trujobs.proto.JobP" +
+      "ost\"\322\002\n\007JobPost\022\021\n\tjobPostId\030\001 \001(\003\022\024\n\014jo" +
+      "bPostTitle\030\002 \001(\t\022\032\n\022jobPostCompanyName\030\003",
+      " \001(\t\022\030\n\020jobPostMinSalary\030\004 \001(\003\022\030\n\020jobPos" +
+      "tMaxSalary\030\005 \001(\003\0223\n\017jobPostLocality\030\006 \003(" +
+      "\0132\032.in.trujobs.proto.Locality\022\032\n\022jobPost" +
+      "CompanyLogo\030\007 \001(\t\0227\n\021jobPostExperience\030\010" +
+      " \001(\0132\034.in.trujobs.proto.Experience\0221\n\014jo" +
+      "bPostShift\030\t \001(\0132\033.in.trujobs.proto.Time" +
+      "Shift\022\021\n\tvacancies\030\n \001(\005\")\n\024JobPostDetai" +
+      "lRequest\022\021\n\tjobPostId\030\001 \001(\003\"4\n\010Locality\022" +
+      "\022\n\nlocalityId\030\001 \001(\003\022\024\n\014localityName\030\002 \001(" +
+      "\t\":\n\nExperience\022\024\n\014experienceId\030\001 \001(\003\022\026\n",
+      "\016experienceType\030\002 \001(\t\"7\n\tTimeShift\022\023\n\013ti" +
+      "meShiftId\030\001 \001(\003\022\025\n\rtimeShiftName\030\002 \001(\t\"Q" +
+      "\n\017ApplyJobRequest\022\027\n\017candidateMobile\030\001 \001" +
+      "(\t\022\021\n\tjobPostId\030\002 \001(\003\022\022\n\nlocalityId\030\003 \001(" +
+      "\003\"\261\001\n\020ApplyJobResponse\0229\n\006status\030\001 \001(\0162)" +
+      ".in.trujobs.proto.ApplyJobResponse.Statu" +
+      "s\"b\n\006Status\022\013\n\007UNKNOWN\020\000\022\013\n\007SUCCESS\020\001\022\013\n" +
+      "\007FAILURE\020\002\022\023\n\017ALREADY_APPLIED\020\003\022\020\n\014NO_CA" +
+      "NDIDATE\020\004\022\n\n\006NO_JOB\020\005B\002P\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -54,23 +164,107 @@ public final class Gen {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_in_trujobs_proto_AddLeadRequest_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_in_trujobs_proto_AddLeadRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_in_trujobs_proto_AddLeadRequest_descriptor,
-        new java.lang.String[] { "LeadName", "LeadMobile", });
     internal_static_in_trujobs_proto_TestMessage_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(0);
     internal_static_in_trujobs_proto_TestMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_TestMessage_descriptor,
         new java.lang.String[] { "TestName", "TestPage", });
-    internal_static_in_trujobs_proto_AddLeadResponse_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_in_trujobs_proto_AddLeadResponse_fieldAccessorTable = new
+    internal_static_in_trujobs_proto_LogInRequest_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_in_trujobs_proto_LogInRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_in_trujobs_proto_AddLeadResponse_descriptor,
+        internal_static_in_trujobs_proto_LogInRequest_descriptor,
+        new java.lang.String[] { "CandidateMobile", "CandidatePassword", });
+    internal_static_in_trujobs_proto_LogInResponse_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_in_trujobs_proto_LogInResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_in_trujobs_proto_LogInResponse_descriptor,
+        new java.lang.String[] { "Status", "LeadId", "CandidateId", "CandidateGender", "CandidateFirstName", "CandidateLastName", "CandidateIsAssessed", "SessionId", "SessionExpiryMillis", "MinProfile", });
+    internal_static_in_trujobs_proto_SignUpRequest_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_in_trujobs_proto_SignUpRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_in_trujobs_proto_SignUpRequest_descriptor,
+        new java.lang.String[] { "Name", "Mobile", });
+    internal_static_in_trujobs_proto_SignUpResponse_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_in_trujobs_proto_SignUpResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_in_trujobs_proto_SignUpResponse_descriptor,
+        new java.lang.String[] { "Status", "GeneratedOtp", });
+    internal_static_in_trujobs_proto_ResetPasswordRequest_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_in_trujobs_proto_ResetPasswordRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_in_trujobs_proto_ResetPasswordRequest_descriptor,
+        new java.lang.String[] { "Mobile", "Password", });
+    internal_static_in_trujobs_proto_ResetPasswordResponse_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_in_trujobs_proto_ResetPasswordResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_in_trujobs_proto_ResetPasswordResponse_descriptor,
+        new java.lang.String[] { "Status", "Otp", });
+    internal_static_in_trujobs_proto_JobRoleResponse_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_in_trujobs_proto_JobRoleResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_in_trujobs_proto_JobRoleResponse_descriptor,
+        new java.lang.String[] { "JobRole", });
+    internal_static_in_trujobs_proto_JobRole_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_in_trujobs_proto_JobRole_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_in_trujobs_proto_JobRole_descriptor,
+        new java.lang.String[] { "JobRoleId", "JobRoleName", });
+    internal_static_in_trujobs_proto_JobPostResponse_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_in_trujobs_proto_JobPostResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_in_trujobs_proto_JobPostResponse_descriptor,
+        new java.lang.String[] { "JobPost", });
+    internal_static_in_trujobs_proto_JobPost_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_in_trujobs_proto_JobPost_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_in_trujobs_proto_JobPost_descriptor,
+        new java.lang.String[] { "JobPostId", "JobPostTitle", "JobPostCompanyName", "JobPostMinSalary", "JobPostMaxSalary", "JobPostLocality", "JobPostCompanyLogo", "JobPostExperience", "JobPostShift", "Vacancies", });
+    internal_static_in_trujobs_proto_JobPostDetailRequest_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_in_trujobs_proto_JobPostDetailRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_in_trujobs_proto_JobPostDetailRequest_descriptor,
+        new java.lang.String[] { "JobPostId", });
+    internal_static_in_trujobs_proto_Locality_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_in_trujobs_proto_Locality_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_in_trujobs_proto_Locality_descriptor,
+        new java.lang.String[] { "LocalityId", "LocalityName", });
+    internal_static_in_trujobs_proto_Experience_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_in_trujobs_proto_Experience_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_in_trujobs_proto_Experience_descriptor,
+        new java.lang.String[] { "ExperienceId", "ExperienceType", });
+    internal_static_in_trujobs_proto_TimeShift_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_in_trujobs_proto_TimeShift_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_in_trujobs_proto_TimeShift_descriptor,
+        new java.lang.String[] { "TimeShiftId", "TimeShiftName", });
+    internal_static_in_trujobs_proto_ApplyJobRequest_descriptor =
+      getDescriptor().getMessageTypes().get(15);
+    internal_static_in_trujobs_proto_ApplyJobRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_in_trujobs_proto_ApplyJobRequest_descriptor,
+        new java.lang.String[] { "CandidateMobile", "JobPostId", "LocalityId", });
+    internal_static_in_trujobs_proto_ApplyJobResponse_descriptor =
+      getDescriptor().getMessageTypes().get(16);
+    internal_static_in_trujobs_proto_ApplyJobResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_in_trujobs_proto_ApplyJobResponse_descriptor,
         new java.lang.String[] { "Status", });
   }
 

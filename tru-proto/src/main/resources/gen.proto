@@ -4,26 +4,127 @@ package in.trujobs.proto;
 
 option java_multiple_files = true;
 
-message AddLeadRequest {
-    string leadName = 1;
-    string leadMobile = 2; 
-}
-
 message TestMessage {
 	string testName = 1;
 	string testPage = 2;
 }
 
 
-message AddLeadResponse {
+message LogInRequest {
+    string candidateMobile = 1;
+    string candidatePassword = 2; 
+}
+
+message LogInResponse {
     enum Status {
-        UNKNOWN = 0;
+	UNKNOWN = 0;
         SUCCESS = 1;
         FAILURE = 2;
-        NO_ACCOUNT = 3;
-        PASSWORD_INCORRECT = 4;
-        ALREADY_EXISTS = 5;
+        NO_USER = 3;
+        WRONG_PASSWORD = 4;
     }
     Status status = 1;
+    int64 leadId = 2;
+    int64 candidateId = 3;
+    int32 candidateGender = 4;
+    string candidateFirstName = 5;
+    string candidateLastName = 6;
+    int32 candidateIsAssessed = 7;
+    string session_id = 8;
+    int64 session_expiry_millis = 9;
+    int32 minProfile = 10;
+}
 
+message SignUpRequest {
+    string name = 1;
+    string mobile = 2; 
+}
+
+message SignUpResponse {
+    enum Status {
+	UNKNOWN = 0;
+        SUCCESS = 1;
+        USER_EXISTS = 3;
+    }
+    Status status = 1;
+    int32 generatedOtp = 2;
+}
+
+message ResetPasswordRequest {
+    string mobile = 1;
+    string password = 2;
+}
+
+message ResetPasswordResponse {
+    enum Status {
+	UNKNOWN = 0;
+        SUCCESS = 1;
+        FAILURE = 2;
+        USER_EXISTS = 3;
+	}
+    Status status = 1;
+    int32 otp = 2;
+}
+
+message JobRoleResponse {
+    repeated JobRole jobRole = 1;
+}
+
+message JobRole {
+    string jobRoleId = 1;
+    string jobRoleName = 2;
+}
+
+message JobPostResponse {
+    repeated JobPost jobPost = 1;
+}
+
+message JobPost {
+    int64 jobPostId = 1;
+    string jobPostTitle = 2;
+    string jobPostCompanyName = 3;
+    int64 jobPostMinSalary = 4;
+    int64 jobPostMaxSalary = 5;
+    repeated Locality jobPostLocality = 6;
+    string jobPostCompanyLogo = 7;
+    Experience jobPostExperience = 8;
+    TimeShift jobPostShift = 9;
+    int32 vacancies = 10;
+}
+
+message JobPostDetailRequest{
+    int64 jobPostId = 1;
+}
+
+message Locality {
+    int64 localityId = 1;
+    string localityName = 2;
+}
+
+message Experience {
+    int64 experienceId = 1;
+    string experienceType = 2;
+}
+
+message TimeShift {
+    int64 timeShiftId = 1;
+    string timeShiftName = 2;
+}
+
+message ApplyJobRequest{
+    string candidateMobile = 1;
+    int64 jobPostId = 2;
+    int64 localityId = 3;
+}
+
+message ApplyJobResponse{
+    enum Status {
+	UNKNOWN = 0;
+        SUCCESS = 1;
+        FAILURE = 2;
+        ALREADY_APPLIED = 3;
+        NO_CANDIDATE = 4;
+        NO_JOB = 5;
+    }
+    Status status = 1;
 }
