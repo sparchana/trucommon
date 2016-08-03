@@ -33,6 +33,8 @@ message LogInResponse {
     string session_id = 8;
     int64 session_expiry_millis = 9;
     int32 minProfile = 10;
+    int32 candidateJobPrefStatus = 11;
+    int32 candidateHomeLocalityStatus = 12;
 }
 
 message SignUpRequest {

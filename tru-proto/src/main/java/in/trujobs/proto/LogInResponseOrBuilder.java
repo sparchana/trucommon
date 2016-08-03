@@ -75,4 +75,14 @@ public interface LogInResponseOrBuilder extends
    * <code>optional int32 minProfile = 10;</code>
    */
   int getMinProfile();
+
+  /**
+   * <code>optional int32 candidateJobPrefStatus = 11;</code>
+   */
+  int getCandidateJobPrefStatus();
+
+  /**
+   * <code>optional int32 candidateHomeLocalityStatus = 12;</code>
+   */
+  int getCandidateHomeLocalityStatus();
 }
