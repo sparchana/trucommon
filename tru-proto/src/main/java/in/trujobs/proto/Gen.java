@@ -143,6 +143,16 @@ public final class Gen {
   static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_in_trujobs_proto_CompanyTypeObject_fieldAccessorTable;
+  static com.google.protobuf.Descriptors.Descriptor
+    internal_static_in_trujobs_proto_HomeLocalityRequest_descriptor;
+  static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_in_trujobs_proto_HomeLocalityRequest_fieldAccessorTable;
+  static com.google.protobuf.Descriptors.Descriptor
+    internal_static_in_trujobs_proto_HomeLocalityResponse_descriptor;
+  static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_in_trujobs_proto_HomeLocalityResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -257,7 +267,14 @@ public final class Gen {
       "ityObject\0229\n\020companyOtherJobs\030\013 \003(\0132\037.in" +
       ".trujobs.proto.JobPostObject\"C\n\021CompanyT" +
       "ypeObject\022\025\n\rcompanyTypeId\030\001 \001(\003\022\027\n\017comp" +
-      "anyTypeName\030\002 \001(\tB\002P\001b\006proto3"
+      "anyTypeName\030\002 \001(\t\"~\n\023HomeLocalityRequest" +
+      "\022\013\n\003lat\030\001 \001(\001\022\013\n\003lng\030\002 \001(\001\022\014\n\004name\030\003 \001(\t" +
+      "\022\017\n\007address\030\004 \001(\t\022\030\n\020candidate_mobile\030\005 " +
+      "\001(\t\022\024\n\014candidate_id\030\006 \001(\003\"\232\001\n\024HomeLocali" +
+      "tyResponse\022=\n\006status\030\001 \001(\0162-.in.trujobs.",
+      "proto.HomeLocalityResponse.Status\"C\n\006Sta" +
+      "tus\022\013\n\007UNKNOWN\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007FAILURE" +
+      "\020\002\022\022\n\016USER_NOT_FOUND\020\003B\002P\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -433,6 +450,18 @@ public final class Gen {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_CompanyTypeObject_descriptor,
         new java.lang.String[] { "CompanyTypeId", "CompanyTypeName", });
+    internal_static_in_trujobs_proto_HomeLocalityRequest_descriptor =
+      getDescriptor().getMessageTypes().get(27);
+    internal_static_in_trujobs_proto_HomeLocalityRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_in_trujobs_proto_HomeLocalityRequest_descriptor,
+        new java.lang.String[] { "Lat", "Lng", "Name", "Address", "CandidateMobile", "CandidateId", });
+    internal_static_in_trujobs_proto_HomeLocalityResponse_descriptor =
+      getDescriptor().getMessageTypes().get(28);
+    internal_static_in_trujobs_proto_HomeLocalityResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_in_trujobs_proto_HomeLocalityResponse_descriptor,
+        new java.lang.String[] { "Status", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

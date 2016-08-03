@@ -5,8 +5,8 @@ package in.trujobs.proto;
 option java_multiple_files = true;
 
 message TestMessage {
-	string testName = 1;
-	string testPage = 2;
+    string testName = 1;
+    string testPage = 2;
 }
 
 
@@ -17,7 +17,7 @@ message LogInRequest {
 
 message LogInResponse {
     enum Status {
-	UNKNOWN = 0;
+        UNKNOWN = 0;
         SUCCESS = 1;
         FAILURE = 2;
         NO_USER = 3;
@@ -42,7 +42,7 @@ message SignUpRequest {
 
 message SignUpResponse {
     enum Status {
-	UNKNOWN = 0;
+        UNKNOWN = 0;
         SUCCESS = 1;
         USER_EXISTS = 3;
     }
@@ -57,11 +57,11 @@ message ResetPasswordRequest {
 
 message ResetPasswordResponse {
     enum Status {
-	UNKNOWN = 0;
+        UNKNOWN = 0;
         SUCCESS = 1;
         FAILURE = 2;
         USER_EXISTS = 3;
-	}
+    }
     Status status = 1;
     int32 otp = 2;
 }
@@ -136,7 +136,7 @@ message ApplyJobRequest{
 
 message ApplyJobResponse{
     enum Status {
-	UNKNOWN = 0;
+        UNKNOWN = 0;
         SUCCESS = 1;
         FAILURE = 2;
         ALREADY_APPLIED = 3;
@@ -155,7 +155,7 @@ message AddJobRoleRequest {
 
 message AddJobRoleResponse{
     enum Status {
-	UNKNOWN = 0;
+        UNKNOWN = 0;
         SUCCESS = 1;
         FAILURE = 2;
     }
@@ -168,7 +168,7 @@ message CandidateInformationRequest{
 
 message GetCandidateInformationResponse{
     enum Status {
-	UNKNOWN = 0;
+        UNKNOWN = 0;
         SUCCESS = 1;
         FAILURE = 2;
     }
@@ -198,7 +198,7 @@ message GetJobPostDetailsRequest {
 
 message GetJobPostDetailsResponse {
     enum Status {
-	UNKNOWN = 0;
+        UNKNOWN = 0;
         SUCCESS = 1;
         NO_JOB = 2;
     }
@@ -222,6 +222,24 @@ message CompanyObject {
 
 message CompanyTypeObject {
     int64 companyTypeId = 1;
-    string companyTypeName = 2;	
+    string companyTypeName = 2; 
 }
 
+message HomeLocalityRequest {
+    double lat = 1;
+    double lng = 2;
+    string name = 3;
+    string address = 4;
+    string candidate_mobile = 5;
+    int64 candidate_id = 6;
+}
+
+message HomeLocalityResponse { 
+    enum Status {
+        UNKNOWN = 0;
+        SUCCESS = 1;
+        FAILURE = 2;
+        USER_NOT_FOUND = 3;
+    }
+    Status status = 1;
+}
