@@ -44,10 +44,10 @@ public  final class JobPostResponse extends
           }
           case 10: {
             if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-              jobPost_ = new java.util.ArrayList<in.trujobs.proto.JobPost>();
+              jobPost_ = new java.util.ArrayList<in.trujobs.proto.JobPostObject>();
               mutable_bitField0_ |= 0x00000001;
             }
-            jobPost_.add(input.readMessage(in.trujobs.proto.JobPost.parser(), extensionRegistry));
+            jobPost_.add(input.readMessage(in.trujobs.proto.JobPostObject.parser(), extensionRegistry));
             break;
           }
         }
@@ -78,36 +78,36 @@ public  final class JobPostResponse extends
   }
 
   public static final int JOBPOST_FIELD_NUMBER = 1;
-  private java.util.List<in.trujobs.proto.JobPost> jobPost_;
+  private java.util.List<in.trujobs.proto.JobPostObject> jobPost_;
   /**
-   * <code>repeated .in.trujobs.proto.JobPost jobPost = 1;</code>
+   * <code>repeated .in.trujobs.proto.JobPostObject jobPost = 1;</code>
    */
-  public java.util.List<in.trujobs.proto.JobPost> getJobPostList() {
+  public java.util.List<in.trujobs.proto.JobPostObject> getJobPostList() {
     return jobPost_;
   }
   /**
-   * <code>repeated .in.trujobs.proto.JobPost jobPost = 1;</code>
+   * <code>repeated .in.trujobs.proto.JobPostObject jobPost = 1;</code>
    */
-  public java.util.List<? extends in.trujobs.proto.JobPostOrBuilder> 
+  public java.util.List<? extends in.trujobs.proto.JobPostObjectOrBuilder> 
       getJobPostOrBuilderList() {
     return jobPost_;
   }
   /**
-   * <code>repeated .in.trujobs.proto.JobPost jobPost = 1;</code>
+   * <code>repeated .in.trujobs.proto.JobPostObject jobPost = 1;</code>
    */
   public int getJobPostCount() {
     return jobPost_.size();
   }
   /**
-   * <code>repeated .in.trujobs.proto.JobPost jobPost = 1;</code>
+   * <code>repeated .in.trujobs.proto.JobPostObject jobPost = 1;</code>
    */
-  public in.trujobs.proto.JobPost getJobPost(int index) {
+  public in.trujobs.proto.JobPostObject getJobPost(int index) {
     return jobPost_.get(index);
   }
   /**
-   * <code>repeated .in.trujobs.proto.JobPost jobPost = 1;</code>
+   * <code>repeated .in.trujobs.proto.JobPostObject jobPost = 1;</code>
    */
-  public in.trujobs.proto.JobPostOrBuilder getJobPostOrBuilder(
+  public in.trujobs.proto.JobPostObjectOrBuilder getJobPostOrBuilder(
       int index) {
     return jobPost_.get(index);
   }
@@ -356,22 +356,22 @@ public  final class JobPostResponse extends
     }
     private int bitField0_;
 
-    private java.util.List<in.trujobs.proto.JobPost> jobPost_ =
+    private java.util.List<in.trujobs.proto.JobPostObject> jobPost_ =
       java.util.Collections.emptyList();
     private void ensureJobPostIsMutable() {
       if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-        jobPost_ = new java.util.ArrayList<in.trujobs.proto.JobPost>(jobPost_);
+        jobPost_ = new java.util.ArrayList<in.trujobs.proto.JobPostObject>(jobPost_);
         bitField0_ |= 0x00000001;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilder<
-        in.trujobs.proto.JobPost, in.trujobs.proto.JobPost.Builder, in.trujobs.proto.JobPostOrBuilder> jobPostBuilder_;
+        in.trujobs.proto.JobPostObject, in.trujobs.proto.JobPostObject.Builder, in.trujobs.proto.JobPostObjectOrBuilder> jobPostBuilder_;
 
     /**
-     * <code>repeated .in.trujobs.proto.JobPost jobPost = 1;</code>
+     * <code>repeated .in.trujobs.proto.JobPostObject jobPost = 1;</code>
      */
-    public java.util.List<in.trujobs.proto.JobPost> getJobPostList() {
+    public java.util.List<in.trujobs.proto.JobPostObject> getJobPostList() {
       if (jobPostBuilder_ == null) {
         return java.util.Collections.unmodifiableList(jobPost_);
       } else {
@@ -379,7 +379,7 @@ public  final class JobPostResponse extends
       }
     }
     /**
-     * <code>repeated .in.trujobs.proto.JobPost jobPost = 1;</code>
+     * <code>repeated .in.trujobs.proto.JobPostObject jobPost = 1;</code>
      */
     public int getJobPostCount() {
       if (jobPostBuilder_ == null) {
@@ -389,9 +389,9 @@ public  final class JobPostResponse extends
       }
     }
     /**
-     * <code>repeated .in.trujobs.proto.JobPost jobPost = 1;</code>
+     * <code>repeated .in.trujobs.proto.JobPostObject jobPost = 1;</code>
      */
-    public in.trujobs.proto.JobPost getJobPost(int index) {
+    public in.trujobs.proto.JobPostObject getJobPost(int index) {
       if (jobPostBuilder_ == null) {
         return jobPost_.get(index);
       } else {
@@ -399,10 +399,10 @@ public  final class JobPostResponse extends
       }
     }
     /**
-     * <code>repeated .in.trujobs.proto.JobPost jobPost = 1;</code>
+     * <code>repeated .in.trujobs.proto.JobPostObject jobPost = 1;</code>
      */
     public Builder setJobPost(
-        int index, in.trujobs.proto.JobPost value) {
+        int index, in.trujobs.proto.JobPostObject value) {
       if (jobPostBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -416,10 +416,10 @@ public  final class JobPostResponse extends
       return this;
     }
     /**
-     * <code>repeated .in.trujobs.proto.JobPost jobPost = 1;</code>
+     * <code>repeated .in.trujobs.proto.JobPostObject jobPost = 1;</code>
      */
     public Builder setJobPost(
-        int index, in.trujobs.proto.JobPost.Builder builderForValue) {
+        int index, in.trujobs.proto.JobPostObject.Builder builderForValue) {
       if (jobPostBuilder_ == null) {
         ensureJobPostIsMutable();
         jobPost_.set(index, builderForValue.build());
@@ -430,9 +430,9 @@ public  final class JobPostResponse extends
       return this;
     }
     /**
-     * <code>repeated .in.trujobs.proto.JobPost jobPost = 1;</code>
+     * <code>repeated .in.trujobs.proto.JobPostObject jobPost = 1;</code>
      */
-    public Builder addJobPost(in.trujobs.proto.JobPost value) {
+    public Builder addJobPost(in.trujobs.proto.JobPostObject value) {
       if (jobPostBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -446,10 +446,10 @@ public  final class JobPostResponse extends
       return this;
     }
     /**
-     * <code>repeated .in.trujobs.proto.JobPost jobPost = 1;</code>
+     * <code>repeated .in.trujobs.proto.JobPostObject jobPost = 1;</code>
      */
     public Builder addJobPost(
-        int index, in.trujobs.proto.JobPost value) {
+        int index, in.trujobs.proto.JobPostObject value) {
       if (jobPostBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -463,10 +463,10 @@ public  final class JobPostResponse extends
       return this;
     }
     /**
-     * <code>repeated .in.trujobs.proto.JobPost jobPost = 1;</code>
+     * <code>repeated .in.trujobs.proto.JobPostObject jobPost = 1;</code>
      */
     public Builder addJobPost(
-        in.trujobs.proto.JobPost.Builder builderForValue) {
+        in.trujobs.proto.JobPostObject.Builder builderForValue) {
       if (jobPostBuilder_ == null) {
         ensureJobPostIsMutable();
         jobPost_.add(builderForValue.build());
@@ -477,10 +477,10 @@ public  final class JobPostResponse extends
       return this;
     }
     /**
-     * <code>repeated .in.trujobs.proto.JobPost jobPost = 1;</code>
+     * <code>repeated .in.trujobs.proto.JobPostObject jobPost = 1;</code>
      */
     public Builder addJobPost(
-        int index, in.trujobs.proto.JobPost.Builder builderForValue) {
+        int index, in.trujobs.proto.JobPostObject.Builder builderForValue) {
       if (jobPostBuilder_ == null) {
         ensureJobPostIsMutable();
         jobPost_.add(index, builderForValue.build());
@@ -491,10 +491,10 @@ public  final class JobPostResponse extends
       return this;
     }
     /**
-     * <code>repeated .in.trujobs.proto.JobPost jobPost = 1;</code>
+     * <code>repeated .in.trujobs.proto.JobPostObject jobPost = 1;</code>
      */
     public Builder addAllJobPost(
-        java.lang.Iterable<? extends in.trujobs.proto.JobPost> values) {
+        java.lang.Iterable<? extends in.trujobs.proto.JobPostObject> values) {
       if (jobPostBuilder_ == null) {
         ensureJobPostIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -506,7 +506,7 @@ public  final class JobPostResponse extends
       return this;
     }
     /**
-     * <code>repeated .in.trujobs.proto.JobPost jobPost = 1;</code>
+     * <code>repeated .in.trujobs.proto.JobPostObject jobPost = 1;</code>
      */
     public Builder clearJobPost() {
       if (jobPostBuilder_ == null) {
@@ -519,7 +519,7 @@ public  final class JobPostResponse extends
       return this;
     }
     /**
-     * <code>repeated .in.trujobs.proto.JobPost jobPost = 1;</code>
+     * <code>repeated .in.trujobs.proto.JobPostObject jobPost = 1;</code>
      */
     public Builder removeJobPost(int index) {
       if (jobPostBuilder_ == null) {
@@ -532,16 +532,16 @@ public  final class JobPostResponse extends
       return this;
     }
     /**
-     * <code>repeated .in.trujobs.proto.JobPost jobPost = 1;</code>
+     * <code>repeated .in.trujobs.proto.JobPostObject jobPost = 1;</code>
      */
-    public in.trujobs.proto.JobPost.Builder getJobPostBuilder(
+    public in.trujobs.proto.JobPostObject.Builder getJobPostBuilder(
         int index) {
       return getJobPostFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .in.trujobs.proto.JobPost jobPost = 1;</code>
+     * <code>repeated .in.trujobs.proto.JobPostObject jobPost = 1;</code>
      */
-    public in.trujobs.proto.JobPostOrBuilder getJobPostOrBuilder(
+    public in.trujobs.proto.JobPostObjectOrBuilder getJobPostOrBuilder(
         int index) {
       if (jobPostBuilder_ == null) {
         return jobPost_.get(index);  } else {
@@ -549,9 +549,9 @@ public  final class JobPostResponse extends
       }
     }
     /**
-     * <code>repeated .in.trujobs.proto.JobPost jobPost = 1;</code>
+     * <code>repeated .in.trujobs.proto.JobPostObject jobPost = 1;</code>
      */
-    public java.util.List<? extends in.trujobs.proto.JobPostOrBuilder> 
+    public java.util.List<? extends in.trujobs.proto.JobPostObjectOrBuilder> 
          getJobPostOrBuilderList() {
       if (jobPostBuilder_ != null) {
         return jobPostBuilder_.getMessageOrBuilderList();
@@ -560,33 +560,33 @@ public  final class JobPostResponse extends
       }
     }
     /**
-     * <code>repeated .in.trujobs.proto.JobPost jobPost = 1;</code>
+     * <code>repeated .in.trujobs.proto.JobPostObject jobPost = 1;</code>
      */
-    public in.trujobs.proto.JobPost.Builder addJobPostBuilder() {
+    public in.trujobs.proto.JobPostObject.Builder addJobPostBuilder() {
       return getJobPostFieldBuilder().addBuilder(
-          in.trujobs.proto.JobPost.getDefaultInstance());
+          in.trujobs.proto.JobPostObject.getDefaultInstance());
     }
     /**
-     * <code>repeated .in.trujobs.proto.JobPost jobPost = 1;</code>
+     * <code>repeated .in.trujobs.proto.JobPostObject jobPost = 1;</code>
      */
-    public in.trujobs.proto.JobPost.Builder addJobPostBuilder(
+    public in.trujobs.proto.JobPostObject.Builder addJobPostBuilder(
         int index) {
       return getJobPostFieldBuilder().addBuilder(
-          index, in.trujobs.proto.JobPost.getDefaultInstance());
+          index, in.trujobs.proto.JobPostObject.getDefaultInstance());
     }
     /**
-     * <code>repeated .in.trujobs.proto.JobPost jobPost = 1;</code>
+     * <code>repeated .in.trujobs.proto.JobPostObject jobPost = 1;</code>
      */
-    public java.util.List<in.trujobs.proto.JobPost.Builder> 
+    public java.util.List<in.trujobs.proto.JobPostObject.Builder> 
          getJobPostBuilderList() {
       return getJobPostFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilder<
-        in.trujobs.proto.JobPost, in.trujobs.proto.JobPost.Builder, in.trujobs.proto.JobPostOrBuilder> 
+        in.trujobs.proto.JobPostObject, in.trujobs.proto.JobPostObject.Builder, in.trujobs.proto.JobPostObjectOrBuilder> 
         getJobPostFieldBuilder() {
       if (jobPostBuilder_ == null) {
         jobPostBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-            in.trujobs.proto.JobPost, in.trujobs.proto.JobPost.Builder, in.trujobs.proto.JobPostOrBuilder>(
+            in.trujobs.proto.JobPostObject, in.trujobs.proto.JobPostObject.Builder, in.trujobs.proto.JobPostObjectOrBuilder>(
                 jobPost_,
                 ((bitField0_ & 0x00000001) == 0x00000001),
                 getParentForChildren(),

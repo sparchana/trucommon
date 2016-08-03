@@ -4,22 +4,20 @@
 package in.trujobs.proto;
 
 /**
- * Protobuf type {@code in.trujobs.proto.JobPost}
+ * Protobuf type {@code in.trujobs.proto.JobRoleObject}
  */
-public  final class JobPost extends
+public  final class JobRoleObject extends
     com.google.protobuf.GeneratedMessage implements
-    // @@protoc_insertion_point(message_implements:in.trujobs.proto.JobPost)
-    JobPostOrBuilder {
-  // Use JobPost.newBuilder() to construct.
-  private JobPost(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    // @@protoc_insertion_point(message_implements:in.trujobs.proto.JobRoleObject)
+    JobRoleObjectOrBuilder {
+  // Use JobRoleObject.newBuilder() to construct.
+  private JobRoleObject(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-  private JobPost() {
-    jobPostId_ = 0L;
-    jobPostTitle_ = "";
-    jobPostCompanyName_ = "";
-    jobPostMinSalary_ = 0L;
-    jobPostMaxSalary_ = 0L;
+  private JobRoleObject() {
+    jobRoleId_ = 0L;
+    jobRoleName_ = "";
+    jobRoleIcon_ = "";
   }
 
   @java.lang.Override
@@ -27,7 +25,7 @@ public  final class JobPost extends
   getUnknownFields() {
     return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
   }
-  private JobPost(
+  private JobRoleObject(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
     this();
@@ -48,29 +46,19 @@ public  final class JobPost extends
           }
           case 8: {
 
-            jobPostId_ = input.readInt64();
+            jobRoleId_ = input.readInt64();
             break;
           }
           case 18: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            jobPostTitle_ = s;
+            jobRoleName_ = s;
             break;
           }
           case 26: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            jobPostCompanyName_ = s;
-            break;
-          }
-          case 32: {
-
-            jobPostMinSalary_ = input.readInt64();
-            break;
-          }
-          case 40: {
-
-            jobPostMaxSalary_ = input.readInt64();
+            jobRoleIcon_ = s;
             break;
           }
         }
@@ -87,109 +75,91 @@ public  final class JobPost extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_JobPost_descriptor;
+    return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_JobRoleObject_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_JobPost_fieldAccessorTable
+    return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_JobRoleObject_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            in.trujobs.proto.JobPost.class, in.trujobs.proto.JobPost.Builder.class);
+            in.trujobs.proto.JobRoleObject.class, in.trujobs.proto.JobRoleObject.Builder.class);
   }
 
-  public static final int JOBPOSTID_FIELD_NUMBER = 1;
-  private long jobPostId_;
+  public static final int JOBROLEID_FIELD_NUMBER = 1;
+  private long jobRoleId_;
   /**
-   * <code>optional int64 jobPostId = 1;</code>
+   * <code>optional int64 jobRoleId = 1;</code>
    */
-  public long getJobPostId() {
-    return jobPostId_;
+  public long getJobRoleId() {
+    return jobRoleId_;
   }
 
-  public static final int JOBPOSTTITLE_FIELD_NUMBER = 2;
-  private volatile java.lang.Object jobPostTitle_;
+  public static final int JOBROLENAME_FIELD_NUMBER = 2;
+  private volatile java.lang.Object jobRoleName_;
   /**
-   * <code>optional string jobPostTitle = 2;</code>
+   * <code>optional string jobRoleName = 2;</code>
    */
-  public java.lang.String getJobPostTitle() {
-    java.lang.Object ref = jobPostTitle_;
+  public java.lang.String getJobRoleName() {
+    java.lang.Object ref = jobRoleName_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      jobPostTitle_ = s;
+      jobRoleName_ = s;
       return s;
     }
   }
   /**
-   * <code>optional string jobPostTitle = 2;</code>
+   * <code>optional string jobRoleName = 2;</code>
    */
   public com.google.protobuf.ByteString
-      getJobPostTitleBytes() {
-    java.lang.Object ref = jobPostTitle_;
+      getJobRoleNameBytes() {
+    java.lang.Object ref = jobRoleName_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      jobPostTitle_ = b;
+      jobRoleName_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
   }
 
-  public static final int JOBPOSTCOMPANYNAME_FIELD_NUMBER = 3;
-  private volatile java.lang.Object jobPostCompanyName_;
+  public static final int JOBROLEICON_FIELD_NUMBER = 3;
+  private volatile java.lang.Object jobRoleIcon_;
   /**
-   * <code>optional string jobPostCompanyName = 3;</code>
+   * <code>optional string jobRoleIcon = 3;</code>
    */
-  public java.lang.String getJobPostCompanyName() {
-    java.lang.Object ref = jobPostCompanyName_;
+  public java.lang.String getJobRoleIcon() {
+    java.lang.Object ref = jobRoleIcon_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      jobPostCompanyName_ = s;
+      jobRoleIcon_ = s;
       return s;
     }
   }
   /**
-   * <code>optional string jobPostCompanyName = 3;</code>
+   * <code>optional string jobRoleIcon = 3;</code>
    */
   public com.google.protobuf.ByteString
-      getJobPostCompanyNameBytes() {
-    java.lang.Object ref = jobPostCompanyName_;
+      getJobRoleIconBytes() {
+    java.lang.Object ref = jobRoleIcon_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      jobPostCompanyName_ = b;
+      jobRoleIcon_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
-  }
-
-  public static final int JOBPOSTMINSALARY_FIELD_NUMBER = 4;
-  private long jobPostMinSalary_;
-  /**
-   * <code>optional int64 jobPostMinSalary = 4;</code>
-   */
-  public long getJobPostMinSalary() {
-    return jobPostMinSalary_;
-  }
-
-  public static final int JOBPOSTMAXSALARY_FIELD_NUMBER = 5;
-  private long jobPostMaxSalary_;
-  /**
-   * <code>optional int64 jobPostMaxSalary = 5;</code>
-   */
-  public long getJobPostMaxSalary() {
-    return jobPostMaxSalary_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -204,20 +174,14 @@ public  final class JobPost extends
 
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (jobPostId_ != 0L) {
-      output.writeInt64(1, jobPostId_);
+    if (jobRoleId_ != 0L) {
+      output.writeInt64(1, jobRoleId_);
     }
-    if (!getJobPostTitleBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 2, jobPostTitle_);
+    if (!getJobRoleNameBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 2, jobRoleName_);
     }
-    if (!getJobPostCompanyNameBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 3, jobPostCompanyName_);
-    }
-    if (jobPostMinSalary_ != 0L) {
-      output.writeInt64(4, jobPostMinSalary_);
-    }
-    if (jobPostMaxSalary_ != 0L) {
-      output.writeInt64(5, jobPostMaxSalary_);
+    if (!getJobRoleIconBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 3, jobRoleIcon_);
     }
   }
 
@@ -226,76 +190,68 @@ public  final class JobPost extends
     if (size != -1) return size;
 
     size = 0;
-    if (jobPostId_ != 0L) {
+    if (jobRoleId_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(1, jobPostId_);
+        .computeInt64Size(1, jobRoleId_);
     }
-    if (!getJobPostTitleBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(2, jobPostTitle_);
+    if (!getJobRoleNameBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(2, jobRoleName_);
     }
-    if (!getJobPostCompanyNameBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(3, jobPostCompanyName_);
-    }
-    if (jobPostMinSalary_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(4, jobPostMinSalary_);
-    }
-    if (jobPostMaxSalary_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(5, jobPostMaxSalary_);
+    if (!getJobRoleIconBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(3, jobRoleIcon_);
     }
     memoizedSize = size;
     return size;
   }
 
   private static final long serialVersionUID = 0L;
-  public static in.trujobs.proto.JobPost parseFrom(
+  public static in.trujobs.proto.JobRoleObject parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static in.trujobs.proto.JobPost parseFrom(
+  public static in.trujobs.proto.JobRoleObject parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static in.trujobs.proto.JobPost parseFrom(byte[] data)
+  public static in.trujobs.proto.JobRoleObject parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static in.trujobs.proto.JobPost parseFrom(
+  public static in.trujobs.proto.JobRoleObject parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static in.trujobs.proto.JobPost parseFrom(java.io.InputStream input)
+  public static in.trujobs.proto.JobRoleObject parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return PARSER.parseFrom(input);
   }
-  public static in.trujobs.proto.JobPost parseFrom(
+  public static in.trujobs.proto.JobRoleObject parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return PARSER.parseFrom(input, extensionRegistry);
   }
-  public static in.trujobs.proto.JobPost parseDelimitedFrom(java.io.InputStream input)
+  public static in.trujobs.proto.JobRoleObject parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return PARSER.parseDelimitedFrom(input);
   }
-  public static in.trujobs.proto.JobPost parseDelimitedFrom(
+  public static in.trujobs.proto.JobRoleObject parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return PARSER.parseDelimitedFrom(input, extensionRegistry);
   }
-  public static in.trujobs.proto.JobPost parseFrom(
+  public static in.trujobs.proto.JobRoleObject parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return PARSER.parseFrom(input);
   }
-  public static in.trujobs.proto.JobPost parseFrom(
+  public static in.trujobs.proto.JobRoleObject parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -306,7 +262,7 @@ public  final class JobPost extends
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(in.trujobs.proto.JobPost prototype) {
+  public static Builder newBuilder(in.trujobs.proto.JobRoleObject prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   public Builder toBuilder() {
@@ -321,25 +277,25 @@ public  final class JobPost extends
     return builder;
   }
   /**
-   * Protobuf type {@code in.trujobs.proto.JobPost}
+   * Protobuf type {@code in.trujobs.proto.JobRoleObject}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:in.trujobs.proto.JobPost)
-      in.trujobs.proto.JobPostOrBuilder {
+      // @@protoc_insertion_point(builder_implements:in.trujobs.proto.JobRoleObject)
+      in.trujobs.proto.JobRoleObjectOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_JobPost_descriptor;
+      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_JobRoleObject_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_JobPost_fieldAccessorTable
+      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_JobRoleObject_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              in.trujobs.proto.JobPost.class, in.trujobs.proto.JobPost.Builder.class);
+              in.trujobs.proto.JobRoleObject.class, in.trujobs.proto.JobRoleObject.Builder.class);
     }
 
-    // Construct using in.trujobs.proto.JobPost.newBuilder()
+    // Construct using in.trujobs.proto.JobRoleObject.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -355,74 +311,62 @@ public  final class JobPost extends
     }
     public Builder clear() {
       super.clear();
-      jobPostId_ = 0L;
+      jobRoleId_ = 0L;
 
-      jobPostTitle_ = "";
+      jobRoleName_ = "";
 
-      jobPostCompanyName_ = "";
-
-      jobPostMinSalary_ = 0L;
-
-      jobPostMaxSalary_ = 0L;
+      jobRoleIcon_ = "";
 
       return this;
     }
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_JobPost_descriptor;
+      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_JobRoleObject_descriptor;
     }
 
-    public in.trujobs.proto.JobPost getDefaultInstanceForType() {
-      return in.trujobs.proto.JobPost.getDefaultInstance();
+    public in.trujobs.proto.JobRoleObject getDefaultInstanceForType() {
+      return in.trujobs.proto.JobRoleObject.getDefaultInstance();
     }
 
-    public in.trujobs.proto.JobPost build() {
-      in.trujobs.proto.JobPost result = buildPartial();
+    public in.trujobs.proto.JobRoleObject build() {
+      in.trujobs.proto.JobRoleObject result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
       return result;
     }
 
-    public in.trujobs.proto.JobPost buildPartial() {
-      in.trujobs.proto.JobPost result = new in.trujobs.proto.JobPost(this);
-      result.jobPostId_ = jobPostId_;
-      result.jobPostTitle_ = jobPostTitle_;
-      result.jobPostCompanyName_ = jobPostCompanyName_;
-      result.jobPostMinSalary_ = jobPostMinSalary_;
-      result.jobPostMaxSalary_ = jobPostMaxSalary_;
+    public in.trujobs.proto.JobRoleObject buildPartial() {
+      in.trujobs.proto.JobRoleObject result = new in.trujobs.proto.JobRoleObject(this);
+      result.jobRoleId_ = jobRoleId_;
+      result.jobRoleName_ = jobRoleName_;
+      result.jobRoleIcon_ = jobRoleIcon_;
       onBuilt();
       return result;
     }
 
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof in.trujobs.proto.JobPost) {
-        return mergeFrom((in.trujobs.proto.JobPost)other);
+      if (other instanceof in.trujobs.proto.JobRoleObject) {
+        return mergeFrom((in.trujobs.proto.JobRoleObject)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(in.trujobs.proto.JobPost other) {
-      if (other == in.trujobs.proto.JobPost.getDefaultInstance()) return this;
-      if (other.getJobPostId() != 0L) {
-        setJobPostId(other.getJobPostId());
+    public Builder mergeFrom(in.trujobs.proto.JobRoleObject other) {
+      if (other == in.trujobs.proto.JobRoleObject.getDefaultInstance()) return this;
+      if (other.getJobRoleId() != 0L) {
+        setJobRoleId(other.getJobRoleId());
       }
-      if (!other.getJobPostTitle().isEmpty()) {
-        jobPostTitle_ = other.jobPostTitle_;
+      if (!other.getJobRoleName().isEmpty()) {
+        jobRoleName_ = other.jobRoleName_;
         onChanged();
       }
-      if (!other.getJobPostCompanyName().isEmpty()) {
-        jobPostCompanyName_ = other.jobPostCompanyName_;
+      if (!other.getJobRoleIcon().isEmpty()) {
+        jobRoleIcon_ = other.jobRoleIcon_;
         onChanged();
-      }
-      if (other.getJobPostMinSalary() != 0L) {
-        setJobPostMinSalary(other.getJobPostMinSalary());
-      }
-      if (other.getJobPostMaxSalary() != 0L) {
-        setJobPostMaxSalary(other.getJobPostMaxSalary());
       }
       onChanged();
       return this;
@@ -436,11 +380,11 @@ public  final class JobPost extends
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      in.trujobs.proto.JobPost parsedMessage = null;
+      in.trujobs.proto.JobRoleObject parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (in.trujobs.proto.JobPost) e.getUnfinishedMessage();
+        parsedMessage = (in.trujobs.proto.JobRoleObject) e.getUnfinishedMessage();
         throw e;
       } finally {
         if (parsedMessage != null) {
@@ -450,218 +394,166 @@ public  final class JobPost extends
       return this;
     }
 
-    private long jobPostId_ ;
+    private long jobRoleId_ ;
     /**
-     * <code>optional int64 jobPostId = 1;</code>
+     * <code>optional int64 jobRoleId = 1;</code>
      */
-    public long getJobPostId() {
-      return jobPostId_;
+    public long getJobRoleId() {
+      return jobRoleId_;
     }
     /**
-     * <code>optional int64 jobPostId = 1;</code>
+     * <code>optional int64 jobRoleId = 1;</code>
      */
-    public Builder setJobPostId(long value) {
+    public Builder setJobRoleId(long value) {
       
-      jobPostId_ = value;
+      jobRoleId_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>optional int64 jobPostId = 1;</code>
+     * <code>optional int64 jobRoleId = 1;</code>
      */
-    public Builder clearJobPostId() {
+    public Builder clearJobRoleId() {
       
-      jobPostId_ = 0L;
+      jobRoleId_ = 0L;
       onChanged();
       return this;
     }
 
-    private java.lang.Object jobPostTitle_ = "";
+    private java.lang.Object jobRoleName_ = "";
     /**
-     * <code>optional string jobPostTitle = 2;</code>
+     * <code>optional string jobRoleName = 2;</code>
      */
-    public java.lang.String getJobPostTitle() {
-      java.lang.Object ref = jobPostTitle_;
+    public java.lang.String getJobRoleName() {
+      java.lang.Object ref = jobRoleName_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        jobPostTitle_ = s;
+        jobRoleName_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>optional string jobPostTitle = 2;</code>
+     * <code>optional string jobRoleName = 2;</code>
      */
     public com.google.protobuf.ByteString
-        getJobPostTitleBytes() {
-      java.lang.Object ref = jobPostTitle_;
+        getJobRoleNameBytes() {
+      java.lang.Object ref = jobRoleName_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        jobPostTitle_ = b;
+        jobRoleName_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>optional string jobPostTitle = 2;</code>
+     * <code>optional string jobRoleName = 2;</code>
      */
-    public Builder setJobPostTitle(
+    public Builder setJobRoleName(
         java.lang.String value) {
       if (value == null) {
     throw new NullPointerException();
   }
   
-      jobPostTitle_ = value;
+      jobRoleName_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>optional string jobPostTitle = 2;</code>
+     * <code>optional string jobRoleName = 2;</code>
      */
-    public Builder clearJobPostTitle() {
+    public Builder clearJobRoleName() {
       
-      jobPostTitle_ = getDefaultInstance().getJobPostTitle();
+      jobRoleName_ = getDefaultInstance().getJobRoleName();
       onChanged();
       return this;
     }
     /**
-     * <code>optional string jobPostTitle = 2;</code>
+     * <code>optional string jobRoleName = 2;</code>
      */
-    public Builder setJobPostTitleBytes(
+    public Builder setJobRoleNameBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
       
-      jobPostTitle_ = value;
+      jobRoleName_ = value;
       onChanged();
       return this;
     }
 
-    private java.lang.Object jobPostCompanyName_ = "";
+    private java.lang.Object jobRoleIcon_ = "";
     /**
-     * <code>optional string jobPostCompanyName = 3;</code>
+     * <code>optional string jobRoleIcon = 3;</code>
      */
-    public java.lang.String getJobPostCompanyName() {
-      java.lang.Object ref = jobPostCompanyName_;
+    public java.lang.String getJobRoleIcon() {
+      java.lang.Object ref = jobRoleIcon_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        jobPostCompanyName_ = s;
+        jobRoleIcon_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>optional string jobPostCompanyName = 3;</code>
+     * <code>optional string jobRoleIcon = 3;</code>
      */
     public com.google.protobuf.ByteString
-        getJobPostCompanyNameBytes() {
-      java.lang.Object ref = jobPostCompanyName_;
+        getJobRoleIconBytes() {
+      java.lang.Object ref = jobRoleIcon_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        jobPostCompanyName_ = b;
+        jobRoleIcon_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>optional string jobPostCompanyName = 3;</code>
+     * <code>optional string jobRoleIcon = 3;</code>
      */
-    public Builder setJobPostCompanyName(
+    public Builder setJobRoleIcon(
         java.lang.String value) {
       if (value == null) {
     throw new NullPointerException();
   }
   
-      jobPostCompanyName_ = value;
+      jobRoleIcon_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>optional string jobPostCompanyName = 3;</code>
+     * <code>optional string jobRoleIcon = 3;</code>
      */
-    public Builder clearJobPostCompanyName() {
+    public Builder clearJobRoleIcon() {
       
-      jobPostCompanyName_ = getDefaultInstance().getJobPostCompanyName();
+      jobRoleIcon_ = getDefaultInstance().getJobRoleIcon();
       onChanged();
       return this;
     }
     /**
-     * <code>optional string jobPostCompanyName = 3;</code>
+     * <code>optional string jobRoleIcon = 3;</code>
      */
-    public Builder setJobPostCompanyNameBytes(
+    public Builder setJobRoleIconBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
       
-      jobPostCompanyName_ = value;
-      onChanged();
-      return this;
-    }
-
-    private long jobPostMinSalary_ ;
-    /**
-     * <code>optional int64 jobPostMinSalary = 4;</code>
-     */
-    public long getJobPostMinSalary() {
-      return jobPostMinSalary_;
-    }
-    /**
-     * <code>optional int64 jobPostMinSalary = 4;</code>
-     */
-    public Builder setJobPostMinSalary(long value) {
-      
-      jobPostMinSalary_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>optional int64 jobPostMinSalary = 4;</code>
-     */
-    public Builder clearJobPostMinSalary() {
-      
-      jobPostMinSalary_ = 0L;
-      onChanged();
-      return this;
-    }
-
-    private long jobPostMaxSalary_ ;
-    /**
-     * <code>optional int64 jobPostMaxSalary = 5;</code>
-     */
-    public long getJobPostMaxSalary() {
-      return jobPostMaxSalary_;
-    }
-    /**
-     * <code>optional int64 jobPostMaxSalary = 5;</code>
-     */
-    public Builder setJobPostMaxSalary(long value) {
-      
-      jobPostMaxSalary_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>optional int64 jobPostMaxSalary = 5;</code>
-     */
-    public Builder clearJobPostMaxSalary() {
-      
-      jobPostMaxSalary_ = 0L;
+      jobRoleIcon_ = value;
       onChanged();
       return this;
     }
@@ -676,27 +568,27 @@ public  final class JobPost extends
     }
 
 
-    // @@protoc_insertion_point(builder_scope:in.trujobs.proto.JobPost)
+    // @@protoc_insertion_point(builder_scope:in.trujobs.proto.JobRoleObject)
   }
 
-  // @@protoc_insertion_point(class_scope:in.trujobs.proto.JobPost)
-  private static final in.trujobs.proto.JobPost DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:in.trujobs.proto.JobRoleObject)
+  private static final in.trujobs.proto.JobRoleObject DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new in.trujobs.proto.JobPost();
+    DEFAULT_INSTANCE = new in.trujobs.proto.JobRoleObject();
   }
 
-  public static in.trujobs.proto.JobPost getDefaultInstance() {
+  public static in.trujobs.proto.JobRoleObject getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<JobPost>
-      PARSER = new com.google.protobuf.AbstractParser<JobPost>() {
-    public JobPost parsePartialFrom(
+  private static final com.google.protobuf.Parser<JobRoleObject>
+      PARSER = new com.google.protobuf.AbstractParser<JobRoleObject>() {
+    public JobRoleObject parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       try {
-        return new JobPost(input, extensionRegistry);
+        return new JobRoleObject(input, extensionRegistry);
       } catch (RuntimeException e) {
         if (e.getCause() instanceof
             com.google.protobuf.InvalidProtocolBufferException) {
@@ -708,16 +600,16 @@ public  final class JobPost extends
     }
   };
 
-  public static com.google.protobuf.Parser<JobPost> parser() {
+  public static com.google.protobuf.Parser<JobRoleObject> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<JobPost> getParserForType() {
+  public com.google.protobuf.Parser<JobRoleObject> getParserForType() {
     return PARSER;
   }
 
-  public in.trujobs.proto.JobPost getDefaultInstanceForType() {
+  public in.trujobs.proto.JobRoleObject getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 
