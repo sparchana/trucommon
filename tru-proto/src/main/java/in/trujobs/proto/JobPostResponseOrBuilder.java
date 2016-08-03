@@ -8,26 +8,26 @@ public interface JobPostResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .in.trujobs.proto.JobPost jobPost = 1;</code>
+   * <code>repeated .in.trujobs.proto.JobPostObject jobPost = 1;</code>
    */
-  java.util.List<in.trujobs.proto.JobPost> 
+  java.util.List<in.trujobs.proto.JobPostObject> 
       getJobPostList();
   /**
-   * <code>repeated .in.trujobs.proto.JobPost jobPost = 1;</code>
+   * <code>repeated .in.trujobs.proto.JobPostObject jobPost = 1;</code>
    */
-  in.trujobs.proto.JobPost getJobPost(int index);
+  in.trujobs.proto.JobPostObject getJobPost(int index);
   /**
-   * <code>repeated .in.trujobs.proto.JobPost jobPost = 1;</code>
+   * <code>repeated .in.trujobs.proto.JobPostObject jobPost = 1;</code>
    */
   int getJobPostCount();
   /**
-   * <code>repeated .in.trujobs.proto.JobPost jobPost = 1;</code>
+   * <code>repeated .in.trujobs.proto.JobPostObject jobPost = 1;</code>
    */
-  java.util.List<? extends in.trujobs.proto.JobPostOrBuilder> 
+  java.util.List<? extends in.trujobs.proto.JobPostObjectOrBuilder> 
       getJobPostOrBuilderList();
   /**
-   * <code>repeated .in.trujobs.proto.JobPost jobPost = 1;</code>
+   * <code>repeated .in.trujobs.proto.JobPostObject jobPost = 1;</code>
    */
-  in.trujobs.proto.JobPostOrBuilder getJobPostOrBuilder(
+  in.trujobs.proto.JobPostObjectOrBuilder getJobPostOrBuilder(
       int index);
 }

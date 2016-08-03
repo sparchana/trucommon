@@ -3,8 +3,8 @@
 
 package in.trujobs.proto;
 
-public interface TimeShiftOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:in.trujobs.proto.TimeShift)
+public interface TimeShiftObjectOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:in.trujobs.proto.TimeShiftObject)
     com.google.protobuf.MessageOrBuilder {
 
   /**

@@ -4,17 +4,17 @@
 package in.trujobs.proto;
 
 /**
- * Protobuf type {@code in.trujobs.proto.Locality}
+ * Protobuf type {@code in.trujobs.proto.LocalityObject}
  */
-public  final class Locality extends
+public  final class LocalityObject extends
     com.google.protobuf.GeneratedMessage implements
-    // @@protoc_insertion_point(message_implements:in.trujobs.proto.Locality)
-    LocalityOrBuilder {
-  // Use Locality.newBuilder() to construct.
-  private Locality(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    // @@protoc_insertion_point(message_implements:in.trujobs.proto.LocalityObject)
+    LocalityObjectOrBuilder {
+  // Use LocalityObject.newBuilder() to construct.
+  private LocalityObject(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-  private Locality() {
+  private LocalityObject() {
     localityId_ = 0L;
     localityName_ = "";
   }
@@ -24,7 +24,7 @@ public  final class Locality extends
   getUnknownFields() {
     return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
   }
-  private Locality(
+  private LocalityObject(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
     this();
@@ -68,14 +68,14 @@ public  final class Locality extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_Locality_descriptor;
+    return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_LocalityObject_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_Locality_fieldAccessorTable
+    return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_LocalityObject_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            in.trujobs.proto.Locality.class, in.trujobs.proto.Locality.Builder.class);
+            in.trujobs.proto.LocalityObject.class, in.trujobs.proto.LocalityObject.Builder.class);
   }
 
   public static final int LOCALITYID_FIELD_NUMBER = 1;
@@ -158,53 +158,53 @@ public  final class Locality extends
   }
 
   private static final long serialVersionUID = 0L;
-  public static in.trujobs.proto.Locality parseFrom(
+  public static in.trujobs.proto.LocalityObject parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static in.trujobs.proto.Locality parseFrom(
+  public static in.trujobs.proto.LocalityObject parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static in.trujobs.proto.Locality parseFrom(byte[] data)
+  public static in.trujobs.proto.LocalityObject parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static in.trujobs.proto.Locality parseFrom(
+  public static in.trujobs.proto.LocalityObject parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static in.trujobs.proto.Locality parseFrom(java.io.InputStream input)
+  public static in.trujobs.proto.LocalityObject parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return PARSER.parseFrom(input);
   }
-  public static in.trujobs.proto.Locality parseFrom(
+  public static in.trujobs.proto.LocalityObject parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return PARSER.parseFrom(input, extensionRegistry);
   }
-  public static in.trujobs.proto.Locality parseDelimitedFrom(java.io.InputStream input)
+  public static in.trujobs.proto.LocalityObject parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return PARSER.parseDelimitedFrom(input);
   }
-  public static in.trujobs.proto.Locality parseDelimitedFrom(
+  public static in.trujobs.proto.LocalityObject parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return PARSER.parseDelimitedFrom(input, extensionRegistry);
   }
-  public static in.trujobs.proto.Locality parseFrom(
+  public static in.trujobs.proto.LocalityObject parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return PARSER.parseFrom(input);
   }
-  public static in.trujobs.proto.Locality parseFrom(
+  public static in.trujobs.proto.LocalityObject parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -215,7 +215,7 @@ public  final class Locality extends
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(in.trujobs.proto.Locality prototype) {
+  public static Builder newBuilder(in.trujobs.proto.LocalityObject prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   public Builder toBuilder() {
@@ -230,25 +230,25 @@ public  final class Locality extends
     return builder;
   }
   /**
-   * Protobuf type {@code in.trujobs.proto.Locality}
+   * Protobuf type {@code in.trujobs.proto.LocalityObject}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:in.trujobs.proto.Locality)
-      in.trujobs.proto.LocalityOrBuilder {
+      // @@protoc_insertion_point(builder_implements:in.trujobs.proto.LocalityObject)
+      in.trujobs.proto.LocalityObjectOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_Locality_descriptor;
+      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_LocalityObject_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_Locality_fieldAccessorTable
+      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_LocalityObject_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              in.trujobs.proto.Locality.class, in.trujobs.proto.Locality.Builder.class);
+              in.trujobs.proto.LocalityObject.class, in.trujobs.proto.LocalityObject.Builder.class);
     }
 
-    // Construct using in.trujobs.proto.Locality.newBuilder()
+    // Construct using in.trujobs.proto.LocalityObject.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -273,23 +273,23 @@ public  final class Locality extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_Locality_descriptor;
+      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_LocalityObject_descriptor;
     }
 
-    public in.trujobs.proto.Locality getDefaultInstanceForType() {
-      return in.trujobs.proto.Locality.getDefaultInstance();
+    public in.trujobs.proto.LocalityObject getDefaultInstanceForType() {
+      return in.trujobs.proto.LocalityObject.getDefaultInstance();
     }
 
-    public in.trujobs.proto.Locality build() {
-      in.trujobs.proto.Locality result = buildPartial();
+    public in.trujobs.proto.LocalityObject build() {
+      in.trujobs.proto.LocalityObject result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
       return result;
     }
 
-    public in.trujobs.proto.Locality buildPartial() {
-      in.trujobs.proto.Locality result = new in.trujobs.proto.Locality(this);
+    public in.trujobs.proto.LocalityObject buildPartial() {
+      in.trujobs.proto.LocalityObject result = new in.trujobs.proto.LocalityObject(this);
       result.localityId_ = localityId_;
       result.localityName_ = localityName_;
       onBuilt();
@@ -297,16 +297,16 @@ public  final class Locality extends
     }
 
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof in.trujobs.proto.Locality) {
-        return mergeFrom((in.trujobs.proto.Locality)other);
+      if (other instanceof in.trujobs.proto.LocalityObject) {
+        return mergeFrom((in.trujobs.proto.LocalityObject)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(in.trujobs.proto.Locality other) {
-      if (other == in.trujobs.proto.Locality.getDefaultInstance()) return this;
+    public Builder mergeFrom(in.trujobs.proto.LocalityObject other) {
+      if (other == in.trujobs.proto.LocalityObject.getDefaultInstance()) return this;
       if (other.getLocalityId() != 0L) {
         setLocalityId(other.getLocalityId());
       }
@@ -326,11 +326,11 @@ public  final class Locality extends
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      in.trujobs.proto.Locality parsedMessage = null;
+      in.trujobs.proto.LocalityObject parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (in.trujobs.proto.Locality) e.getUnfinishedMessage();
+        parsedMessage = (in.trujobs.proto.LocalityObject) e.getUnfinishedMessage();
         throw e;
       } finally {
         if (parsedMessage != null) {
@@ -445,27 +445,27 @@ public  final class Locality extends
     }
 
 
-    // @@protoc_insertion_point(builder_scope:in.trujobs.proto.Locality)
+    // @@protoc_insertion_point(builder_scope:in.trujobs.proto.LocalityObject)
   }
 
-  // @@protoc_insertion_point(class_scope:in.trujobs.proto.Locality)
-  private static final in.trujobs.proto.Locality DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:in.trujobs.proto.LocalityObject)
+  private static final in.trujobs.proto.LocalityObject DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new in.trujobs.proto.Locality();
+    DEFAULT_INSTANCE = new in.trujobs.proto.LocalityObject();
   }
 
-  public static in.trujobs.proto.Locality getDefaultInstance() {
+  public static in.trujobs.proto.LocalityObject getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<Locality>
-      PARSER = new com.google.protobuf.AbstractParser<Locality>() {
-    public Locality parsePartialFrom(
+  private static final com.google.protobuf.Parser<LocalityObject>
+      PARSER = new com.google.protobuf.AbstractParser<LocalityObject>() {
+    public LocalityObject parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       try {
-        return new Locality(input, extensionRegistry);
+        return new LocalityObject(input, extensionRegistry);
       } catch (RuntimeException e) {
         if (e.getCause() instanceof
             com.google.protobuf.InvalidProtocolBufferException) {
@@ -477,16 +477,16 @@ public  final class Locality extends
     }
   };
 
-  public static com.google.protobuf.Parser<Locality> parser() {
+  public static com.google.protobuf.Parser<LocalityObject> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<Locality> getParserForType() {
+  public com.google.protobuf.Parser<LocalityObject> getParserForType() {
     return PARSER;
   }
 
-  public in.trujobs.proto.Locality getDefaultInstanceForType() {
+  public in.trujobs.proto.LocalityObject getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

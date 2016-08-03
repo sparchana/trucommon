@@ -3,8 +3,8 @@
 
 package in.trujobs.proto;
 
-public interface LocalityOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:in.trujobs.proto.Locality)
+public interface LocalityObjectOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:in.trujobs.proto.LocalityObject)
     com.google.protobuf.MessageOrBuilder {
 
   /**

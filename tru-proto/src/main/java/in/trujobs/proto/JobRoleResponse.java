@@ -44,10 +44,10 @@ public  final class JobRoleResponse extends
           }
           case 10: {
             if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-              jobRole_ = new java.util.ArrayList<in.trujobs.proto.JobRole>();
+              jobRole_ = new java.util.ArrayList<in.trujobs.proto.JobRoleObject>();
               mutable_bitField0_ |= 0x00000001;
             }
-            jobRole_.add(input.readMessage(in.trujobs.proto.JobRole.parser(), extensionRegistry));
+            jobRole_.add(input.readMessage(in.trujobs.proto.JobRoleObject.parser(), extensionRegistry));
             break;
           }
         }
@@ -78,36 +78,36 @@ public  final class JobRoleResponse extends
   }
 
   public static final int JOBROLE_FIELD_NUMBER = 1;
-  private java.util.List<in.trujobs.proto.JobRole> jobRole_;
+  private java.util.List<in.trujobs.proto.JobRoleObject> jobRole_;
   /**
-   * <code>repeated .in.trujobs.proto.JobRole jobRole = 1;</code>
+   * <code>repeated .in.trujobs.proto.JobRoleObject jobRole = 1;</code>
    */
-  public java.util.List<in.trujobs.proto.JobRole> getJobRoleList() {
+  public java.util.List<in.trujobs.proto.JobRoleObject> getJobRoleList() {
     return jobRole_;
   }
   /**
-   * <code>repeated .in.trujobs.proto.JobRole jobRole = 1;</code>
+   * <code>repeated .in.trujobs.proto.JobRoleObject jobRole = 1;</code>
    */
-  public java.util.List<? extends in.trujobs.proto.JobRoleOrBuilder> 
+  public java.util.List<? extends in.trujobs.proto.JobRoleObjectOrBuilder> 
       getJobRoleOrBuilderList() {
     return jobRole_;
   }
   /**
-   * <code>repeated .in.trujobs.proto.JobRole jobRole = 1;</code>
+   * <code>repeated .in.trujobs.proto.JobRoleObject jobRole = 1;</code>
    */
   public int getJobRoleCount() {
     return jobRole_.size();
   }
   /**
-   * <code>repeated .in.trujobs.proto.JobRole jobRole = 1;</code>
+   * <code>repeated .in.trujobs.proto.JobRoleObject jobRole = 1;</code>
    */
-  public in.trujobs.proto.JobRole getJobRole(int index) {
+  public in.trujobs.proto.JobRoleObject getJobRole(int index) {
     return jobRole_.get(index);
   }
   /**
-   * <code>repeated .in.trujobs.proto.JobRole jobRole = 1;</code>
+   * <code>repeated .in.trujobs.proto.JobRoleObject jobRole = 1;</code>
    */
-  public in.trujobs.proto.JobRoleOrBuilder getJobRoleOrBuilder(
+  public in.trujobs.proto.JobRoleObjectOrBuilder getJobRoleOrBuilder(
       int index) {
     return jobRole_.get(index);
   }
@@ -356,22 +356,22 @@ public  final class JobRoleResponse extends
     }
     private int bitField0_;
 
-    private java.util.List<in.trujobs.proto.JobRole> jobRole_ =
+    private java.util.List<in.trujobs.proto.JobRoleObject> jobRole_ =
       java.util.Collections.emptyList();
     private void ensureJobRoleIsMutable() {
       if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-        jobRole_ = new java.util.ArrayList<in.trujobs.proto.JobRole>(jobRole_);
+        jobRole_ = new java.util.ArrayList<in.trujobs.proto.JobRoleObject>(jobRole_);
         bitField0_ |= 0x00000001;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilder<
-        in.trujobs.proto.JobRole, in.trujobs.proto.JobRole.Builder, in.trujobs.proto.JobRoleOrBuilder> jobRoleBuilder_;
+        in.trujobs.proto.JobRoleObject, in.trujobs.proto.JobRoleObject.Builder, in.trujobs.proto.JobRoleObjectOrBuilder> jobRoleBuilder_;
 
     /**
-     * <code>repeated .in.trujobs.proto.JobRole jobRole = 1;</code>
+     * <code>repeated .in.trujobs.proto.JobRoleObject jobRole = 1;</code>
      */
-    public java.util.List<in.trujobs.proto.JobRole> getJobRoleList() {
+    public java.util.List<in.trujobs.proto.JobRoleObject> getJobRoleList() {
       if (jobRoleBuilder_ == null) {
         return java.util.Collections.unmodifiableList(jobRole_);
       } else {
@@ -379,7 +379,7 @@ public  final class JobRoleResponse extends
       }
     }
     /**
-     * <code>repeated .in.trujobs.proto.JobRole jobRole = 1;</code>
+     * <code>repeated .in.trujobs.proto.JobRoleObject jobRole = 1;</code>
      */
     public int getJobRoleCount() {
       if (jobRoleBuilder_ == null) {
@@ -389,9 +389,9 @@ public  final class JobRoleResponse extends
       }
     }
     /**
-     * <code>repeated .in.trujobs.proto.JobRole jobRole = 1;</code>
+     * <code>repeated .in.trujobs.proto.JobRoleObject jobRole = 1;</code>
      */
-    public in.trujobs.proto.JobRole getJobRole(int index) {
+    public in.trujobs.proto.JobRoleObject getJobRole(int index) {
       if (jobRoleBuilder_ == null) {
         return jobRole_.get(index);
       } else {
@@ -399,10 +399,10 @@ public  final class JobRoleResponse extends
       }
     }
     /**
-     * <code>repeated .in.trujobs.proto.JobRole jobRole = 1;</code>
+     * <code>repeated .in.trujobs.proto.JobRoleObject jobRole = 1;</code>
      */
     public Builder setJobRole(
-        int index, in.trujobs.proto.JobRole value) {
+        int index, in.trujobs.proto.JobRoleObject value) {
       if (jobRoleBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -416,10 +416,10 @@ public  final class JobRoleResponse extends
       return this;
     }
     /**
-     * <code>repeated .in.trujobs.proto.JobRole jobRole = 1;</code>
+     * <code>repeated .in.trujobs.proto.JobRoleObject jobRole = 1;</code>
      */
     public Builder setJobRole(
-        int index, in.trujobs.proto.JobRole.Builder builderForValue) {
+        int index, in.trujobs.proto.JobRoleObject.Builder builderForValue) {
       if (jobRoleBuilder_ == null) {
         ensureJobRoleIsMutable();
         jobRole_.set(index, builderForValue.build());
@@ -430,9 +430,9 @@ public  final class JobRoleResponse extends
       return this;
     }
     /**
-     * <code>repeated .in.trujobs.proto.JobRole jobRole = 1;</code>
+     * <code>repeated .in.trujobs.proto.JobRoleObject jobRole = 1;</code>
      */
-    public Builder addJobRole(in.trujobs.proto.JobRole value) {
+    public Builder addJobRole(in.trujobs.proto.JobRoleObject value) {
       if (jobRoleBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -446,10 +446,10 @@ public  final class JobRoleResponse extends
       return this;
     }
     /**
-     * <code>repeated .in.trujobs.proto.JobRole jobRole = 1;</code>
+     * <code>repeated .in.trujobs.proto.JobRoleObject jobRole = 1;</code>
      */
     public Builder addJobRole(
-        int index, in.trujobs.proto.JobRole value) {
+        int index, in.trujobs.proto.JobRoleObject value) {
       if (jobRoleBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -463,10 +463,10 @@ public  final class JobRoleResponse extends
       return this;
     }
     /**
-     * <code>repeated .in.trujobs.proto.JobRole jobRole = 1;</code>
+     * <code>repeated .in.trujobs.proto.JobRoleObject jobRole = 1;</code>
      */
     public Builder addJobRole(
-        in.trujobs.proto.JobRole.Builder builderForValue) {
+        in.trujobs.proto.JobRoleObject.Builder builderForValue) {
       if (jobRoleBuilder_ == null) {
         ensureJobRoleIsMutable();
         jobRole_.add(builderForValue.build());
@@ -477,10 +477,10 @@ public  final class JobRoleResponse extends
       return this;
     }
     /**
-     * <code>repeated .in.trujobs.proto.JobRole jobRole = 1;</code>
+     * <code>repeated .in.trujobs.proto.JobRoleObject jobRole = 1;</code>
      */
     public Builder addJobRole(
-        int index, in.trujobs.proto.JobRole.Builder builderForValue) {
+        int index, in.trujobs.proto.JobRoleObject.Builder builderForValue) {
       if (jobRoleBuilder_ == null) {
         ensureJobRoleIsMutable();
         jobRole_.add(index, builderForValue.build());
@@ -491,10 +491,10 @@ public  final class JobRoleResponse extends
       return this;
     }
     /**
-     * <code>repeated .in.trujobs.proto.JobRole jobRole = 1;</code>
+     * <code>repeated .in.trujobs.proto.JobRoleObject jobRole = 1;</code>
      */
     public Builder addAllJobRole(
-        java.lang.Iterable<? extends in.trujobs.proto.JobRole> values) {
+        java.lang.Iterable<? extends in.trujobs.proto.JobRoleObject> values) {
       if (jobRoleBuilder_ == null) {
         ensureJobRoleIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -506,7 +506,7 @@ public  final class JobRoleResponse extends
       return this;
     }
     /**
-     * <code>repeated .in.trujobs.proto.JobRole jobRole = 1;</code>
+     * <code>repeated .in.trujobs.proto.JobRoleObject jobRole = 1;</code>
      */
     public Builder clearJobRole() {
       if (jobRoleBuilder_ == null) {
@@ -519,7 +519,7 @@ public  final class JobRoleResponse extends
       return this;
     }
     /**
-     * <code>repeated .in.trujobs.proto.JobRole jobRole = 1;</code>
+     * <code>repeated .in.trujobs.proto.JobRoleObject jobRole = 1;</code>
      */
     public Builder removeJobRole(int index) {
       if (jobRoleBuilder_ == null) {
@@ -532,16 +532,16 @@ public  final class JobRoleResponse extends
       return this;
     }
     /**
-     * <code>repeated .in.trujobs.proto.JobRole jobRole = 1;</code>
+     * <code>repeated .in.trujobs.proto.JobRoleObject jobRole = 1;</code>
      */
-    public in.trujobs.proto.JobRole.Builder getJobRoleBuilder(
+    public in.trujobs.proto.JobRoleObject.Builder getJobRoleBuilder(
         int index) {
       return getJobRoleFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .in.trujobs.proto.JobRole jobRole = 1;</code>
+     * <code>repeated .in.trujobs.proto.JobRoleObject jobRole = 1;</code>
      */
-    public in.trujobs.proto.JobRoleOrBuilder getJobRoleOrBuilder(
+    public in.trujobs.proto.JobRoleObjectOrBuilder getJobRoleOrBuilder(
         int index) {
       if (jobRoleBuilder_ == null) {
         return jobRole_.get(index);  } else {
@@ -549,9 +549,9 @@ public  final class JobRoleResponse extends
       }
     }
     /**
-     * <code>repeated .in.trujobs.proto.JobRole jobRole = 1;</code>
+     * <code>repeated .in.trujobs.proto.JobRoleObject jobRole = 1;</code>
      */
-    public java.util.List<? extends in.trujobs.proto.JobRoleOrBuilder> 
+    public java.util.List<? extends in.trujobs.proto.JobRoleObjectOrBuilder> 
          getJobRoleOrBuilderList() {
       if (jobRoleBuilder_ != null) {
         return jobRoleBuilder_.getMessageOrBuilderList();
@@ -560,33 +560,33 @@ public  final class JobRoleResponse extends
       }
     }
     /**
-     * <code>repeated .in.trujobs.proto.JobRole jobRole = 1;</code>
+     * <code>repeated .in.trujobs.proto.JobRoleObject jobRole = 1;</code>
      */
-    public in.trujobs.proto.JobRole.Builder addJobRoleBuilder() {
+    public in.trujobs.proto.JobRoleObject.Builder addJobRoleBuilder() {
       return getJobRoleFieldBuilder().addBuilder(
-          in.trujobs.proto.JobRole.getDefaultInstance());
+          in.trujobs.proto.JobRoleObject.getDefaultInstance());
     }
     /**
-     * <code>repeated .in.trujobs.proto.JobRole jobRole = 1;</code>
+     * <code>repeated .in.trujobs.proto.JobRoleObject jobRole = 1;</code>
      */
-    public in.trujobs.proto.JobRole.Builder addJobRoleBuilder(
+    public in.trujobs.proto.JobRoleObject.Builder addJobRoleBuilder(
         int index) {
       return getJobRoleFieldBuilder().addBuilder(
-          index, in.trujobs.proto.JobRole.getDefaultInstance());
+          index, in.trujobs.proto.JobRoleObject.getDefaultInstance());
     }
     /**
-     * <code>repeated .in.trujobs.proto.JobRole jobRole = 1;</code>
+     * <code>repeated .in.trujobs.proto.JobRoleObject jobRole = 1;</code>
      */
-    public java.util.List<in.trujobs.proto.JobRole.Builder> 
+    public java.util.List<in.trujobs.proto.JobRoleObject.Builder> 
          getJobRoleBuilderList() {
       return getJobRoleFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilder<
-        in.trujobs.proto.JobRole, in.trujobs.proto.JobRole.Builder, in.trujobs.proto.JobRoleOrBuilder> 
+        in.trujobs.proto.JobRoleObject, in.trujobs.proto.JobRoleObject.Builder, in.trujobs.proto.JobRoleObjectOrBuilder> 
         getJobRoleFieldBuilder() {
       if (jobRoleBuilder_ == null) {
         jobRoleBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-            in.trujobs.proto.JobRole, in.trujobs.proto.JobRole.Builder, in.trujobs.proto.JobRoleOrBuilder>(
+            in.trujobs.proto.JobRoleObject, in.trujobs.proto.JobRoleObject.Builder, in.trujobs.proto.JobRoleObjectOrBuilder>(
                 jobRole_,
                 ((bitField0_ & 0x00000001) == 0x00000001),
                 getParentForChildren(),
