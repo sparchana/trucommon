@@ -25,6 +25,8 @@ public  final class LogInResponse extends
     sessionId_ = "";
     sessionExpiryMillis_ = 0L;
     minProfile_ = 0;
+    candidateJobPrefStatus_ = 0;
+    candidateHomeLocalityStatus_ = 0;
   }
 
   @java.lang.Override
@@ -103,6 +105,16 @@ public  final class LogInResponse extends
           case 80: {
 
             minProfile_ = input.readInt32();
+            break;
+          }
+          case 88: {
+
+            candidateJobPrefStatus_ = input.readInt32();
+            break;
+          }
+          case 96: {
+
+            candidateHomeLocalityStatus_ = input.readInt32();
             break;
           }
         }
@@ -420,6 +432,24 @@ public  final class LogInResponse extends
     return minProfile_;
   }
 
+  public static final int CANDIDATEJOBPREFSTATUS_FIELD_NUMBER = 11;
+  private int candidateJobPrefStatus_;
+  /**
+   * <code>optional int32 candidateJobPrefStatus = 11;</code>
+   */
+  public int getCandidateJobPrefStatus() {
+    return candidateJobPrefStatus_;
+  }
+
+  public static final int CANDIDATEHOMELOCALITYSTATUS_FIELD_NUMBER = 12;
+  private int candidateHomeLocalityStatus_;
+  /**
+   * <code>optional int32 candidateHomeLocalityStatus = 12;</code>
+   */
+  public int getCandidateHomeLocalityStatus() {
+    return candidateHomeLocalityStatus_;
+  }
+
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -461,6 +491,12 @@ public  final class LogInResponse extends
     }
     if (minProfile_ != 0) {
       output.writeInt32(10, minProfile_);
+    }
+    if (candidateJobPrefStatus_ != 0) {
+      output.writeInt32(11, candidateJobPrefStatus_);
+    }
+    if (candidateHomeLocalityStatus_ != 0) {
+      output.writeInt32(12, candidateHomeLocalityStatus_);
     }
   }
 
@@ -505,6 +541,14 @@ public  final class LogInResponse extends
     if (minProfile_ != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(10, minProfile_);
+    }
+    if (candidateJobPrefStatus_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(11, candidateJobPrefStatus_);
+    }
+    if (candidateHomeLocalityStatus_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(12, candidateHomeLocalityStatus_);
     }
     memoizedSize = size;
     return size;
@@ -637,6 +681,10 @@ public  final class LogInResponse extends
 
       minProfile_ = 0;
 
+      candidateJobPrefStatus_ = 0;
+
+      candidateHomeLocalityStatus_ = 0;
+
       return this;
     }
 
@@ -669,6 +717,8 @@ public  final class LogInResponse extends
       result.sessionId_ = sessionId_;
       result.sessionExpiryMillis_ = sessionExpiryMillis_;
       result.minProfile_ = minProfile_;
+      result.candidateJobPrefStatus_ = candidateJobPrefStatus_;
+      result.candidateHomeLocalityStatus_ = candidateHomeLocalityStatus_;
       onBuilt();
       return result;
     }
@@ -716,6 +766,12 @@ public  final class LogInResponse extends
       }
       if (other.getMinProfile() != 0) {
         setMinProfile(other.getMinProfile());
+      }
+      if (other.getCandidateJobPrefStatus() != 0) {
+        setCandidateJobPrefStatus(other.getCandidateJobPrefStatus());
+      }
+      if (other.getCandidateHomeLocalityStatus() != 0) {
+        setCandidateHomeLocalityStatus(other.getCandidateHomeLocalityStatus());
       }
       onChanged();
       return this;
@@ -1146,6 +1202,58 @@ public  final class LogInResponse extends
     public Builder clearMinProfile() {
       
       minProfile_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int candidateJobPrefStatus_ ;
+    /**
+     * <code>optional int32 candidateJobPrefStatus = 11;</code>
+     */
+    public int getCandidateJobPrefStatus() {
+      return candidateJobPrefStatus_;
+    }
+    /**
+     * <code>optional int32 candidateJobPrefStatus = 11;</code>
+     */
+    public Builder setCandidateJobPrefStatus(int value) {
+      
+      candidateJobPrefStatus_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional int32 candidateJobPrefStatus = 11;</code>
+     */
+    public Builder clearCandidateJobPrefStatus() {
+      
+      candidateJobPrefStatus_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int candidateHomeLocalityStatus_ ;
+    /**
+     * <code>optional int32 candidateHomeLocalityStatus = 12;</code>
+     */
+    public int getCandidateHomeLocalityStatus() {
+      return candidateHomeLocalityStatus_;
+    }
+    /**
+     * <code>optional int32 candidateHomeLocalityStatus = 12;</code>
+     */
+    public Builder setCandidateHomeLocalityStatus(int value) {
+      
+      candidateHomeLocalityStatus_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional int32 candidateHomeLocalityStatus = 12;</code>
+     */
+    public Builder clearCandidateHomeLocalityStatus() {
+      
+      candidateHomeLocalityStatus_ = 0;
       onChanged();
       return this;
     }
