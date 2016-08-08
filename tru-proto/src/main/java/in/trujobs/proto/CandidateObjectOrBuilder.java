@@ -63,81 +63,109 @@ public interface CandidateObjectOrBuilder extends
   int getCandidateAge();
 
   /**
-   * <code>optional .in.trujobs.proto.LocalityObject candidateHomelocality = 9;</code>
+   * <code>optional int64 candidateLastWithdrawnSalary = 9;</code>
+   */
+  long getCandidateLastWithdrawnSalary();
+
+  /**
+   * <code>optional .in.trujobs.proto.LocalityObject candidateHomelocality = 10;</code>
    */
   boolean hasCandidateHomelocality();
   /**
-   * <code>optional .in.trujobs.proto.LocalityObject candidateHomelocality = 9;</code>
+   * <code>optional .in.trujobs.proto.LocalityObject candidateHomelocality = 10;</code>
    */
   in.trujobs.proto.LocalityObject getCandidateHomelocality();
   /**
-   * <code>optional .in.trujobs.proto.LocalityObject candidateHomelocality = 9;</code>
+   * <code>optional .in.trujobs.proto.LocalityObject candidateHomelocality = 10;</code>
    */
   in.trujobs.proto.LocalityObjectOrBuilder getCandidateHomelocalityOrBuilder();
 
   /**
-   * <code>repeated .in.trujobs.proto.LocalityObject candidateLocationPref = 10;</code>
+   * <code>repeated .in.trujobs.proto.LocalityObject candidateLocationPref = 11;</code>
    */
   java.util.List<in.trujobs.proto.LocalityObject> 
       getCandidateLocationPrefList();
   /**
-   * <code>repeated .in.trujobs.proto.LocalityObject candidateLocationPref = 10;</code>
+   * <code>repeated .in.trujobs.proto.LocalityObject candidateLocationPref = 11;</code>
    */
   in.trujobs.proto.LocalityObject getCandidateLocationPref(int index);
   /**
-   * <code>repeated .in.trujobs.proto.LocalityObject candidateLocationPref = 10;</code>
+   * <code>repeated .in.trujobs.proto.LocalityObject candidateLocationPref = 11;</code>
    */
   int getCandidateLocationPrefCount();
   /**
-   * <code>repeated .in.trujobs.proto.LocalityObject candidateLocationPref = 10;</code>
+   * <code>repeated .in.trujobs.proto.LocalityObject candidateLocationPref = 11;</code>
    */
   java.util.List<? extends in.trujobs.proto.LocalityObjectOrBuilder> 
       getCandidateLocationPrefOrBuilderList();
   /**
-   * <code>repeated .in.trujobs.proto.LocalityObject candidateLocationPref = 10;</code>
+   * <code>repeated .in.trujobs.proto.LocalityObject candidateLocationPref = 11;</code>
    */
   in.trujobs.proto.LocalityObjectOrBuilder getCandidateLocationPrefOrBuilder(
       int index);
 
   /**
-   * <code>repeated .in.trujobs.proto.JobRoleObject candidateJobRolePref = 11;</code>
+   * <code>repeated .in.trujobs.proto.JobRoleObject candidateJobRolePref = 12;</code>
    */
   java.util.List<in.trujobs.proto.JobRoleObject> 
       getCandidateJobRolePrefList();
   /**
-   * <code>repeated .in.trujobs.proto.JobRoleObject candidateJobRolePref = 11;</code>
+   * <code>repeated .in.trujobs.proto.JobRoleObject candidateJobRolePref = 12;</code>
    */
   in.trujobs.proto.JobRoleObject getCandidateJobRolePref(int index);
   /**
-   * <code>repeated .in.trujobs.proto.JobRoleObject candidateJobRolePref = 11;</code>
+   * <code>repeated .in.trujobs.proto.JobRoleObject candidateJobRolePref = 12;</code>
    */
   int getCandidateJobRolePrefCount();
   /**
-   * <code>repeated .in.trujobs.proto.JobRoleObject candidateJobRolePref = 11;</code>
+   * <code>repeated .in.trujobs.proto.JobRoleObject candidateJobRolePref = 12;</code>
    */
   java.util.List<? extends in.trujobs.proto.JobRoleObjectOrBuilder> 
       getCandidateJobRolePrefOrBuilderList();
   /**
-   * <code>repeated .in.trujobs.proto.JobRoleObject candidateJobRolePref = 11;</code>
+   * <code>repeated .in.trujobs.proto.JobRoleObject candidateJobRolePref = 12;</code>
    */
   in.trujobs.proto.JobRoleObjectOrBuilder getCandidateJobRolePrefOrBuilder(
       int index);
 
   /**
-   * <code>optional .in.trujobs.proto.TimeShiftObject candidateTimeShiftPref = 12;</code>
+   * <code>optional .in.trujobs.proto.TimeShiftObject candidateTimeShiftPref = 13;</code>
    */
   boolean hasCandidateTimeShiftPref();
   /**
-   * <code>optional .in.trujobs.proto.TimeShiftObject candidateTimeShiftPref = 12;</code>
+   * <code>optional .in.trujobs.proto.TimeShiftObject candidateTimeShiftPref = 13;</code>
    */
   in.trujobs.proto.TimeShiftObject getCandidateTimeShiftPref();
   /**
-   * <code>optional .in.trujobs.proto.TimeShiftObject candidateTimeShiftPref = 12;</code>
+   * <code>optional .in.trujobs.proto.TimeShiftObject candidateTimeShiftPref = 13;</code>
    */
   in.trujobs.proto.TimeShiftObjectOrBuilder getCandidateTimeShiftPrefOrBuilder();
 
   /**
-   * <code>optional int32 candidateTotalExperience = 13;</code>
+   * <code>optional .in.trujobs.proto.CandidateEducationObject candidateEducation = 14;</code>
+   */
+  boolean hasCandidateEducation();
+  /**
+   * <code>optional .in.trujobs.proto.CandidateEducationObject candidateEducation = 14;</code>
+   */
+  in.trujobs.proto.CandidateEducationObject getCandidateEducation();
+  /**
+   * <code>optional .in.trujobs.proto.CandidateEducationObject candidateEducation = 14;</code>
+   */
+  in.trujobs.proto.CandidateEducationObjectOrBuilder getCandidateEducationOrBuilder();
+
+  /**
+   * <code>optional int32 candidateTotalExperience = 15;</code>
    */
   int getCandidateTotalExperience();
+
+  /**
+   * <code>optional string candidateCurrentCompany = 16;</code>
+   */
+  java.lang.String getCandidateCurrentCompany();
+  /**
+   * <code>optional string candidateCurrentCompany = 16;</code>
+   */
+  com.google.protobuf.ByteString
+      getCandidateCurrentCompanyBytes();
 }

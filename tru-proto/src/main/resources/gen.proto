@@ -187,11 +187,14 @@ message CandidateObject {
     int32 candidateGender = 6;
     string candidateMobile = 7;
     int32 candidateAge = 8;
-    LocalityObject candidateHomelocality = 9;
-    repeated LocalityObject candidateLocationPref = 10;
-    repeated JobRoleObject candidateJobRolePref = 11;
-    TimeShiftObject candidateTimeShiftPref = 12;
-    int32 candidateTotalExperience = 13;
+    int64 candidateLastWithdrawnSalary = 9;
+    LocalityObject candidateHomelocality = 10;
+    repeated LocalityObject candidateLocationPref = 11;
+    repeated JobRoleObject candidateJobRolePref = 12;
+    TimeShiftObject candidateTimeShiftPref = 13;
+    CandidateEducationObject candidateEducation = 14;
+    int32 candidateTotalExperience = 15;
+    string candidateCurrentCompany = 16;
 }
 
 message GetJobPostDetailsRequest {
@@ -244,4 +247,36 @@ message HomeLocalityResponse {
         USER_NOT_FOUND = 3;
     }
     Status status = 1;
+}
+
+message CandidateEducationObject {
+    EducationObject education = 1;
+    DegreeObject degree = 2;
+    string candidateInstitute = 3;
+}
+
+message DegreeObject {
+    int64 degreeId = 1;
+    string degreeName = 2;
+}
+
+message CandidateAppliedJobsRequest {
+    string candidate_mobile = 1;
+}
+
+message CandidateAppliedJobsResponse { 
+    enum Status {
+        UNKNOWN = 0;
+        SUCCESS = 1;
+        FAILURE = 2;
+    }
+    Status status = 1;
+    repeated JobApplicationObject jobApplication = 2;
+}
+
+message JobApplicationObject {
+    int64 jobApplicationId = 1;
+    int64 jobApplicationAppliedMillis = 2;
+    JobPostObject jobPost = 3;	
+    LocalityObject preScreenLocation = 4;
 }
