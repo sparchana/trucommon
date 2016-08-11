@@ -245,3 +245,26 @@ message HomeLocalityResponse {
     }
     Status status = 1;
 }
+
+message FetchCandidateAlertRequest {
+    string candidate_mobile = 1;
+}
+
+message FetchCandidateAlertResponse {
+    enum Status {
+        UNKNOWN = 0;
+        SUCCESS = 1;
+    }
+
+    enum Type {
+        COMPLETE_PROFILE = 0;
+        INTERVIEW_SCHEDULED = 1;
+        JOINING_DATE_CONFIRMED = 2;
+        PROFILE_DEACTIVATED = 3;
+        NEW_JOBS_IN_LOCALITY = 4;
+    }
+
+    Status status = 1;
+    Type alertType = 2;
+    string statusMessage = 3;
+}
