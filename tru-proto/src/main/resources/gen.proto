@@ -245,3 +245,38 @@ message HomeLocalityResponse {
     }
     Status status = 1;
 }
+
+message JobFilterRequest {
+    enum Salary {
+        ANY_SALARY = 0;
+        EIGHT_K_PLUS = 1;
+        TEN_K_PLUS = 2;
+        TWELVE_K_PLUS = 3;
+        FIFTEEN_K_PLUS = 4;
+        TWENTY_K_PLUS = 5;
+    }
+    enum Experience {
+        ANY_EXPERIENCE = 0;
+        FRESHER = 1;
+        EXPERIENCED = 2;
+    }
+    enum Education {
+        ANY_EDUCATION = 0;
+        LT_TEN = 1;
+        TEN_PASS = 2;
+        TWELVE_PASS = 3;
+        UG = 4;
+        PG = 5;
+    }
+    enum Gender {
+        MALE = 0;
+        FEMALE = 1;
+    }
+    Salary salary = 1;
+    Experience exp = 2;
+    Education edu = 3;
+    Gender gender= 4;
+    bool sort_by_date_posted = 5; 
+    bool sort_by_salary = 6; 
+    string candidate_mobile = 7;
+}

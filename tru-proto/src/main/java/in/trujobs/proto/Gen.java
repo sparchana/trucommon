@@ -153,6 +153,11 @@ public final class Gen {
   static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_in_trujobs_proto_HomeLocalityResponse_fieldAccessorTable;
+  static com.google.protobuf.Descriptors.Descriptor
+    internal_static_in_trujobs_proto_JobFilterRequest_descriptor;
+  static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_in_trujobs_proto_JobFilterRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -276,7 +281,23 @@ public final class Gen {
       "=\n\006status\030\001 \001(\0162-.in.trujobs.proto.HomeL" +
       "ocalityResponse.Status\"C\n\006Status\022\013\n\007UNKN" +
       "OWN\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007FAILURE\020\002\022\022\n\016USER_" +
-      "NOT_FOUND\020\003B\002P\001b\006proto3"
+      "NOT_FOUND\020\003\"\377\004\n\020JobFilterRequest\0229\n\006sala" +
+      "ry\030\001 \001(\0162).in.trujobs.proto.JobFilterReq" +
+      "uest.Salary\022:\n\003exp\030\002 \001(\0162-.in.trujobs.pr" +
+      "oto.JobFilterRequest.Experience\0229\n\003edu\030\003" +
+      " \001(\0162,.in.trujobs.proto.JobFilterRequest" +
+      ".Education\0229\n\006gender\030\004 \001(\0162).in.trujobs.",
+      "proto.JobFilterRequest.Gender\022\033\n\023sort_by" +
+      "_date_posted\030\005 \001(\010\022\026\n\016sort_by_salary\030\006 \001" +
+      "(\010\022\030\n\020candidate_mobile\030\007 \001(\t\"t\n\006Salary\022\016" +
+      "\n\nANY_SALARY\020\000\022\020\n\014EIGHT_K_PLUS\020\001\022\016\n\nTEN_" +
+      "K_PLUS\020\002\022\021\n\rTWELVE_K_PLUS\020\003\022\022\n\016FIFTEEN_K" +
+      "_PLUS\020\004\022\021\n\rTWENTY_K_PLUS\020\005\">\n\nExperience" +
+      "\022\022\n\016ANY_EXPERIENCE\020\000\022\013\n\007FRESHER\020\001\022\017\n\013EXP" +
+      "ERIENCED\020\002\"Y\n\tEducation\022\021\n\rANY_EDUCATION" +
+      "\020\000\022\n\n\006LT_TEN\020\001\022\014\n\010TEN_PASS\020\002\022\017\n\013TWELVE_P" +
+      "ASS\020\003\022\006\n\002UG\020\004\022\006\n\002PG\020\005\"\036\n\006Gender\022\010\n\004MALE\020",
+      "\000\022\n\n\006FEMALE\020\001B\002P\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -464,6 +485,12 @@ public final class Gen {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_HomeLocalityResponse_descriptor,
         new java.lang.String[] { "Status", });
+    internal_static_in_trujobs_proto_JobFilterRequest_descriptor =
+      getDescriptor().getMessageTypes().get(29);
+    internal_static_in_trujobs_proto_JobFilterRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_in_trujobs_proto_JobFilterRequest_descriptor,
+        new java.lang.String[] { "Salary", "Exp", "Edu", "Gender", "SortByDatePosted", "SortBySalary", "CandidateMobile", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
