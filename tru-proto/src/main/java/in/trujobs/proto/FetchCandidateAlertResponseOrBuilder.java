@@ -26,12 +26,12 @@ public interface FetchCandidateAlertResponseOrBuilder extends
   in.trujobs.proto.FetchCandidateAlertResponse.Type getAlertType();
 
   /**
-   * <code>optional string statusMessage = 3;</code>
+   * <code>optional string alertMessage = 3;</code>
    */
-  java.lang.String getStatusMessage();
+  java.lang.String getAlertMessage();
   /**
-   * <code>optional string statusMessage = 3;</code>
+   * <code>optional string alertMessage = 3;</code>
    */
   com.google.protobuf.ByteString
-      getStatusMessageBytes();
+      getAlertMessageBytes();
 }

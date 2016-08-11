@@ -287,17 +287,17 @@ public final class Gen {
       "ocalityResponse.Status\"C\n\006Status\022\013\n\007UNKN" +
       "OWN\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007FAILURE\020\002\022\022\n\016USER_" +
       "NOT_FOUND\020\003\"6\n\032FetchCandidateAlertReques" +
-      "t\022\030\n\020candidate_mobile\030\001 \001(\t\"\354\002\n\033FetchCan" +
+      "t\022\030\n\020candidate_mobile\030\001 \001(\t\"\353\002\n\033FetchCan" +
       "didateAlertResponse\022D\n\006status\030\001 \001(\01624.in" +
       ".trujobs.proto.FetchCandidateAlertRespon" +
       "se.Status\022E\n\talertType\030\002 \001(\01622.in.trujob" +
       "s.proto.FetchCandidateAlertResponse.Type",
-      "\022\025\n\rstatusMessage\030\003 \001(\t\"\"\n\006Status\022\013\n\007UNK" +
-      "NOWN\020\000\022\013\n\007SUCCESS\020\001\"\204\001\n\004Type\022\024\n\020COMPLETE" +
-      "_PROFILE\020\000\022\027\n\023INTERVIEW_SCHEDULED\020\001\022\032\n\026J" +
-      "OINING_DATE_CONFIRMED\020\002\022\027\n\023PROFILE_DEACT" +
-      "IVATED\020\003\022\030\n\024NEW_JOBS_IN_LOCALITY\020\004B\002P\001b\006" +
-      "proto3"
+      "\022\024\n\014alertMessage\030\003 \001(\t\"\"\n\006Status\022\013\n\007UNKN" +
+      "OWN\020\000\022\013\n\007SUCCESS\020\001\"\204\001\n\004Type\022\024\n\020COMPLETE_" +
+      "PROFILE\020\000\022\027\n\023INTERVIEW_SCHEDULED\020\001\022\032\n\026JO" +
+      "INING_DATE_CONFIRMED\020\002\022\027\n\023PROFILE_DEACTI" +
+      "VATED\020\003\022\030\n\024NEW_JOBS_IN_LOCALITY\020\004B\002P\001b\006p" +
+      "roto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -496,7 +496,7 @@ public final class Gen {
     internal_static_in_trujobs_proto_FetchCandidateAlertResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_FetchCandidateAlertResponse_descriptor,
-        new java.lang.String[] { "Status", "AlertType", "StatusMessage", });
+        new java.lang.String[] { "Status", "AlertType", "AlertMessage", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

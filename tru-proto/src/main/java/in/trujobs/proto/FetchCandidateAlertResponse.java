@@ -17,7 +17,7 @@ public  final class FetchCandidateAlertResponse extends
   private FetchCandidateAlertResponse() {
     status_ = 0;
     alertType_ = 0;
-    statusMessage_ = "";
+    alertMessage_ = "";
   }
 
   @java.lang.Override
@@ -59,7 +59,7 @@ public  final class FetchCandidateAlertResponse extends
           case 26: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            statusMessage_ = s;
+            alertMessage_ = s;
             break;
           }
         }
@@ -329,34 +329,34 @@ public  final class FetchCandidateAlertResponse extends
     return result == null ? in.trujobs.proto.FetchCandidateAlertResponse.Type.UNRECOGNIZED : result;
   }
 
-  public static final int STATUSMESSAGE_FIELD_NUMBER = 3;
-  private volatile java.lang.Object statusMessage_;
+  public static final int ALERTMESSAGE_FIELD_NUMBER = 3;
+  private volatile java.lang.Object alertMessage_;
   /**
-   * <code>optional string statusMessage = 3;</code>
+   * <code>optional string alertMessage = 3;</code>
    */
-  public java.lang.String getStatusMessage() {
-    java.lang.Object ref = statusMessage_;
+  public java.lang.String getAlertMessage() {
+    java.lang.Object ref = alertMessage_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      statusMessage_ = s;
+      alertMessage_ = s;
       return s;
     }
   }
   /**
-   * <code>optional string statusMessage = 3;</code>
+   * <code>optional string alertMessage = 3;</code>
    */
   public com.google.protobuf.ByteString
-      getStatusMessageBytes() {
-    java.lang.Object ref = statusMessage_;
+      getAlertMessageBytes() {
+    java.lang.Object ref = alertMessage_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      statusMessage_ = b;
+      alertMessage_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -381,8 +381,8 @@ public  final class FetchCandidateAlertResponse extends
     if (alertType_ != in.trujobs.proto.FetchCandidateAlertResponse.Type.COMPLETE_PROFILE.getNumber()) {
       output.writeEnum(2, alertType_);
     }
-    if (!getStatusMessageBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 3, statusMessage_);
+    if (!getAlertMessageBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 3, alertMessage_);
     }
   }
 
@@ -399,8 +399,8 @@ public  final class FetchCandidateAlertResponse extends
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(2, alertType_);
     }
-    if (!getStatusMessageBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(3, statusMessage_);
+    if (!getAlertMessageBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(3, alertMessage_);
     }
     memoizedSize = size;
     return size;
@@ -517,7 +517,7 @@ public  final class FetchCandidateAlertResponse extends
 
       alertType_ = 0;
 
-      statusMessage_ = "";
+      alertMessage_ = "";
 
       return this;
     }
@@ -543,7 +543,7 @@ public  final class FetchCandidateAlertResponse extends
       in.trujobs.proto.FetchCandidateAlertResponse result = new in.trujobs.proto.FetchCandidateAlertResponse(this);
       result.status_ = status_;
       result.alertType_ = alertType_;
-      result.statusMessage_ = statusMessage_;
+      result.alertMessage_ = alertMessage_;
       onBuilt();
       return result;
     }
@@ -565,8 +565,8 @@ public  final class FetchCandidateAlertResponse extends
       if (other.alertType_ != 0) {
         setAlertTypeValue(other.getAlertTypeValue());
       }
-      if (!other.getStatusMessage().isEmpty()) {
-        statusMessage_ = other.statusMessage_;
+      if (!other.getAlertMessage().isEmpty()) {
+        alertMessage_ = other.alertMessage_;
         onChanged();
       }
       onChanged();
@@ -683,71 +683,71 @@ public  final class FetchCandidateAlertResponse extends
       return this;
     }
 
-    private java.lang.Object statusMessage_ = "";
+    private java.lang.Object alertMessage_ = "";
     /**
-     * <code>optional string statusMessage = 3;</code>
+     * <code>optional string alertMessage = 3;</code>
      */
-    public java.lang.String getStatusMessage() {
-      java.lang.Object ref = statusMessage_;
+    public java.lang.String getAlertMessage() {
+      java.lang.Object ref = alertMessage_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        statusMessage_ = s;
+        alertMessage_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>optional string statusMessage = 3;</code>
+     * <code>optional string alertMessage = 3;</code>
      */
     public com.google.protobuf.ByteString
-        getStatusMessageBytes() {
-      java.lang.Object ref = statusMessage_;
+        getAlertMessageBytes() {
+      java.lang.Object ref = alertMessage_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        statusMessage_ = b;
+        alertMessage_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>optional string statusMessage = 3;</code>
+     * <code>optional string alertMessage = 3;</code>
      */
-    public Builder setStatusMessage(
+    public Builder setAlertMessage(
         java.lang.String value) {
       if (value == null) {
     throw new NullPointerException();
   }
   
-      statusMessage_ = value;
+      alertMessage_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>optional string statusMessage = 3;</code>
+     * <code>optional string alertMessage = 3;</code>
      */
-    public Builder clearStatusMessage() {
+    public Builder clearAlertMessage() {
       
-      statusMessage_ = getDefaultInstance().getStatusMessage();
+      alertMessage_ = getDefaultInstance().getAlertMessage();
       onChanged();
       return this;
     }
     /**
-     * <code>optional string statusMessage = 3;</code>
+     * <code>optional string alertMessage = 3;</code>
      */
-    public Builder setStatusMessageBytes(
+    public Builder setAlertMessageBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
       
-      statusMessage_ = value;
+      alertMessage_ = value;
       onChanged();
       return this;
     }

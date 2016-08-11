@@ -266,5 +266,5 @@ message FetchCandidateAlertResponse {
 
     Status status = 1;
     Type alertType = 2;
-    string statusMessage = 3;
+    string alertMessage = 3;
 }
