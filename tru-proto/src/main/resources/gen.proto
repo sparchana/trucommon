@@ -304,3 +304,8 @@ message FetchCandidateAlertResponse {
     string alertMessage = 3;
 
 }
+message JobSearchRequest {
+    double latitude = 1;
+    double longitude = 2;
+    string candidate_mobile = 3;
+}

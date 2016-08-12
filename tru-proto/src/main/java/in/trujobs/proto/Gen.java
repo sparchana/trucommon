@@ -168,6 +168,11 @@ public final class Gen {
   static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_in_trujobs_proto_FetchCandidateAlertResponse_fieldAccessorTable;
+  static com.google.protobuf.Descriptors.Descriptor
+    internal_static_in_trujobs_proto_JobSearchRequest_descriptor;
+  static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_in_trujobs_proto_JobSearchRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -317,8 +322,10 @@ public final class Gen {
       "KNOWN\020\000\022\013\n\007SUCCESS\020\001\"\204\001\n\004Type\022\024\n\020COMPLET" +
       "E_PROFILE\020\000\022\027\n\023INTERVIEW_SCHEDULED\020\001\022\032\n\026" +
       "JOINING_DATE_CONFIRMED\020\002\022\027\n\023PROFILE_DEAC",
-      "TIVATED\020\003\022\030\n\024NEW_JOBS_IN_LOCALITY\020\004B\002P\001b" +
-      "\006proto3"
+      "TIVATED\020\003\022\030\n\024NEW_JOBS_IN_LOCALITY\020\004\"Q\n\020J" +
+      "obSearchRequest\022\020\n\010latitude\030\001 \001(\001\022\021\n\tlon" +
+      "gitude\030\002 \001(\001\022\030\n\020candidate_mobile\030\003 \001(\tB\002" +
+      "P\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -524,6 +531,12 @@ public final class Gen {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_FetchCandidateAlertResponse_descriptor,
         new java.lang.String[] { "Status", "AlertType", "AlertMessage", });
+    internal_static_in_trujobs_proto_JobSearchRequest_descriptor =
+      getDescriptor().getMessageTypes().get(32);
+    internal_static_in_trujobs_proto_JobSearchRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_in_trujobs_proto_JobSearchRequest_descriptor,
+        new java.lang.String[] { "Latitude", "Longitude", "CandidateMobile", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
