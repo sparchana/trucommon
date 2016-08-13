@@ -269,8 +269,9 @@ message JobFilterRequest {
         PG = 5;
     }
     enum Gender {
-        MALE = 0;
-        FEMALE = 1;
+        ANY_GENDER = 0;
+        MALE = 1;
+        FEMALE = 2;
     }
     Salary salary = 1;
     Experience exp = 2;

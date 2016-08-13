@@ -475,24 +475,32 @@ public  final class JobFilterRequest extends
   public enum Gender
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
-     * <code>MALE = 0;</code>
+     * <code>ANY_GENDER = 0;</code>
      */
-    MALE(0, 0),
+    ANY_GENDER(0, 0),
     /**
-     * <code>FEMALE = 1;</code>
+     * <code>MALE = 1;</code>
      */
-    FEMALE(1, 1),
+    MALE(1, 1),
+    /**
+     * <code>FEMALE = 2;</code>
+     */
+    FEMALE(2, 2),
     UNRECOGNIZED(-1, -1),
     ;
 
     /**
-     * <code>MALE = 0;</code>
+     * <code>ANY_GENDER = 0;</code>
      */
-    public static final int MALE_VALUE = 0;
+    public static final int ANY_GENDER_VALUE = 0;
     /**
-     * <code>FEMALE = 1;</code>
+     * <code>MALE = 1;</code>
      */
-    public static final int FEMALE_VALUE = 1;
+    public static final int MALE_VALUE = 1;
+    /**
+     * <code>FEMALE = 2;</code>
+     */
+    public static final int FEMALE_VALUE = 2;
 
 
     public final int getNumber() {
@@ -505,8 +513,9 @@ public  final class JobFilterRequest extends
 
     public static Gender valueOf(int value) {
       switch (value) {
-        case 0: return MALE;
-        case 1: return FEMALE;
+        case 0: return ANY_GENDER;
+        case 1: return MALE;
+        case 2: return FEMALE;
         default: return null;
       }
     }
@@ -698,7 +707,7 @@ public  final class JobFilterRequest extends
     if (edu_ != in.trujobs.proto.JobFilterRequest.Education.ANY_EDUCATION.getNumber()) {
       output.writeEnum(3, edu_);
     }
-    if (gender_ != in.trujobs.proto.JobFilterRequest.Gender.MALE.getNumber()) {
+    if (gender_ != in.trujobs.proto.JobFilterRequest.Gender.ANY_GENDER.getNumber()) {
       output.writeEnum(4, gender_);
     }
     if (sortByDatePosted_ != false) {
@@ -729,7 +738,7 @@ public  final class JobFilterRequest extends
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(3, edu_);
     }
-    if (gender_ != in.trujobs.proto.JobFilterRequest.Gender.MALE.getNumber()) {
+    if (gender_ != in.trujobs.proto.JobFilterRequest.Gender.ANY_GENDER.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(4, gender_);
     }
