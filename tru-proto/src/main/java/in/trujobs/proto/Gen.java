@@ -233,6 +233,16 @@ public final class Gen {
   static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_in_trujobs_proto_CandidateSkillObject_fieldAccessorTable;
+  static com.google.protobuf.Descriptors.Descriptor
+    internal_static_in_trujobs_proto_FetchCandidateAlertRequest_descriptor;
+  static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_in_trujobs_proto_FetchCandidateAlertRequest_fieldAccessorTable;
+  static com.google.protobuf.Descriptors.Descriptor
+    internal_static_in_trujobs_proto_FetchCandidateAlertResponse_descriptor;
+  static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_in_trujobs_proto_FetchCandidateAlertResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -441,7 +451,18 @@ public final class Gen {
       "d\030\001 \001(\005\022\032\n\022languageUnderstand\030\002 \001(\005\022\025\n\rl" +
       "anguageSpeak\030\003 \001(\005\022\031\n\021languageReadWrite\030" +
       "\004 \001(\005\"7\n\024CandidateSkillObject\022\017\n\007skillId" +
-      "\030\001 \001(\005\022\016\n\006answer\030\002 \001(\010B\002P\001b\006proto3"
+      "\030\001 \001(\005\022\016\n\006answer\030\002 \001(\010\"6\n\032FetchCandidate",
+      "AlertRequest\022\030\n\020candidate_mobile\030\001 \001(\t\"\353" +
+      "\002\n\033FetchCandidateAlertResponse\022D\n\006status" +
+      "\030\001 \001(\01624.in.trujobs.proto.FetchCandidate" +
+      "AlertResponse.Status\022E\n\talertType\030\002 \001(\0162" +
+      "2.in.trujobs.proto.FetchCandidateAlertRe" +
+      "sponse.Type\022\024\n\014alertMessage\030\003 \001(\t\"\"\n\006Sta" +
+      "tus\022\013\n\007UNKNOWN\020\000\022\013\n\007SUCCESS\020\001\"\204\001\n\004Type\022\024" +
+      "\n\020COMPLETE_PROFILE\020\000\022\027\n\023INTERVIEW_SCHEDU" +
+      "LED\020\001\022\032\n\026JOINING_DATE_CONFIRMED\020\002\022\027\n\023PRO" +
+      "FILE_DEACTIVATED\020\003\022\030\n\024NEW_JOBS_IN_LOCALI",
+      "TY\020\004B\002P\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -725,6 +746,18 @@ public final class Gen {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_CandidateSkillObject_descriptor,
         new java.lang.String[] { "SkillId", "Answer", });
+    internal_static_in_trujobs_proto_FetchCandidateAlertRequest_descriptor =
+      getDescriptor().getMessageTypes().get(45);
+    internal_static_in_trujobs_proto_FetchCandidateAlertRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_in_trujobs_proto_FetchCandidateAlertRequest_descriptor,
+        new java.lang.String[] { "CandidateMobile", });
+    internal_static_in_trujobs_proto_FetchCandidateAlertResponse_descriptor =
+      getDescriptor().getMessageTypes().get(46);
+    internal_static_in_trujobs_proto_FetchCandidateAlertResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_in_trujobs_proto_FetchCandidateAlertResponse_descriptor,
+        new java.lang.String[] { "Status", "AlertType", "AlertMessage", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
