@@ -28,6 +28,10 @@ public  final class CandidateObject extends
     candidateJobRolePref_ = java.util.Collections.emptyList();
     candidateTotalExperience_ = 0;
     candidateCurrentCompany_ = "";
+    candidateDobMillis_ = 0L;
+    candidateIsEmployed_ = 0;
+    languageKnownObject_ = java.util.Collections.emptyList();
+    candidateSkillObject_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -168,6 +172,45 @@ public  final class CandidateObject extends
             candidateCurrentCompany_ = s;
             break;
           }
+          case 136: {
+
+            candidateDobMillis_ = input.readInt64();
+            break;
+          }
+          case 144: {
+
+            candidateIsEmployed_ = input.readInt32();
+            break;
+          }
+          case 154: {
+            if (!((mutable_bitField0_ & 0x00040000) == 0x00040000)) {
+              languageKnownObject_ = new java.util.ArrayList<in.trujobs.proto.LanguageKnownObject>();
+              mutable_bitField0_ |= 0x00040000;
+            }
+            languageKnownObject_.add(input.readMessage(in.trujobs.proto.LanguageKnownObject.parser(), extensionRegistry));
+            break;
+          }
+          case 162: {
+            if (!((mutable_bitField0_ & 0x00080000) == 0x00080000)) {
+              candidateSkillObject_ = new java.util.ArrayList<in.trujobs.proto.CandidateSkillObject>();
+              mutable_bitField0_ |= 0x00080000;
+            }
+            candidateSkillObject_.add(input.readMessage(in.trujobs.proto.CandidateSkillObject.parser(), extensionRegistry));
+            break;
+          }
+          case 170: {
+            in.trujobs.proto.JobRoleObject.Builder subBuilder = null;
+            if (candidateCurrentJobRole_ != null) {
+              subBuilder = candidateCurrentJobRole_.toBuilder();
+            }
+            candidateCurrentJobRole_ = input.readMessage(in.trujobs.proto.JobRoleObject.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(candidateCurrentJobRole_);
+              candidateCurrentJobRole_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -182,6 +225,12 @@ public  final class CandidateObject extends
       }
       if (((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
         candidateJobRolePref_ = java.util.Collections.unmodifiableList(candidateJobRolePref_);
+      }
+      if (((mutable_bitField0_ & 0x00040000) == 0x00040000)) {
+        languageKnownObject_ = java.util.Collections.unmodifiableList(languageKnownObject_);
+      }
+      if (((mutable_bitField0_ & 0x00080000) == 0x00080000)) {
+        candidateSkillObject_ = java.util.Collections.unmodifiableList(candidateSkillObject_);
       }
       makeExtensionsImmutable();
     }
@@ -531,6 +580,115 @@ public  final class CandidateObject extends
     }
   }
 
+  public static final int CANDIDATEDOBMILLIS_FIELD_NUMBER = 17;
+  private long candidateDobMillis_;
+  /**
+   * <code>optional int64 candidateDobMillis = 17;</code>
+   */
+  public long getCandidateDobMillis() {
+    return candidateDobMillis_;
+  }
+
+  public static final int CANDIDATEISEMPLOYED_FIELD_NUMBER = 18;
+  private int candidateIsEmployed_;
+  /**
+   * <code>optional int32 candidateIsEmployed = 18;</code>
+   */
+  public int getCandidateIsEmployed() {
+    return candidateIsEmployed_;
+  }
+
+  public static final int LANGUAGEKNOWNOBJECT_FIELD_NUMBER = 19;
+  private java.util.List<in.trujobs.proto.LanguageKnownObject> languageKnownObject_;
+  /**
+   * <code>repeated .in.trujobs.proto.LanguageKnownObject languageKnownObject = 19;</code>
+   */
+  public java.util.List<in.trujobs.proto.LanguageKnownObject> getLanguageKnownObjectList() {
+    return languageKnownObject_;
+  }
+  /**
+   * <code>repeated .in.trujobs.proto.LanguageKnownObject languageKnownObject = 19;</code>
+   */
+  public java.util.List<? extends in.trujobs.proto.LanguageKnownObjectOrBuilder> 
+      getLanguageKnownObjectOrBuilderList() {
+    return languageKnownObject_;
+  }
+  /**
+   * <code>repeated .in.trujobs.proto.LanguageKnownObject languageKnownObject = 19;</code>
+   */
+  public int getLanguageKnownObjectCount() {
+    return languageKnownObject_.size();
+  }
+  /**
+   * <code>repeated .in.trujobs.proto.LanguageKnownObject languageKnownObject = 19;</code>
+   */
+  public in.trujobs.proto.LanguageKnownObject getLanguageKnownObject(int index) {
+    return languageKnownObject_.get(index);
+  }
+  /**
+   * <code>repeated .in.trujobs.proto.LanguageKnownObject languageKnownObject = 19;</code>
+   */
+  public in.trujobs.proto.LanguageKnownObjectOrBuilder getLanguageKnownObjectOrBuilder(
+      int index) {
+    return languageKnownObject_.get(index);
+  }
+
+  public static final int CANDIDATESKILLOBJECT_FIELD_NUMBER = 20;
+  private java.util.List<in.trujobs.proto.CandidateSkillObject> candidateSkillObject_;
+  /**
+   * <code>repeated .in.trujobs.proto.CandidateSkillObject candidateSkillObject = 20;</code>
+   */
+  public java.util.List<in.trujobs.proto.CandidateSkillObject> getCandidateSkillObjectList() {
+    return candidateSkillObject_;
+  }
+  /**
+   * <code>repeated .in.trujobs.proto.CandidateSkillObject candidateSkillObject = 20;</code>
+   */
+  public java.util.List<? extends in.trujobs.proto.CandidateSkillObjectOrBuilder> 
+      getCandidateSkillObjectOrBuilderList() {
+    return candidateSkillObject_;
+  }
+  /**
+   * <code>repeated .in.trujobs.proto.CandidateSkillObject candidateSkillObject = 20;</code>
+   */
+  public int getCandidateSkillObjectCount() {
+    return candidateSkillObject_.size();
+  }
+  /**
+   * <code>repeated .in.trujobs.proto.CandidateSkillObject candidateSkillObject = 20;</code>
+   */
+  public in.trujobs.proto.CandidateSkillObject getCandidateSkillObject(int index) {
+    return candidateSkillObject_.get(index);
+  }
+  /**
+   * <code>repeated .in.trujobs.proto.CandidateSkillObject candidateSkillObject = 20;</code>
+   */
+  public in.trujobs.proto.CandidateSkillObjectOrBuilder getCandidateSkillObjectOrBuilder(
+      int index) {
+    return candidateSkillObject_.get(index);
+  }
+
+  public static final int CANDIDATECURRENTJOBROLE_FIELD_NUMBER = 21;
+  private in.trujobs.proto.JobRoleObject candidateCurrentJobRole_;
+  /**
+   * <code>optional .in.trujobs.proto.JobRoleObject candidateCurrentJobRole = 21;</code>
+   */
+  public boolean hasCandidateCurrentJobRole() {
+    return candidateCurrentJobRole_ != null;
+  }
+  /**
+   * <code>optional .in.trujobs.proto.JobRoleObject candidateCurrentJobRole = 21;</code>
+   */
+  public in.trujobs.proto.JobRoleObject getCandidateCurrentJobRole() {
+    return candidateCurrentJobRole_ == null ? in.trujobs.proto.JobRoleObject.getDefaultInstance() : candidateCurrentJobRole_;
+  }
+  /**
+   * <code>optional .in.trujobs.proto.JobRoleObject candidateCurrentJobRole = 21;</code>
+   */
+  public in.trujobs.proto.JobRoleObjectOrBuilder getCandidateCurrentJobRoleOrBuilder() {
+    return getCandidateCurrentJobRole();
+  }
+
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -590,6 +748,21 @@ public  final class CandidateObject extends
     }
     if (!getCandidateCurrentCompanyBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessage.writeString(output, 16, candidateCurrentCompany_);
+    }
+    if (candidateDobMillis_ != 0L) {
+      output.writeInt64(17, candidateDobMillis_);
+    }
+    if (candidateIsEmployed_ != 0) {
+      output.writeInt32(18, candidateIsEmployed_);
+    }
+    for (int i = 0; i < languageKnownObject_.size(); i++) {
+      output.writeMessage(19, languageKnownObject_.get(i));
+    }
+    for (int i = 0; i < candidateSkillObject_.size(); i++) {
+      output.writeMessage(20, candidateSkillObject_.get(i));
+    }
+    if (candidateCurrentJobRole_ != null) {
+      output.writeMessage(21, getCandidateCurrentJobRole());
     }
   }
 
@@ -657,6 +830,26 @@ public  final class CandidateObject extends
     }
     if (!getCandidateCurrentCompanyBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(16, candidateCurrentCompany_);
+    }
+    if (candidateDobMillis_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(17, candidateDobMillis_);
+    }
+    if (candidateIsEmployed_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(18, candidateIsEmployed_);
+    }
+    for (int i = 0; i < languageKnownObject_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(19, languageKnownObject_.get(i));
+    }
+    for (int i = 0; i < candidateSkillObject_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(20, candidateSkillObject_.get(i));
+    }
+    if (candidateCurrentJobRole_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(21, getCandidateCurrentJobRole());
     }
     memoizedSize = size;
     return size;
@@ -767,6 +960,8 @@ public  final class CandidateObject extends
       if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         getCandidateLocationPrefFieldBuilder();
         getCandidateJobRolePrefFieldBuilder();
+        getLanguageKnownObjectFieldBuilder();
+        getCandidateSkillObjectFieldBuilder();
       }
     }
     public Builder clear() {
@@ -823,6 +1018,28 @@ public  final class CandidateObject extends
 
       candidateCurrentCompany_ = "";
 
+      candidateDobMillis_ = 0L;
+
+      candidateIsEmployed_ = 0;
+
+      if (languageKnownObjectBuilder_ == null) {
+        languageKnownObject_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00040000);
+      } else {
+        languageKnownObjectBuilder_.clear();
+      }
+      if (candidateSkillObjectBuilder_ == null) {
+        candidateSkillObject_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00080000);
+      } else {
+        candidateSkillObjectBuilder_.clear();
+      }
+      if (candidateCurrentJobRoleBuilder_ == null) {
+        candidateCurrentJobRole_ = null;
+      } else {
+        candidateCurrentJobRole_ = null;
+        candidateCurrentJobRoleBuilder_ = null;
+      }
       return this;
     }
 
@@ -891,6 +1108,31 @@ public  final class CandidateObject extends
       }
       result.candidateTotalExperience_ = candidateTotalExperience_;
       result.candidateCurrentCompany_ = candidateCurrentCompany_;
+      result.candidateDobMillis_ = candidateDobMillis_;
+      result.candidateIsEmployed_ = candidateIsEmployed_;
+      if (languageKnownObjectBuilder_ == null) {
+        if (((bitField0_ & 0x00040000) == 0x00040000)) {
+          languageKnownObject_ = java.util.Collections.unmodifiableList(languageKnownObject_);
+          bitField0_ = (bitField0_ & ~0x00040000);
+        }
+        result.languageKnownObject_ = languageKnownObject_;
+      } else {
+        result.languageKnownObject_ = languageKnownObjectBuilder_.build();
+      }
+      if (candidateSkillObjectBuilder_ == null) {
+        if (((bitField0_ & 0x00080000) == 0x00080000)) {
+          candidateSkillObject_ = java.util.Collections.unmodifiableList(candidateSkillObject_);
+          bitField0_ = (bitField0_ & ~0x00080000);
+        }
+        result.candidateSkillObject_ = candidateSkillObject_;
+      } else {
+        result.candidateSkillObject_ = candidateSkillObjectBuilder_.build();
+      }
+      if (candidateCurrentJobRoleBuilder_ == null) {
+        result.candidateCurrentJobRole_ = candidateCurrentJobRole_;
+      } else {
+        result.candidateCurrentJobRole_ = candidateCurrentJobRoleBuilder_.build();
+      }
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -1004,6 +1246,67 @@ public  final class CandidateObject extends
       if (!other.getCandidateCurrentCompany().isEmpty()) {
         candidateCurrentCompany_ = other.candidateCurrentCompany_;
         onChanged();
+      }
+      if (other.getCandidateDobMillis() != 0L) {
+        setCandidateDobMillis(other.getCandidateDobMillis());
+      }
+      if (other.getCandidateIsEmployed() != 0) {
+        setCandidateIsEmployed(other.getCandidateIsEmployed());
+      }
+      if (languageKnownObjectBuilder_ == null) {
+        if (!other.languageKnownObject_.isEmpty()) {
+          if (languageKnownObject_.isEmpty()) {
+            languageKnownObject_ = other.languageKnownObject_;
+            bitField0_ = (bitField0_ & ~0x00040000);
+          } else {
+            ensureLanguageKnownObjectIsMutable();
+            languageKnownObject_.addAll(other.languageKnownObject_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.languageKnownObject_.isEmpty()) {
+          if (languageKnownObjectBuilder_.isEmpty()) {
+            languageKnownObjectBuilder_.dispose();
+            languageKnownObjectBuilder_ = null;
+            languageKnownObject_ = other.languageKnownObject_;
+            bitField0_ = (bitField0_ & ~0x00040000);
+            languageKnownObjectBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 getLanguageKnownObjectFieldBuilder() : null;
+          } else {
+            languageKnownObjectBuilder_.addAllMessages(other.languageKnownObject_);
+          }
+        }
+      }
+      if (candidateSkillObjectBuilder_ == null) {
+        if (!other.candidateSkillObject_.isEmpty()) {
+          if (candidateSkillObject_.isEmpty()) {
+            candidateSkillObject_ = other.candidateSkillObject_;
+            bitField0_ = (bitField0_ & ~0x00080000);
+          } else {
+            ensureCandidateSkillObjectIsMutable();
+            candidateSkillObject_.addAll(other.candidateSkillObject_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.candidateSkillObject_.isEmpty()) {
+          if (candidateSkillObjectBuilder_.isEmpty()) {
+            candidateSkillObjectBuilder_.dispose();
+            candidateSkillObjectBuilder_ = null;
+            candidateSkillObject_ = other.candidateSkillObject_;
+            bitField0_ = (bitField0_ & ~0x00080000);
+            candidateSkillObjectBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 getCandidateSkillObjectFieldBuilder() : null;
+          } else {
+            candidateSkillObjectBuilder_.addAllMessages(other.candidateSkillObject_);
+          }
+        }
+      }
+      if (other.hasCandidateCurrentJobRole()) {
+        mergeCandidateCurrentJobRole(other.getCandidateCurrentJobRole());
       }
       onChanged();
       return this;
@@ -2319,6 +2622,655 @@ public  final class CandidateObject extends
       candidateCurrentCompany_ = value;
       onChanged();
       return this;
+    }
+
+    private long candidateDobMillis_ ;
+    /**
+     * <code>optional int64 candidateDobMillis = 17;</code>
+     */
+    public long getCandidateDobMillis() {
+      return candidateDobMillis_;
+    }
+    /**
+     * <code>optional int64 candidateDobMillis = 17;</code>
+     */
+    public Builder setCandidateDobMillis(long value) {
+      
+      candidateDobMillis_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional int64 candidateDobMillis = 17;</code>
+     */
+    public Builder clearCandidateDobMillis() {
+      
+      candidateDobMillis_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private int candidateIsEmployed_ ;
+    /**
+     * <code>optional int32 candidateIsEmployed = 18;</code>
+     */
+    public int getCandidateIsEmployed() {
+      return candidateIsEmployed_;
+    }
+    /**
+     * <code>optional int32 candidateIsEmployed = 18;</code>
+     */
+    public Builder setCandidateIsEmployed(int value) {
+      
+      candidateIsEmployed_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional int32 candidateIsEmployed = 18;</code>
+     */
+    public Builder clearCandidateIsEmployed() {
+      
+      candidateIsEmployed_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private java.util.List<in.trujobs.proto.LanguageKnownObject> languageKnownObject_ =
+      java.util.Collections.emptyList();
+    private void ensureLanguageKnownObjectIsMutable() {
+      if (!((bitField0_ & 0x00040000) == 0x00040000)) {
+        languageKnownObject_ = new java.util.ArrayList<in.trujobs.proto.LanguageKnownObject>(languageKnownObject_);
+        bitField0_ |= 0x00040000;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilder<
+        in.trujobs.proto.LanguageKnownObject, in.trujobs.proto.LanguageKnownObject.Builder, in.trujobs.proto.LanguageKnownObjectOrBuilder> languageKnownObjectBuilder_;
+
+    /**
+     * <code>repeated .in.trujobs.proto.LanguageKnownObject languageKnownObject = 19;</code>
+     */
+    public java.util.List<in.trujobs.proto.LanguageKnownObject> getLanguageKnownObjectList() {
+      if (languageKnownObjectBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(languageKnownObject_);
+      } else {
+        return languageKnownObjectBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.LanguageKnownObject languageKnownObject = 19;</code>
+     */
+    public int getLanguageKnownObjectCount() {
+      if (languageKnownObjectBuilder_ == null) {
+        return languageKnownObject_.size();
+      } else {
+        return languageKnownObjectBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.LanguageKnownObject languageKnownObject = 19;</code>
+     */
+    public in.trujobs.proto.LanguageKnownObject getLanguageKnownObject(int index) {
+      if (languageKnownObjectBuilder_ == null) {
+        return languageKnownObject_.get(index);
+      } else {
+        return languageKnownObjectBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.LanguageKnownObject languageKnownObject = 19;</code>
+     */
+    public Builder setLanguageKnownObject(
+        int index, in.trujobs.proto.LanguageKnownObject value) {
+      if (languageKnownObjectBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureLanguageKnownObjectIsMutable();
+        languageKnownObject_.set(index, value);
+        onChanged();
+      } else {
+        languageKnownObjectBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.LanguageKnownObject languageKnownObject = 19;</code>
+     */
+    public Builder setLanguageKnownObject(
+        int index, in.trujobs.proto.LanguageKnownObject.Builder builderForValue) {
+      if (languageKnownObjectBuilder_ == null) {
+        ensureLanguageKnownObjectIsMutable();
+        languageKnownObject_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        languageKnownObjectBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.LanguageKnownObject languageKnownObject = 19;</code>
+     */
+    public Builder addLanguageKnownObject(in.trujobs.proto.LanguageKnownObject value) {
+      if (languageKnownObjectBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureLanguageKnownObjectIsMutable();
+        languageKnownObject_.add(value);
+        onChanged();
+      } else {
+        languageKnownObjectBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.LanguageKnownObject languageKnownObject = 19;</code>
+     */
+    public Builder addLanguageKnownObject(
+        int index, in.trujobs.proto.LanguageKnownObject value) {
+      if (languageKnownObjectBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureLanguageKnownObjectIsMutable();
+        languageKnownObject_.add(index, value);
+        onChanged();
+      } else {
+        languageKnownObjectBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.LanguageKnownObject languageKnownObject = 19;</code>
+     */
+    public Builder addLanguageKnownObject(
+        in.trujobs.proto.LanguageKnownObject.Builder builderForValue) {
+      if (languageKnownObjectBuilder_ == null) {
+        ensureLanguageKnownObjectIsMutable();
+        languageKnownObject_.add(builderForValue.build());
+        onChanged();
+      } else {
+        languageKnownObjectBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.LanguageKnownObject languageKnownObject = 19;</code>
+     */
+    public Builder addLanguageKnownObject(
+        int index, in.trujobs.proto.LanguageKnownObject.Builder builderForValue) {
+      if (languageKnownObjectBuilder_ == null) {
+        ensureLanguageKnownObjectIsMutable();
+        languageKnownObject_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        languageKnownObjectBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.LanguageKnownObject languageKnownObject = 19;</code>
+     */
+    public Builder addAllLanguageKnownObject(
+        java.lang.Iterable<? extends in.trujobs.proto.LanguageKnownObject> values) {
+      if (languageKnownObjectBuilder_ == null) {
+        ensureLanguageKnownObjectIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, languageKnownObject_);
+        onChanged();
+      } else {
+        languageKnownObjectBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.LanguageKnownObject languageKnownObject = 19;</code>
+     */
+    public Builder clearLanguageKnownObject() {
+      if (languageKnownObjectBuilder_ == null) {
+        languageKnownObject_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00040000);
+        onChanged();
+      } else {
+        languageKnownObjectBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.LanguageKnownObject languageKnownObject = 19;</code>
+     */
+    public Builder removeLanguageKnownObject(int index) {
+      if (languageKnownObjectBuilder_ == null) {
+        ensureLanguageKnownObjectIsMutable();
+        languageKnownObject_.remove(index);
+        onChanged();
+      } else {
+        languageKnownObjectBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.LanguageKnownObject languageKnownObject = 19;</code>
+     */
+    public in.trujobs.proto.LanguageKnownObject.Builder getLanguageKnownObjectBuilder(
+        int index) {
+      return getLanguageKnownObjectFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.LanguageKnownObject languageKnownObject = 19;</code>
+     */
+    public in.trujobs.proto.LanguageKnownObjectOrBuilder getLanguageKnownObjectOrBuilder(
+        int index) {
+      if (languageKnownObjectBuilder_ == null) {
+        return languageKnownObject_.get(index);  } else {
+        return languageKnownObjectBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.LanguageKnownObject languageKnownObject = 19;</code>
+     */
+    public java.util.List<? extends in.trujobs.proto.LanguageKnownObjectOrBuilder> 
+         getLanguageKnownObjectOrBuilderList() {
+      if (languageKnownObjectBuilder_ != null) {
+        return languageKnownObjectBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(languageKnownObject_);
+      }
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.LanguageKnownObject languageKnownObject = 19;</code>
+     */
+    public in.trujobs.proto.LanguageKnownObject.Builder addLanguageKnownObjectBuilder() {
+      return getLanguageKnownObjectFieldBuilder().addBuilder(
+          in.trujobs.proto.LanguageKnownObject.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.LanguageKnownObject languageKnownObject = 19;</code>
+     */
+    public in.trujobs.proto.LanguageKnownObject.Builder addLanguageKnownObjectBuilder(
+        int index) {
+      return getLanguageKnownObjectFieldBuilder().addBuilder(
+          index, in.trujobs.proto.LanguageKnownObject.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.LanguageKnownObject languageKnownObject = 19;</code>
+     */
+    public java.util.List<in.trujobs.proto.LanguageKnownObject.Builder> 
+         getLanguageKnownObjectBuilderList() {
+      return getLanguageKnownObjectFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        in.trujobs.proto.LanguageKnownObject, in.trujobs.proto.LanguageKnownObject.Builder, in.trujobs.proto.LanguageKnownObjectOrBuilder> 
+        getLanguageKnownObjectFieldBuilder() {
+      if (languageKnownObjectBuilder_ == null) {
+        languageKnownObjectBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            in.trujobs.proto.LanguageKnownObject, in.trujobs.proto.LanguageKnownObject.Builder, in.trujobs.proto.LanguageKnownObjectOrBuilder>(
+                languageKnownObject_,
+                ((bitField0_ & 0x00040000) == 0x00040000),
+                getParentForChildren(),
+                isClean());
+        languageKnownObject_ = null;
+      }
+      return languageKnownObjectBuilder_;
+    }
+
+    private java.util.List<in.trujobs.proto.CandidateSkillObject> candidateSkillObject_ =
+      java.util.Collections.emptyList();
+    private void ensureCandidateSkillObjectIsMutable() {
+      if (!((bitField0_ & 0x00080000) == 0x00080000)) {
+        candidateSkillObject_ = new java.util.ArrayList<in.trujobs.proto.CandidateSkillObject>(candidateSkillObject_);
+        bitField0_ |= 0x00080000;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilder<
+        in.trujobs.proto.CandidateSkillObject, in.trujobs.proto.CandidateSkillObject.Builder, in.trujobs.proto.CandidateSkillObjectOrBuilder> candidateSkillObjectBuilder_;
+
+    /**
+     * <code>repeated .in.trujobs.proto.CandidateSkillObject candidateSkillObject = 20;</code>
+     */
+    public java.util.List<in.trujobs.proto.CandidateSkillObject> getCandidateSkillObjectList() {
+      if (candidateSkillObjectBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(candidateSkillObject_);
+      } else {
+        return candidateSkillObjectBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.CandidateSkillObject candidateSkillObject = 20;</code>
+     */
+    public int getCandidateSkillObjectCount() {
+      if (candidateSkillObjectBuilder_ == null) {
+        return candidateSkillObject_.size();
+      } else {
+        return candidateSkillObjectBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.CandidateSkillObject candidateSkillObject = 20;</code>
+     */
+    public in.trujobs.proto.CandidateSkillObject getCandidateSkillObject(int index) {
+      if (candidateSkillObjectBuilder_ == null) {
+        return candidateSkillObject_.get(index);
+      } else {
+        return candidateSkillObjectBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.CandidateSkillObject candidateSkillObject = 20;</code>
+     */
+    public Builder setCandidateSkillObject(
+        int index, in.trujobs.proto.CandidateSkillObject value) {
+      if (candidateSkillObjectBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureCandidateSkillObjectIsMutable();
+        candidateSkillObject_.set(index, value);
+        onChanged();
+      } else {
+        candidateSkillObjectBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.CandidateSkillObject candidateSkillObject = 20;</code>
+     */
+    public Builder setCandidateSkillObject(
+        int index, in.trujobs.proto.CandidateSkillObject.Builder builderForValue) {
+      if (candidateSkillObjectBuilder_ == null) {
+        ensureCandidateSkillObjectIsMutable();
+        candidateSkillObject_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        candidateSkillObjectBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.CandidateSkillObject candidateSkillObject = 20;</code>
+     */
+    public Builder addCandidateSkillObject(in.trujobs.proto.CandidateSkillObject value) {
+      if (candidateSkillObjectBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureCandidateSkillObjectIsMutable();
+        candidateSkillObject_.add(value);
+        onChanged();
+      } else {
+        candidateSkillObjectBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.CandidateSkillObject candidateSkillObject = 20;</code>
+     */
+    public Builder addCandidateSkillObject(
+        int index, in.trujobs.proto.CandidateSkillObject value) {
+      if (candidateSkillObjectBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureCandidateSkillObjectIsMutable();
+        candidateSkillObject_.add(index, value);
+        onChanged();
+      } else {
+        candidateSkillObjectBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.CandidateSkillObject candidateSkillObject = 20;</code>
+     */
+    public Builder addCandidateSkillObject(
+        in.trujobs.proto.CandidateSkillObject.Builder builderForValue) {
+      if (candidateSkillObjectBuilder_ == null) {
+        ensureCandidateSkillObjectIsMutable();
+        candidateSkillObject_.add(builderForValue.build());
+        onChanged();
+      } else {
+        candidateSkillObjectBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.CandidateSkillObject candidateSkillObject = 20;</code>
+     */
+    public Builder addCandidateSkillObject(
+        int index, in.trujobs.proto.CandidateSkillObject.Builder builderForValue) {
+      if (candidateSkillObjectBuilder_ == null) {
+        ensureCandidateSkillObjectIsMutable();
+        candidateSkillObject_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        candidateSkillObjectBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.CandidateSkillObject candidateSkillObject = 20;</code>
+     */
+    public Builder addAllCandidateSkillObject(
+        java.lang.Iterable<? extends in.trujobs.proto.CandidateSkillObject> values) {
+      if (candidateSkillObjectBuilder_ == null) {
+        ensureCandidateSkillObjectIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, candidateSkillObject_);
+        onChanged();
+      } else {
+        candidateSkillObjectBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.CandidateSkillObject candidateSkillObject = 20;</code>
+     */
+    public Builder clearCandidateSkillObject() {
+      if (candidateSkillObjectBuilder_ == null) {
+        candidateSkillObject_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00080000);
+        onChanged();
+      } else {
+        candidateSkillObjectBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.CandidateSkillObject candidateSkillObject = 20;</code>
+     */
+    public Builder removeCandidateSkillObject(int index) {
+      if (candidateSkillObjectBuilder_ == null) {
+        ensureCandidateSkillObjectIsMutable();
+        candidateSkillObject_.remove(index);
+        onChanged();
+      } else {
+        candidateSkillObjectBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.CandidateSkillObject candidateSkillObject = 20;</code>
+     */
+    public in.trujobs.proto.CandidateSkillObject.Builder getCandidateSkillObjectBuilder(
+        int index) {
+      return getCandidateSkillObjectFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.CandidateSkillObject candidateSkillObject = 20;</code>
+     */
+    public in.trujobs.proto.CandidateSkillObjectOrBuilder getCandidateSkillObjectOrBuilder(
+        int index) {
+      if (candidateSkillObjectBuilder_ == null) {
+        return candidateSkillObject_.get(index);  } else {
+        return candidateSkillObjectBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.CandidateSkillObject candidateSkillObject = 20;</code>
+     */
+    public java.util.List<? extends in.trujobs.proto.CandidateSkillObjectOrBuilder> 
+         getCandidateSkillObjectOrBuilderList() {
+      if (candidateSkillObjectBuilder_ != null) {
+        return candidateSkillObjectBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(candidateSkillObject_);
+      }
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.CandidateSkillObject candidateSkillObject = 20;</code>
+     */
+    public in.trujobs.proto.CandidateSkillObject.Builder addCandidateSkillObjectBuilder() {
+      return getCandidateSkillObjectFieldBuilder().addBuilder(
+          in.trujobs.proto.CandidateSkillObject.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.CandidateSkillObject candidateSkillObject = 20;</code>
+     */
+    public in.trujobs.proto.CandidateSkillObject.Builder addCandidateSkillObjectBuilder(
+        int index) {
+      return getCandidateSkillObjectFieldBuilder().addBuilder(
+          index, in.trujobs.proto.CandidateSkillObject.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.CandidateSkillObject candidateSkillObject = 20;</code>
+     */
+    public java.util.List<in.trujobs.proto.CandidateSkillObject.Builder> 
+         getCandidateSkillObjectBuilderList() {
+      return getCandidateSkillObjectFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        in.trujobs.proto.CandidateSkillObject, in.trujobs.proto.CandidateSkillObject.Builder, in.trujobs.proto.CandidateSkillObjectOrBuilder> 
+        getCandidateSkillObjectFieldBuilder() {
+      if (candidateSkillObjectBuilder_ == null) {
+        candidateSkillObjectBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            in.trujobs.proto.CandidateSkillObject, in.trujobs.proto.CandidateSkillObject.Builder, in.trujobs.proto.CandidateSkillObjectOrBuilder>(
+                candidateSkillObject_,
+                ((bitField0_ & 0x00080000) == 0x00080000),
+                getParentForChildren(),
+                isClean());
+        candidateSkillObject_ = null;
+      }
+      return candidateSkillObjectBuilder_;
+    }
+
+    private in.trujobs.proto.JobRoleObject candidateCurrentJobRole_ = null;
+    private com.google.protobuf.SingleFieldBuilder<
+        in.trujobs.proto.JobRoleObject, in.trujobs.proto.JobRoleObject.Builder, in.trujobs.proto.JobRoleObjectOrBuilder> candidateCurrentJobRoleBuilder_;
+    /**
+     * <code>optional .in.trujobs.proto.JobRoleObject candidateCurrentJobRole = 21;</code>
+     */
+    public boolean hasCandidateCurrentJobRole() {
+      return candidateCurrentJobRoleBuilder_ != null || candidateCurrentJobRole_ != null;
+    }
+    /**
+     * <code>optional .in.trujobs.proto.JobRoleObject candidateCurrentJobRole = 21;</code>
+     */
+    public in.trujobs.proto.JobRoleObject getCandidateCurrentJobRole() {
+      if (candidateCurrentJobRoleBuilder_ == null) {
+        return candidateCurrentJobRole_ == null ? in.trujobs.proto.JobRoleObject.getDefaultInstance() : candidateCurrentJobRole_;
+      } else {
+        return candidateCurrentJobRoleBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>optional .in.trujobs.proto.JobRoleObject candidateCurrentJobRole = 21;</code>
+     */
+    public Builder setCandidateCurrentJobRole(in.trujobs.proto.JobRoleObject value) {
+      if (candidateCurrentJobRoleBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        candidateCurrentJobRole_ = value;
+        onChanged();
+      } else {
+        candidateCurrentJobRoleBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <code>optional .in.trujobs.proto.JobRoleObject candidateCurrentJobRole = 21;</code>
+     */
+    public Builder setCandidateCurrentJobRole(
+        in.trujobs.proto.JobRoleObject.Builder builderForValue) {
+      if (candidateCurrentJobRoleBuilder_ == null) {
+        candidateCurrentJobRole_ = builderForValue.build();
+        onChanged();
+      } else {
+        candidateCurrentJobRoleBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <code>optional .in.trujobs.proto.JobRoleObject candidateCurrentJobRole = 21;</code>
+     */
+    public Builder mergeCandidateCurrentJobRole(in.trujobs.proto.JobRoleObject value) {
+      if (candidateCurrentJobRoleBuilder_ == null) {
+        if (candidateCurrentJobRole_ != null) {
+          candidateCurrentJobRole_ =
+            in.trujobs.proto.JobRoleObject.newBuilder(candidateCurrentJobRole_).mergeFrom(value).buildPartial();
+        } else {
+          candidateCurrentJobRole_ = value;
+        }
+        onChanged();
+      } else {
+        candidateCurrentJobRoleBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <code>optional .in.trujobs.proto.JobRoleObject candidateCurrentJobRole = 21;</code>
+     */
+    public Builder clearCandidateCurrentJobRole() {
+      if (candidateCurrentJobRoleBuilder_ == null) {
+        candidateCurrentJobRole_ = null;
+        onChanged();
+      } else {
+        candidateCurrentJobRole_ = null;
+        candidateCurrentJobRoleBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <code>optional .in.trujobs.proto.JobRoleObject candidateCurrentJobRole = 21;</code>
+     */
+    public in.trujobs.proto.JobRoleObject.Builder getCandidateCurrentJobRoleBuilder() {
+      
+      onChanged();
+      return getCandidateCurrentJobRoleFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>optional .in.trujobs.proto.JobRoleObject candidateCurrentJobRole = 21;</code>
+     */
+    public in.trujobs.proto.JobRoleObjectOrBuilder getCandidateCurrentJobRoleOrBuilder() {
+      if (candidateCurrentJobRoleBuilder_ != null) {
+        return candidateCurrentJobRoleBuilder_.getMessageOrBuilder();
+      } else {
+        return candidateCurrentJobRole_ == null ?
+            in.trujobs.proto.JobRoleObject.getDefaultInstance() : candidateCurrentJobRole_;
+      }
+    }
+    /**
+     * <code>optional .in.trujobs.proto.JobRoleObject candidateCurrentJobRole = 21;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        in.trujobs.proto.JobRoleObject, in.trujobs.proto.JobRoleObject.Builder, in.trujobs.proto.JobRoleObjectOrBuilder> 
+        getCandidateCurrentJobRoleFieldBuilder() {
+      if (candidateCurrentJobRoleBuilder_ == null) {
+        candidateCurrentJobRoleBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            in.trujobs.proto.JobRoleObject, in.trujobs.proto.JobRoleObject.Builder, in.trujobs.proto.JobRoleObjectOrBuilder>(
+                getCandidateCurrentJobRole(),
+                getParentForChildren(),
+                isClean());
+        candidateCurrentJobRole_ = null;
+      }
+      return candidateCurrentJobRoleBuilder_;
     }
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {

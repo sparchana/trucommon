@@ -16,6 +16,7 @@ public  final class CandidateEducationObject extends
   }
   private CandidateEducationObject() {
     candidateInstitute_ = "";
+    candidateEducationCompletionStatus_ = 0;
   }
 
   @java.lang.Override
@@ -72,6 +73,11 @@ public  final class CandidateEducationObject extends
             java.lang.String s = input.readStringRequireUtf8();
 
             candidateInstitute_ = s;
+            break;
+          }
+          case 32: {
+
+            candidateEducationCompletionStatus_ = input.readInt32();
             break;
           }
         }
@@ -174,6 +180,15 @@ public  final class CandidateEducationObject extends
     }
   }
 
+  public static final int CANDIDATEEDUCATIONCOMPLETIONSTATUS_FIELD_NUMBER = 4;
+  private int candidateEducationCompletionStatus_;
+  /**
+   * <code>optional int32 candidateEducationCompletionStatus = 4;</code>
+   */
+  public int getCandidateEducationCompletionStatus() {
+    return candidateEducationCompletionStatus_;
+  }
+
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -195,6 +210,9 @@ public  final class CandidateEducationObject extends
     if (!getCandidateInstituteBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessage.writeString(output, 3, candidateInstitute_);
     }
+    if (candidateEducationCompletionStatus_ != 0) {
+      output.writeInt32(4, candidateEducationCompletionStatus_);
+    }
   }
 
   public int getSerializedSize() {
@@ -212,6 +230,10 @@ public  final class CandidateEducationObject extends
     }
     if (!getCandidateInstituteBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(3, candidateInstitute_);
+    }
+    if (candidateEducationCompletionStatus_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(4, candidateEducationCompletionStatus_);
     }
     memoizedSize = size;
     return size;
@@ -338,6 +360,8 @@ public  final class CandidateEducationObject extends
       }
       candidateInstitute_ = "";
 
+      candidateEducationCompletionStatus_ = 0;
+
       return this;
     }
 
@@ -371,6 +395,7 @@ public  final class CandidateEducationObject extends
         result.degree_ = degreeBuilder_.build();
       }
       result.candidateInstitute_ = candidateInstitute_;
+      result.candidateEducationCompletionStatus_ = candidateEducationCompletionStatus_;
       onBuilt();
       return result;
     }
@@ -395,6 +420,9 @@ public  final class CandidateEducationObject extends
       if (!other.getCandidateInstitute().isEmpty()) {
         candidateInstitute_ = other.candidateInstitute_;
         onChanged();
+      }
+      if (other.getCandidateEducationCompletionStatus() != 0) {
+        setCandidateEducationCompletionStatus(other.getCandidateEducationCompletionStatus());
       }
       onChanged();
       return this;
@@ -721,6 +749,32 @@ public  final class CandidateEducationObject extends
   checkByteStringIsUtf8(value);
       
       candidateInstitute_ = value;
+      onChanged();
+      return this;
+    }
+
+    private int candidateEducationCompletionStatus_ ;
+    /**
+     * <code>optional int32 candidateEducationCompletionStatus = 4;</code>
+     */
+    public int getCandidateEducationCompletionStatus() {
+      return candidateEducationCompletionStatus_;
+    }
+    /**
+     * <code>optional int32 candidateEducationCompletionStatus = 4;</code>
+     */
+    public Builder setCandidateEducationCompletionStatus(int value) {
+      
+      candidateEducationCompletionStatus_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional int32 candidateEducationCompletionStatus = 4;</code>
+     */
+    public Builder clearCandidateEducationCompletionStatus() {
+      
+      candidateEducationCompletionStatus_ = 0;
       onChanged();
       return this;
     }

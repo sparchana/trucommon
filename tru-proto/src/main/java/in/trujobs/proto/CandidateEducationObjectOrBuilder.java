@@ -42,4 +42,9 @@ public interface CandidateEducationObjectOrBuilder extends
    */
   com.google.protobuf.ByteString
       getCandidateInstituteBytes();
+
+  /**
+   * <code>optional int32 candidateEducationCompletionStatus = 4;</code>
+   */
+  int getCandidateEducationCompletionStatus();
 }

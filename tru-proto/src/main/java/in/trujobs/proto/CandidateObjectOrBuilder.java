@@ -168,4 +168,75 @@ public interface CandidateObjectOrBuilder extends
    */
   com.google.protobuf.ByteString
       getCandidateCurrentCompanyBytes();
+
+  /**
+   * <code>optional int64 candidateDobMillis = 17;</code>
+   */
+  long getCandidateDobMillis();
+
+  /**
+   * <code>optional int32 candidateIsEmployed = 18;</code>
+   */
+  int getCandidateIsEmployed();
+
+  /**
+   * <code>repeated .in.trujobs.proto.LanguageKnownObject languageKnownObject = 19;</code>
+   */
+  java.util.List<in.trujobs.proto.LanguageKnownObject> 
+      getLanguageKnownObjectList();
+  /**
+   * <code>repeated .in.trujobs.proto.LanguageKnownObject languageKnownObject = 19;</code>
+   */
+  in.trujobs.proto.LanguageKnownObject getLanguageKnownObject(int index);
+  /**
+   * <code>repeated .in.trujobs.proto.LanguageKnownObject languageKnownObject = 19;</code>
+   */
+  int getLanguageKnownObjectCount();
+  /**
+   * <code>repeated .in.trujobs.proto.LanguageKnownObject languageKnownObject = 19;</code>
+   */
+  java.util.List<? extends in.trujobs.proto.LanguageKnownObjectOrBuilder> 
+      getLanguageKnownObjectOrBuilderList();
+  /**
+   * <code>repeated .in.trujobs.proto.LanguageKnownObject languageKnownObject = 19;</code>
+   */
+  in.trujobs.proto.LanguageKnownObjectOrBuilder getLanguageKnownObjectOrBuilder(
+      int index);
+
+  /**
+   * <code>repeated .in.trujobs.proto.CandidateSkillObject candidateSkillObject = 20;</code>
+   */
+  java.util.List<in.trujobs.proto.CandidateSkillObject> 
+      getCandidateSkillObjectList();
+  /**
+   * <code>repeated .in.trujobs.proto.CandidateSkillObject candidateSkillObject = 20;</code>
+   */
+  in.trujobs.proto.CandidateSkillObject getCandidateSkillObject(int index);
+  /**
+   * <code>repeated .in.trujobs.proto.CandidateSkillObject candidateSkillObject = 20;</code>
+   */
+  int getCandidateSkillObjectCount();
+  /**
+   * <code>repeated .in.trujobs.proto.CandidateSkillObject candidateSkillObject = 20;</code>
+   */
+  java.util.List<? extends in.trujobs.proto.CandidateSkillObjectOrBuilder> 
+      getCandidateSkillObjectOrBuilderList();
+  /**
+   * <code>repeated .in.trujobs.proto.CandidateSkillObject candidateSkillObject = 20;</code>
+   */
+  in.trujobs.proto.CandidateSkillObjectOrBuilder getCandidateSkillObjectOrBuilder(
+      int index);
+
+  /**
+   * <code>optional .in.trujobs.proto.JobRoleObject candidateCurrentJobRole = 21;</code>
+   */
+  boolean hasCandidateCurrentJobRole();
+  /**
+   * <code>optional .in.trujobs.proto.JobRoleObject candidateCurrentJobRole = 21;</code>
+   */
+  in.trujobs.proto.JobRoleObject getCandidateCurrentJobRole();
+  /**
+   * <code>optional .in.trujobs.proto.JobRoleObject candidateCurrentJobRole = 21;</code>
+   */
+  in.trujobs.proto.JobRoleObjectOrBuilder getCandidateCurrentJobRoleOrBuilder();
 }
