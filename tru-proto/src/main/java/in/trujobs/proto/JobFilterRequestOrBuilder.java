@@ -62,4 +62,14 @@ public interface JobFilterRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getCandidateMobileBytes();
+
+  /**
+   * <code>optional double job_search_latitude = 8;</code>
+   */
+  double getJobSearchLatitude();
+
+  /**
+   * <code>optional double job_search_longitude = 9;</code>
+   */
+  double getJobSearchLongitude();
 }

@@ -22,6 +22,8 @@ public  final class JobFilterRequest extends
     sortByDatePosted_ = false;
     sortBySalary_ = false;
     candidateMobile_ = "";
+    jobSearchLatitude_ = 0D;
+    jobSearchLongitude_ = 0D;
   }
 
   @java.lang.Override
@@ -86,6 +88,16 @@ public  final class JobFilterRequest extends
             java.lang.String s = input.readStringRequireUtf8();
 
             candidateMobile_ = s;
+            break;
+          }
+          case 65: {
+
+            jobSearchLatitude_ = input.readDouble();
+            break;
+          }
+          case 73: {
+
+            jobSearchLongitude_ = input.readDouble();
             break;
           }
         }
@@ -686,6 +698,24 @@ public  final class JobFilterRequest extends
     }
   }
 
+  public static final int JOB_SEARCH_LATITUDE_FIELD_NUMBER = 8;
+  private double jobSearchLatitude_;
+  /**
+   * <code>optional double job_search_latitude = 8;</code>
+   */
+  public double getJobSearchLatitude() {
+    return jobSearchLatitude_;
+  }
+
+  public static final int JOB_SEARCH_LONGITUDE_FIELD_NUMBER = 9;
+  private double jobSearchLongitude_;
+  /**
+   * <code>optional double job_search_longitude = 9;</code>
+   */
+  public double getJobSearchLongitude() {
+    return jobSearchLongitude_;
+  }
+
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -718,6 +748,12 @@ public  final class JobFilterRequest extends
     }
     if (!getCandidateMobileBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessage.writeString(output, 7, candidateMobile_);
+    }
+    if (jobSearchLatitude_ != 0D) {
+      output.writeDouble(8, jobSearchLatitude_);
+    }
+    if (jobSearchLongitude_ != 0D) {
+      output.writeDouble(9, jobSearchLongitude_);
     }
   }
 
@@ -752,6 +788,14 @@ public  final class JobFilterRequest extends
     }
     if (!getCandidateMobileBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(7, candidateMobile_);
+    }
+    if (jobSearchLatitude_ != 0D) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(8, jobSearchLatitude_);
+    }
+    if (jobSearchLongitude_ != 0D) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(9, jobSearchLongitude_);
     }
     memoizedSize = size;
     return size;
@@ -878,6 +922,10 @@ public  final class JobFilterRequest extends
 
       candidateMobile_ = "";
 
+      jobSearchLatitude_ = 0D;
+
+      jobSearchLongitude_ = 0D;
+
       return this;
     }
 
@@ -907,6 +955,8 @@ public  final class JobFilterRequest extends
       result.sortByDatePosted_ = sortByDatePosted_;
       result.sortBySalary_ = sortBySalary_;
       result.candidateMobile_ = candidateMobile_;
+      result.jobSearchLatitude_ = jobSearchLatitude_;
+      result.jobSearchLongitude_ = jobSearchLongitude_;
       onBuilt();
       return result;
     }
@@ -943,6 +993,12 @@ public  final class JobFilterRequest extends
       if (!other.getCandidateMobile().isEmpty()) {
         candidateMobile_ = other.candidateMobile_;
         onChanged();
+      }
+      if (other.getJobSearchLatitude() != 0D) {
+        setJobSearchLatitude(other.getJobSearchLatitude());
+      }
+      if (other.getJobSearchLongitude() != 0D) {
+        setJobSearchLongitude(other.getJobSearchLongitude());
       }
       onChanged();
       return this;
@@ -1263,6 +1319,58 @@ public  final class JobFilterRequest extends
   checkByteStringIsUtf8(value);
       
       candidateMobile_ = value;
+      onChanged();
+      return this;
+    }
+
+    private double jobSearchLatitude_ ;
+    /**
+     * <code>optional double job_search_latitude = 8;</code>
+     */
+    public double getJobSearchLatitude() {
+      return jobSearchLatitude_;
+    }
+    /**
+     * <code>optional double job_search_latitude = 8;</code>
+     */
+    public Builder setJobSearchLatitude(double value) {
+      
+      jobSearchLatitude_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional double job_search_latitude = 8;</code>
+     */
+    public Builder clearJobSearchLatitude() {
+      
+      jobSearchLatitude_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double jobSearchLongitude_ ;
+    /**
+     * <code>optional double job_search_longitude = 9;</code>
+     */
+    public double getJobSearchLongitude() {
+      return jobSearchLongitude_;
+    }
+    /**
+     * <code>optional double job_search_longitude = 9;</code>
+     */
+    public Builder setJobSearchLongitude(double value) {
+      
+      jobSearchLongitude_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional double job_search_longitude = 9;</code>
+     */
+    public Builder clearJobSearchLongitude() {
+      
+      jobSearchLongitude_ = 0D;
       onChanged();
       return this;
     }

@@ -280,6 +280,8 @@ message JobFilterRequest {
     bool sort_by_date_posted = 5; 
     bool sort_by_salary = 6; 
     string candidate_mobile = 7;
+    double job_search_latitude = 8;
+    double job_search_longitude = 9;
 }
 
 message FetchCandidateAlertRequest {
