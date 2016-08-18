@@ -37,6 +37,9 @@ message LogInResponse {
     int32 candidateHomeLocalityStatus = 12;
     double candidateHomeLatitude = 13;
     double candidateHomeLongitude = 14;
+    int64 candidatePrefJobRoleIdOne = 15;
+    int64 candidatePrefJobRoleIdTwo = 16;
+    int64 candidatePrefJobRoleIdThree = 17;
 }
 
 message SignUpRequest {

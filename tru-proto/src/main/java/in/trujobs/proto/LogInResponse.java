@@ -29,6 +29,9 @@ public  final class LogInResponse extends
     candidateHomeLocalityStatus_ = 0;
     candidateHomeLatitude_ = 0D;
     candidateHomeLongitude_ = 0D;
+    candidatePrefJobRoleIdOne_ = 0L;
+    candidatePrefJobRoleIdTwo_ = 0L;
+    candidatePrefJobRoleIdThree_ = 0L;
   }
 
   @java.lang.Override
@@ -127,6 +130,21 @@ public  final class LogInResponse extends
           case 113: {
 
             candidateHomeLongitude_ = input.readDouble();
+            break;
+          }
+          case 120: {
+
+            candidatePrefJobRoleIdOne_ = input.readInt64();
+            break;
+          }
+          case 128: {
+
+            candidatePrefJobRoleIdTwo_ = input.readInt64();
+            break;
+          }
+          case 136: {
+
+            candidatePrefJobRoleIdThree_ = input.readInt64();
             break;
           }
         }
@@ -480,6 +498,33 @@ public  final class LogInResponse extends
     return candidateHomeLongitude_;
   }
 
+  public static final int CANDIDATEPREFJOBROLEIDONE_FIELD_NUMBER = 15;
+  private long candidatePrefJobRoleIdOne_;
+  /**
+   * <code>optional int64 candidatePrefJobRoleIdOne = 15;</code>
+   */
+  public long getCandidatePrefJobRoleIdOne() {
+    return candidatePrefJobRoleIdOne_;
+  }
+
+  public static final int CANDIDATEPREFJOBROLEIDTWO_FIELD_NUMBER = 16;
+  private long candidatePrefJobRoleIdTwo_;
+  /**
+   * <code>optional int64 candidatePrefJobRoleIdTwo = 16;</code>
+   */
+  public long getCandidatePrefJobRoleIdTwo() {
+    return candidatePrefJobRoleIdTwo_;
+  }
+
+  public static final int CANDIDATEPREFJOBROLEIDTHREE_FIELD_NUMBER = 17;
+  private long candidatePrefJobRoleIdThree_;
+  /**
+   * <code>optional int64 candidatePrefJobRoleIdThree = 17;</code>
+   */
+  public long getCandidatePrefJobRoleIdThree() {
+    return candidatePrefJobRoleIdThree_;
+  }
+
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -533,6 +578,15 @@ public  final class LogInResponse extends
     }
     if (candidateHomeLongitude_ != 0D) {
       output.writeDouble(14, candidateHomeLongitude_);
+    }
+    if (candidatePrefJobRoleIdOne_ != 0L) {
+      output.writeInt64(15, candidatePrefJobRoleIdOne_);
+    }
+    if (candidatePrefJobRoleIdTwo_ != 0L) {
+      output.writeInt64(16, candidatePrefJobRoleIdTwo_);
+    }
+    if (candidatePrefJobRoleIdThree_ != 0L) {
+      output.writeInt64(17, candidatePrefJobRoleIdThree_);
     }
   }
 
@@ -593,6 +647,18 @@ public  final class LogInResponse extends
     if (candidateHomeLongitude_ != 0D) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(14, candidateHomeLongitude_);
+    }
+    if (candidatePrefJobRoleIdOne_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(15, candidatePrefJobRoleIdOne_);
+    }
+    if (candidatePrefJobRoleIdTwo_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(16, candidatePrefJobRoleIdTwo_);
+    }
+    if (candidatePrefJobRoleIdThree_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(17, candidatePrefJobRoleIdThree_);
     }
     memoizedSize = size;
     return size;
@@ -733,6 +799,12 @@ public  final class LogInResponse extends
 
       candidateHomeLongitude_ = 0D;
 
+      candidatePrefJobRoleIdOne_ = 0L;
+
+      candidatePrefJobRoleIdTwo_ = 0L;
+
+      candidatePrefJobRoleIdThree_ = 0L;
+
       return this;
     }
 
@@ -769,6 +841,9 @@ public  final class LogInResponse extends
       result.candidateHomeLocalityStatus_ = candidateHomeLocalityStatus_;
       result.candidateHomeLatitude_ = candidateHomeLatitude_;
       result.candidateHomeLongitude_ = candidateHomeLongitude_;
+      result.candidatePrefJobRoleIdOne_ = candidatePrefJobRoleIdOne_;
+      result.candidatePrefJobRoleIdTwo_ = candidatePrefJobRoleIdTwo_;
+      result.candidatePrefJobRoleIdThree_ = candidatePrefJobRoleIdThree_;
       onBuilt();
       return result;
     }
@@ -828,6 +903,15 @@ public  final class LogInResponse extends
       }
       if (other.getCandidateHomeLongitude() != 0D) {
         setCandidateHomeLongitude(other.getCandidateHomeLongitude());
+      }
+      if (other.getCandidatePrefJobRoleIdOne() != 0L) {
+        setCandidatePrefJobRoleIdOne(other.getCandidatePrefJobRoleIdOne());
+      }
+      if (other.getCandidatePrefJobRoleIdTwo() != 0L) {
+        setCandidatePrefJobRoleIdTwo(other.getCandidatePrefJobRoleIdTwo());
+      }
+      if (other.getCandidatePrefJobRoleIdThree() != 0L) {
+        setCandidatePrefJobRoleIdThree(other.getCandidatePrefJobRoleIdThree());
       }
       onChanged();
       return this;
@@ -1362,6 +1446,84 @@ public  final class LogInResponse extends
     public Builder clearCandidateHomeLongitude() {
       
       candidateHomeLongitude_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private long candidatePrefJobRoleIdOne_ ;
+    /**
+     * <code>optional int64 candidatePrefJobRoleIdOne = 15;</code>
+     */
+    public long getCandidatePrefJobRoleIdOne() {
+      return candidatePrefJobRoleIdOne_;
+    }
+    /**
+     * <code>optional int64 candidatePrefJobRoleIdOne = 15;</code>
+     */
+    public Builder setCandidatePrefJobRoleIdOne(long value) {
+      
+      candidatePrefJobRoleIdOne_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional int64 candidatePrefJobRoleIdOne = 15;</code>
+     */
+    public Builder clearCandidatePrefJobRoleIdOne() {
+      
+      candidatePrefJobRoleIdOne_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private long candidatePrefJobRoleIdTwo_ ;
+    /**
+     * <code>optional int64 candidatePrefJobRoleIdTwo = 16;</code>
+     */
+    public long getCandidatePrefJobRoleIdTwo() {
+      return candidatePrefJobRoleIdTwo_;
+    }
+    /**
+     * <code>optional int64 candidatePrefJobRoleIdTwo = 16;</code>
+     */
+    public Builder setCandidatePrefJobRoleIdTwo(long value) {
+      
+      candidatePrefJobRoleIdTwo_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional int64 candidatePrefJobRoleIdTwo = 16;</code>
+     */
+    public Builder clearCandidatePrefJobRoleIdTwo() {
+      
+      candidatePrefJobRoleIdTwo_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private long candidatePrefJobRoleIdThree_ ;
+    /**
+     * <code>optional int64 candidatePrefJobRoleIdThree = 17;</code>
+     */
+    public long getCandidatePrefJobRoleIdThree() {
+      return candidatePrefJobRoleIdThree_;
+    }
+    /**
+     * <code>optional int64 candidatePrefJobRoleIdThree = 17;</code>
+     */
+    public Builder setCandidatePrefJobRoleIdThree(long value) {
+      
+      candidatePrefJobRoleIdThree_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional int64 candidatePrefJobRoleIdThree = 17;</code>
+     */
+    public Builder clearCandidatePrefJobRoleIdThree() {
+      
+      candidatePrefJobRoleIdThree_ = 0L;
       onChanged();
       return this;
     }
