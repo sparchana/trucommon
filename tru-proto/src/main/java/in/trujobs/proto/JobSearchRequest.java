@@ -60,6 +60,32 @@ public  final class JobSearchRequest extends
             candidateMobile_ = s;
             break;
           }
+          case 34: {
+            in.trujobs.proto.JobFilterRequest.Builder subBuilder = null;
+            if (jobFilterRequest_ != null) {
+              subBuilder = jobFilterRequest_.toBuilder();
+            }
+            jobFilterRequest_ = input.readMessage(in.trujobs.proto.JobFilterRequest.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(jobFilterRequest_);
+              jobFilterRequest_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 42: {
+            in.trujobs.proto.JobSearchByJobRoleRequest.Builder subBuilder = null;
+            if (jobSearchByJobRoleRequest_ != null) {
+              subBuilder = jobSearchByJobRoleRequest_.toBuilder();
+            }
+            jobSearchByJobRoleRequest_ = input.readMessage(in.trujobs.proto.JobSearchByJobRoleRequest.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(jobSearchByJobRoleRequest_);
+              jobSearchByJobRoleRequest_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -136,6 +162,48 @@ public  final class JobSearchRequest extends
     }
   }
 
+  public static final int JOBFILTERREQUEST_FIELD_NUMBER = 4;
+  private in.trujobs.proto.JobFilterRequest jobFilterRequest_;
+  /**
+   * <code>optional .in.trujobs.proto.JobFilterRequest jobFilterRequest = 4;</code>
+   */
+  public boolean hasJobFilterRequest() {
+    return jobFilterRequest_ != null;
+  }
+  /**
+   * <code>optional .in.trujobs.proto.JobFilterRequest jobFilterRequest = 4;</code>
+   */
+  public in.trujobs.proto.JobFilterRequest getJobFilterRequest() {
+    return jobFilterRequest_ == null ? in.trujobs.proto.JobFilterRequest.getDefaultInstance() : jobFilterRequest_;
+  }
+  /**
+   * <code>optional .in.trujobs.proto.JobFilterRequest jobFilterRequest = 4;</code>
+   */
+  public in.trujobs.proto.JobFilterRequestOrBuilder getJobFilterRequestOrBuilder() {
+    return getJobFilterRequest();
+  }
+
+  public static final int JOBSEARCHBYJOBROLEREQUEST_FIELD_NUMBER = 5;
+  private in.trujobs.proto.JobSearchByJobRoleRequest jobSearchByJobRoleRequest_;
+  /**
+   * <code>optional .in.trujobs.proto.JobSearchByJobRoleRequest jobSearchByJobRoleRequest = 5;</code>
+   */
+  public boolean hasJobSearchByJobRoleRequest() {
+    return jobSearchByJobRoleRequest_ != null;
+  }
+  /**
+   * <code>optional .in.trujobs.proto.JobSearchByJobRoleRequest jobSearchByJobRoleRequest = 5;</code>
+   */
+  public in.trujobs.proto.JobSearchByJobRoleRequest getJobSearchByJobRoleRequest() {
+    return jobSearchByJobRoleRequest_ == null ? in.trujobs.proto.JobSearchByJobRoleRequest.getDefaultInstance() : jobSearchByJobRoleRequest_;
+  }
+  /**
+   * <code>optional .in.trujobs.proto.JobSearchByJobRoleRequest jobSearchByJobRoleRequest = 5;</code>
+   */
+  public in.trujobs.proto.JobSearchByJobRoleRequestOrBuilder getJobSearchByJobRoleRequestOrBuilder() {
+    return getJobSearchByJobRoleRequest();
+  }
+
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -157,6 +225,12 @@ public  final class JobSearchRequest extends
     if (!getCandidateMobileBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessage.writeString(output, 3, candidateMobile_);
     }
+    if (jobFilterRequest_ != null) {
+      output.writeMessage(4, getJobFilterRequest());
+    }
+    if (jobSearchByJobRoleRequest_ != null) {
+      output.writeMessage(5, getJobSearchByJobRoleRequest());
+    }
   }
 
   public int getSerializedSize() {
@@ -174,6 +248,14 @@ public  final class JobSearchRequest extends
     }
     if (!getCandidateMobileBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(3, candidateMobile_);
+    }
+    if (jobFilterRequest_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, getJobFilterRequest());
+    }
+    if (jobSearchByJobRoleRequest_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, getJobSearchByJobRoleRequest());
     }
     memoizedSize = size;
     return size;
@@ -292,6 +374,18 @@ public  final class JobSearchRequest extends
 
       candidateMobile_ = "";
 
+      if (jobFilterRequestBuilder_ == null) {
+        jobFilterRequest_ = null;
+      } else {
+        jobFilterRequest_ = null;
+        jobFilterRequestBuilder_ = null;
+      }
+      if (jobSearchByJobRoleRequestBuilder_ == null) {
+        jobSearchByJobRoleRequest_ = null;
+      } else {
+        jobSearchByJobRoleRequest_ = null;
+        jobSearchByJobRoleRequestBuilder_ = null;
+      }
       return this;
     }
 
@@ -317,6 +411,16 @@ public  final class JobSearchRequest extends
       result.latitude_ = latitude_;
       result.longitude_ = longitude_;
       result.candidateMobile_ = candidateMobile_;
+      if (jobFilterRequestBuilder_ == null) {
+        result.jobFilterRequest_ = jobFilterRequest_;
+      } else {
+        result.jobFilterRequest_ = jobFilterRequestBuilder_.build();
+      }
+      if (jobSearchByJobRoleRequestBuilder_ == null) {
+        result.jobSearchByJobRoleRequest_ = jobSearchByJobRoleRequest_;
+      } else {
+        result.jobSearchByJobRoleRequest_ = jobSearchByJobRoleRequestBuilder_.build();
+      }
       onBuilt();
       return result;
     }
@@ -341,6 +445,12 @@ public  final class JobSearchRequest extends
       if (!other.getCandidateMobile().isEmpty()) {
         candidateMobile_ = other.candidateMobile_;
         onChanged();
+      }
+      if (other.hasJobFilterRequest()) {
+        mergeJobFilterRequest(other.getJobFilterRequest());
+      }
+      if (other.hasJobSearchByJobRoleRequest()) {
+        mergeJobSearchByJobRoleRequest(other.getJobSearchByJobRoleRequest());
       }
       onChanged();
       return this;
@@ -487,6 +597,240 @@ public  final class JobSearchRequest extends
       candidateMobile_ = value;
       onChanged();
       return this;
+    }
+
+    private in.trujobs.proto.JobFilterRequest jobFilterRequest_ = null;
+    private com.google.protobuf.SingleFieldBuilder<
+        in.trujobs.proto.JobFilterRequest, in.trujobs.proto.JobFilterRequest.Builder, in.trujobs.proto.JobFilterRequestOrBuilder> jobFilterRequestBuilder_;
+    /**
+     * <code>optional .in.trujobs.proto.JobFilterRequest jobFilterRequest = 4;</code>
+     */
+    public boolean hasJobFilterRequest() {
+      return jobFilterRequestBuilder_ != null || jobFilterRequest_ != null;
+    }
+    /**
+     * <code>optional .in.trujobs.proto.JobFilterRequest jobFilterRequest = 4;</code>
+     */
+    public in.trujobs.proto.JobFilterRequest getJobFilterRequest() {
+      if (jobFilterRequestBuilder_ == null) {
+        return jobFilterRequest_ == null ? in.trujobs.proto.JobFilterRequest.getDefaultInstance() : jobFilterRequest_;
+      } else {
+        return jobFilterRequestBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>optional .in.trujobs.proto.JobFilterRequest jobFilterRequest = 4;</code>
+     */
+    public Builder setJobFilterRequest(in.trujobs.proto.JobFilterRequest value) {
+      if (jobFilterRequestBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        jobFilterRequest_ = value;
+        onChanged();
+      } else {
+        jobFilterRequestBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <code>optional .in.trujobs.proto.JobFilterRequest jobFilterRequest = 4;</code>
+     */
+    public Builder setJobFilterRequest(
+        in.trujobs.proto.JobFilterRequest.Builder builderForValue) {
+      if (jobFilterRequestBuilder_ == null) {
+        jobFilterRequest_ = builderForValue.build();
+        onChanged();
+      } else {
+        jobFilterRequestBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <code>optional .in.trujobs.proto.JobFilterRequest jobFilterRequest = 4;</code>
+     */
+    public Builder mergeJobFilterRequest(in.trujobs.proto.JobFilterRequest value) {
+      if (jobFilterRequestBuilder_ == null) {
+        if (jobFilterRequest_ != null) {
+          jobFilterRequest_ =
+            in.trujobs.proto.JobFilterRequest.newBuilder(jobFilterRequest_).mergeFrom(value).buildPartial();
+        } else {
+          jobFilterRequest_ = value;
+        }
+        onChanged();
+      } else {
+        jobFilterRequestBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <code>optional .in.trujobs.proto.JobFilterRequest jobFilterRequest = 4;</code>
+     */
+    public Builder clearJobFilterRequest() {
+      if (jobFilterRequestBuilder_ == null) {
+        jobFilterRequest_ = null;
+        onChanged();
+      } else {
+        jobFilterRequest_ = null;
+        jobFilterRequestBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <code>optional .in.trujobs.proto.JobFilterRequest jobFilterRequest = 4;</code>
+     */
+    public in.trujobs.proto.JobFilterRequest.Builder getJobFilterRequestBuilder() {
+      
+      onChanged();
+      return getJobFilterRequestFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>optional .in.trujobs.proto.JobFilterRequest jobFilterRequest = 4;</code>
+     */
+    public in.trujobs.proto.JobFilterRequestOrBuilder getJobFilterRequestOrBuilder() {
+      if (jobFilterRequestBuilder_ != null) {
+        return jobFilterRequestBuilder_.getMessageOrBuilder();
+      } else {
+        return jobFilterRequest_ == null ?
+            in.trujobs.proto.JobFilterRequest.getDefaultInstance() : jobFilterRequest_;
+      }
+    }
+    /**
+     * <code>optional .in.trujobs.proto.JobFilterRequest jobFilterRequest = 4;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        in.trujobs.proto.JobFilterRequest, in.trujobs.proto.JobFilterRequest.Builder, in.trujobs.proto.JobFilterRequestOrBuilder> 
+        getJobFilterRequestFieldBuilder() {
+      if (jobFilterRequestBuilder_ == null) {
+        jobFilterRequestBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            in.trujobs.proto.JobFilterRequest, in.trujobs.proto.JobFilterRequest.Builder, in.trujobs.proto.JobFilterRequestOrBuilder>(
+                getJobFilterRequest(),
+                getParentForChildren(),
+                isClean());
+        jobFilterRequest_ = null;
+      }
+      return jobFilterRequestBuilder_;
+    }
+
+    private in.trujobs.proto.JobSearchByJobRoleRequest jobSearchByJobRoleRequest_ = null;
+    private com.google.protobuf.SingleFieldBuilder<
+        in.trujobs.proto.JobSearchByJobRoleRequest, in.trujobs.proto.JobSearchByJobRoleRequest.Builder, in.trujobs.proto.JobSearchByJobRoleRequestOrBuilder> jobSearchByJobRoleRequestBuilder_;
+    /**
+     * <code>optional .in.trujobs.proto.JobSearchByJobRoleRequest jobSearchByJobRoleRequest = 5;</code>
+     */
+    public boolean hasJobSearchByJobRoleRequest() {
+      return jobSearchByJobRoleRequestBuilder_ != null || jobSearchByJobRoleRequest_ != null;
+    }
+    /**
+     * <code>optional .in.trujobs.proto.JobSearchByJobRoleRequest jobSearchByJobRoleRequest = 5;</code>
+     */
+    public in.trujobs.proto.JobSearchByJobRoleRequest getJobSearchByJobRoleRequest() {
+      if (jobSearchByJobRoleRequestBuilder_ == null) {
+        return jobSearchByJobRoleRequest_ == null ? in.trujobs.proto.JobSearchByJobRoleRequest.getDefaultInstance() : jobSearchByJobRoleRequest_;
+      } else {
+        return jobSearchByJobRoleRequestBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>optional .in.trujobs.proto.JobSearchByJobRoleRequest jobSearchByJobRoleRequest = 5;</code>
+     */
+    public Builder setJobSearchByJobRoleRequest(in.trujobs.proto.JobSearchByJobRoleRequest value) {
+      if (jobSearchByJobRoleRequestBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        jobSearchByJobRoleRequest_ = value;
+        onChanged();
+      } else {
+        jobSearchByJobRoleRequestBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <code>optional .in.trujobs.proto.JobSearchByJobRoleRequest jobSearchByJobRoleRequest = 5;</code>
+     */
+    public Builder setJobSearchByJobRoleRequest(
+        in.trujobs.proto.JobSearchByJobRoleRequest.Builder builderForValue) {
+      if (jobSearchByJobRoleRequestBuilder_ == null) {
+        jobSearchByJobRoleRequest_ = builderForValue.build();
+        onChanged();
+      } else {
+        jobSearchByJobRoleRequestBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <code>optional .in.trujobs.proto.JobSearchByJobRoleRequest jobSearchByJobRoleRequest = 5;</code>
+     */
+    public Builder mergeJobSearchByJobRoleRequest(in.trujobs.proto.JobSearchByJobRoleRequest value) {
+      if (jobSearchByJobRoleRequestBuilder_ == null) {
+        if (jobSearchByJobRoleRequest_ != null) {
+          jobSearchByJobRoleRequest_ =
+            in.trujobs.proto.JobSearchByJobRoleRequest.newBuilder(jobSearchByJobRoleRequest_).mergeFrom(value).buildPartial();
+        } else {
+          jobSearchByJobRoleRequest_ = value;
+        }
+        onChanged();
+      } else {
+        jobSearchByJobRoleRequestBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <code>optional .in.trujobs.proto.JobSearchByJobRoleRequest jobSearchByJobRoleRequest = 5;</code>
+     */
+    public Builder clearJobSearchByJobRoleRequest() {
+      if (jobSearchByJobRoleRequestBuilder_ == null) {
+        jobSearchByJobRoleRequest_ = null;
+        onChanged();
+      } else {
+        jobSearchByJobRoleRequest_ = null;
+        jobSearchByJobRoleRequestBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <code>optional .in.trujobs.proto.JobSearchByJobRoleRequest jobSearchByJobRoleRequest = 5;</code>
+     */
+    public in.trujobs.proto.JobSearchByJobRoleRequest.Builder getJobSearchByJobRoleRequestBuilder() {
+      
+      onChanged();
+      return getJobSearchByJobRoleRequestFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>optional .in.trujobs.proto.JobSearchByJobRoleRequest jobSearchByJobRoleRequest = 5;</code>
+     */
+    public in.trujobs.proto.JobSearchByJobRoleRequestOrBuilder getJobSearchByJobRoleRequestOrBuilder() {
+      if (jobSearchByJobRoleRequestBuilder_ != null) {
+        return jobSearchByJobRoleRequestBuilder_.getMessageOrBuilder();
+      } else {
+        return jobSearchByJobRoleRequest_ == null ?
+            in.trujobs.proto.JobSearchByJobRoleRequest.getDefaultInstance() : jobSearchByJobRoleRequest_;
+      }
+    }
+    /**
+     * <code>optional .in.trujobs.proto.JobSearchByJobRoleRequest jobSearchByJobRoleRequest = 5;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        in.trujobs.proto.JobSearchByJobRoleRequest, in.trujobs.proto.JobSearchByJobRoleRequest.Builder, in.trujobs.proto.JobSearchByJobRoleRequestOrBuilder> 
+        getJobSearchByJobRoleRequestFieldBuilder() {
+      if (jobSearchByJobRoleRequestBuilder_ == null) {
+        jobSearchByJobRoleRequestBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            in.trujobs.proto.JobSearchByJobRoleRequest, in.trujobs.proto.JobSearchByJobRoleRequest.Builder, in.trujobs.proto.JobSearchByJobRoleRequestOrBuilder>(
+                getJobSearchByJobRoleRequest(),
+                getParentForChildren(),
+                isClean());
+        jobSearchByJobRoleRequest_ = null;
+      }
+      return jobSearchByJobRoleRequestBuilder_;
     }
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {

@@ -27,6 +27,8 @@ public  final class LogInResponse extends
     minProfile_ = 0;
     candidateJobPrefStatus_ = 0;
     candidateHomeLocalityStatus_ = 0;
+    candidateHomeLatitude_ = 0D;
+    candidateHomeLongitude_ = 0D;
   }
 
   @java.lang.Override
@@ -115,6 +117,16 @@ public  final class LogInResponse extends
           case 96: {
 
             candidateHomeLocalityStatus_ = input.readInt32();
+            break;
+          }
+          case 105: {
+
+            candidateHomeLatitude_ = input.readDouble();
+            break;
+          }
+          case 113: {
+
+            candidateHomeLongitude_ = input.readDouble();
             break;
           }
         }
@@ -450,6 +462,24 @@ public  final class LogInResponse extends
     return candidateHomeLocalityStatus_;
   }
 
+  public static final int CANDIDATEHOMELATITUDE_FIELD_NUMBER = 13;
+  private double candidateHomeLatitude_;
+  /**
+   * <code>optional double candidateHomeLatitude = 13;</code>
+   */
+  public double getCandidateHomeLatitude() {
+    return candidateHomeLatitude_;
+  }
+
+  public static final int CANDIDATEHOMELONGITUDE_FIELD_NUMBER = 14;
+  private double candidateHomeLongitude_;
+  /**
+   * <code>optional double candidateHomeLongitude = 14;</code>
+   */
+  public double getCandidateHomeLongitude() {
+    return candidateHomeLongitude_;
+  }
+
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -497,6 +527,12 @@ public  final class LogInResponse extends
     }
     if (candidateHomeLocalityStatus_ != 0) {
       output.writeInt32(12, candidateHomeLocalityStatus_);
+    }
+    if (candidateHomeLatitude_ != 0D) {
+      output.writeDouble(13, candidateHomeLatitude_);
+    }
+    if (candidateHomeLongitude_ != 0D) {
+      output.writeDouble(14, candidateHomeLongitude_);
     }
   }
 
@@ -549,6 +585,14 @@ public  final class LogInResponse extends
     if (candidateHomeLocalityStatus_ != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(12, candidateHomeLocalityStatus_);
+    }
+    if (candidateHomeLatitude_ != 0D) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(13, candidateHomeLatitude_);
+    }
+    if (candidateHomeLongitude_ != 0D) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(14, candidateHomeLongitude_);
     }
     memoizedSize = size;
     return size;
@@ -685,6 +729,10 @@ public  final class LogInResponse extends
 
       candidateHomeLocalityStatus_ = 0;
 
+      candidateHomeLatitude_ = 0D;
+
+      candidateHomeLongitude_ = 0D;
+
       return this;
     }
 
@@ -719,6 +767,8 @@ public  final class LogInResponse extends
       result.minProfile_ = minProfile_;
       result.candidateJobPrefStatus_ = candidateJobPrefStatus_;
       result.candidateHomeLocalityStatus_ = candidateHomeLocalityStatus_;
+      result.candidateHomeLatitude_ = candidateHomeLatitude_;
+      result.candidateHomeLongitude_ = candidateHomeLongitude_;
       onBuilt();
       return result;
     }
@@ -772,6 +822,12 @@ public  final class LogInResponse extends
       }
       if (other.getCandidateHomeLocalityStatus() != 0) {
         setCandidateHomeLocalityStatus(other.getCandidateHomeLocalityStatus());
+      }
+      if (other.getCandidateHomeLatitude() != 0D) {
+        setCandidateHomeLatitude(other.getCandidateHomeLatitude());
+      }
+      if (other.getCandidateHomeLongitude() != 0D) {
+        setCandidateHomeLongitude(other.getCandidateHomeLongitude());
       }
       onChanged();
       return this;
@@ -1254,6 +1310,58 @@ public  final class LogInResponse extends
     public Builder clearCandidateHomeLocalityStatus() {
       
       candidateHomeLocalityStatus_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private double candidateHomeLatitude_ ;
+    /**
+     * <code>optional double candidateHomeLatitude = 13;</code>
+     */
+    public double getCandidateHomeLatitude() {
+      return candidateHomeLatitude_;
+    }
+    /**
+     * <code>optional double candidateHomeLatitude = 13;</code>
+     */
+    public Builder setCandidateHomeLatitude(double value) {
+      
+      candidateHomeLatitude_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional double candidateHomeLatitude = 13;</code>
+     */
+    public Builder clearCandidateHomeLatitude() {
+      
+      candidateHomeLatitude_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double candidateHomeLongitude_ ;
+    /**
+     * <code>optional double candidateHomeLongitude = 14;</code>
+     */
+    public double getCandidateHomeLongitude() {
+      return candidateHomeLongitude_;
+    }
+    /**
+     * <code>optional double candidateHomeLongitude = 14;</code>
+     */
+    public Builder setCandidateHomeLongitude(double value) {
+      
+      candidateHomeLongitude_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional double candidateHomeLongitude = 14;</code>
+     */
+    public Builder clearCandidateHomeLongitude() {
+      
+      candidateHomeLongitude_ = 0D;
       onChanged();
       return this;
     }

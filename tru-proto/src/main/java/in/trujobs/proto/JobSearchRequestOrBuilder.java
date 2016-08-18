@@ -26,4 +26,30 @@ public interface JobSearchRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getCandidateMobileBytes();
+
+  /**
+   * <code>optional .in.trujobs.proto.JobFilterRequest jobFilterRequest = 4;</code>
+   */
+  boolean hasJobFilterRequest();
+  /**
+   * <code>optional .in.trujobs.proto.JobFilterRequest jobFilterRequest = 4;</code>
+   */
+  in.trujobs.proto.JobFilterRequest getJobFilterRequest();
+  /**
+   * <code>optional .in.trujobs.proto.JobFilterRequest jobFilterRequest = 4;</code>
+   */
+  in.trujobs.proto.JobFilterRequestOrBuilder getJobFilterRequestOrBuilder();
+
+  /**
+   * <code>optional .in.trujobs.proto.JobSearchByJobRoleRequest jobSearchByJobRoleRequest = 5;</code>
+   */
+  boolean hasJobSearchByJobRoleRequest();
+  /**
+   * <code>optional .in.trujobs.proto.JobSearchByJobRoleRequest jobSearchByJobRoleRequest = 5;</code>
+   */
+  in.trujobs.proto.JobSearchByJobRoleRequest getJobSearchByJobRoleRequest();
+  /**
+   * <code>optional .in.trujobs.proto.JobSearchByJobRoleRequest jobSearchByJobRoleRequest = 5;</code>
+   */
+  in.trujobs.proto.JobSearchByJobRoleRequestOrBuilder getJobSearchByJobRoleRequestOrBuilder();
 }

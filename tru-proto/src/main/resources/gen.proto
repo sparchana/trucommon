@@ -35,6 +35,8 @@ message LogInResponse {
     int32 minProfile = 10;
     int32 candidateJobPrefStatus = 11;
     int32 candidateHomeLocalityStatus = 12;
+    double candidateHomeLatitude = 13;
+    double candidateHomeLongitude = 14;
 }
 
 message SignUpRequest {
@@ -311,4 +313,11 @@ message JobSearchRequest {
     double latitude = 1;
     double longitude = 2;
     string candidate_mobile = 3;
+    JobFilterRequest jobFilterRequest = 4;
+    JobSearchByJobRoleRequest jobSearchByJobRoleRequest = 5;
+}
+message JobSearchByJobRoleRequest {
+    int64 jobRoleIdOne = 1;
+    int64 jobRoleIdTwo = 2;
+    int64 JobRoleIdThree = 3;
 }
