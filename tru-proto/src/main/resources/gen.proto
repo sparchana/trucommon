@@ -104,6 +104,7 @@ message JobPostObject {
     int64 jobPostCreationMillis = 19;
     int32 jobPostStartTime = 20;
     int32 jobPostEndTime = 21;
+    int32 isApplied = 22;
 }
 
 message JobPostDetailRequest{

@@ -199,4 +199,9 @@ public interface JobPostObjectOrBuilder extends
    * <code>optional int32 jobPostEndTime = 21;</code>
    */
   int getJobPostEndTime();
+
+  /**
+   * <code>optional int32 isApplied = 22;</code>
+   */
+  int getIsApplied();
 }

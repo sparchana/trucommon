@@ -33,6 +33,7 @@ public  final class JobPostObject extends
     jobPostCreationMillis_ = 0L;
     jobPostStartTime_ = 0;
     jobPostEndTime_ = 0;
+    isApplied_ = 0;
   }
 
   @java.lang.Override
@@ -198,6 +199,11 @@ public  final class JobPostObject extends
           case 168: {
 
             jobPostEndTime_ = input.readInt32();
+            break;
+          }
+          case 176: {
+
+            isApplied_ = input.readInt32();
             break;
           }
         }
@@ -704,6 +710,15 @@ public  final class JobPostObject extends
     return jobPostEndTime_;
   }
 
+  public static final int ISAPPLIED_FIELD_NUMBER = 22;
+  private int isApplied_;
+  /**
+   * <code>optional int32 isApplied = 22;</code>
+   */
+  public int getIsApplied() {
+    return isApplied_;
+  }
+
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -778,6 +793,9 @@ public  final class JobPostObject extends
     }
     if (jobPostEndTime_ != 0) {
       output.writeInt32(21, jobPostEndTime_);
+    }
+    if (isApplied_ != 0) {
+      output.writeInt32(22, isApplied_);
     }
   }
 
@@ -860,6 +878,10 @@ public  final class JobPostObject extends
     if (jobPostEndTime_ != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(21, jobPostEndTime_);
+    }
+    if (isApplied_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(22, isApplied_);
     }
     memoizedSize = size;
     return size;
@@ -1031,6 +1053,8 @@ public  final class JobPostObject extends
 
       jobPostEndTime_ = 0;
 
+      isApplied_ = 0;
+
       return this;
     }
 
@@ -1096,6 +1120,7 @@ public  final class JobPostObject extends
       result.jobPostCreationMillis_ = jobPostCreationMillis_;
       result.jobPostStartTime_ = jobPostStartTime_;
       result.jobPostEndTime_ = jobPostEndTime_;
+      result.isApplied_ = isApplied_;
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -1206,6 +1231,9 @@ public  final class JobPostObject extends
       }
       if (other.getJobPostEndTime() != 0) {
         setJobPostEndTime(other.getJobPostEndTime());
+      }
+      if (other.getIsApplied() != 0) {
+        setIsApplied(other.getIsApplied());
       }
       onChanged();
       return this;
@@ -2650,6 +2678,32 @@ public  final class JobPostObject extends
     public Builder clearJobPostEndTime() {
       
       jobPostEndTime_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int isApplied_ ;
+    /**
+     * <code>optional int32 isApplied = 22;</code>
+     */
+    public int getIsApplied() {
+      return isApplied_;
+    }
+    /**
+     * <code>optional int32 isApplied = 22;</code>
+     */
+    public Builder setIsApplied(int value) {
+      
+      isApplied_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional int32 isApplied = 22;</code>
+     */
+    public Builder clearIsApplied() {
+      
+      isApplied_ = 0;
       onChanged();
       return this;
     }
