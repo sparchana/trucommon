@@ -16,6 +16,7 @@ public  final class GetJobPostDetailsResponse extends
   }
   private GetJobPostDetailsResponse() {
     status_ = 0;
+    alreadyApplied_ = false;
   }
 
   @java.lang.Override
@@ -72,6 +73,11 @@ public  final class GetJobPostDetailsResponse extends
               company_ = subBuilder.buildPartial();
             }
 
+            break;
+          }
+          case 32: {
+
+            alreadyApplied_ = input.readBool();
             break;
           }
         }
@@ -257,6 +263,15 @@ public  final class GetJobPostDetailsResponse extends
     return getCompany();
   }
 
+  public static final int ALREADYAPPLIED_FIELD_NUMBER = 4;
+  private boolean alreadyApplied_;
+  /**
+   * <code>optional bool alreadyApplied = 4;</code>
+   */
+  public boolean getAlreadyApplied() {
+    return alreadyApplied_;
+  }
+
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -278,6 +293,9 @@ public  final class GetJobPostDetailsResponse extends
     if (company_ != null) {
       output.writeMessage(3, getCompany());
     }
+    if (alreadyApplied_ != false) {
+      output.writeBool(4, alreadyApplied_);
+    }
   }
 
   public int getSerializedSize() {
@@ -296,6 +314,10 @@ public  final class GetJobPostDetailsResponse extends
     if (company_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getCompany());
+    }
+    if (alreadyApplied_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(4, alreadyApplied_);
     }
     memoizedSize = size;
     return size;
@@ -422,6 +444,8 @@ public  final class GetJobPostDetailsResponse extends
         company_ = null;
         companyBuilder_ = null;
       }
+      alreadyApplied_ = false;
+
       return this;
     }
 
@@ -455,6 +479,7 @@ public  final class GetJobPostDetailsResponse extends
       } else {
         result.company_ = companyBuilder_.build();
       }
+      result.alreadyApplied_ = alreadyApplied_;
       onBuilt();
       return result;
     }
@@ -478,6 +503,9 @@ public  final class GetJobPostDetailsResponse extends
       }
       if (other.hasCompany()) {
         mergeCompany(other.getCompany());
+      }
+      if (other.getAlreadyApplied() != false) {
+        setAlreadyApplied(other.getAlreadyApplied());
       }
       onChanged();
       return this;
@@ -781,6 +809,32 @@ public  final class GetJobPostDetailsResponse extends
         company_ = null;
       }
       return companyBuilder_;
+    }
+
+    private boolean alreadyApplied_ ;
+    /**
+     * <code>optional bool alreadyApplied = 4;</code>
+     */
+    public boolean getAlreadyApplied() {
+      return alreadyApplied_;
+    }
+    /**
+     * <code>optional bool alreadyApplied = 4;</code>
+     */
+    public Builder setAlreadyApplied(boolean value) {
+      
+      alreadyApplied_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional bool alreadyApplied = 4;</code>
+     */
+    public Builder clearAlreadyApplied() {
+      
+      alreadyApplied_ = false;
+      onChanged();
+      return this;
     }
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {

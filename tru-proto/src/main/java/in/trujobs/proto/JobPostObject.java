@@ -29,6 +29,7 @@ public  final class JobPostObject extends
     jobPostAddress_ = "";
     jobPostWorkFromHome_ = 0;
     jobPostWorkingDays_ = "";
+    jobRole_ = "";
     jobPostCreationMillis_ = 0L;
     jobPostStartTime_ = 0;
     jobPostEndTime_ = 0;
@@ -179,16 +180,9 @@ public  final class JobPostObject extends
             break;
           }
           case 146: {
-            in.trujobs.proto.JobRoleObject.Builder subBuilder = null;
-            if (jobRole_ != null) {
-              subBuilder = jobRole_.toBuilder();
-            }
-            jobRole_ = input.readMessage(in.trujobs.proto.JobRoleObject.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(jobRole_);
-              jobRole_ = subBuilder.buildPartial();
-            }
+            java.lang.String s = input.readStringRequireUtf8();
 
+            jobRole_ = s;
             break;
           }
           case 152: {
@@ -650,24 +644,37 @@ public  final class JobPostObject extends
   }
 
   public static final int JOBROLE_FIELD_NUMBER = 18;
-  private in.trujobs.proto.JobRoleObject jobRole_;
+  private volatile java.lang.Object jobRole_;
   /**
-   * <code>optional .in.trujobs.proto.JobRoleObject jobRole = 18;</code>
+   * <code>optional string jobRole = 18;</code>
    */
-  public boolean hasJobRole() {
-    return jobRole_ != null;
+  public java.lang.String getJobRole() {
+    java.lang.Object ref = jobRole_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      jobRole_ = s;
+      return s;
+    }
   }
   /**
-   * <code>optional .in.trujobs.proto.JobRoleObject jobRole = 18;</code>
+   * <code>optional string jobRole = 18;</code>
    */
-  public in.trujobs.proto.JobRoleObject getJobRole() {
-    return jobRole_ == null ? in.trujobs.proto.JobRoleObject.getDefaultInstance() : jobRole_;
-  }
-  /**
-   * <code>optional .in.trujobs.proto.JobRoleObject jobRole = 18;</code>
-   */
-  public in.trujobs.proto.JobRoleObjectOrBuilder getJobRoleOrBuilder() {
-    return getJobRole();
+  public com.google.protobuf.ByteString
+      getJobRoleBytes() {
+    java.lang.Object ref = jobRole_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      jobRole_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
   }
 
   public static final int JOBPOSTCREATIONMILLIS_FIELD_NUMBER = 19;
@@ -760,8 +767,8 @@ public  final class JobPostObject extends
     if (education_ != null) {
       output.writeMessage(17, getEducation());
     }
-    if (jobRole_ != null) {
-      output.writeMessage(18, getJobRole());
+    if (!getJobRoleBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 18, jobRole_);
     }
     if (jobPostCreationMillis_ != 0L) {
       output.writeInt64(19, jobPostCreationMillis_);
@@ -839,9 +846,8 @@ public  final class JobPostObject extends
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(17, getEducation());
     }
-    if (jobRole_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(18, getJobRole());
+    if (!getJobRoleBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(18, jobRole_);
     }
     if (jobPostCreationMillis_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
@@ -1017,12 +1023,8 @@ public  final class JobPostObject extends
         education_ = null;
         educationBuilder_ = null;
       }
-      if (jobRoleBuilder_ == null) {
-        jobRole_ = null;
-      } else {
-        jobRole_ = null;
-        jobRoleBuilder_ = null;
-      }
+      jobRole_ = "";
+
       jobPostCreationMillis_ = 0L;
 
       jobPostStartTime_ = 0;
@@ -1090,11 +1092,7 @@ public  final class JobPostObject extends
       } else {
         result.education_ = educationBuilder_.build();
       }
-      if (jobRoleBuilder_ == null) {
-        result.jobRole_ = jobRole_;
-      } else {
-        result.jobRole_ = jobRoleBuilder_.build();
-      }
+      result.jobRole_ = jobRole_;
       result.jobPostCreationMillis_ = jobPostCreationMillis_;
       result.jobPostStartTime_ = jobPostStartTime_;
       result.jobPostEndTime_ = jobPostEndTime_;
@@ -1196,8 +1194,9 @@ public  final class JobPostObject extends
       if (other.hasEducation()) {
         mergeEducation(other.getEducation());
       }
-      if (other.hasJobRole()) {
-        mergeJobRole(other.getJobRole());
+      if (!other.getJobRole().isEmpty()) {
+        jobRole_ = other.jobRole_;
+        onChanged();
       }
       if (other.getJobPostCreationMillis() != 0L) {
         setJobPostCreationMillis(other.getJobPostCreationMillis());
@@ -2508,121 +2507,73 @@ public  final class JobPostObject extends
       return educationBuilder_;
     }
 
-    private in.trujobs.proto.JobRoleObject jobRole_ = null;
-    private com.google.protobuf.SingleFieldBuilder<
-        in.trujobs.proto.JobRoleObject, in.trujobs.proto.JobRoleObject.Builder, in.trujobs.proto.JobRoleObjectOrBuilder> jobRoleBuilder_;
+    private java.lang.Object jobRole_ = "";
     /**
-     * <code>optional .in.trujobs.proto.JobRoleObject jobRole = 18;</code>
+     * <code>optional string jobRole = 18;</code>
      */
-    public boolean hasJobRole() {
-      return jobRoleBuilder_ != null || jobRole_ != null;
-    }
-    /**
-     * <code>optional .in.trujobs.proto.JobRoleObject jobRole = 18;</code>
-     */
-    public in.trujobs.proto.JobRoleObject getJobRole() {
-      if (jobRoleBuilder_ == null) {
-        return jobRole_ == null ? in.trujobs.proto.JobRoleObject.getDefaultInstance() : jobRole_;
+    public java.lang.String getJobRole() {
+      java.lang.Object ref = jobRole_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        jobRole_ = s;
+        return s;
       } else {
-        return jobRoleBuilder_.getMessage();
+        return (java.lang.String) ref;
       }
     }
     /**
-     * <code>optional .in.trujobs.proto.JobRoleObject jobRole = 18;</code>
+     * <code>optional string jobRole = 18;</code>
      */
-    public Builder setJobRole(in.trujobs.proto.JobRoleObject value) {
-      if (jobRoleBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        jobRole_ = value;
-        onChanged();
+    public com.google.protobuf.ByteString
+        getJobRoleBytes() {
+      java.lang.Object ref = jobRole_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        jobRole_ = b;
+        return b;
       } else {
-        jobRoleBuilder_.setMessage(value);
+        return (com.google.protobuf.ByteString) ref;
       }
-
-      return this;
     }
     /**
-     * <code>optional .in.trujobs.proto.JobRoleObject jobRole = 18;</code>
+     * <code>optional string jobRole = 18;</code>
      */
     public Builder setJobRole(
-        in.trujobs.proto.JobRoleObject.Builder builderForValue) {
-      if (jobRoleBuilder_ == null) {
-        jobRole_ = builderForValue.build();
-        onChanged();
-      } else {
-        jobRoleBuilder_.setMessage(builderForValue.build());
-      }
-
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      jobRole_ = value;
+      onChanged();
       return this;
     }
     /**
-     * <code>optional .in.trujobs.proto.JobRoleObject jobRole = 18;</code>
-     */
-    public Builder mergeJobRole(in.trujobs.proto.JobRoleObject value) {
-      if (jobRoleBuilder_ == null) {
-        if (jobRole_ != null) {
-          jobRole_ =
-            in.trujobs.proto.JobRoleObject.newBuilder(jobRole_).mergeFrom(value).buildPartial();
-        } else {
-          jobRole_ = value;
-        }
-        onChanged();
-      } else {
-        jobRoleBuilder_.mergeFrom(value);
-      }
-
-      return this;
-    }
-    /**
-     * <code>optional .in.trujobs.proto.JobRoleObject jobRole = 18;</code>
+     * <code>optional string jobRole = 18;</code>
      */
     public Builder clearJobRole() {
-      if (jobRoleBuilder_ == null) {
-        jobRole_ = null;
-        onChanged();
-      } else {
-        jobRole_ = null;
-        jobRoleBuilder_ = null;
-      }
-
+      
+      jobRole_ = getDefaultInstance().getJobRole();
+      onChanged();
       return this;
     }
     /**
-     * <code>optional .in.trujobs.proto.JobRoleObject jobRole = 18;</code>
+     * <code>optional string jobRole = 18;</code>
      */
-    public in.trujobs.proto.JobRoleObject.Builder getJobRoleBuilder() {
+    public Builder setJobRoleBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
       
+      jobRole_ = value;
       onChanged();
-      return getJobRoleFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>optional .in.trujobs.proto.JobRoleObject jobRole = 18;</code>
-     */
-    public in.trujobs.proto.JobRoleObjectOrBuilder getJobRoleOrBuilder() {
-      if (jobRoleBuilder_ != null) {
-        return jobRoleBuilder_.getMessageOrBuilder();
-      } else {
-        return jobRole_ == null ?
-            in.trujobs.proto.JobRoleObject.getDefaultInstance() : jobRole_;
-      }
-    }
-    /**
-     * <code>optional .in.trujobs.proto.JobRoleObject jobRole = 18;</code>
-     */
-    private com.google.protobuf.SingleFieldBuilder<
-        in.trujobs.proto.JobRoleObject, in.trujobs.proto.JobRoleObject.Builder, in.trujobs.proto.JobRoleObjectOrBuilder> 
-        getJobRoleFieldBuilder() {
-      if (jobRoleBuilder_ == null) {
-        jobRoleBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-            in.trujobs.proto.JobRoleObject, in.trujobs.proto.JobRoleObject.Builder, in.trujobs.proto.JobRoleObjectOrBuilder>(
-                getJobRole(),
-                getParentForChildren(),
-                isClean());
-        jobRole_ = null;
-      }
-      return jobRoleBuilder_;
+      return this;
     }
 
     private long jobPostCreationMillis_ ;

@@ -100,7 +100,7 @@ message JobPostObject {
     int32 jobPostWorkFromHome = 15;
     string jobPostWorkingDays = 16;
     EducationObject education = 17;
-    JobRoleObject jobRole = 18;
+    string jobRole = 18;
     int64 jobPostCreationMillis = 19;
     int32 jobPostStartTime = 20;
     int32 jobPostEndTime = 21;
@@ -201,10 +201,14 @@ message CandidateObject {
     repeated LanguageKnownObject languageKnownObject = 19;
     repeated CandidateSkillObject candidateSkillObject = 20;
     JobRoleObject candidateCurrentJobRole = 21;
+    float candidateProfileCompletePercent = 22;
+    int32 candidateTotalAppliedJobs = 23;
+    int32 appliedJobs = 24; 
 }
 
 message GetJobPostDetailsRequest {
     int64 jobPostId = 1;
+    string candidateMobile = 2; 
 }
 
 message GetJobPostDetailsResponse {
@@ -216,6 +220,7 @@ message GetJobPostDetailsResponse {
     Status status = 1;
     JobPostObject jobPost = 2;
     CompanyObject company = 3;
+    bool alreadyApplied = 4;
 }
 
 message CompanyObject {

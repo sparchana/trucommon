@@ -32,6 +32,9 @@ public  final class CandidateObject extends
     candidateIsEmployed_ = 0;
     languageKnownObject_ = java.util.Collections.emptyList();
     candidateSkillObject_ = java.util.Collections.emptyList();
+    candidateProfileCompletePercent_ = 0F;
+    candidateTotalAppliedJobs_ = 0;
+    appliedJobs_ = 0;
   }
 
   @java.lang.Override
@@ -209,6 +212,21 @@ public  final class CandidateObject extends
               candidateCurrentJobRole_ = subBuilder.buildPartial();
             }
 
+            break;
+          }
+          case 181: {
+
+            candidateProfileCompletePercent_ = input.readFloat();
+            break;
+          }
+          case 184: {
+
+            candidateTotalAppliedJobs_ = input.readInt32();
+            break;
+          }
+          case 192: {
+
+            appliedJobs_ = input.readInt32();
             break;
           }
         }
@@ -689,6 +707,33 @@ public  final class CandidateObject extends
     return getCandidateCurrentJobRole();
   }
 
+  public static final int CANDIDATEPROFILECOMPLETEPERCENT_FIELD_NUMBER = 22;
+  private float candidateProfileCompletePercent_;
+  /**
+   * <code>optional float candidateProfileCompletePercent = 22;</code>
+   */
+  public float getCandidateProfileCompletePercent() {
+    return candidateProfileCompletePercent_;
+  }
+
+  public static final int CANDIDATETOTALAPPLIEDJOBS_FIELD_NUMBER = 23;
+  private int candidateTotalAppliedJobs_;
+  /**
+   * <code>optional int32 candidateTotalAppliedJobs = 23;</code>
+   */
+  public int getCandidateTotalAppliedJobs() {
+    return candidateTotalAppliedJobs_;
+  }
+
+  public static final int APPLIEDJOBS_FIELD_NUMBER = 24;
+  private int appliedJobs_;
+  /**
+   * <code>optional int32 appliedJobs = 24;</code>
+   */
+  public int getAppliedJobs() {
+    return appliedJobs_;
+  }
+
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -763,6 +808,15 @@ public  final class CandidateObject extends
     }
     if (candidateCurrentJobRole_ != null) {
       output.writeMessage(21, getCandidateCurrentJobRole());
+    }
+    if (candidateProfileCompletePercent_ != 0F) {
+      output.writeFloat(22, candidateProfileCompletePercent_);
+    }
+    if (candidateTotalAppliedJobs_ != 0) {
+      output.writeInt32(23, candidateTotalAppliedJobs_);
+    }
+    if (appliedJobs_ != 0) {
+      output.writeInt32(24, appliedJobs_);
     }
   }
 
@@ -850,6 +904,18 @@ public  final class CandidateObject extends
     if (candidateCurrentJobRole_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(21, getCandidateCurrentJobRole());
+    }
+    if (candidateProfileCompletePercent_ != 0F) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeFloatSize(22, candidateProfileCompletePercent_);
+    }
+    if (candidateTotalAppliedJobs_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(23, candidateTotalAppliedJobs_);
+    }
+    if (appliedJobs_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(24, appliedJobs_);
     }
     memoizedSize = size;
     return size;
@@ -1040,6 +1106,12 @@ public  final class CandidateObject extends
         candidateCurrentJobRole_ = null;
         candidateCurrentJobRoleBuilder_ = null;
       }
+      candidateProfileCompletePercent_ = 0F;
+
+      candidateTotalAppliedJobs_ = 0;
+
+      appliedJobs_ = 0;
+
       return this;
     }
 
@@ -1133,6 +1205,9 @@ public  final class CandidateObject extends
       } else {
         result.candidateCurrentJobRole_ = candidateCurrentJobRoleBuilder_.build();
       }
+      result.candidateProfileCompletePercent_ = candidateProfileCompletePercent_;
+      result.candidateTotalAppliedJobs_ = candidateTotalAppliedJobs_;
+      result.appliedJobs_ = appliedJobs_;
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -1307,6 +1382,15 @@ public  final class CandidateObject extends
       }
       if (other.hasCandidateCurrentJobRole()) {
         mergeCandidateCurrentJobRole(other.getCandidateCurrentJobRole());
+      }
+      if (other.getCandidateProfileCompletePercent() != 0F) {
+        setCandidateProfileCompletePercent(other.getCandidateProfileCompletePercent());
+      }
+      if (other.getCandidateTotalAppliedJobs() != 0) {
+        setCandidateTotalAppliedJobs(other.getCandidateTotalAppliedJobs());
+      }
+      if (other.getAppliedJobs() != 0) {
+        setAppliedJobs(other.getAppliedJobs());
       }
       onChanged();
       return this;
@@ -3271,6 +3355,84 @@ public  final class CandidateObject extends
         candidateCurrentJobRole_ = null;
       }
       return candidateCurrentJobRoleBuilder_;
+    }
+
+    private float candidateProfileCompletePercent_ ;
+    /**
+     * <code>optional float candidateProfileCompletePercent = 22;</code>
+     */
+    public float getCandidateProfileCompletePercent() {
+      return candidateProfileCompletePercent_;
+    }
+    /**
+     * <code>optional float candidateProfileCompletePercent = 22;</code>
+     */
+    public Builder setCandidateProfileCompletePercent(float value) {
+      
+      candidateProfileCompletePercent_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional float candidateProfileCompletePercent = 22;</code>
+     */
+    public Builder clearCandidateProfileCompletePercent() {
+      
+      candidateProfileCompletePercent_ = 0F;
+      onChanged();
+      return this;
+    }
+
+    private int candidateTotalAppliedJobs_ ;
+    /**
+     * <code>optional int32 candidateTotalAppliedJobs = 23;</code>
+     */
+    public int getCandidateTotalAppliedJobs() {
+      return candidateTotalAppliedJobs_;
+    }
+    /**
+     * <code>optional int32 candidateTotalAppliedJobs = 23;</code>
+     */
+    public Builder setCandidateTotalAppliedJobs(int value) {
+      
+      candidateTotalAppliedJobs_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional int32 candidateTotalAppliedJobs = 23;</code>
+     */
+    public Builder clearCandidateTotalAppliedJobs() {
+      
+      candidateTotalAppliedJobs_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int appliedJobs_ ;
+    /**
+     * <code>optional int32 appliedJobs = 24;</code>
+     */
+    public int getAppliedJobs() {
+      return appliedJobs_;
+    }
+    /**
+     * <code>optional int32 appliedJobs = 24;</code>
+     */
+    public Builder setAppliedJobs(int value) {
+      
+      appliedJobs_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional int32 appliedJobs = 24;</code>
+     */
+    public Builder clearAppliedJobs() {
+      
+      appliedJobs_ = 0;
+      onChanged();
+      return this;
     }
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {

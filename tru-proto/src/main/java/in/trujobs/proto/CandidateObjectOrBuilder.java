@@ -239,4 +239,19 @@ public interface CandidateObjectOrBuilder extends
    * <code>optional .in.trujobs.proto.JobRoleObject candidateCurrentJobRole = 21;</code>
    */
   in.trujobs.proto.JobRoleObjectOrBuilder getCandidateCurrentJobRoleOrBuilder();
+
+  /**
+   * <code>optional float candidateProfileCompletePercent = 22;</code>
+   */
+  float getCandidateProfileCompletePercent();
+
+  /**
+   * <code>optional int32 candidateTotalAppliedJobs = 23;</code>
+   */
+  int getCandidateTotalAppliedJobs();
+
+  /**
+   * <code>optional int32 appliedJobs = 24;</code>
+   */
+  int getAppliedJobs();
 }
