@@ -11,4 +11,14 @@ public interface GetJobPostDetailsRequestOrBuilder extends
    * <code>optional int64 jobPostId = 1;</code>
    */
   long getJobPostId();
+
+  /**
+   * <code>optional string candidateMobile = 2;</code>
+   */
+  java.lang.String getCandidateMobile();
+  /**
+   * <code>optional string candidateMobile = 2;</code>
+   */
+  com.google.protobuf.ByteString
+      getCandidateMobileBytes();
 }

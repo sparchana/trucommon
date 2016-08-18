@@ -176,17 +176,14 @@ public interface JobPostObjectOrBuilder extends
   in.trujobs.proto.EducationObjectOrBuilder getEducationOrBuilder();
 
   /**
-   * <code>optional .in.trujobs.proto.JobRoleObject jobRole = 18;</code>
+   * <code>optional string jobRole = 18;</code>
    */
-  boolean hasJobRole();
+  java.lang.String getJobRole();
   /**
-   * <code>optional .in.trujobs.proto.JobRoleObject jobRole = 18;</code>
+   * <code>optional string jobRole = 18;</code>
    */
-  in.trujobs.proto.JobRoleObject getJobRole();
-  /**
-   * <code>optional .in.trujobs.proto.JobRoleObject jobRole = 18;</code>
-   */
-  in.trujobs.proto.JobRoleObjectOrBuilder getJobRoleOrBuilder();
+  com.google.protobuf.ByteString
+      getJobRoleBytes();
 
   /**
    * <code>optional int64 jobPostCreationMillis = 19;</code>
@@ -202,4 +199,9 @@ public interface JobPostObjectOrBuilder extends
    * <code>optional int32 jobPostEndTime = 21;</code>
    */
   int getJobPostEndTime();
+
+  /**
+   * <code>optional int32 isApplied = 22;</code>
+   */
+  int getIsApplied();
 }

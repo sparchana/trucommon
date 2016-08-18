@@ -4,19 +4,19 @@
 package in.trujobs.proto;
 
 /**
- * Protobuf type {@code in.trujobs.proto.GetJobPostDetailsRequest}
+ * Protobuf type {@code in.trujobs.proto.DegreeObject}
  */
-public  final class GetJobPostDetailsRequest extends
+public  final class DegreeObject extends
     com.google.protobuf.GeneratedMessage implements
-    // @@protoc_insertion_point(message_implements:in.trujobs.proto.GetJobPostDetailsRequest)
-    GetJobPostDetailsRequestOrBuilder {
-  // Use GetJobPostDetailsRequest.newBuilder() to construct.
-  private GetJobPostDetailsRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    // @@protoc_insertion_point(message_implements:in.trujobs.proto.DegreeObject)
+    DegreeObjectOrBuilder {
+  // Use DegreeObject.newBuilder() to construct.
+  private DegreeObject(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-  private GetJobPostDetailsRequest() {
-    jobPostId_ = 0L;
-    candidateMobile_ = "";
+  private DegreeObject() {
+    degreeId_ = 0L;
+    degreeName_ = "";
   }
 
   @java.lang.Override
@@ -24,7 +24,7 @@ public  final class GetJobPostDetailsRequest extends
   getUnknownFields() {
     return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
   }
-  private GetJobPostDetailsRequest(
+  private DegreeObject(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
     this();
@@ -45,13 +45,13 @@ public  final class GetJobPostDetailsRequest extends
           }
           case 8: {
 
-            jobPostId_ = input.readInt64();
+            degreeId_ = input.readInt64();
             break;
           }
           case 18: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            candidateMobile_ = s;
+            degreeName_ = s;
             break;
           }
         }
@@ -68,53 +68,53 @@ public  final class GetJobPostDetailsRequest extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_GetJobPostDetailsRequest_descriptor;
+    return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_DegreeObject_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_GetJobPostDetailsRequest_fieldAccessorTable
+    return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_DegreeObject_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            in.trujobs.proto.GetJobPostDetailsRequest.class, in.trujobs.proto.GetJobPostDetailsRequest.Builder.class);
+            in.trujobs.proto.DegreeObject.class, in.trujobs.proto.DegreeObject.Builder.class);
   }
 
-  public static final int JOBPOSTID_FIELD_NUMBER = 1;
-  private long jobPostId_;
+  public static final int DEGREEID_FIELD_NUMBER = 1;
+  private long degreeId_;
   /**
-   * <code>optional int64 jobPostId = 1;</code>
+   * <code>optional int64 degreeId = 1;</code>
    */
-  public long getJobPostId() {
-    return jobPostId_;
+  public long getDegreeId() {
+    return degreeId_;
   }
 
-  public static final int CANDIDATEMOBILE_FIELD_NUMBER = 2;
-  private volatile java.lang.Object candidateMobile_;
+  public static final int DEGREENAME_FIELD_NUMBER = 2;
+  private volatile java.lang.Object degreeName_;
   /**
-   * <code>optional string candidateMobile = 2;</code>
+   * <code>optional string degreeName = 2;</code>
    */
-  public java.lang.String getCandidateMobile() {
-    java.lang.Object ref = candidateMobile_;
+  public java.lang.String getDegreeName() {
+    java.lang.Object ref = degreeName_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      candidateMobile_ = s;
+      degreeName_ = s;
       return s;
     }
   }
   /**
-   * <code>optional string candidateMobile = 2;</code>
+   * <code>optional string degreeName = 2;</code>
    */
   public com.google.protobuf.ByteString
-      getCandidateMobileBytes() {
-    java.lang.Object ref = candidateMobile_;
+      getDegreeNameBytes() {
+    java.lang.Object ref = degreeName_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      candidateMobile_ = b;
+      degreeName_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -133,11 +133,11 @@ public  final class GetJobPostDetailsRequest extends
 
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (jobPostId_ != 0L) {
-      output.writeInt64(1, jobPostId_);
+    if (degreeId_ != 0L) {
+      output.writeInt64(1, degreeId_);
     }
-    if (!getCandidateMobileBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 2, candidateMobile_);
+    if (!getDegreeNameBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 2, degreeName_);
     }
   }
 
@@ -146,65 +146,65 @@ public  final class GetJobPostDetailsRequest extends
     if (size != -1) return size;
 
     size = 0;
-    if (jobPostId_ != 0L) {
+    if (degreeId_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(1, jobPostId_);
+        .computeInt64Size(1, degreeId_);
     }
-    if (!getCandidateMobileBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(2, candidateMobile_);
+    if (!getDegreeNameBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(2, degreeName_);
     }
     memoizedSize = size;
     return size;
   }
 
   private static final long serialVersionUID = 0L;
-  public static in.trujobs.proto.GetJobPostDetailsRequest parseFrom(
+  public static in.trujobs.proto.DegreeObject parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static in.trujobs.proto.GetJobPostDetailsRequest parseFrom(
+  public static in.trujobs.proto.DegreeObject parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static in.trujobs.proto.GetJobPostDetailsRequest parseFrom(byte[] data)
+  public static in.trujobs.proto.DegreeObject parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static in.trujobs.proto.GetJobPostDetailsRequest parseFrom(
+  public static in.trujobs.proto.DegreeObject parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static in.trujobs.proto.GetJobPostDetailsRequest parseFrom(java.io.InputStream input)
+  public static in.trujobs.proto.DegreeObject parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return PARSER.parseFrom(input);
   }
-  public static in.trujobs.proto.GetJobPostDetailsRequest parseFrom(
+  public static in.trujobs.proto.DegreeObject parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return PARSER.parseFrom(input, extensionRegistry);
   }
-  public static in.trujobs.proto.GetJobPostDetailsRequest parseDelimitedFrom(java.io.InputStream input)
+  public static in.trujobs.proto.DegreeObject parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return PARSER.parseDelimitedFrom(input);
   }
-  public static in.trujobs.proto.GetJobPostDetailsRequest parseDelimitedFrom(
+  public static in.trujobs.proto.DegreeObject parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return PARSER.parseDelimitedFrom(input, extensionRegistry);
   }
-  public static in.trujobs.proto.GetJobPostDetailsRequest parseFrom(
+  public static in.trujobs.proto.DegreeObject parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return PARSER.parseFrom(input);
   }
-  public static in.trujobs.proto.GetJobPostDetailsRequest parseFrom(
+  public static in.trujobs.proto.DegreeObject parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -215,7 +215,7 @@ public  final class GetJobPostDetailsRequest extends
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(in.trujobs.proto.GetJobPostDetailsRequest prototype) {
+  public static Builder newBuilder(in.trujobs.proto.DegreeObject prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   public Builder toBuilder() {
@@ -230,25 +230,25 @@ public  final class GetJobPostDetailsRequest extends
     return builder;
   }
   /**
-   * Protobuf type {@code in.trujobs.proto.GetJobPostDetailsRequest}
+   * Protobuf type {@code in.trujobs.proto.DegreeObject}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:in.trujobs.proto.GetJobPostDetailsRequest)
-      in.trujobs.proto.GetJobPostDetailsRequestOrBuilder {
+      // @@protoc_insertion_point(builder_implements:in.trujobs.proto.DegreeObject)
+      in.trujobs.proto.DegreeObjectOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_GetJobPostDetailsRequest_descriptor;
+      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_DegreeObject_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_GetJobPostDetailsRequest_fieldAccessorTable
+      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_DegreeObject_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              in.trujobs.proto.GetJobPostDetailsRequest.class, in.trujobs.proto.GetJobPostDetailsRequest.Builder.class);
+              in.trujobs.proto.DegreeObject.class, in.trujobs.proto.DegreeObject.Builder.class);
     }
 
-    // Construct using in.trujobs.proto.GetJobPostDetailsRequest.newBuilder()
+    // Construct using in.trujobs.proto.DegreeObject.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -264,54 +264,54 @@ public  final class GetJobPostDetailsRequest extends
     }
     public Builder clear() {
       super.clear();
-      jobPostId_ = 0L;
+      degreeId_ = 0L;
 
-      candidateMobile_ = "";
+      degreeName_ = "";
 
       return this;
     }
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_GetJobPostDetailsRequest_descriptor;
+      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_DegreeObject_descriptor;
     }
 
-    public in.trujobs.proto.GetJobPostDetailsRequest getDefaultInstanceForType() {
-      return in.trujobs.proto.GetJobPostDetailsRequest.getDefaultInstance();
+    public in.trujobs.proto.DegreeObject getDefaultInstanceForType() {
+      return in.trujobs.proto.DegreeObject.getDefaultInstance();
     }
 
-    public in.trujobs.proto.GetJobPostDetailsRequest build() {
-      in.trujobs.proto.GetJobPostDetailsRequest result = buildPartial();
+    public in.trujobs.proto.DegreeObject build() {
+      in.trujobs.proto.DegreeObject result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
       return result;
     }
 
-    public in.trujobs.proto.GetJobPostDetailsRequest buildPartial() {
-      in.trujobs.proto.GetJobPostDetailsRequest result = new in.trujobs.proto.GetJobPostDetailsRequest(this);
-      result.jobPostId_ = jobPostId_;
-      result.candidateMobile_ = candidateMobile_;
+    public in.trujobs.proto.DegreeObject buildPartial() {
+      in.trujobs.proto.DegreeObject result = new in.trujobs.proto.DegreeObject(this);
+      result.degreeId_ = degreeId_;
+      result.degreeName_ = degreeName_;
       onBuilt();
       return result;
     }
 
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof in.trujobs.proto.GetJobPostDetailsRequest) {
-        return mergeFrom((in.trujobs.proto.GetJobPostDetailsRequest)other);
+      if (other instanceof in.trujobs.proto.DegreeObject) {
+        return mergeFrom((in.trujobs.proto.DegreeObject)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(in.trujobs.proto.GetJobPostDetailsRequest other) {
-      if (other == in.trujobs.proto.GetJobPostDetailsRequest.getDefaultInstance()) return this;
-      if (other.getJobPostId() != 0L) {
-        setJobPostId(other.getJobPostId());
+    public Builder mergeFrom(in.trujobs.proto.DegreeObject other) {
+      if (other == in.trujobs.proto.DegreeObject.getDefaultInstance()) return this;
+      if (other.getDegreeId() != 0L) {
+        setDegreeId(other.getDegreeId());
       }
-      if (!other.getCandidateMobile().isEmpty()) {
-        candidateMobile_ = other.candidateMobile_;
+      if (!other.getDegreeName().isEmpty()) {
+        degreeName_ = other.degreeName_;
         onChanged();
       }
       onChanged();
@@ -326,11 +326,11 @@ public  final class GetJobPostDetailsRequest extends
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      in.trujobs.proto.GetJobPostDetailsRequest parsedMessage = null;
+      in.trujobs.proto.DegreeObject parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (in.trujobs.proto.GetJobPostDetailsRequest) e.getUnfinishedMessage();
+        parsedMessage = (in.trujobs.proto.DegreeObject) e.getUnfinishedMessage();
         throw e;
       } finally {
         if (parsedMessage != null) {
@@ -340,97 +340,97 @@ public  final class GetJobPostDetailsRequest extends
       return this;
     }
 
-    private long jobPostId_ ;
+    private long degreeId_ ;
     /**
-     * <code>optional int64 jobPostId = 1;</code>
+     * <code>optional int64 degreeId = 1;</code>
      */
-    public long getJobPostId() {
-      return jobPostId_;
+    public long getDegreeId() {
+      return degreeId_;
     }
     /**
-     * <code>optional int64 jobPostId = 1;</code>
+     * <code>optional int64 degreeId = 1;</code>
      */
-    public Builder setJobPostId(long value) {
+    public Builder setDegreeId(long value) {
       
-      jobPostId_ = value;
+      degreeId_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>optional int64 jobPostId = 1;</code>
+     * <code>optional int64 degreeId = 1;</code>
      */
-    public Builder clearJobPostId() {
+    public Builder clearDegreeId() {
       
-      jobPostId_ = 0L;
+      degreeId_ = 0L;
       onChanged();
       return this;
     }
 
-    private java.lang.Object candidateMobile_ = "";
+    private java.lang.Object degreeName_ = "";
     /**
-     * <code>optional string candidateMobile = 2;</code>
+     * <code>optional string degreeName = 2;</code>
      */
-    public java.lang.String getCandidateMobile() {
-      java.lang.Object ref = candidateMobile_;
+    public java.lang.String getDegreeName() {
+      java.lang.Object ref = degreeName_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        candidateMobile_ = s;
+        degreeName_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>optional string candidateMobile = 2;</code>
+     * <code>optional string degreeName = 2;</code>
      */
     public com.google.protobuf.ByteString
-        getCandidateMobileBytes() {
-      java.lang.Object ref = candidateMobile_;
+        getDegreeNameBytes() {
+      java.lang.Object ref = degreeName_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        candidateMobile_ = b;
+        degreeName_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>optional string candidateMobile = 2;</code>
+     * <code>optional string degreeName = 2;</code>
      */
-    public Builder setCandidateMobile(
+    public Builder setDegreeName(
         java.lang.String value) {
       if (value == null) {
     throw new NullPointerException();
   }
   
-      candidateMobile_ = value;
+      degreeName_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>optional string candidateMobile = 2;</code>
+     * <code>optional string degreeName = 2;</code>
      */
-    public Builder clearCandidateMobile() {
+    public Builder clearDegreeName() {
       
-      candidateMobile_ = getDefaultInstance().getCandidateMobile();
+      degreeName_ = getDefaultInstance().getDegreeName();
       onChanged();
       return this;
     }
     /**
-     * <code>optional string candidateMobile = 2;</code>
+     * <code>optional string degreeName = 2;</code>
      */
-    public Builder setCandidateMobileBytes(
+    public Builder setDegreeNameBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
       
-      candidateMobile_ = value;
+      degreeName_ = value;
       onChanged();
       return this;
     }
@@ -445,27 +445,27 @@ public  final class GetJobPostDetailsRequest extends
     }
 
 
-    // @@protoc_insertion_point(builder_scope:in.trujobs.proto.GetJobPostDetailsRequest)
+    // @@protoc_insertion_point(builder_scope:in.trujobs.proto.DegreeObject)
   }
 
-  // @@protoc_insertion_point(class_scope:in.trujobs.proto.GetJobPostDetailsRequest)
-  private static final in.trujobs.proto.GetJobPostDetailsRequest DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:in.trujobs.proto.DegreeObject)
+  private static final in.trujobs.proto.DegreeObject DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new in.trujobs.proto.GetJobPostDetailsRequest();
+    DEFAULT_INSTANCE = new in.trujobs.proto.DegreeObject();
   }
 
-  public static in.trujobs.proto.GetJobPostDetailsRequest getDefaultInstance() {
+  public static in.trujobs.proto.DegreeObject getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<GetJobPostDetailsRequest>
-      PARSER = new com.google.protobuf.AbstractParser<GetJobPostDetailsRequest>() {
-    public GetJobPostDetailsRequest parsePartialFrom(
+  private static final com.google.protobuf.Parser<DegreeObject>
+      PARSER = new com.google.protobuf.AbstractParser<DegreeObject>() {
+    public DegreeObject parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       try {
-        return new GetJobPostDetailsRequest(input, extensionRegistry);
+        return new DegreeObject(input, extensionRegistry);
       } catch (RuntimeException e) {
         if (e.getCause() instanceof
             com.google.protobuf.InvalidProtocolBufferException) {
@@ -477,16 +477,16 @@ public  final class GetJobPostDetailsRequest extends
     }
   };
 
-  public static com.google.protobuf.Parser<GetJobPostDetailsRequest> parser() {
+  public static com.google.protobuf.Parser<DegreeObject> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<GetJobPostDetailsRequest> getParserForType() {
+  public com.google.protobuf.Parser<DegreeObject> getParserForType() {
     return PARSER;
   }
 
-  public in.trujobs.proto.GetJobPostDetailsRequest getDefaultInstanceForType() {
+  public in.trujobs.proto.DegreeObject getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

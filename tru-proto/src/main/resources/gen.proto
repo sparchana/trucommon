@@ -100,10 +100,11 @@ message JobPostObject {
     int32 jobPostWorkFromHome = 15;
     string jobPostWorkingDays = 16;
     EducationObject education = 17;
-    JobRoleObject jobRole = 18;
+    string jobRole = 18;
     int64 jobPostCreationMillis = 19;
     int32 jobPostStartTime = 20;
     int32 jobPostEndTime = 21;
+    int32 isApplied = 22;
 }
 
 message JobPostDetailRequest{
@@ -176,6 +177,7 @@ message GetCandidateInformationResponse{
     }
     Status status = 1;
     CandidateObject candidate = 2;
+    repeated JobRoleObject jobRoles = 3;
 }
 
 message CandidateObject {
@@ -187,15 +189,27 @@ message CandidateObject {
     int32 candidateGender = 6;
     string candidateMobile = 7;
     int32 candidateAge = 8;
-    LocalityObject candidateHomelocality = 9;
-    repeated LocalityObject candidateLocationPref = 10;
-    repeated JobRoleObject candidateJobRolePref = 11;
-    TimeShiftObject candidateTimeShiftPref = 12;
-    int32 candidateTotalExperience = 13;
+    int64 candidateLastWithdrawnSalary = 9;
+    LocalityObject candidateHomelocality = 10;
+    repeated LocalityObject candidateLocationPref = 11;
+    repeated JobRoleObject candidateJobRolePref = 12;
+    TimeShiftObject candidateTimeShiftPref = 13;
+    CandidateEducationObject candidateEducation = 14;
+    int32 candidateTotalExperience = 15;
+    string candidateCurrentCompany = 16;
+    int64 candidateDobMillis = 17;
+    int32 candidateIsEmployed = 18;
+    repeated LanguageKnownObject languageKnownObject = 19;
+    repeated CandidateSkillObject candidateSkillObject = 20;
+    JobRoleObject candidateCurrentJobRole = 21;
+    float candidateProfileCompletePercent = 22;
+    int32 candidateTotalAppliedJobs = 23;
+    int32 appliedJobs = 24; 
 }
 
 message GetJobPostDetailsRequest {
     int64 jobPostId = 1;
+    string candidateMobile = 2; 
 }
 
 message GetJobPostDetailsResponse {
@@ -207,6 +221,7 @@ message GetJobPostDetailsResponse {
     Status status = 1;
     JobPostObject jobPost = 2;
     CompanyObject company = 3;
+    bool alreadyApplied = 4;
 }
 
 message CompanyObject {
@@ -244,6 +259,133 @@ message HomeLocalityResponse {
         USER_NOT_FOUND = 3;
     }
     Status status = 1;
+}
+
+message CandidateEducationObject {
+    EducationObject education = 1;
+    DegreeObject degree = 2;
+    string candidateInstitute = 3;
+    int32 candidateEducationCompletionStatus = 4;
+}
+
+message DegreeObject {
+    int64 degreeId = 1;
+    string degreeName = 2;
+}
+
+message CandidateAppliedJobsRequest {
+    string candidate_mobile = 1;
+}
+
+message CandidateAppliedJobsResponse { 
+    enum Status {
+        UNKNOWN = 0;
+        SUCCESS = 1;
+        FAILURE = 2;
+    }
+    Status status = 1;
+    repeated JobApplicationObject jobApplication = 2;
+}
+
+message JobApplicationObject {
+    int64 jobApplicationId = 1;
+    int64 jobApplicationAppliedMillis = 2;
+    JobPostObject jobPost = 3;	
+    LocalityObject preScreenLocation = 4;
+}
+
+message UpdateCandidateBasicProfileRequest {
+    string candidate_mobile = 1;
+    string candidate_first_name = 2;
+    string candidate_last_name = 3;
+    int64 candidate_timeshift_pref = 4;
+    int32 candidate_gender = 5;
+    string candidateDOB = 6;
+    repeated JobRoleObject jobRolePref = 7;
+}
+
+message UpdateCandidateExperienceProfileRequest {
+    string candidate_mobile = 1;
+    int32 candidate_total_experience = 2;
+    int32 candidate_is_employed = 3;
+    string candidate_current_company = 4;
+    int64 candidate_current_salary = 5;
+    JobRoleObject current_job_role = 6;	
+    repeated LanguageKnownObject candidate_language = 7;
+    repeated CandidateSkillObject candidate_skill = 8;
+}
+
+message UpdateCandidateEducationProfileRequest {
+    string candidate_mobile = 1;
+    int64 candidate_education_level = 2;
+    int64 candidate_degree = 3;
+    string candidate_education_institute = 4;
+    int32 candidate_education_completion_status = 5;
+}
+
+message UpdateCandidateBasicProfileResponse {
+    enum Status {
+        UNKNOWN = 0;
+        SUCCESS = 1;
+        FAILURE = 2;
+    }
+    Status status = 1;
+}
+
+message GetCandidateBasicProfileStaticResponse {
+    enum Status {
+        UNKNOWN = 0;
+        SUCCESS = 1;
+        FAILURE = 2;
+    }
+    Status status = 1;
+    repeated TimeShiftObject timeShiftList = 2;
+}
+
+message GetCandidateExperienceProfileStaticResponse {
+    enum Status {
+        UNKNOWN = 0;
+        SUCCESS = 1;
+        FAILURE = 2;
+    }
+    Status status = 1;
+    repeated LanguageObject languageObject = 2;
+    repeated SkillObject skillObject = 3;
+    repeated JobRoleObject jobRole = 4;
+}
+
+message GetCandidateEducationProfileStaticResponse {
+    enum Status {
+        UNKNOWN = 0;
+        SUCCESS = 1;
+        FAILURE = 2;
+    }
+    Status status = 1;
+    repeated DegreeObject degreeObject = 2;
+    repeated EducationObject educationObject = 3;
+}
+
+message LanguageObject {
+    int32 languageId = 1;
+    string languageName = 2;
+}
+
+message SkillObject {
+    int32 skillId = 1;
+    string skillName = 2;
+    string skillQuestion = 3;
+}
+
+message LanguageKnownObject {
+    int32 languageKnownId = 1;
+    int32 languageUnderstand = 2;
+    int32 languageSpeak = 3;
+    int32 languageReadWrite = 4;
+}
+
+message CandidateSkillObject {
+    int32 skillId = 1;
+    bool answer = 2;
 }
 
 message FetchCandidateAlertRequest {

@@ -28,4 +28,28 @@ public interface GetCandidateInformationResponseOrBuilder extends
    * <code>optional .in.trujobs.proto.CandidateObject candidate = 2;</code>
    */
   in.trujobs.proto.CandidateObjectOrBuilder getCandidateOrBuilder();
+
+  /**
+   * <code>repeated .in.trujobs.proto.JobRoleObject jobRoles = 3;</code>
+   */
+  java.util.List<in.trujobs.proto.JobRoleObject> 
+      getJobRolesList();
+  /**
+   * <code>repeated .in.trujobs.proto.JobRoleObject jobRoles = 3;</code>
+   */
+  in.trujobs.proto.JobRoleObject getJobRoles(int index);
+  /**
+   * <code>repeated .in.trujobs.proto.JobRoleObject jobRoles = 3;</code>
+   */
+  int getJobRolesCount();
+  /**
+   * <code>repeated .in.trujobs.proto.JobRoleObject jobRoles = 3;</code>
+   */
+  java.util.List<? extends in.trujobs.proto.JobRoleObjectOrBuilder> 
+      getJobRolesOrBuilderList();
+  /**
+   * <code>repeated .in.trujobs.proto.JobRoleObject jobRoles = 3;</code>
+   */
+  in.trujobs.proto.JobRoleObjectOrBuilder getJobRolesOrBuilder(
+      int index);
 }

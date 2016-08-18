@@ -41,4 +41,9 @@ public interface GetJobPostDetailsResponseOrBuilder extends
    * <code>optional .in.trujobs.proto.CompanyObject company = 3;</code>
    */
   in.trujobs.proto.CompanyObjectOrBuilder getCompanyOrBuilder();
+
+  /**
+   * <code>optional bool alreadyApplied = 4;</code>
+   */
+  boolean getAlreadyApplied();
 }
