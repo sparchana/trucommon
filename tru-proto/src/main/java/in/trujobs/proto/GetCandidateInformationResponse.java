@@ -16,6 +16,7 @@ public  final class GetCandidateInformationResponse extends
   }
   private GetCandidateInformationResponse() {
     status_ = 0;
+    jobRoles_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -61,6 +62,14 @@ public  final class GetCandidateInformationResponse extends
 
             break;
           }
+          case 26: {
+            if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              jobRoles_ = new java.util.ArrayList<in.trujobs.proto.JobRoleObject>();
+              mutable_bitField0_ |= 0x00000004;
+            }
+            jobRoles_.add(input.readMessage(in.trujobs.proto.JobRoleObject.parser(), extensionRegistry));
+            break;
+          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -70,6 +79,9 @@ public  final class GetCandidateInformationResponse extends
           new com.google.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this));
     } finally {
+      if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        jobRoles_ = java.util.Collections.unmodifiableList(jobRoles_);
+      }
       makeExtensionsImmutable();
     }
   }
@@ -186,6 +198,7 @@ public  final class GetCandidateInformationResponse extends
     // @@protoc_insertion_point(enum_scope:in.trujobs.proto.GetCandidateInformationResponse.Status)
   }
 
+  private int bitField0_;
   public static final int STATUS_FIELD_NUMBER = 1;
   private int status_;
   /**
@@ -223,6 +236,41 @@ public  final class GetCandidateInformationResponse extends
     return getCandidate();
   }
 
+  public static final int JOBROLES_FIELD_NUMBER = 3;
+  private java.util.List<in.trujobs.proto.JobRoleObject> jobRoles_;
+  /**
+   * <code>repeated .in.trujobs.proto.JobRoleObject jobRoles = 3;</code>
+   */
+  public java.util.List<in.trujobs.proto.JobRoleObject> getJobRolesList() {
+    return jobRoles_;
+  }
+  /**
+   * <code>repeated .in.trujobs.proto.JobRoleObject jobRoles = 3;</code>
+   */
+  public java.util.List<? extends in.trujobs.proto.JobRoleObjectOrBuilder> 
+      getJobRolesOrBuilderList() {
+    return jobRoles_;
+  }
+  /**
+   * <code>repeated .in.trujobs.proto.JobRoleObject jobRoles = 3;</code>
+   */
+  public int getJobRolesCount() {
+    return jobRoles_.size();
+  }
+  /**
+   * <code>repeated .in.trujobs.proto.JobRoleObject jobRoles = 3;</code>
+   */
+  public in.trujobs.proto.JobRoleObject getJobRoles(int index) {
+    return jobRoles_.get(index);
+  }
+  /**
+   * <code>repeated .in.trujobs.proto.JobRoleObject jobRoles = 3;</code>
+   */
+  public in.trujobs.proto.JobRoleObjectOrBuilder getJobRolesOrBuilder(
+      int index) {
+    return jobRoles_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -241,6 +289,9 @@ public  final class GetCandidateInformationResponse extends
     if (candidate_ != null) {
       output.writeMessage(2, getCandidate());
     }
+    for (int i = 0; i < jobRoles_.size(); i++) {
+      output.writeMessage(3, jobRoles_.get(i));
+    }
   }
 
   public int getSerializedSize() {
@@ -255,6 +306,10 @@ public  final class GetCandidateInformationResponse extends
     if (candidate_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getCandidate());
+    }
+    for (int i = 0; i < jobRoles_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, jobRoles_.get(i));
     }
     memoizedSize = size;
     return size;
@@ -363,6 +418,7 @@ public  final class GetCandidateInformationResponse extends
     }
     private void maybeForceBuilderInitialization() {
       if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        getJobRolesFieldBuilder();
       }
     }
     public Builder clear() {
@@ -374,6 +430,12 @@ public  final class GetCandidateInformationResponse extends
       } else {
         candidate_ = null;
         candidateBuilder_ = null;
+      }
+      if (jobRolesBuilder_ == null) {
+        jobRoles_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+      } else {
+        jobRolesBuilder_.clear();
       }
       return this;
     }
@@ -397,12 +459,24 @@ public  final class GetCandidateInformationResponse extends
 
     public in.trujobs.proto.GetCandidateInformationResponse buildPartial() {
       in.trujobs.proto.GetCandidateInformationResponse result = new in.trujobs.proto.GetCandidateInformationResponse(this);
+      int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       result.status_ = status_;
       if (candidateBuilder_ == null) {
         result.candidate_ = candidate_;
       } else {
         result.candidate_ = candidateBuilder_.build();
       }
+      if (jobRolesBuilder_ == null) {
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          jobRoles_ = java.util.Collections.unmodifiableList(jobRoles_);
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.jobRoles_ = jobRoles_;
+      } else {
+        result.jobRoles_ = jobRolesBuilder_.build();
+      }
+      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
@@ -423,6 +497,32 @@ public  final class GetCandidateInformationResponse extends
       }
       if (other.hasCandidate()) {
         mergeCandidate(other.getCandidate());
+      }
+      if (jobRolesBuilder_ == null) {
+        if (!other.jobRoles_.isEmpty()) {
+          if (jobRoles_.isEmpty()) {
+            jobRoles_ = other.jobRoles_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureJobRolesIsMutable();
+            jobRoles_.addAll(other.jobRoles_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.jobRoles_.isEmpty()) {
+          if (jobRolesBuilder_.isEmpty()) {
+            jobRolesBuilder_.dispose();
+            jobRolesBuilder_ = null;
+            jobRoles_ = other.jobRoles_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+            jobRolesBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 getJobRolesFieldBuilder() : null;
+          } else {
+            jobRolesBuilder_.addAllMessages(other.jobRoles_);
+          }
+        }
       }
       onChanged();
       return this;
@@ -449,6 +549,7 @@ public  final class GetCandidateInformationResponse extends
       }
       return this;
     }
+    private int bitField0_;
 
     private int status_ = 0;
     /**
@@ -609,6 +710,246 @@ public  final class GetCandidateInformationResponse extends
         candidate_ = null;
       }
       return candidateBuilder_;
+    }
+
+    private java.util.List<in.trujobs.proto.JobRoleObject> jobRoles_ =
+      java.util.Collections.emptyList();
+    private void ensureJobRolesIsMutable() {
+      if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        jobRoles_ = new java.util.ArrayList<in.trujobs.proto.JobRoleObject>(jobRoles_);
+        bitField0_ |= 0x00000004;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilder<
+        in.trujobs.proto.JobRoleObject, in.trujobs.proto.JobRoleObject.Builder, in.trujobs.proto.JobRoleObjectOrBuilder> jobRolesBuilder_;
+
+    /**
+     * <code>repeated .in.trujobs.proto.JobRoleObject jobRoles = 3;</code>
+     */
+    public java.util.List<in.trujobs.proto.JobRoleObject> getJobRolesList() {
+      if (jobRolesBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(jobRoles_);
+      } else {
+        return jobRolesBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.JobRoleObject jobRoles = 3;</code>
+     */
+    public int getJobRolesCount() {
+      if (jobRolesBuilder_ == null) {
+        return jobRoles_.size();
+      } else {
+        return jobRolesBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.JobRoleObject jobRoles = 3;</code>
+     */
+    public in.trujobs.proto.JobRoleObject getJobRoles(int index) {
+      if (jobRolesBuilder_ == null) {
+        return jobRoles_.get(index);
+      } else {
+        return jobRolesBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.JobRoleObject jobRoles = 3;</code>
+     */
+    public Builder setJobRoles(
+        int index, in.trujobs.proto.JobRoleObject value) {
+      if (jobRolesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureJobRolesIsMutable();
+        jobRoles_.set(index, value);
+        onChanged();
+      } else {
+        jobRolesBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.JobRoleObject jobRoles = 3;</code>
+     */
+    public Builder setJobRoles(
+        int index, in.trujobs.proto.JobRoleObject.Builder builderForValue) {
+      if (jobRolesBuilder_ == null) {
+        ensureJobRolesIsMutable();
+        jobRoles_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        jobRolesBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.JobRoleObject jobRoles = 3;</code>
+     */
+    public Builder addJobRoles(in.trujobs.proto.JobRoleObject value) {
+      if (jobRolesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureJobRolesIsMutable();
+        jobRoles_.add(value);
+        onChanged();
+      } else {
+        jobRolesBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.JobRoleObject jobRoles = 3;</code>
+     */
+    public Builder addJobRoles(
+        int index, in.trujobs.proto.JobRoleObject value) {
+      if (jobRolesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureJobRolesIsMutable();
+        jobRoles_.add(index, value);
+        onChanged();
+      } else {
+        jobRolesBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.JobRoleObject jobRoles = 3;</code>
+     */
+    public Builder addJobRoles(
+        in.trujobs.proto.JobRoleObject.Builder builderForValue) {
+      if (jobRolesBuilder_ == null) {
+        ensureJobRolesIsMutable();
+        jobRoles_.add(builderForValue.build());
+        onChanged();
+      } else {
+        jobRolesBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.JobRoleObject jobRoles = 3;</code>
+     */
+    public Builder addJobRoles(
+        int index, in.trujobs.proto.JobRoleObject.Builder builderForValue) {
+      if (jobRolesBuilder_ == null) {
+        ensureJobRolesIsMutable();
+        jobRoles_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        jobRolesBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.JobRoleObject jobRoles = 3;</code>
+     */
+    public Builder addAllJobRoles(
+        java.lang.Iterable<? extends in.trujobs.proto.JobRoleObject> values) {
+      if (jobRolesBuilder_ == null) {
+        ensureJobRolesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, jobRoles_);
+        onChanged();
+      } else {
+        jobRolesBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.JobRoleObject jobRoles = 3;</code>
+     */
+    public Builder clearJobRoles() {
+      if (jobRolesBuilder_ == null) {
+        jobRoles_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+      } else {
+        jobRolesBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.JobRoleObject jobRoles = 3;</code>
+     */
+    public Builder removeJobRoles(int index) {
+      if (jobRolesBuilder_ == null) {
+        ensureJobRolesIsMutable();
+        jobRoles_.remove(index);
+        onChanged();
+      } else {
+        jobRolesBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.JobRoleObject jobRoles = 3;</code>
+     */
+    public in.trujobs.proto.JobRoleObject.Builder getJobRolesBuilder(
+        int index) {
+      return getJobRolesFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.JobRoleObject jobRoles = 3;</code>
+     */
+    public in.trujobs.proto.JobRoleObjectOrBuilder getJobRolesOrBuilder(
+        int index) {
+      if (jobRolesBuilder_ == null) {
+        return jobRoles_.get(index);  } else {
+        return jobRolesBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.JobRoleObject jobRoles = 3;</code>
+     */
+    public java.util.List<? extends in.trujobs.proto.JobRoleObjectOrBuilder> 
+         getJobRolesOrBuilderList() {
+      if (jobRolesBuilder_ != null) {
+        return jobRolesBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(jobRoles_);
+      }
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.JobRoleObject jobRoles = 3;</code>
+     */
+    public in.trujobs.proto.JobRoleObject.Builder addJobRolesBuilder() {
+      return getJobRolesFieldBuilder().addBuilder(
+          in.trujobs.proto.JobRoleObject.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.JobRoleObject jobRoles = 3;</code>
+     */
+    public in.trujobs.proto.JobRoleObject.Builder addJobRolesBuilder(
+        int index) {
+      return getJobRolesFieldBuilder().addBuilder(
+          index, in.trujobs.proto.JobRoleObject.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .in.trujobs.proto.JobRoleObject jobRoles = 3;</code>
+     */
+    public java.util.List<in.trujobs.proto.JobRoleObject.Builder> 
+         getJobRolesBuilderList() {
+      return getJobRolesFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        in.trujobs.proto.JobRoleObject, in.trujobs.proto.JobRoleObject.Builder, in.trujobs.proto.JobRoleObjectOrBuilder> 
+        getJobRolesFieldBuilder() {
+      if (jobRolesBuilder_ == null) {
+        jobRolesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            in.trujobs.proto.JobRoleObject, in.trujobs.proto.JobRoleObject.Builder, in.trujobs.proto.JobRoleObjectOrBuilder>(
+                jobRoles_,
+                ((bitField0_ & 0x00000004) == 0x00000004),
+                getParentForChildren(),
+                isClean());
+        jobRoles_ = null;
+      }
+      return jobRolesBuilder_;
     }
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
