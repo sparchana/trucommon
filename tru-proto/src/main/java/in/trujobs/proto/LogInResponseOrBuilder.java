@@ -85,4 +85,29 @@ public interface LogInResponseOrBuilder extends
    * <code>optional int32 candidateHomeLocalityStatus = 12;</code>
    */
   int getCandidateHomeLocalityStatus();
+
+  /**
+   * <code>optional double candidateHomeLatitude = 13;</code>
+   */
+  double getCandidateHomeLatitude();
+
+  /**
+   * <code>optional double candidateHomeLongitude = 14;</code>
+   */
+  double getCandidateHomeLongitude();
+
+  /**
+   * <code>optional int64 candidatePrefJobRoleIdOne = 15;</code>
+   */
+  long getCandidatePrefJobRoleIdOne();
+
+  /**
+   * <code>optional int64 candidatePrefJobRoleIdTwo = 16;</code>
+   */
+  long getCandidatePrefJobRoleIdTwo();
+
+  /**
+   * <code>optional int64 candidatePrefJobRoleIdThree = 17;</code>
+   */
+  long getCandidatePrefJobRoleIdThree();
 }
