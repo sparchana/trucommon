@@ -21,4 +21,14 @@ public interface LocalityObjectOrBuilder extends
    */
   com.google.protobuf.ByteString
       getLocalityNameBytes();
+
+  /**
+   * <code>optional double lat = 3;</code>
+   */
+  double getLat();
+
+  /**
+   * <code>optional double lng = 4;</code>
+   */
+  double getLng();
 }
