@@ -17,6 +17,8 @@ public  final class LocalityObject extends
   private LocalityObject() {
     localityId_ = 0L;
     localityName_ = "";
+    lat_ = 0D;
+    lng_ = 0D;
   }
 
   @java.lang.Override
@@ -52,6 +54,16 @@ public  final class LocalityObject extends
             java.lang.String s = input.readStringRequireUtf8();
 
             localityName_ = s;
+            break;
+          }
+          case 25: {
+
+            lat_ = input.readDouble();
+            break;
+          }
+          case 33: {
+
+            lng_ = input.readDouble();
             break;
           }
         }
@@ -121,6 +133,24 @@ public  final class LocalityObject extends
     }
   }
 
+  public static final int LAT_FIELD_NUMBER = 3;
+  private double lat_;
+  /**
+   * <code>optional double lat = 3;</code>
+   */
+  public double getLat() {
+    return lat_;
+  }
+
+  public static final int LNG_FIELD_NUMBER = 4;
+  private double lng_;
+  /**
+   * <code>optional double lng = 4;</code>
+   */
+  public double getLng() {
+    return lng_;
+  }
+
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -139,6 +169,12 @@ public  final class LocalityObject extends
     if (!getLocalityNameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessage.writeString(output, 2, localityName_);
     }
+    if (lat_ != 0D) {
+      output.writeDouble(3, lat_);
+    }
+    if (lng_ != 0D) {
+      output.writeDouble(4, lng_);
+    }
   }
 
   public int getSerializedSize() {
@@ -152,6 +188,14 @@ public  final class LocalityObject extends
     }
     if (!getLocalityNameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(2, localityName_);
+    }
+    if (lat_ != 0D) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(3, lat_);
+    }
+    if (lng_ != 0D) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(4, lng_);
     }
     memoizedSize = size;
     return size;
@@ -268,6 +312,10 @@ public  final class LocalityObject extends
 
       localityName_ = "";
 
+      lat_ = 0D;
+
+      lng_ = 0D;
+
       return this;
     }
 
@@ -292,6 +340,8 @@ public  final class LocalityObject extends
       in.trujobs.proto.LocalityObject result = new in.trujobs.proto.LocalityObject(this);
       result.localityId_ = localityId_;
       result.localityName_ = localityName_;
+      result.lat_ = lat_;
+      result.lng_ = lng_;
       onBuilt();
       return result;
     }
@@ -313,6 +363,12 @@ public  final class LocalityObject extends
       if (!other.getLocalityName().isEmpty()) {
         localityName_ = other.localityName_;
         onChanged();
+      }
+      if (other.getLat() != 0D) {
+        setLat(other.getLat());
+      }
+      if (other.getLng() != 0D) {
+        setLng(other.getLng());
       }
       onChanged();
       return this;
@@ -431,6 +487,58 @@ public  final class LocalityObject extends
   checkByteStringIsUtf8(value);
       
       localityName_ = value;
+      onChanged();
+      return this;
+    }
+
+    private double lat_ ;
+    /**
+     * <code>optional double lat = 3;</code>
+     */
+    public double getLat() {
+      return lat_;
+    }
+    /**
+     * <code>optional double lat = 3;</code>
+     */
+    public Builder setLat(double value) {
+      
+      lat_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional double lat = 3;</code>
+     */
+    public Builder clearLat() {
+      
+      lat_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private double lng_ ;
+    /**
+     * <code>optional double lng = 4;</code>
+     */
+    public double getLng() {
+      return lng_;
+    }
+    /**
+     * <code>optional double lng = 4;</code>
+     */
+    public Builder setLng(double value) {
+      
+      lng_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional double lng = 4;</code>
+     */
+    public Builder clearLng() {
+      
+      lng_ = 0D;
       onChanged();
       return this;
     }
