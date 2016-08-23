@@ -444,11 +444,13 @@ message FetchCandidateAlertResponse {
     }
 
     enum Type {
-        COMPLETE_PROFILE = 0;
-        INTERVIEW_SCHEDULED = 1;
-        JOINING_DATE_CONFIRMED = 2;
-        PROFILE_DEACTIVATED = 3;
-        NEW_JOBS_IN_LOCALITY = 4;
+        DEFAULT = 0;
+        COMPLETE_PROFILE = 1;
+        INTERVIEW_SCHEDULED = 2;
+        JOINING_DATE_CONFIRMED = 3;
+        PROFILE_DEACTIVATED = 4;
+        NEW_JOBS_IN_LOCALITY = 5;
+        COMPLETE_ASSESSMENT = 6;
     }
 
     Status status = 1;

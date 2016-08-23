@@ -494,24 +494,25 @@ public final class Gen {
       "\rANY_EDUCATION\020\000\022\n\n\006LT_TEN\020\001\022\014\n\010TEN_PASS" +
       "\020\002\022\017\n\013TWELVE_PASS\020\003\022\006\n\002UG\020\004\022\006\n\002PG\020\005\".\n\006G" +
       "ender\022\016\n\nANY_GENDER\020\000\022\010\n\004MALE\020\001\022\n\n\006FEMAL" +
-      "E\020\002\"\353\002\n\033FetchCandidateAlertResponse\022D\n\006s" +
+      "E\020\002\"\221\003\n\033FetchCandidateAlertResponse\022D\n\006s" +
       "tatus\030\001 \001(\01624.in.trujobs.proto.FetchCand" +
       "idateAlertResponse.Status\022E\n\talertType\030\002",
       " \001(\01622.in.trujobs.proto.FetchCandidateAl" +
       "ertResponse.Type\022\024\n\014alertMessage\030\003 \001(\t\"\"" +
-      "\n\006Status\022\013\n\007UNKNOWN\020\000\022\013\n\007SUCCESS\020\001\"\204\001\n\004T" +
-      "ype\022\024\n\020COMPLETE_PROFILE\020\000\022\027\n\023INTERVIEW_S" +
-      "CHEDULED\020\001\022\032\n\026JOINING_DATE_CONFIRMED\020\002\022\027" +
-      "\n\023PROFILE_DEACTIVATED\020\003\022\030\n\024NEW_JOBS_IN_L" +
-      "OCALITY\020\004\"\337\001\n\020JobSearchRequest\022\020\n\010latitu" +
-      "de\030\001 \001(\001\022\021\n\tlongitude\030\002 \001(\001\022\030\n\020candidate" +
-      "_mobile\030\003 \001(\t\022<\n\020jobFilterRequest\030\004 \001(\0132" +
-      "\".in.trujobs.proto.JobFilterRequest\022N\n\031j",
-      "obSearchByJobRoleRequest\030\005 \001(\0132+.in.truj" +
-      "obs.proto.JobSearchByJobRoleRequest\"_\n\031J" +
-      "obSearchByJobRoleRequest\022\024\n\014jobRoleIdOne" +
-      "\030\001 \001(\003\022\024\n\014jobRoleIdTwo\030\002 \001(\003\022\026\n\016JobRoleI" +
-      "dThree\030\003 \001(\003B\002P\001b\006proto3"
+      "\n\006Status\022\013\n\007UNKNOWN\020\000\022\013\n\007SUCCESS\020\001\"\252\001\n\004T" +
+      "ype\022\013\n\007DEFAULT\020\000\022\024\n\020COMPLETE_PROFILE\020\001\022\027" +
+      "\n\023INTERVIEW_SCHEDULED\020\002\022\032\n\026JOINING_DATE_" +
+      "CONFIRMED\020\003\022\027\n\023PROFILE_DEACTIVATED\020\004\022\030\n\024" +
+      "NEW_JOBS_IN_LOCALITY\020\005\022\027\n\023COMPLETE_ASSES" +
+      "SMENT\020\006\"\337\001\n\020JobSearchRequest\022\020\n\010latitude" +
+      "\030\001 \001(\001\022\021\n\tlongitude\030\002 \001(\001\022\030\n\020candidate_m" +
+      "obile\030\003 \001(\t\022<\n\020jobFilterRequest\030\004 \001(\0132\".",
+      "in.trujobs.proto.JobFilterRequest\022N\n\031job" +
+      "SearchByJobRoleRequest\030\005 \001(\0132+.in.trujob" +
+      "s.proto.JobSearchByJobRoleRequest\"_\n\031Job" +
+      "SearchByJobRoleRequest\022\024\n\014jobRoleIdOne\030\001" +
+      " \001(\003\022\024\n\014jobRoleIdTwo\030\002 \001(\003\022\026\n\016JobRoleIdT" +
+      "hree\030\003 \001(\003B\002P\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
