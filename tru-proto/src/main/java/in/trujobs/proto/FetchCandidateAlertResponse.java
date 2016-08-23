@@ -184,48 +184,64 @@ public  final class FetchCandidateAlertResponse extends
   public enum Type
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
-     * <code>COMPLETE_PROFILE = 0;</code>
+     * <code>DEFAULT = 0;</code>
      */
-    COMPLETE_PROFILE(0, 0),
+    DEFAULT(0, 0),
     /**
-     * <code>INTERVIEW_SCHEDULED = 1;</code>
+     * <code>COMPLETE_PROFILE = 1;</code>
      */
-    INTERVIEW_SCHEDULED(1, 1),
+    COMPLETE_PROFILE(1, 1),
     /**
-     * <code>JOINING_DATE_CONFIRMED = 2;</code>
+     * <code>INTERVIEW_SCHEDULED = 2;</code>
      */
-    JOINING_DATE_CONFIRMED(2, 2),
+    INTERVIEW_SCHEDULED(2, 2),
     /**
-     * <code>PROFILE_DEACTIVATED = 3;</code>
+     * <code>JOINING_DATE_CONFIRMED = 3;</code>
      */
-    PROFILE_DEACTIVATED(3, 3),
+    JOINING_DATE_CONFIRMED(3, 3),
     /**
-     * <code>NEW_JOBS_IN_LOCALITY = 4;</code>
+     * <code>PROFILE_DEACTIVATED = 4;</code>
      */
-    NEW_JOBS_IN_LOCALITY(4, 4),
+    PROFILE_DEACTIVATED(4, 4),
+    /**
+     * <code>NEW_JOBS_IN_LOCALITY = 5;</code>
+     */
+    NEW_JOBS_IN_LOCALITY(5, 5),
+    /**
+     * <code>COMPLETE_ASSESSMENT = 6;</code>
+     */
+    COMPLETE_ASSESSMENT(6, 6),
     UNRECOGNIZED(-1, -1),
     ;
 
     /**
-     * <code>COMPLETE_PROFILE = 0;</code>
+     * <code>DEFAULT = 0;</code>
      */
-    public static final int COMPLETE_PROFILE_VALUE = 0;
+    public static final int DEFAULT_VALUE = 0;
     /**
-     * <code>INTERVIEW_SCHEDULED = 1;</code>
+     * <code>COMPLETE_PROFILE = 1;</code>
      */
-    public static final int INTERVIEW_SCHEDULED_VALUE = 1;
+    public static final int COMPLETE_PROFILE_VALUE = 1;
     /**
-     * <code>JOINING_DATE_CONFIRMED = 2;</code>
+     * <code>INTERVIEW_SCHEDULED = 2;</code>
      */
-    public static final int JOINING_DATE_CONFIRMED_VALUE = 2;
+    public static final int INTERVIEW_SCHEDULED_VALUE = 2;
     /**
-     * <code>PROFILE_DEACTIVATED = 3;</code>
+     * <code>JOINING_DATE_CONFIRMED = 3;</code>
      */
-    public static final int PROFILE_DEACTIVATED_VALUE = 3;
+    public static final int JOINING_DATE_CONFIRMED_VALUE = 3;
     /**
-     * <code>NEW_JOBS_IN_LOCALITY = 4;</code>
+     * <code>PROFILE_DEACTIVATED = 4;</code>
      */
-    public static final int NEW_JOBS_IN_LOCALITY_VALUE = 4;
+    public static final int PROFILE_DEACTIVATED_VALUE = 4;
+    /**
+     * <code>NEW_JOBS_IN_LOCALITY = 5;</code>
+     */
+    public static final int NEW_JOBS_IN_LOCALITY_VALUE = 5;
+    /**
+     * <code>COMPLETE_ASSESSMENT = 6;</code>
+     */
+    public static final int COMPLETE_ASSESSMENT_VALUE = 6;
 
 
     public final int getNumber() {
@@ -238,11 +254,13 @@ public  final class FetchCandidateAlertResponse extends
 
     public static Type valueOf(int value) {
       switch (value) {
-        case 0: return COMPLETE_PROFILE;
-        case 1: return INTERVIEW_SCHEDULED;
-        case 2: return JOINING_DATE_CONFIRMED;
-        case 3: return PROFILE_DEACTIVATED;
-        case 4: return NEW_JOBS_IN_LOCALITY;
+        case 0: return DEFAULT;
+        case 1: return COMPLETE_PROFILE;
+        case 2: return INTERVIEW_SCHEDULED;
+        case 3: return JOINING_DATE_CONFIRMED;
+        case 4: return PROFILE_DEACTIVATED;
+        case 5: return NEW_JOBS_IN_LOCALITY;
+        case 6: return COMPLETE_ASSESSMENT;
         default: return null;
       }
     }
@@ -378,7 +396,7 @@ public  final class FetchCandidateAlertResponse extends
     if (status_ != in.trujobs.proto.FetchCandidateAlertResponse.Status.UNKNOWN.getNumber()) {
       output.writeEnum(1, status_);
     }
-    if (alertType_ != in.trujobs.proto.FetchCandidateAlertResponse.Type.COMPLETE_PROFILE.getNumber()) {
+    if (alertType_ != in.trujobs.proto.FetchCandidateAlertResponse.Type.DEFAULT.getNumber()) {
       output.writeEnum(2, alertType_);
     }
     if (!getAlertMessageBytes().isEmpty()) {
@@ -395,7 +413,7 @@ public  final class FetchCandidateAlertResponse extends
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(1, status_);
     }
-    if (alertType_ != in.trujobs.proto.FetchCandidateAlertResponse.Type.COMPLETE_PROFILE.getNumber()) {
+    if (alertType_ != in.trujobs.proto.FetchCandidateAlertResponse.Type.DEFAULT.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(2, alertType_);
     }

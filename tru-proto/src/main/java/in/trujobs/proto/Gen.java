@@ -493,24 +493,25 @@ public final class Gen {
       "\n\tEducation\022\021\n\rANY_EDUCATION\020\000\022\n\n\006LT_TEN" +
       "\020\001\022\014\n\010TEN_PASS\020\002\022\017\n\013TWELVE_PASS\020\003\022\006\n\002UG\020" +
       "\004\022\006\n\002PG\020\005\".\n\006Gender\022\016\n\nANY_GENDER\020\000\022\010\n\004M" +
-      "ALE\020\001\022\n\n\006FEMALE\020\002\"\353\002\n\033FetchCandidateAler" +
+      "ALE\020\001\022\n\n\006FEMALE\020\002\"\221\003\n\033FetchCandidateAler" +
       "tResponse\022D\n\006status\030\001 \001(\01624.in.trujobs.p" +
       "roto.FetchCandidateAlertResponse.Status\022" +
       "E\n\talertType\030\002 \001(\01622.in.trujobs.proto.Fe",
       "tchCandidateAlertResponse.Type\022\024\n\014alertM" +
       "essage\030\003 \001(\t\"\"\n\006Status\022\013\n\007UNKNOWN\020\000\022\013\n\007S" +
-      "UCCESS\020\001\"\204\001\n\004Type\022\024\n\020COMPLETE_PROFILE\020\000\022" +
-      "\027\n\023INTERVIEW_SCHEDULED\020\001\022\032\n\026JOINING_DATE" +
-      "_CONFIRMED\020\002\022\027\n\023PROFILE_DEACTIVATED\020\003\022\030\n" +
-      "\024NEW_JOBS_IN_LOCALITY\020\004\"\337\001\n\020JobSearchReq" +
-      "uest\022\020\n\010latitude\030\001 \001(\001\022\021\n\tlongitude\030\002 \001(" +
-      "\001\022\030\n\020candidate_mobile\030\003 \001(\t\022<\n\020jobFilter" +
-      "Request\030\004 \001(\0132\".in.trujobs.proto.JobFilt" +
-      "erRequest\022N\n\031jobSearchByJobRoleRequest\030\005",
-      " \001(\0132+.in.trujobs.proto.JobSearchByJobRo" +
-      "leRequest\"_\n\031JobSearchByJobRoleRequest\022\024" +
-      "\n\014jobRoleIdOne\030\001 \001(\003\022\024\n\014jobRoleIdTwo\030\002 \001" +
-      "(\003\022\026\n\016JobRoleIdThree\030\003 \001(\003B\002P\001b\006proto3"
+      "UCCESS\020\001\"\252\001\n\004Type\022\013\n\007DEFAULT\020\000\022\024\n\020COMPLE" +
+      "TE_PROFILE\020\001\022\027\n\023INTERVIEW_SCHEDULED\020\002\022\032\n" +
+      "\026JOINING_DATE_CONFIRMED\020\003\022\027\n\023PROFILE_DEA" +
+      "CTIVATED\020\004\022\030\n\024NEW_JOBS_IN_LOCALITY\020\005\022\027\n\023" +
+      "COMPLETE_ASSESSMENT\020\006\"\337\001\n\020JobSearchReque" +
+      "st\022\020\n\010latitude\030\001 \001(\001\022\021\n\tlongitude\030\002 \001(\001\022" +
+      "\030\n\020candidate_mobile\030\003 \001(\t\022<\n\020jobFilterRe" +
+      "quest\030\004 \001(\0132\".in.trujobs.proto.JobFilter",
+      "Request\022N\n\031jobSearchByJobRoleRequest\030\005 \001" +
+      "(\0132+.in.trujobs.proto.JobSearchByJobRole" +
+      "Request\"_\n\031JobSearchByJobRoleRequest\022\024\n\014" +
+      "jobRoleIdOne\030\001 \001(\003\022\024\n\014jobRoleIdTwo\030\002 \001(\003" +
+      "\022\026\n\016JobRoleIdThree\030\003 \001(\003B\002P\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
