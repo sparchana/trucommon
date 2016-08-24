@@ -32,6 +32,7 @@ public  final class LogInResponse extends
     candidatePrefJobRoleIdOne_ = 0L;
     candidatePrefJobRoleIdTwo_ = 0L;
     candidatePrefJobRoleIdThree_ = 0L;
+    candidateHomeLocalityName_ = "";
   }
 
   @java.lang.Override
@@ -145,6 +146,12 @@ public  final class LogInResponse extends
           case 136: {
 
             candidatePrefJobRoleIdThree_ = input.readInt64();
+            break;
+          }
+          case 146: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            candidateHomeLocalityName_ = s;
             break;
           }
         }
@@ -525,6 +532,40 @@ public  final class LogInResponse extends
     return candidatePrefJobRoleIdThree_;
   }
 
+  public static final int CANDIDATEHOMELOCALITYNAME_FIELD_NUMBER = 18;
+  private volatile java.lang.Object candidateHomeLocalityName_;
+  /**
+   * <code>optional string candidateHomeLocalityName = 18;</code>
+   */
+  public java.lang.String getCandidateHomeLocalityName() {
+    java.lang.Object ref = candidateHomeLocalityName_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      candidateHomeLocalityName_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>optional string candidateHomeLocalityName = 18;</code>
+   */
+  public com.google.protobuf.ByteString
+      getCandidateHomeLocalityNameBytes() {
+    java.lang.Object ref = candidateHomeLocalityName_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      candidateHomeLocalityName_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -587,6 +628,9 @@ public  final class LogInResponse extends
     }
     if (candidatePrefJobRoleIdThree_ != 0L) {
       output.writeInt64(17, candidatePrefJobRoleIdThree_);
+    }
+    if (!getCandidateHomeLocalityNameBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 18, candidateHomeLocalityName_);
     }
   }
 
@@ -659,6 +703,9 @@ public  final class LogInResponse extends
     if (candidatePrefJobRoleIdThree_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(17, candidatePrefJobRoleIdThree_);
+    }
+    if (!getCandidateHomeLocalityNameBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(18, candidateHomeLocalityName_);
     }
     memoizedSize = size;
     return size;
@@ -805,6 +852,8 @@ public  final class LogInResponse extends
 
       candidatePrefJobRoleIdThree_ = 0L;
 
+      candidateHomeLocalityName_ = "";
+
       return this;
     }
 
@@ -844,6 +893,7 @@ public  final class LogInResponse extends
       result.candidatePrefJobRoleIdOne_ = candidatePrefJobRoleIdOne_;
       result.candidatePrefJobRoleIdTwo_ = candidatePrefJobRoleIdTwo_;
       result.candidatePrefJobRoleIdThree_ = candidatePrefJobRoleIdThree_;
+      result.candidateHomeLocalityName_ = candidateHomeLocalityName_;
       onBuilt();
       return result;
     }
@@ -912,6 +962,10 @@ public  final class LogInResponse extends
       }
       if (other.getCandidatePrefJobRoleIdThree() != 0L) {
         setCandidatePrefJobRoleIdThree(other.getCandidatePrefJobRoleIdThree());
+      }
+      if (!other.getCandidateHomeLocalityName().isEmpty()) {
+        candidateHomeLocalityName_ = other.candidateHomeLocalityName_;
+        onChanged();
       }
       onChanged();
       return this;
@@ -1524,6 +1578,75 @@ public  final class LogInResponse extends
     public Builder clearCandidatePrefJobRoleIdThree() {
       
       candidatePrefJobRoleIdThree_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object candidateHomeLocalityName_ = "";
+    /**
+     * <code>optional string candidateHomeLocalityName = 18;</code>
+     */
+    public java.lang.String getCandidateHomeLocalityName() {
+      java.lang.Object ref = candidateHomeLocalityName_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        candidateHomeLocalityName_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>optional string candidateHomeLocalityName = 18;</code>
+     */
+    public com.google.protobuf.ByteString
+        getCandidateHomeLocalityNameBytes() {
+      java.lang.Object ref = candidateHomeLocalityName_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        candidateHomeLocalityName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>optional string candidateHomeLocalityName = 18;</code>
+     */
+    public Builder setCandidateHomeLocalityName(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      candidateHomeLocalityName_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional string candidateHomeLocalityName = 18;</code>
+     */
+    public Builder clearCandidateHomeLocalityName() {
+      
+      candidateHomeLocalityName_ = getDefaultInstance().getCandidateHomeLocalityName();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional string candidateHomeLocalityName = 18;</code>
+     */
+    public Builder setCandidateHomeLocalityNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      candidateHomeLocalityName_ = value;
       onChanged();
       return this;
     }
