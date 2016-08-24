@@ -110,4 +110,14 @@ public interface LogInResponseOrBuilder extends
    * <code>optional int64 candidatePrefJobRoleIdThree = 17;</code>
    */
   long getCandidatePrefJobRoleIdThree();
+
+  /**
+   * <code>optional string candidateHomeLocalityName = 18;</code>
+   */
+  java.lang.String getCandidateHomeLocalityName();
+  /**
+   * <code>optional string candidateHomeLocalityName = 18;</code>
+   */
+  com.google.protobuf.ByteString
+      getCandidateHomeLocalityNameBytes();
 }

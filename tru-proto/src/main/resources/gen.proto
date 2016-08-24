@@ -40,6 +40,7 @@ message LogInResponse {
     int64 candidatePrefJobRoleIdOne = 15;
     int64 candidatePrefJobRoleIdTwo = 16;
     int64 candidatePrefJobRoleIdThree = 17;
+    string candidateHomeLocalityName = 18;
 }
 
 message SignUpRequest {
