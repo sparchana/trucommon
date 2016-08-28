@@ -31,4 +31,14 @@ public interface LocalityObjectOrBuilder extends
    * <code>optional double lng = 4;</code>
    */
   double getLng();
+
+  /**
+   * <code>optional string place_id = 5;</code>
+   */
+  java.lang.String getPlaceId();
+  /**
+   * <code>optional string place_id = 5;</code>
+   */
+  com.google.protobuf.ByteString
+      getPlaceIdBytes();
 }

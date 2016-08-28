@@ -19,6 +19,7 @@ public  final class LocalityObject extends
     localityName_ = "";
     lat_ = 0D;
     lng_ = 0D;
+    placeId_ = "";
   }
 
   @java.lang.Override
@@ -64,6 +65,12 @@ public  final class LocalityObject extends
           case 33: {
 
             lng_ = input.readDouble();
+            break;
+          }
+          case 42: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            placeId_ = s;
             break;
           }
         }
@@ -151,6 +158,40 @@ public  final class LocalityObject extends
     return lng_;
   }
 
+  public static final int PLACE_ID_FIELD_NUMBER = 5;
+  private volatile java.lang.Object placeId_;
+  /**
+   * <code>optional string place_id = 5;</code>
+   */
+  public java.lang.String getPlaceId() {
+    java.lang.Object ref = placeId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      placeId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>optional string place_id = 5;</code>
+   */
+  public com.google.protobuf.ByteString
+      getPlaceIdBytes() {
+    java.lang.Object ref = placeId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      placeId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -175,6 +216,9 @@ public  final class LocalityObject extends
     if (lng_ != 0D) {
       output.writeDouble(4, lng_);
     }
+    if (!getPlaceIdBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 5, placeId_);
+    }
   }
 
   public int getSerializedSize() {
@@ -196,6 +240,9 @@ public  final class LocalityObject extends
     if (lng_ != 0D) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(4, lng_);
+    }
+    if (!getPlaceIdBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(5, placeId_);
     }
     memoizedSize = size;
     return size;
@@ -316,6 +363,8 @@ public  final class LocalityObject extends
 
       lng_ = 0D;
 
+      placeId_ = "";
+
       return this;
     }
 
@@ -342,6 +391,7 @@ public  final class LocalityObject extends
       result.localityName_ = localityName_;
       result.lat_ = lat_;
       result.lng_ = lng_;
+      result.placeId_ = placeId_;
       onBuilt();
       return result;
     }
@@ -369,6 +419,10 @@ public  final class LocalityObject extends
       }
       if (other.getLng() != 0D) {
         setLng(other.getLng());
+      }
+      if (!other.getPlaceId().isEmpty()) {
+        placeId_ = other.placeId_;
+        onChanged();
       }
       onChanged();
       return this;
@@ -539,6 +593,75 @@ public  final class LocalityObject extends
     public Builder clearLng() {
       
       lng_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object placeId_ = "";
+    /**
+     * <code>optional string place_id = 5;</code>
+     */
+    public java.lang.String getPlaceId() {
+      java.lang.Object ref = placeId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        placeId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>optional string place_id = 5;</code>
+     */
+    public com.google.protobuf.ByteString
+        getPlaceIdBytes() {
+      java.lang.Object ref = placeId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        placeId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>optional string place_id = 5;</code>
+     */
+    public Builder setPlaceId(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      placeId_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional string place_id = 5;</code>
+     */
+    public Builder clearPlaceId() {
+      
+      placeId_ = getDefaultInstance().getPlaceId();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional string place_id = 5;</code>
+     */
+    public Builder setPlaceIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      placeId_ = value;
       onChanged();
       return this;
     }
