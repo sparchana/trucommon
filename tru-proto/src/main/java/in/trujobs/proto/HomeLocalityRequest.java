@@ -15,10 +15,11 @@ public  final class HomeLocalityRequest extends
     super(builder);
   }
   private HomeLocalityRequest() {
+    localityId_ = 0L;
     lat_ = 0D;
     lng_ = 0D;
-    name_ = "";
-    address_ = "";
+    localityName_ = "";
+    placeId_ = "";
     candidateMobile_ = "";
     candidateId_ = 0L;
   }
@@ -47,35 +48,40 @@ public  final class HomeLocalityRequest extends
             }
             break;
           }
-          case 9: {
+          case 8: {
 
-            lat_ = input.readDouble();
+            localityId_ = input.readInt64();
             break;
           }
           case 17: {
 
-            lng_ = input.readDouble();
+            lat_ = input.readDouble();
             break;
           }
-          case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
+          case 25: {
 
-            name_ = s;
+            lng_ = input.readDouble();
             break;
           }
           case 34: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            address_ = s;
+            localityName_ = s;
             break;
           }
           case 42: {
             java.lang.String s = input.readStringRequireUtf8();
 
+            placeId_ = s;
+            break;
+          }
+          case 50: {
+            java.lang.String s = input.readStringRequireUtf8();
+
             candidateMobile_ = s;
             break;
           }
-          case 48: {
+          case 56: {
 
             candidateId_ = input.readInt64();
             break;
@@ -104,96 +110,105 @@ public  final class HomeLocalityRequest extends
             in.trujobs.proto.HomeLocalityRequest.class, in.trujobs.proto.HomeLocalityRequest.Builder.class);
   }
 
-  public static final int LAT_FIELD_NUMBER = 1;
+  public static final int LOCALITYID_FIELD_NUMBER = 1;
+  private long localityId_;
+  /**
+   * <code>optional int64 localityId = 1;</code>
+   */
+  public long getLocalityId() {
+    return localityId_;
+  }
+
+  public static final int LAT_FIELD_NUMBER = 2;
   private double lat_;
   /**
-   * <code>optional double lat = 1;</code>
+   * <code>optional double lat = 2;</code>
    */
   public double getLat() {
     return lat_;
   }
 
-  public static final int LNG_FIELD_NUMBER = 2;
+  public static final int LNG_FIELD_NUMBER = 3;
   private double lng_;
   /**
-   * <code>optional double lng = 2;</code>
+   * <code>optional double lng = 3;</code>
    */
   public double getLng() {
     return lng_;
   }
 
-  public static final int NAME_FIELD_NUMBER = 3;
-  private volatile java.lang.Object name_;
+  public static final int LOCALITY_NAME_FIELD_NUMBER = 4;
+  private volatile java.lang.Object localityName_;
   /**
-   * <code>optional string name = 3;</code>
+   * <code>optional string locality_name = 4;</code>
    */
-  public java.lang.String getName() {
-    java.lang.Object ref = name_;
+  public java.lang.String getLocalityName() {
+    java.lang.Object ref = localityName_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      name_ = s;
+      localityName_ = s;
       return s;
     }
   }
   /**
-   * <code>optional string name = 3;</code>
+   * <code>optional string locality_name = 4;</code>
    */
   public com.google.protobuf.ByteString
-      getNameBytes() {
-    java.lang.Object ref = name_;
+      getLocalityNameBytes() {
+    java.lang.Object ref = localityName_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      name_ = b;
+      localityName_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
   }
 
-  public static final int ADDRESS_FIELD_NUMBER = 4;
-  private volatile java.lang.Object address_;
+  public static final int PLACE_ID_FIELD_NUMBER = 5;
+  private volatile java.lang.Object placeId_;
   /**
-   * <code>optional string address = 4;</code>
+   * <code>optional string place_id = 5;</code>
    */
-  public java.lang.String getAddress() {
-    java.lang.Object ref = address_;
+  public java.lang.String getPlaceId() {
+    java.lang.Object ref = placeId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      address_ = s;
+      placeId_ = s;
       return s;
     }
   }
   /**
-   * <code>optional string address = 4;</code>
+   * <code>optional string place_id = 5;</code>
    */
   public com.google.protobuf.ByteString
-      getAddressBytes() {
-    java.lang.Object ref = address_;
+      getPlaceIdBytes() {
+    java.lang.Object ref = placeId_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      address_ = b;
+      placeId_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
   }
 
-  public static final int CANDIDATE_MOBILE_FIELD_NUMBER = 5;
+  public static final int CANDIDATE_MOBILE_FIELD_NUMBER = 6;
   private volatile java.lang.Object candidateMobile_;
   /**
-   * <code>optional string candidate_mobile = 5;</code>
+   * <code>optional string candidate_mobile = 6;</code>
    */
   public java.lang.String getCandidateMobile() {
     java.lang.Object ref = candidateMobile_;
@@ -208,7 +223,7 @@ public  final class HomeLocalityRequest extends
     }
   }
   /**
-   * <code>optional string candidate_mobile = 5;</code>
+   * <code>optional string candidate_mobile = 6;</code>
    */
   public com.google.protobuf.ByteString
       getCandidateMobileBytes() {
@@ -224,10 +239,10 @@ public  final class HomeLocalityRequest extends
     }
   }
 
-  public static final int CANDIDATE_ID_FIELD_NUMBER = 6;
+  public static final int CANDIDATE_ID_FIELD_NUMBER = 7;
   private long candidateId_;
   /**
-   * <code>optional int64 candidate_id = 6;</code>
+   * <code>optional int64 candidate_id = 7;</code>
    */
   public long getCandidateId() {
     return candidateId_;
@@ -245,23 +260,26 @@ public  final class HomeLocalityRequest extends
 
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (localityId_ != 0L) {
+      output.writeInt64(1, localityId_);
+    }
     if (lat_ != 0D) {
-      output.writeDouble(1, lat_);
+      output.writeDouble(2, lat_);
     }
     if (lng_ != 0D) {
-      output.writeDouble(2, lng_);
+      output.writeDouble(3, lng_);
     }
-    if (!getNameBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 3, name_);
+    if (!getLocalityNameBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 4, localityName_);
     }
-    if (!getAddressBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 4, address_);
+    if (!getPlaceIdBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 5, placeId_);
     }
     if (!getCandidateMobileBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 5, candidateMobile_);
+      com.google.protobuf.GeneratedMessage.writeString(output, 6, candidateMobile_);
     }
     if (candidateId_ != 0L) {
-      output.writeInt64(6, candidateId_);
+      output.writeInt64(7, candidateId_);
     }
   }
 
@@ -270,26 +288,30 @@ public  final class HomeLocalityRequest extends
     if (size != -1) return size;
 
     size = 0;
+    if (localityId_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(1, localityId_);
+    }
     if (lat_ != 0D) {
       size += com.google.protobuf.CodedOutputStream
-        .computeDoubleSize(1, lat_);
+        .computeDoubleSize(2, lat_);
     }
     if (lng_ != 0D) {
       size += com.google.protobuf.CodedOutputStream
-        .computeDoubleSize(2, lng_);
+        .computeDoubleSize(3, lng_);
     }
-    if (!getNameBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(3, name_);
+    if (!getLocalityNameBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(4, localityName_);
     }
-    if (!getAddressBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(4, address_);
+    if (!getPlaceIdBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(5, placeId_);
     }
     if (!getCandidateMobileBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(5, candidateMobile_);
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(6, candidateMobile_);
     }
     if (candidateId_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(6, candidateId_);
+        .computeInt64Size(7, candidateId_);
     }
     memoizedSize = size;
     return size;
@@ -402,13 +424,15 @@ public  final class HomeLocalityRequest extends
     }
     public Builder clear() {
       super.clear();
+      localityId_ = 0L;
+
       lat_ = 0D;
 
       lng_ = 0D;
 
-      name_ = "";
+      localityName_ = "";
 
-      address_ = "";
+      placeId_ = "";
 
       candidateMobile_ = "";
 
@@ -436,10 +460,11 @@ public  final class HomeLocalityRequest extends
 
     public in.trujobs.proto.HomeLocalityRequest buildPartial() {
       in.trujobs.proto.HomeLocalityRequest result = new in.trujobs.proto.HomeLocalityRequest(this);
+      result.localityId_ = localityId_;
       result.lat_ = lat_;
       result.lng_ = lng_;
-      result.name_ = name_;
-      result.address_ = address_;
+      result.localityName_ = localityName_;
+      result.placeId_ = placeId_;
       result.candidateMobile_ = candidateMobile_;
       result.candidateId_ = candidateId_;
       onBuilt();
@@ -457,18 +482,21 @@ public  final class HomeLocalityRequest extends
 
     public Builder mergeFrom(in.trujobs.proto.HomeLocalityRequest other) {
       if (other == in.trujobs.proto.HomeLocalityRequest.getDefaultInstance()) return this;
+      if (other.getLocalityId() != 0L) {
+        setLocalityId(other.getLocalityId());
+      }
       if (other.getLat() != 0D) {
         setLat(other.getLat());
       }
       if (other.getLng() != 0D) {
         setLng(other.getLng());
       }
-      if (!other.getName().isEmpty()) {
-        name_ = other.name_;
+      if (!other.getLocalityName().isEmpty()) {
+        localityName_ = other.localityName_;
         onChanged();
       }
-      if (!other.getAddress().isEmpty()) {
-        address_ = other.address_;
+      if (!other.getPlaceId().isEmpty()) {
+        placeId_ = other.placeId_;
         onChanged();
       }
       if (!other.getCandidateMobile().isEmpty()) {
@@ -504,15 +532,41 @@ public  final class HomeLocalityRequest extends
       return this;
     }
 
+    private long localityId_ ;
+    /**
+     * <code>optional int64 localityId = 1;</code>
+     */
+    public long getLocalityId() {
+      return localityId_;
+    }
+    /**
+     * <code>optional int64 localityId = 1;</code>
+     */
+    public Builder setLocalityId(long value) {
+      
+      localityId_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional int64 localityId = 1;</code>
+     */
+    public Builder clearLocalityId() {
+      
+      localityId_ = 0L;
+      onChanged();
+      return this;
+    }
+
     private double lat_ ;
     /**
-     * <code>optional double lat = 1;</code>
+     * <code>optional double lat = 2;</code>
      */
     public double getLat() {
       return lat_;
     }
     /**
-     * <code>optional double lat = 1;</code>
+     * <code>optional double lat = 2;</code>
      */
     public Builder setLat(double value) {
       
@@ -521,7 +575,7 @@ public  final class HomeLocalityRequest extends
       return this;
     }
     /**
-     * <code>optional double lat = 1;</code>
+     * <code>optional double lat = 2;</code>
      */
     public Builder clearLat() {
       
@@ -532,13 +586,13 @@ public  final class HomeLocalityRequest extends
 
     private double lng_ ;
     /**
-     * <code>optional double lng = 2;</code>
+     * <code>optional double lng = 3;</code>
      */
     public double getLng() {
       return lng_;
     }
     /**
-     * <code>optional double lng = 2;</code>
+     * <code>optional double lng = 3;</code>
      */
     public Builder setLng(double value) {
       
@@ -547,7 +601,7 @@ public  final class HomeLocalityRequest extends
       return this;
     }
     /**
-     * <code>optional double lng = 2;</code>
+     * <code>optional double lng = 3;</code>
      */
     public Builder clearLng() {
       
@@ -556,147 +610,147 @@ public  final class HomeLocalityRequest extends
       return this;
     }
 
-    private java.lang.Object name_ = "";
+    private java.lang.Object localityName_ = "";
     /**
-     * <code>optional string name = 3;</code>
+     * <code>optional string locality_name = 4;</code>
      */
-    public java.lang.String getName() {
-      java.lang.Object ref = name_;
+    public java.lang.String getLocalityName() {
+      java.lang.Object ref = localityName_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        name_ = s;
+        localityName_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>optional string name = 3;</code>
+     * <code>optional string locality_name = 4;</code>
      */
     public com.google.protobuf.ByteString
-        getNameBytes() {
-      java.lang.Object ref = name_;
+        getLocalityNameBytes() {
+      java.lang.Object ref = localityName_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        name_ = b;
+        localityName_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>optional string name = 3;</code>
+     * <code>optional string locality_name = 4;</code>
      */
-    public Builder setName(
+    public Builder setLocalityName(
         java.lang.String value) {
       if (value == null) {
     throw new NullPointerException();
   }
   
-      name_ = value;
+      localityName_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>optional string name = 3;</code>
+     * <code>optional string locality_name = 4;</code>
      */
-    public Builder clearName() {
+    public Builder clearLocalityName() {
       
-      name_ = getDefaultInstance().getName();
+      localityName_ = getDefaultInstance().getLocalityName();
       onChanged();
       return this;
     }
     /**
-     * <code>optional string name = 3;</code>
+     * <code>optional string locality_name = 4;</code>
      */
-    public Builder setNameBytes(
+    public Builder setLocalityNameBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
       
-      name_ = value;
+      localityName_ = value;
       onChanged();
       return this;
     }
 
-    private java.lang.Object address_ = "";
+    private java.lang.Object placeId_ = "";
     /**
-     * <code>optional string address = 4;</code>
+     * <code>optional string place_id = 5;</code>
      */
-    public java.lang.String getAddress() {
-      java.lang.Object ref = address_;
+    public java.lang.String getPlaceId() {
+      java.lang.Object ref = placeId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        address_ = s;
+        placeId_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>optional string address = 4;</code>
+     * <code>optional string place_id = 5;</code>
      */
     public com.google.protobuf.ByteString
-        getAddressBytes() {
-      java.lang.Object ref = address_;
+        getPlaceIdBytes() {
+      java.lang.Object ref = placeId_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        address_ = b;
+        placeId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>optional string address = 4;</code>
+     * <code>optional string place_id = 5;</code>
      */
-    public Builder setAddress(
+    public Builder setPlaceId(
         java.lang.String value) {
       if (value == null) {
     throw new NullPointerException();
   }
   
-      address_ = value;
+      placeId_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>optional string address = 4;</code>
+     * <code>optional string place_id = 5;</code>
      */
-    public Builder clearAddress() {
+    public Builder clearPlaceId() {
       
-      address_ = getDefaultInstance().getAddress();
+      placeId_ = getDefaultInstance().getPlaceId();
       onChanged();
       return this;
     }
     /**
-     * <code>optional string address = 4;</code>
+     * <code>optional string place_id = 5;</code>
      */
-    public Builder setAddressBytes(
+    public Builder setPlaceIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
       
-      address_ = value;
+      placeId_ = value;
       onChanged();
       return this;
     }
 
     private java.lang.Object candidateMobile_ = "";
     /**
-     * <code>optional string candidate_mobile = 5;</code>
+     * <code>optional string candidate_mobile = 6;</code>
      */
     public java.lang.String getCandidateMobile() {
       java.lang.Object ref = candidateMobile_;
@@ -711,7 +765,7 @@ public  final class HomeLocalityRequest extends
       }
     }
     /**
-     * <code>optional string candidate_mobile = 5;</code>
+     * <code>optional string candidate_mobile = 6;</code>
      */
     public com.google.protobuf.ByteString
         getCandidateMobileBytes() {
@@ -727,7 +781,7 @@ public  final class HomeLocalityRequest extends
       }
     }
     /**
-     * <code>optional string candidate_mobile = 5;</code>
+     * <code>optional string candidate_mobile = 6;</code>
      */
     public Builder setCandidateMobile(
         java.lang.String value) {
@@ -740,7 +794,7 @@ public  final class HomeLocalityRequest extends
       return this;
     }
     /**
-     * <code>optional string candidate_mobile = 5;</code>
+     * <code>optional string candidate_mobile = 6;</code>
      */
     public Builder clearCandidateMobile() {
       
@@ -749,7 +803,7 @@ public  final class HomeLocalityRequest extends
       return this;
     }
     /**
-     * <code>optional string candidate_mobile = 5;</code>
+     * <code>optional string candidate_mobile = 6;</code>
      */
     public Builder setCandidateMobileBytes(
         com.google.protobuf.ByteString value) {
@@ -765,13 +819,13 @@ public  final class HomeLocalityRequest extends
 
     private long candidateId_ ;
     /**
-     * <code>optional int64 candidate_id = 6;</code>
+     * <code>optional int64 candidate_id = 7;</code>
      */
     public long getCandidateId() {
       return candidateId_;
     }
     /**
-     * <code>optional int64 candidate_id = 6;</code>
+     * <code>optional int64 candidate_id = 7;</code>
      */
     public Builder setCandidateId(long value) {
       
@@ -780,7 +834,7 @@ public  final class HomeLocalityRequest extends
       return this;
     }
     /**
-     * <code>optional int64 candidate_id = 6;</code>
+     * <code>optional int64 candidate_id = 7;</code>
      */
     public Builder clearCandidateId() {
       

@@ -8,47 +8,52 @@ public interface HomeLocalityRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>optional double lat = 1;</code>
+   * <code>optional int64 localityId = 1;</code>
+   */
+  long getLocalityId();
+
+  /**
+   * <code>optional double lat = 2;</code>
    */
   double getLat();
 
   /**
-   * <code>optional double lng = 2;</code>
+   * <code>optional double lng = 3;</code>
    */
   double getLng();
 
   /**
-   * <code>optional string name = 3;</code>
+   * <code>optional string locality_name = 4;</code>
    */
-  java.lang.String getName();
+  java.lang.String getLocalityName();
   /**
-   * <code>optional string name = 3;</code>
-   */
-  com.google.protobuf.ByteString
-      getNameBytes();
-
-  /**
-   * <code>optional string address = 4;</code>
-   */
-  java.lang.String getAddress();
-  /**
-   * <code>optional string address = 4;</code>
+   * <code>optional string locality_name = 4;</code>
    */
   com.google.protobuf.ByteString
-      getAddressBytes();
+      getLocalityNameBytes();
 
   /**
-   * <code>optional string candidate_mobile = 5;</code>
+   * <code>optional string place_id = 5;</code>
+   */
+  java.lang.String getPlaceId();
+  /**
+   * <code>optional string place_id = 5;</code>
+   */
+  com.google.protobuf.ByteString
+      getPlaceIdBytes();
+
+  /**
+   * <code>optional string candidate_mobile = 6;</code>
    */
   java.lang.String getCandidateMobile();
   /**
-   * <code>optional string candidate_mobile = 5;</code>
+   * <code>optional string candidate_mobile = 6;</code>
    */
   com.google.protobuf.ByteString
       getCandidateMobileBytes();
 
   /**
-   * <code>optional int64 candidate_id = 6;</code>
+   * <code>optional int64 candidate_id = 7;</code>
    */
   long getCandidateId();
 }

@@ -122,6 +122,7 @@ message LocalityObject {
     string localityName = 2;
     double lat = 3;
     double lng = 4;
+    string place_id = 5;
 }
 
 message ExperienceObject {
@@ -251,12 +252,13 @@ message CompanyTypeObject {
 }
 
 message HomeLocalityRequest {
-    double lat = 1;
-    double lng = 2;
-    string name = 3;
-    string address = 4;
-    string candidate_mobile = 5;
-    int64 candidate_id = 6;
+    int64 localityId = 1;
+    double lat = 2;
+    double lng = 3;
+    string locality_name = 4;
+    string place_id = 5;
+    string candidate_mobile = 6;
+    int64 candidate_id = 7;
 }
 
 message HomeLocalityResponse { 
@@ -470,4 +472,24 @@ message JobSearchByJobRoleRequest {
     int64 jobRoleIdOne = 1;
     int64 jobRoleIdTwo = 2;
     int64 JobRoleIdThree = 3;
+}
+message LatLngOrPlaceIdRequest {
+    double latitude = 1;
+    double longitude = 2;
+    string place_id = 3;
+}
+message LocalityObjectResponse {
+    enum Status {
+        UNKNOWN = 0;
+        SUCCESS = 1;
+        FAILURE = 2;
+    }
+    enum Type {
+        UNDEFINED = 0;
+        FOR_PLACEID = 1;
+        FOR_LATLNG = 2;    
+    }
+    Status status = 1;
+    Type type = 2;
+    LocalityObject locality = 3;
 }
