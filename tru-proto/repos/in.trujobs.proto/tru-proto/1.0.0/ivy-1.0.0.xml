@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ivy-module version="2.0" xmlns:m="http://ant.apache.org/ivy/maven">
-  <info organisation="in.trujobs.proto" module="tru-proto" revision="1.0.0" status="integration" default="true" publication="20160828112050"/>
+  <info organisation="in.trujobs.proto" module="tru-proto" revision="1.0.0" status="integration" default="true" publication="20160901195232"/>
   <configurations>
     <conf name="compileClasspath" visibility="private" extends="compileOnly"/>
     <conf name="compileOnly" visibility="private" extends="compile"/>
