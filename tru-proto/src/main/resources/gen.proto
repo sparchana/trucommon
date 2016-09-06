@@ -467,6 +467,7 @@ message JobSearchRequest {
     string candidate_mobile = 3;
     JobFilterRequest jobFilterRequest = 4;
     JobSearchByJobRoleRequest jobSearchByJobRoleRequest = 5;
+    string locality_name = 6;
 }
 message JobSearchByJobRoleRequest {
     int64 jobRoleIdOne = 1;

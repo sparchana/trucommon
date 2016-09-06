@@ -18,6 +18,7 @@ public  final class JobSearchRequest extends
     latitude_ = 0D;
     longitude_ = 0D;
     candidateMobile_ = "";
+    localityName_ = "";
   }
 
   @java.lang.Override
@@ -84,6 +85,12 @@ public  final class JobSearchRequest extends
               jobSearchByJobRoleRequest_ = subBuilder.buildPartial();
             }
 
+            break;
+          }
+          case 50: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            localityName_ = s;
             break;
           }
         }
@@ -204,6 +211,40 @@ public  final class JobSearchRequest extends
     return getJobSearchByJobRoleRequest();
   }
 
+  public static final int LOCALITY_NAME_FIELD_NUMBER = 6;
+  private volatile java.lang.Object localityName_;
+  /**
+   * <code>optional string locality_name = 6;</code>
+   */
+  public java.lang.String getLocalityName() {
+    java.lang.Object ref = localityName_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      localityName_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>optional string locality_name = 6;</code>
+   */
+  public com.google.protobuf.ByteString
+      getLocalityNameBytes() {
+    java.lang.Object ref = localityName_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      localityName_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -231,6 +272,9 @@ public  final class JobSearchRequest extends
     if (jobSearchByJobRoleRequest_ != null) {
       output.writeMessage(5, getJobSearchByJobRoleRequest());
     }
+    if (!getLocalityNameBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 6, localityName_);
+    }
   }
 
   public int getSerializedSize() {
@@ -256,6 +300,9 @@ public  final class JobSearchRequest extends
     if (jobSearchByJobRoleRequest_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getJobSearchByJobRoleRequest());
+    }
+    if (!getLocalityNameBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(6, localityName_);
     }
     memoizedSize = size;
     return size;
@@ -386,6 +433,8 @@ public  final class JobSearchRequest extends
         jobSearchByJobRoleRequest_ = null;
         jobSearchByJobRoleRequestBuilder_ = null;
       }
+      localityName_ = "";
+
       return this;
     }
 
@@ -421,6 +470,7 @@ public  final class JobSearchRequest extends
       } else {
         result.jobSearchByJobRoleRequest_ = jobSearchByJobRoleRequestBuilder_.build();
       }
+      result.localityName_ = localityName_;
       onBuilt();
       return result;
     }
@@ -451,6 +501,10 @@ public  final class JobSearchRequest extends
       }
       if (other.hasJobSearchByJobRoleRequest()) {
         mergeJobSearchByJobRoleRequest(other.getJobSearchByJobRoleRequest());
+      }
+      if (!other.getLocalityName().isEmpty()) {
+        localityName_ = other.localityName_;
+        onChanged();
       }
       onChanged();
       return this;
@@ -831,6 +885,75 @@ public  final class JobSearchRequest extends
         jobSearchByJobRoleRequest_ = null;
       }
       return jobSearchByJobRoleRequestBuilder_;
+    }
+
+    private java.lang.Object localityName_ = "";
+    /**
+     * <code>optional string locality_name = 6;</code>
+     */
+    public java.lang.String getLocalityName() {
+      java.lang.Object ref = localityName_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        localityName_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>optional string locality_name = 6;</code>
+     */
+    public com.google.protobuf.ByteString
+        getLocalityNameBytes() {
+      java.lang.Object ref = localityName_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        localityName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>optional string locality_name = 6;</code>
+     */
+    public Builder setLocalityName(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      localityName_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional string locality_name = 6;</code>
+     */
+    public Builder clearLocalityName() {
+      
+      localityName_ = getDefaultInstance().getLocalityName();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional string locality_name = 6;</code>
+     */
+    public Builder setLocalityNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      localityName_ = value;
+      onChanged();
+      return this;
     }
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {

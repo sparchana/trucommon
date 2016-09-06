@@ -52,4 +52,14 @@ public interface JobSearchRequestOrBuilder extends
    * <code>optional .in.trujobs.proto.JobSearchByJobRoleRequest jobSearchByJobRoleRequest = 5;</code>
    */
   in.trujobs.proto.JobSearchByJobRoleRequestOrBuilder getJobSearchByJobRoleRequestOrBuilder();
+
+  /**
+   * <code>optional string locality_name = 6;</code>
+   */
+  java.lang.String getLocalityName();
+  /**
+   * <code>optional string locality_name = 6;</code>
+   */
+  com.google.protobuf.ByteString
+      getLocalityNameBytes();
 }

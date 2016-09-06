@@ -516,25 +516,25 @@ public final class Gen {
       "\020\001\022\027\n\023INTERVIEW_SCHEDULED\020\002\022\032\n\026JOINING_D" +
       "ATE_CONFIRMED\020\003\022\027\n\023PROFILE_DEACTIVATED\020\004" +
       "\022\030\n\024NEW_JOBS_IN_LOCALITY\020\005\022\027\n\023COMPLETE_A" +
-      "SSESSMENT\020\006\"\337\001\n\020JobSearchRequest\022\020\n\010lati",
+      "SSESSMENT\020\006\"\366\001\n\020JobSearchRequest\022\020\n\010lati",
       "tude\030\001 \001(\001\022\021\n\tlongitude\030\002 \001(\001\022\030\n\020candida" +
       "te_mobile\030\003 \001(\t\022<\n\020jobFilterRequest\030\004 \001(" +
       "\0132\".in.trujobs.proto.JobFilterRequest\022N\n" +
       "\031jobSearchByJobRoleRequest\030\005 \001(\0132+.in.tr" +
-      "ujobs.proto.JobSearchByJobRoleRequest\"_\n" +
-      "\031JobSearchByJobRoleRequest\022\024\n\014jobRoleIdO" +
-      "ne\030\001 \001(\003\022\024\n\014jobRoleIdTwo\030\002 \001(\003\022\026\n\016JobRol" +
-      "eIdThree\030\003 \001(\003\"O\n\026LatLngOrPlaceIdRequest" +
-      "\022\020\n\010latitude\030\001 \001(\001\022\021\n\tlongitude\030\002 \001(\001\022\020\n" +
-      "\010place_id\030\003 \001(\t\"\263\002\n\026LocalityObjectRespon",
-      "se\022?\n\006status\030\001 \001(\0162/.in.trujobs.proto.Lo" +
-      "calityObjectResponse.Status\022;\n\004type\030\002 \001(" +
-      "\0162-.in.trujobs.proto.LocalityObjectRespo" +
-      "nse.Type\0222\n\010locality\030\003 \001(\0132 .in.trujobs." +
-      "proto.LocalityObject\"/\n\006Status\022\013\n\007UNKNOW" +
-      "N\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007FAILURE\020\002\"6\n\004Type\022\r\n" +
-      "\tUNDEFINED\020\000\022\017\n\013FOR_PLACEID\020\001\022\016\n\nFOR_LAT" +
-      "LNG\020\002B\002P\001b\006proto3"
+      "ujobs.proto.JobSearchByJobRoleRequest\022\025\n" +
+      "\rlocality_name\030\006 \001(\t\"_\n\031JobSearchByJobRo" +
+      "leRequest\022\024\n\014jobRoleIdOne\030\001 \001(\003\022\024\n\014jobRo" +
+      "leIdTwo\030\002 \001(\003\022\026\n\016JobRoleIdThree\030\003 \001(\003\"O\n" +
+      "\026LatLngOrPlaceIdRequest\022\020\n\010latitude\030\001 \001(" +
+      "\001\022\021\n\tlongitude\030\002 \001(\001\022\020\n\010place_id\030\003 \001(\t\"\263",
+      "\002\n\026LocalityObjectResponse\022?\n\006status\030\001 \001(" +
+      "\0162/.in.trujobs.proto.LocalityObjectRespo" +
+      "nse.Status\022;\n\004type\030\002 \001(\0162-.in.trujobs.pr" +
+      "oto.LocalityObjectResponse.Type\0222\n\010local" +
+      "ity\030\003 \001(\0132 .in.trujobs.proto.LocalityObj" +
+      "ect\"/\n\006Status\022\013\n\007UNKNOWN\020\000\022\013\n\007SUCCESS\020\001\022" +
+      "\013\n\007FAILURE\020\002\"6\n\004Type\022\r\n\tUNDEFINED\020\000\022\017\n\013F" +
+      "OR_PLACEID\020\001\022\016\n\nFOR_LATLNG\020\002B\002P\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -841,7 +841,7 @@ public final class Gen {
     internal_static_in_trujobs_proto_JobSearchRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_JobSearchRequest_descriptor,
-        new java.lang.String[] { "Latitude", "Longitude", "CandidateMobile", "JobFilterRequest", "JobSearchByJobRoleRequest", });
+        new java.lang.String[] { "Latitude", "Longitude", "CandidateMobile", "JobFilterRequest", "JobSearchByJobRoleRequest", "LocalityName", });
     internal_static_in_trujobs_proto_JobSearchByJobRoleRequest_descriptor =
       getDescriptor().getMessageTypes().get(49);
     internal_static_in_trujobs_proto_JobSearchByJobRoleRequest_fieldAccessorTable = new
