@@ -4,17 +4,17 @@
 package in.trujobs.proto;
 
 /**
- * Protobuf type {@code in.trujobs.proto.AddLeadResponse}
+ * Protobuf type {@code in.trujobs.proto.AddJobRoleResponse}
  */
-public  final class AddLeadResponse extends
+public  final class AddJobRoleResponse extends
     com.google.protobuf.GeneratedMessage implements
-    // @@protoc_insertion_point(message_implements:in.trujobs.proto.AddLeadResponse)
-    AddLeadResponseOrBuilder {
-  // Use AddLeadResponse.newBuilder() to construct.
-  private AddLeadResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    // @@protoc_insertion_point(message_implements:in.trujobs.proto.AddJobRoleResponse)
+    AddJobRoleResponseOrBuilder {
+  // Use AddJobRoleResponse.newBuilder() to construct.
+  private AddJobRoleResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-  private AddLeadResponse() {
+  private AddJobRoleResponse() {
     status_ = 0;
   }
 
@@ -23,7 +23,7 @@ public  final class AddLeadResponse extends
   getUnknownFields() {
     return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
   }
-  private AddLeadResponse(
+  private AddJobRoleResponse(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
     this();
@@ -62,18 +62,18 @@ public  final class AddLeadResponse extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_AddLeadResponse_descriptor;
+    return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_AddJobRoleResponse_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_AddLeadResponse_fieldAccessorTable
+    return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_AddJobRoleResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            in.trujobs.proto.AddLeadResponse.class, in.trujobs.proto.AddLeadResponse.Builder.class);
+            in.trujobs.proto.AddJobRoleResponse.class, in.trujobs.proto.AddJobRoleResponse.Builder.class);
   }
 
   /**
-   * Protobuf enum {@code in.trujobs.proto.AddLeadResponse.Status}
+   * Protobuf enum {@code in.trujobs.proto.AddJobRoleResponse.Status}
    */
   public enum Status
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -89,18 +89,6 @@ public  final class AddLeadResponse extends
      * <code>FAILURE = 2;</code>
      */
     FAILURE(2, 2),
-    /**
-     * <code>NO_ACCOUNT = 3;</code>
-     */
-    NO_ACCOUNT(3, 3),
-    /**
-     * <code>PASSWORD_INCORRECT = 4;</code>
-     */
-    PASSWORD_INCORRECT(4, 4),
-    /**
-     * <code>ALREADY_EXISTS = 5;</code>
-     */
-    ALREADY_EXISTS(5, 5),
     UNRECOGNIZED(-1, -1),
     ;
 
@@ -116,18 +104,6 @@ public  final class AddLeadResponse extends
      * <code>FAILURE = 2;</code>
      */
     public static final int FAILURE_VALUE = 2;
-    /**
-     * <code>NO_ACCOUNT = 3;</code>
-     */
-    public static final int NO_ACCOUNT_VALUE = 3;
-    /**
-     * <code>PASSWORD_INCORRECT = 4;</code>
-     */
-    public static final int PASSWORD_INCORRECT_VALUE = 4;
-    /**
-     * <code>ALREADY_EXISTS = 5;</code>
-     */
-    public static final int ALREADY_EXISTS_VALUE = 5;
 
 
     public final int getNumber() {
@@ -143,9 +119,6 @@ public  final class AddLeadResponse extends
         case 0: return UNKNOWN;
         case 1: return SUCCESS;
         case 2: return FAILURE;
-        case 3: return NO_ACCOUNT;
-        case 4: return PASSWORD_INCORRECT;
-        case 5: return ALREADY_EXISTS;
         default: return null;
       }
     }
@@ -172,7 +145,7 @@ public  final class AddLeadResponse extends
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return in.trujobs.proto.AddLeadResponse.getDescriptor().getEnumTypes().get(0);
+      return in.trujobs.proto.AddJobRoleResponse.getDescriptor().getEnumTypes().get(0);
     }
 
     private static final Status[] VALUES = values();
@@ -197,23 +170,23 @@ public  final class AddLeadResponse extends
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:in.trujobs.proto.AddLeadResponse.Status)
+    // @@protoc_insertion_point(enum_scope:in.trujobs.proto.AddJobRoleResponse.Status)
   }
 
   public static final int STATUS_FIELD_NUMBER = 1;
   private int status_;
   /**
-   * <code>optional .in.trujobs.proto.AddLeadResponse.Status status = 1;</code>
+   * <code>optional .in.trujobs.proto.AddJobRoleResponse.Status status = 1;</code>
    */
   public int getStatusValue() {
     return status_;
   }
   /**
-   * <code>optional .in.trujobs.proto.AddLeadResponse.Status status = 1;</code>
+   * <code>optional .in.trujobs.proto.AddJobRoleResponse.Status status = 1;</code>
    */
-  public in.trujobs.proto.AddLeadResponse.Status getStatus() {
-    in.trujobs.proto.AddLeadResponse.Status result = in.trujobs.proto.AddLeadResponse.Status.valueOf(status_);
-    return result == null ? in.trujobs.proto.AddLeadResponse.Status.UNRECOGNIZED : result;
+  public in.trujobs.proto.AddJobRoleResponse.Status getStatus() {
+    in.trujobs.proto.AddJobRoleResponse.Status result = in.trujobs.proto.AddJobRoleResponse.Status.valueOf(status_);
+    return result == null ? in.trujobs.proto.AddJobRoleResponse.Status.UNRECOGNIZED : result;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -228,7 +201,7 @@ public  final class AddLeadResponse extends
 
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (status_ != in.trujobs.proto.AddLeadResponse.Status.UNKNOWN.getNumber()) {
+    if (status_ != in.trujobs.proto.AddJobRoleResponse.Status.UNKNOWN.getNumber()) {
       output.writeEnum(1, status_);
     }
   }
@@ -238,7 +211,7 @@ public  final class AddLeadResponse extends
     if (size != -1) return size;
 
     size = 0;
-    if (status_ != in.trujobs.proto.AddLeadResponse.Status.UNKNOWN.getNumber()) {
+    if (status_ != in.trujobs.proto.AddJobRoleResponse.Status.UNKNOWN.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(1, status_);
     }
@@ -247,53 +220,53 @@ public  final class AddLeadResponse extends
   }
 
   private static final long serialVersionUID = 0L;
-  public static in.trujobs.proto.AddLeadResponse parseFrom(
+  public static in.trujobs.proto.AddJobRoleResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static in.trujobs.proto.AddLeadResponse parseFrom(
+  public static in.trujobs.proto.AddJobRoleResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static in.trujobs.proto.AddLeadResponse parseFrom(byte[] data)
+  public static in.trujobs.proto.AddJobRoleResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static in.trujobs.proto.AddLeadResponse parseFrom(
+  public static in.trujobs.proto.AddJobRoleResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static in.trujobs.proto.AddLeadResponse parseFrom(java.io.InputStream input)
+  public static in.trujobs.proto.AddJobRoleResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return PARSER.parseFrom(input);
   }
-  public static in.trujobs.proto.AddLeadResponse parseFrom(
+  public static in.trujobs.proto.AddJobRoleResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return PARSER.parseFrom(input, extensionRegistry);
   }
-  public static in.trujobs.proto.AddLeadResponse parseDelimitedFrom(java.io.InputStream input)
+  public static in.trujobs.proto.AddJobRoleResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return PARSER.parseDelimitedFrom(input);
   }
-  public static in.trujobs.proto.AddLeadResponse parseDelimitedFrom(
+  public static in.trujobs.proto.AddJobRoleResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return PARSER.parseDelimitedFrom(input, extensionRegistry);
   }
-  public static in.trujobs.proto.AddLeadResponse parseFrom(
+  public static in.trujobs.proto.AddJobRoleResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return PARSER.parseFrom(input);
   }
-  public static in.trujobs.proto.AddLeadResponse parseFrom(
+  public static in.trujobs.proto.AddJobRoleResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -304,7 +277,7 @@ public  final class AddLeadResponse extends
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(in.trujobs.proto.AddLeadResponse prototype) {
+  public static Builder newBuilder(in.trujobs.proto.AddJobRoleResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   public Builder toBuilder() {
@@ -319,25 +292,25 @@ public  final class AddLeadResponse extends
     return builder;
   }
   /**
-   * Protobuf type {@code in.trujobs.proto.AddLeadResponse}
+   * Protobuf type {@code in.trujobs.proto.AddJobRoleResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:in.trujobs.proto.AddLeadResponse)
-      in.trujobs.proto.AddLeadResponseOrBuilder {
+      // @@protoc_insertion_point(builder_implements:in.trujobs.proto.AddJobRoleResponse)
+      in.trujobs.proto.AddJobRoleResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_AddLeadResponse_descriptor;
+      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_AddJobRoleResponse_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_AddLeadResponse_fieldAccessorTable
+      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_AddJobRoleResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              in.trujobs.proto.AddLeadResponse.class, in.trujobs.proto.AddLeadResponse.Builder.class);
+              in.trujobs.proto.AddJobRoleResponse.class, in.trujobs.proto.AddJobRoleResponse.Builder.class);
     }
 
-    // Construct using in.trujobs.proto.AddLeadResponse.newBuilder()
+    // Construct using in.trujobs.proto.AddJobRoleResponse.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -360,39 +333,39 @@ public  final class AddLeadResponse extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_AddLeadResponse_descriptor;
+      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_AddJobRoleResponse_descriptor;
     }
 
-    public in.trujobs.proto.AddLeadResponse getDefaultInstanceForType() {
-      return in.trujobs.proto.AddLeadResponse.getDefaultInstance();
+    public in.trujobs.proto.AddJobRoleResponse getDefaultInstanceForType() {
+      return in.trujobs.proto.AddJobRoleResponse.getDefaultInstance();
     }
 
-    public in.trujobs.proto.AddLeadResponse build() {
-      in.trujobs.proto.AddLeadResponse result = buildPartial();
+    public in.trujobs.proto.AddJobRoleResponse build() {
+      in.trujobs.proto.AddJobRoleResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
       return result;
     }
 
-    public in.trujobs.proto.AddLeadResponse buildPartial() {
-      in.trujobs.proto.AddLeadResponse result = new in.trujobs.proto.AddLeadResponse(this);
+    public in.trujobs.proto.AddJobRoleResponse buildPartial() {
+      in.trujobs.proto.AddJobRoleResponse result = new in.trujobs.proto.AddJobRoleResponse(this);
       result.status_ = status_;
       onBuilt();
       return result;
     }
 
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof in.trujobs.proto.AddLeadResponse) {
-        return mergeFrom((in.trujobs.proto.AddLeadResponse)other);
+      if (other instanceof in.trujobs.proto.AddJobRoleResponse) {
+        return mergeFrom((in.trujobs.proto.AddJobRoleResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(in.trujobs.proto.AddLeadResponse other) {
-      if (other == in.trujobs.proto.AddLeadResponse.getDefaultInstance()) return this;
+    public Builder mergeFrom(in.trujobs.proto.AddJobRoleResponse other) {
+      if (other == in.trujobs.proto.AddJobRoleResponse.getDefaultInstance()) return this;
       if (other.status_ != 0) {
         setStatusValue(other.getStatusValue());
       }
@@ -408,11 +381,11 @@ public  final class AddLeadResponse extends
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      in.trujobs.proto.AddLeadResponse parsedMessage = null;
+      in.trujobs.proto.AddJobRoleResponse parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (in.trujobs.proto.AddLeadResponse) e.getUnfinishedMessage();
+        parsedMessage = (in.trujobs.proto.AddJobRoleResponse) e.getUnfinishedMessage();
         throw e;
       } finally {
         if (parsedMessage != null) {
@@ -424,13 +397,13 @@ public  final class AddLeadResponse extends
 
     private int status_ = 0;
     /**
-     * <code>optional .in.trujobs.proto.AddLeadResponse.Status status = 1;</code>
+     * <code>optional .in.trujobs.proto.AddJobRoleResponse.Status status = 1;</code>
      */
     public int getStatusValue() {
       return status_;
     }
     /**
-     * <code>optional .in.trujobs.proto.AddLeadResponse.Status status = 1;</code>
+     * <code>optional .in.trujobs.proto.AddJobRoleResponse.Status status = 1;</code>
      */
     public Builder setStatusValue(int value) {
       status_ = value;
@@ -438,16 +411,16 @@ public  final class AddLeadResponse extends
       return this;
     }
     /**
-     * <code>optional .in.trujobs.proto.AddLeadResponse.Status status = 1;</code>
+     * <code>optional .in.trujobs.proto.AddJobRoleResponse.Status status = 1;</code>
      */
-    public in.trujobs.proto.AddLeadResponse.Status getStatus() {
-      in.trujobs.proto.AddLeadResponse.Status result = in.trujobs.proto.AddLeadResponse.Status.valueOf(status_);
-      return result == null ? in.trujobs.proto.AddLeadResponse.Status.UNRECOGNIZED : result;
+    public in.trujobs.proto.AddJobRoleResponse.Status getStatus() {
+      in.trujobs.proto.AddJobRoleResponse.Status result = in.trujobs.proto.AddJobRoleResponse.Status.valueOf(status_);
+      return result == null ? in.trujobs.proto.AddJobRoleResponse.Status.UNRECOGNIZED : result;
     }
     /**
-     * <code>optional .in.trujobs.proto.AddLeadResponse.Status status = 1;</code>
+     * <code>optional .in.trujobs.proto.AddJobRoleResponse.Status status = 1;</code>
      */
-    public Builder setStatus(in.trujobs.proto.AddLeadResponse.Status value) {
+    public Builder setStatus(in.trujobs.proto.AddJobRoleResponse.Status value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -457,7 +430,7 @@ public  final class AddLeadResponse extends
       return this;
     }
     /**
-     * <code>optional .in.trujobs.proto.AddLeadResponse.Status status = 1;</code>
+     * <code>optional .in.trujobs.proto.AddJobRoleResponse.Status status = 1;</code>
      */
     public Builder clearStatus() {
       
@@ -476,27 +449,27 @@ public  final class AddLeadResponse extends
     }
 
 
-    // @@protoc_insertion_point(builder_scope:in.trujobs.proto.AddLeadResponse)
+    // @@protoc_insertion_point(builder_scope:in.trujobs.proto.AddJobRoleResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:in.trujobs.proto.AddLeadResponse)
-  private static final in.trujobs.proto.AddLeadResponse DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:in.trujobs.proto.AddJobRoleResponse)
+  private static final in.trujobs.proto.AddJobRoleResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new in.trujobs.proto.AddLeadResponse();
+    DEFAULT_INSTANCE = new in.trujobs.proto.AddJobRoleResponse();
   }
 
-  public static in.trujobs.proto.AddLeadResponse getDefaultInstance() {
+  public static in.trujobs.proto.AddJobRoleResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<AddLeadResponse>
-      PARSER = new com.google.protobuf.AbstractParser<AddLeadResponse>() {
-    public AddLeadResponse parsePartialFrom(
+  private static final com.google.protobuf.Parser<AddJobRoleResponse>
+      PARSER = new com.google.protobuf.AbstractParser<AddJobRoleResponse>() {
+    public AddJobRoleResponse parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       try {
-        return new AddLeadResponse(input, extensionRegistry);
+        return new AddJobRoleResponse(input, extensionRegistry);
       } catch (RuntimeException e) {
         if (e.getCause() instanceof
             com.google.protobuf.InvalidProtocolBufferException) {
@@ -508,16 +481,16 @@ public  final class AddLeadResponse extends
     }
   };
 
-  public static com.google.protobuf.Parser<AddLeadResponse> parser() {
+  public static com.google.protobuf.Parser<AddJobRoleResponse> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<AddLeadResponse> getParserForType() {
+  public com.google.protobuf.Parser<AddJobRoleResponse> getParserForType() {
     return PARSER;
   }
 
-  public in.trujobs.proto.AddLeadResponse getDefaultInstanceForType() {
+  public in.trujobs.proto.AddJobRoleResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 
