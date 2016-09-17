@@ -204,4 +204,9 @@ public interface JobPostObjectOrBuilder extends
    * <code>optional int32 isApplied = 22;</code>
    */
   int getIsApplied();
+
+  /**
+   * <code>optional int32 jobPostSource = 23;</code>
+   */
+  int getJobPostSource();
 }

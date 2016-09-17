@@ -34,6 +34,7 @@ public  final class JobPostObject extends
     jobPostStartTime_ = 0;
     jobPostEndTime_ = 0;
     isApplied_ = 0;
+    jobPostSource_ = 0;
   }
 
   @java.lang.Override
@@ -204,6 +205,11 @@ public  final class JobPostObject extends
           case 176: {
 
             isApplied_ = input.readInt32();
+            break;
+          }
+          case 184: {
+
+            jobPostSource_ = input.readInt32();
             break;
           }
         }
@@ -719,6 +725,15 @@ public  final class JobPostObject extends
     return isApplied_;
   }
 
+  public static final int JOBPOSTSOURCE_FIELD_NUMBER = 23;
+  private int jobPostSource_;
+  /**
+   * <code>optional int32 jobPostSource = 23;</code>
+   */
+  public int getJobPostSource() {
+    return jobPostSource_;
+  }
+
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -796,6 +811,9 @@ public  final class JobPostObject extends
     }
     if (isApplied_ != 0) {
       output.writeInt32(22, isApplied_);
+    }
+    if (jobPostSource_ != 0) {
+      output.writeInt32(23, jobPostSource_);
     }
   }
 
@@ -882,6 +900,10 @@ public  final class JobPostObject extends
     if (isApplied_ != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(22, isApplied_);
+    }
+    if (jobPostSource_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(23, jobPostSource_);
     }
     memoizedSize = size;
     return size;
@@ -1055,6 +1077,8 @@ public  final class JobPostObject extends
 
       isApplied_ = 0;
 
+      jobPostSource_ = 0;
+
       return this;
     }
 
@@ -1121,6 +1145,7 @@ public  final class JobPostObject extends
       result.jobPostStartTime_ = jobPostStartTime_;
       result.jobPostEndTime_ = jobPostEndTime_;
       result.isApplied_ = isApplied_;
+      result.jobPostSource_ = jobPostSource_;
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -1234,6 +1259,9 @@ public  final class JobPostObject extends
       }
       if (other.getIsApplied() != 0) {
         setIsApplied(other.getIsApplied());
+      }
+      if (other.getJobPostSource() != 0) {
+        setJobPostSource(other.getJobPostSource());
       }
       onChanged();
       return this;
@@ -2704,6 +2732,32 @@ public  final class JobPostObject extends
     public Builder clearIsApplied() {
       
       isApplied_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int jobPostSource_ ;
+    /**
+     * <code>optional int32 jobPostSource = 23;</code>
+     */
+    public int getJobPostSource() {
+      return jobPostSource_;
+    }
+    /**
+     * <code>optional int32 jobPostSource = 23;</code>
+     */
+    public Builder setJobPostSource(int value) {
+      
+      jobPostSource_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional int32 jobPostSource = 23;</code>
+     */
+    public Builder clearJobPostSource() {
+      
+      jobPostSource_ = 0;
       onChanged();
       return this;
     }
