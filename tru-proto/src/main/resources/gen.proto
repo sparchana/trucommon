@@ -111,6 +111,7 @@ message JobPostObject {
     int32 jobPostStartTime = 20;
     int32 jobPostEndTime = 21;
     int32 isApplied = 22;
+    int32 jobPostSource = 23;
 }
 
 message JobPostDetailRequest{
