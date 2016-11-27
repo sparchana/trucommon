@@ -298,11 +298,48 @@ message CandidateAppliedJobsResponse {
     repeated JobApplicationObject jobApplication = 2;
 }
 
+message CandidateAppliedJobPostWorkFlowResponse { 
+    enum Status {
+        UNKNOWN = 0;
+        SUCCESS = 1;
+        FAILURE = 2;
+    }
+    Status status = 1;
+    repeated JobPostWorkFlowObject jobPostWorkFlowObject = 2;
+}
+
 message JobApplicationObject {
     int64 jobApplicationId = 1;
     int64 jobApplicationAppliedMillis = 2;
     JobPostObject jobPost = 3;	
     LocalityObject preScreenLocation = 4;
+}
+
+message JobPostWorkFlowObject {
+	int64 jobPostWorkflowId = 1;
+    string workflowUUId = 2;
+	int64 creationTimeMillis = 3;
+    int64 interviewDateMillis = 4;
+    double interviewLat = 5;
+    double interviewLng = 6;
+    InterviewTimeSlotObject InterviewTimeSlotObject = 7;
+    JobPostWorkFlowStatus candidateInterviewStatus = 8;
+    JobPostObject jobPostObject = 9;
+}
+
+message LastActiveValueObject{
+	int32 lastActiveId = 1;
+	string lastActiveValue = 2;
+}
+
+message InterviewTimeSlotObject {
+	int64 slotId = 1;
+	string slotName = 2;
+}
+
+message JobPostWorkFlowStatus {
+	int64 statusId = 1;
+	string statusTitle = 2;
 }
 
 message UpdateCandidateBasicProfileRequest {
@@ -494,4 +531,44 @@ message LocalityObjectResponse {
     Status status = 1;
     Type type = 2;
     LocalityObject locality = 3;
+}
+
+message UpdateInterviewRequest {
+    string candidate_mobile = 1;
+    int64 jpId = 2;
+    int32 val = 3;
+}
+
+message UpdateInterviewResponse {
+    enum Status {
+        UNKNOWN = 0;
+        SUCCESS = 1;
+        FAILURE = 2;
+    }
+    Status status = 1;
+}
+
+message UpdateCandidateStatusRequest {
+    string candidate_mobile = 1;
+    int64 jpId = 2;
+    int32 val = 3;
+    int64 reasonval = 4;
+}
+
+message UpdateCandidateStatusResponse {
+    enum Status {
+        UNKNOWN = 0;
+        SUCCESS = 1;
+        FAILURE = 2;
+    }
+    Status status = 1;
+}
+
+message NotGoingReasonResponse {
+    repeated ReasonObject reasonObject = 1;
+}
+
+message ReasonObject {
+	int64 reasonId = 1;
+	string reasonTitle = 2;
 }
