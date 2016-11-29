@@ -4,23 +4,22 @@
 package in.trujobs.proto;
 
 /**
- * Protobuf type {@code in.trujobs.proto.UpdateCandidateEducationProfileRequest}
+ * Protobuf type {@code in.trujobs.proto.UpdateCandidateInterviewDetailRequest}
  */
-public  final class UpdateCandidateEducationProfileRequest extends
+public  final class UpdateCandidateInterviewDetailRequest extends
     com.google.protobuf.GeneratedMessage implements
-    // @@protoc_insertion_point(message_implements:in.trujobs.proto.UpdateCandidateEducationProfileRequest)
-    UpdateCandidateEducationProfileRequestOrBuilder {
-  // Use UpdateCandidateEducationProfileRequest.newBuilder() to construct.
-  private UpdateCandidateEducationProfileRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    // @@protoc_insertion_point(message_implements:in.trujobs.proto.UpdateCandidateInterviewDetailRequest)
+    UpdateCandidateInterviewDetailRequestOrBuilder {
+  // Use UpdateCandidateInterviewDetailRequest.newBuilder() to construct.
+  private UpdateCandidateInterviewDetailRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-  private UpdateCandidateEducationProfileRequest() {
+  private UpdateCandidateInterviewDetailRequest() {
     candidateMobile_ = "";
-    candidateEducationLevel_ = 0L;
-    candidateDegree_ = 0L;
-    candidateEducationInstitute_ = "";
-    candidateEducationCompletionStatus_ = 0;
+    timeSlotId_ = 0;
+    scheduledInterviewDate_ = "";
     jobPostId_ = 0L;
+    scheduledInterviewDateInMills_ = 0L;
     isFinalFragment_ = false;
   }
 
@@ -29,7 +28,7 @@ public  final class UpdateCandidateEducationProfileRequest extends
   getUnknownFields() {
     return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
   }
-  private UpdateCandidateEducationProfileRequest(
+  private UpdateCandidateInterviewDetailRequest(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
     this();
@@ -56,31 +55,26 @@ public  final class UpdateCandidateEducationProfileRequest extends
           }
           case 16: {
 
-            candidateEducationLevel_ = input.readInt64();
+            timeSlotId_ = input.readInt32();
             break;
           }
-          case 24: {
-
-            candidateDegree_ = input.readInt64();
-            break;
-          }
-          case 34: {
+          case 26: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            candidateEducationInstitute_ = s;
+            scheduledInterviewDate_ = s;
             break;
           }
-          case 40: {
-
-            candidateEducationCompletionStatus_ = input.readInt32();
-            break;
-          }
-          case 48: {
+          case 32: {
 
             jobPostId_ = input.readInt64();
             break;
           }
-          case 56: {
+          case 40: {
+
+            scheduledInterviewDateInMills_ = input.readInt64();
+            break;
+          }
+          case 48: {
 
             isFinalFragment_ = input.readBool();
             break;
@@ -99,14 +93,14 @@ public  final class UpdateCandidateEducationProfileRequest extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_UpdateCandidateEducationProfileRequest_descriptor;
+    return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_UpdateCandidateInterviewDetailRequest_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_UpdateCandidateEducationProfileRequest_fieldAccessorTable
+    return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_UpdateCandidateInterviewDetailRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            in.trujobs.proto.UpdateCandidateEducationProfileRequest.class, in.trujobs.proto.UpdateCandidateEducationProfileRequest.Builder.class);
+            in.trujobs.proto.UpdateCandidateInterviewDetailRequest.class, in.trujobs.proto.UpdateCandidateInterviewDetailRequest.Builder.class);
   }
 
   public static final int CANDIDATE_MOBILE_FIELD_NUMBER = 1;
@@ -143,80 +137,71 @@ public  final class UpdateCandidateEducationProfileRequest extends
     }
   }
 
-  public static final int CANDIDATE_EDUCATION_LEVEL_FIELD_NUMBER = 2;
-  private long candidateEducationLevel_;
+  public static final int TIMESLOTID_FIELD_NUMBER = 2;
+  private int timeSlotId_;
   /**
-   * <code>optional int64 candidate_education_level = 2;</code>
+   * <code>optional int32 timeSlotId = 2;</code>
    */
-  public long getCandidateEducationLevel() {
-    return candidateEducationLevel_;
+  public int getTimeSlotId() {
+    return timeSlotId_;
   }
 
-  public static final int CANDIDATE_DEGREE_FIELD_NUMBER = 3;
-  private long candidateDegree_;
+  public static final int SCHEDULEDINTERVIEWDATE_FIELD_NUMBER = 3;
+  private volatile java.lang.Object scheduledInterviewDate_;
   /**
-   * <code>optional int64 candidate_degree = 3;</code>
+   * <code>optional string scheduledInterviewDate = 3;</code>
    */
-  public long getCandidateDegree() {
-    return candidateDegree_;
-  }
-
-  public static final int CANDIDATE_EDUCATION_INSTITUTE_FIELD_NUMBER = 4;
-  private volatile java.lang.Object candidateEducationInstitute_;
-  /**
-   * <code>optional string candidate_education_institute = 4;</code>
-   */
-  public java.lang.String getCandidateEducationInstitute() {
-    java.lang.Object ref = candidateEducationInstitute_;
+  public java.lang.String getScheduledInterviewDate() {
+    java.lang.Object ref = scheduledInterviewDate_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      candidateEducationInstitute_ = s;
+      scheduledInterviewDate_ = s;
       return s;
     }
   }
   /**
-   * <code>optional string candidate_education_institute = 4;</code>
+   * <code>optional string scheduledInterviewDate = 3;</code>
    */
   public com.google.protobuf.ByteString
-      getCandidateEducationInstituteBytes() {
-    java.lang.Object ref = candidateEducationInstitute_;
+      getScheduledInterviewDateBytes() {
+    java.lang.Object ref = scheduledInterviewDate_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      candidateEducationInstitute_ = b;
+      scheduledInterviewDate_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
   }
 
-  public static final int CANDIDATE_EDUCATION_COMPLETION_STATUS_FIELD_NUMBER = 5;
-  private int candidateEducationCompletionStatus_;
-  /**
-   * <code>optional int32 candidate_education_completion_status = 5;</code>
-   */
-  public int getCandidateEducationCompletionStatus() {
-    return candidateEducationCompletionStatus_;
-  }
-
-  public static final int JOBPOSTID_FIELD_NUMBER = 6;
+  public static final int JOBPOSTID_FIELD_NUMBER = 4;
   private long jobPostId_;
   /**
-   * <code>optional int64 jobPostId = 6;</code>
+   * <code>optional int64 jobPostId = 4;</code>
    */
   public long getJobPostId() {
     return jobPostId_;
   }
 
-  public static final int ISFINALFRAGMENT_FIELD_NUMBER = 7;
+  public static final int SCHEDULEDINTERVIEWDATEINMILLS_FIELD_NUMBER = 5;
+  private long scheduledInterviewDateInMills_;
+  /**
+   * <code>optional int64 scheduledInterviewDateInMills = 5;</code>
+   */
+  public long getScheduledInterviewDateInMills() {
+    return scheduledInterviewDateInMills_;
+  }
+
+  public static final int ISFINALFRAGMENT_FIELD_NUMBER = 6;
   private boolean isFinalFragment_;
   /**
-   * <code>optional bool isFinalFragment = 7;</code>
+   * <code>optional bool isFinalFragment = 6;</code>
    */
   public boolean getIsFinalFragment() {
     return isFinalFragment_;
@@ -237,23 +222,20 @@ public  final class UpdateCandidateEducationProfileRequest extends
     if (!getCandidateMobileBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessage.writeString(output, 1, candidateMobile_);
     }
-    if (candidateEducationLevel_ != 0L) {
-      output.writeInt64(2, candidateEducationLevel_);
+    if (timeSlotId_ != 0) {
+      output.writeInt32(2, timeSlotId_);
     }
-    if (candidateDegree_ != 0L) {
-      output.writeInt64(3, candidateDegree_);
-    }
-    if (!getCandidateEducationInstituteBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 4, candidateEducationInstitute_);
-    }
-    if (candidateEducationCompletionStatus_ != 0) {
-      output.writeInt32(5, candidateEducationCompletionStatus_);
+    if (!getScheduledInterviewDateBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 3, scheduledInterviewDate_);
     }
     if (jobPostId_ != 0L) {
-      output.writeInt64(6, jobPostId_);
+      output.writeInt64(4, jobPostId_);
+    }
+    if (scheduledInterviewDateInMills_ != 0L) {
+      output.writeInt64(5, scheduledInterviewDateInMills_);
     }
     if (isFinalFragment_ != false) {
-      output.writeBool(7, isFinalFragment_);
+      output.writeBool(6, isFinalFragment_);
     }
   }
 
@@ -265,81 +247,77 @@ public  final class UpdateCandidateEducationProfileRequest extends
     if (!getCandidateMobileBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(1, candidateMobile_);
     }
-    if (candidateEducationLevel_ != 0L) {
+    if (timeSlotId_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(2, candidateEducationLevel_);
+        .computeInt32Size(2, timeSlotId_);
     }
-    if (candidateDegree_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(3, candidateDegree_);
-    }
-    if (!getCandidateEducationInstituteBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(4, candidateEducationInstitute_);
-    }
-    if (candidateEducationCompletionStatus_ != 0) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(5, candidateEducationCompletionStatus_);
+    if (!getScheduledInterviewDateBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(3, scheduledInterviewDate_);
     }
     if (jobPostId_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(6, jobPostId_);
+        .computeInt64Size(4, jobPostId_);
+    }
+    if (scheduledInterviewDateInMills_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(5, scheduledInterviewDateInMills_);
     }
     if (isFinalFragment_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(7, isFinalFragment_);
+        .computeBoolSize(6, isFinalFragment_);
     }
     memoizedSize = size;
     return size;
   }
 
   private static final long serialVersionUID = 0L;
-  public static in.trujobs.proto.UpdateCandidateEducationProfileRequest parseFrom(
+  public static in.trujobs.proto.UpdateCandidateInterviewDetailRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static in.trujobs.proto.UpdateCandidateEducationProfileRequest parseFrom(
+  public static in.trujobs.proto.UpdateCandidateInterviewDetailRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static in.trujobs.proto.UpdateCandidateEducationProfileRequest parseFrom(byte[] data)
+  public static in.trujobs.proto.UpdateCandidateInterviewDetailRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static in.trujobs.proto.UpdateCandidateEducationProfileRequest parseFrom(
+  public static in.trujobs.proto.UpdateCandidateInterviewDetailRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static in.trujobs.proto.UpdateCandidateEducationProfileRequest parseFrom(java.io.InputStream input)
+  public static in.trujobs.proto.UpdateCandidateInterviewDetailRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return PARSER.parseFrom(input);
   }
-  public static in.trujobs.proto.UpdateCandidateEducationProfileRequest parseFrom(
+  public static in.trujobs.proto.UpdateCandidateInterviewDetailRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return PARSER.parseFrom(input, extensionRegistry);
   }
-  public static in.trujobs.proto.UpdateCandidateEducationProfileRequest parseDelimitedFrom(java.io.InputStream input)
+  public static in.trujobs.proto.UpdateCandidateInterviewDetailRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return PARSER.parseDelimitedFrom(input);
   }
-  public static in.trujobs.proto.UpdateCandidateEducationProfileRequest parseDelimitedFrom(
+  public static in.trujobs.proto.UpdateCandidateInterviewDetailRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return PARSER.parseDelimitedFrom(input, extensionRegistry);
   }
-  public static in.trujobs.proto.UpdateCandidateEducationProfileRequest parseFrom(
+  public static in.trujobs.proto.UpdateCandidateInterviewDetailRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return PARSER.parseFrom(input);
   }
-  public static in.trujobs.proto.UpdateCandidateEducationProfileRequest parseFrom(
+  public static in.trujobs.proto.UpdateCandidateInterviewDetailRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -350,7 +328,7 @@ public  final class UpdateCandidateEducationProfileRequest extends
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(in.trujobs.proto.UpdateCandidateEducationProfileRequest prototype) {
+  public static Builder newBuilder(in.trujobs.proto.UpdateCandidateInterviewDetailRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   public Builder toBuilder() {
@@ -365,25 +343,25 @@ public  final class UpdateCandidateEducationProfileRequest extends
     return builder;
   }
   /**
-   * Protobuf type {@code in.trujobs.proto.UpdateCandidateEducationProfileRequest}
+   * Protobuf type {@code in.trujobs.proto.UpdateCandidateInterviewDetailRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:in.trujobs.proto.UpdateCandidateEducationProfileRequest)
-      in.trujobs.proto.UpdateCandidateEducationProfileRequestOrBuilder {
+      // @@protoc_insertion_point(builder_implements:in.trujobs.proto.UpdateCandidateInterviewDetailRequest)
+      in.trujobs.proto.UpdateCandidateInterviewDetailRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_UpdateCandidateEducationProfileRequest_descriptor;
+      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_UpdateCandidateInterviewDetailRequest_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_UpdateCandidateEducationProfileRequest_fieldAccessorTable
+      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_UpdateCandidateInterviewDetailRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              in.trujobs.proto.UpdateCandidateEducationProfileRequest.class, in.trujobs.proto.UpdateCandidateEducationProfileRequest.Builder.class);
+              in.trujobs.proto.UpdateCandidateInterviewDetailRequest.class, in.trujobs.proto.UpdateCandidateInterviewDetailRequest.Builder.class);
     }
 
-    // Construct using in.trujobs.proto.UpdateCandidateEducationProfileRequest.newBuilder()
+    // Construct using in.trujobs.proto.UpdateCandidateInterviewDetailRequest.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -401,15 +379,13 @@ public  final class UpdateCandidateEducationProfileRequest extends
       super.clear();
       candidateMobile_ = "";
 
-      candidateEducationLevel_ = 0L;
+      timeSlotId_ = 0;
 
-      candidateDegree_ = 0L;
-
-      candidateEducationInstitute_ = "";
-
-      candidateEducationCompletionStatus_ = 0;
+      scheduledInterviewDate_ = "";
 
       jobPostId_ = 0L;
+
+      scheduledInterviewDateInMills_ = 0L;
 
       isFinalFragment_ = false;
 
@@ -418,64 +394,60 @@ public  final class UpdateCandidateEducationProfileRequest extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_UpdateCandidateEducationProfileRequest_descriptor;
+      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_UpdateCandidateInterviewDetailRequest_descriptor;
     }
 
-    public in.trujobs.proto.UpdateCandidateEducationProfileRequest getDefaultInstanceForType() {
-      return in.trujobs.proto.UpdateCandidateEducationProfileRequest.getDefaultInstance();
+    public in.trujobs.proto.UpdateCandidateInterviewDetailRequest getDefaultInstanceForType() {
+      return in.trujobs.proto.UpdateCandidateInterviewDetailRequest.getDefaultInstance();
     }
 
-    public in.trujobs.proto.UpdateCandidateEducationProfileRequest build() {
-      in.trujobs.proto.UpdateCandidateEducationProfileRequest result = buildPartial();
+    public in.trujobs.proto.UpdateCandidateInterviewDetailRequest build() {
+      in.trujobs.proto.UpdateCandidateInterviewDetailRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
       return result;
     }
 
-    public in.trujobs.proto.UpdateCandidateEducationProfileRequest buildPartial() {
-      in.trujobs.proto.UpdateCandidateEducationProfileRequest result = new in.trujobs.proto.UpdateCandidateEducationProfileRequest(this);
+    public in.trujobs.proto.UpdateCandidateInterviewDetailRequest buildPartial() {
+      in.trujobs.proto.UpdateCandidateInterviewDetailRequest result = new in.trujobs.proto.UpdateCandidateInterviewDetailRequest(this);
       result.candidateMobile_ = candidateMobile_;
-      result.candidateEducationLevel_ = candidateEducationLevel_;
-      result.candidateDegree_ = candidateDegree_;
-      result.candidateEducationInstitute_ = candidateEducationInstitute_;
-      result.candidateEducationCompletionStatus_ = candidateEducationCompletionStatus_;
+      result.timeSlotId_ = timeSlotId_;
+      result.scheduledInterviewDate_ = scheduledInterviewDate_;
       result.jobPostId_ = jobPostId_;
+      result.scheduledInterviewDateInMills_ = scheduledInterviewDateInMills_;
       result.isFinalFragment_ = isFinalFragment_;
       onBuilt();
       return result;
     }
 
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof in.trujobs.proto.UpdateCandidateEducationProfileRequest) {
-        return mergeFrom((in.trujobs.proto.UpdateCandidateEducationProfileRequest)other);
+      if (other instanceof in.trujobs.proto.UpdateCandidateInterviewDetailRequest) {
+        return mergeFrom((in.trujobs.proto.UpdateCandidateInterviewDetailRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(in.trujobs.proto.UpdateCandidateEducationProfileRequest other) {
-      if (other == in.trujobs.proto.UpdateCandidateEducationProfileRequest.getDefaultInstance()) return this;
+    public Builder mergeFrom(in.trujobs.proto.UpdateCandidateInterviewDetailRequest other) {
+      if (other == in.trujobs.proto.UpdateCandidateInterviewDetailRequest.getDefaultInstance()) return this;
       if (!other.getCandidateMobile().isEmpty()) {
         candidateMobile_ = other.candidateMobile_;
         onChanged();
       }
-      if (other.getCandidateEducationLevel() != 0L) {
-        setCandidateEducationLevel(other.getCandidateEducationLevel());
+      if (other.getTimeSlotId() != 0) {
+        setTimeSlotId(other.getTimeSlotId());
       }
-      if (other.getCandidateDegree() != 0L) {
-        setCandidateDegree(other.getCandidateDegree());
-      }
-      if (!other.getCandidateEducationInstitute().isEmpty()) {
-        candidateEducationInstitute_ = other.candidateEducationInstitute_;
+      if (!other.getScheduledInterviewDate().isEmpty()) {
+        scheduledInterviewDate_ = other.scheduledInterviewDate_;
         onChanged();
-      }
-      if (other.getCandidateEducationCompletionStatus() != 0) {
-        setCandidateEducationCompletionStatus(other.getCandidateEducationCompletionStatus());
       }
       if (other.getJobPostId() != 0L) {
         setJobPostId(other.getJobPostId());
+      }
+      if (other.getScheduledInterviewDateInMills() != 0L) {
+        setScheduledInterviewDateInMills(other.getScheduledInterviewDateInMills());
       }
       if (other.getIsFinalFragment() != false) {
         setIsFinalFragment(other.getIsFinalFragment());
@@ -492,11 +464,11 @@ public  final class UpdateCandidateEducationProfileRequest extends
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      in.trujobs.proto.UpdateCandidateEducationProfileRequest parsedMessage = null;
+      in.trujobs.proto.UpdateCandidateInterviewDetailRequest parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (in.trujobs.proto.UpdateCandidateEducationProfileRequest) e.getUnfinishedMessage();
+        parsedMessage = (in.trujobs.proto.UpdateCandidateInterviewDetailRequest) e.getUnfinishedMessage();
         throw e;
       } finally {
         if (parsedMessage != null) {
@@ -575,162 +547,110 @@ public  final class UpdateCandidateEducationProfileRequest extends
       return this;
     }
 
-    private long candidateEducationLevel_ ;
+    private int timeSlotId_ ;
     /**
-     * <code>optional int64 candidate_education_level = 2;</code>
+     * <code>optional int32 timeSlotId = 2;</code>
      */
-    public long getCandidateEducationLevel() {
-      return candidateEducationLevel_;
+    public int getTimeSlotId() {
+      return timeSlotId_;
     }
     /**
-     * <code>optional int64 candidate_education_level = 2;</code>
+     * <code>optional int32 timeSlotId = 2;</code>
      */
-    public Builder setCandidateEducationLevel(long value) {
+    public Builder setTimeSlotId(int value) {
       
-      candidateEducationLevel_ = value;
+      timeSlotId_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>optional int64 candidate_education_level = 2;</code>
+     * <code>optional int32 timeSlotId = 2;</code>
      */
-    public Builder clearCandidateEducationLevel() {
+    public Builder clearTimeSlotId() {
       
-      candidateEducationLevel_ = 0L;
-      onChanged();
-      return this;
-    }
-
-    private long candidateDegree_ ;
-    /**
-     * <code>optional int64 candidate_degree = 3;</code>
-     */
-    public long getCandidateDegree() {
-      return candidateDegree_;
-    }
-    /**
-     * <code>optional int64 candidate_degree = 3;</code>
-     */
-    public Builder setCandidateDegree(long value) {
-      
-      candidateDegree_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>optional int64 candidate_degree = 3;</code>
-     */
-    public Builder clearCandidateDegree() {
-      
-      candidateDegree_ = 0L;
+      timeSlotId_ = 0;
       onChanged();
       return this;
     }
 
-    private java.lang.Object candidateEducationInstitute_ = "";
+    private java.lang.Object scheduledInterviewDate_ = "";
     /**
-     * <code>optional string candidate_education_institute = 4;</code>
+     * <code>optional string scheduledInterviewDate = 3;</code>
      */
-    public java.lang.String getCandidateEducationInstitute() {
-      java.lang.Object ref = candidateEducationInstitute_;
+    public java.lang.String getScheduledInterviewDate() {
+      java.lang.Object ref = scheduledInterviewDate_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        candidateEducationInstitute_ = s;
+        scheduledInterviewDate_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>optional string candidate_education_institute = 4;</code>
+     * <code>optional string scheduledInterviewDate = 3;</code>
      */
     public com.google.protobuf.ByteString
-        getCandidateEducationInstituteBytes() {
-      java.lang.Object ref = candidateEducationInstitute_;
+        getScheduledInterviewDateBytes() {
+      java.lang.Object ref = scheduledInterviewDate_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        candidateEducationInstitute_ = b;
+        scheduledInterviewDate_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>optional string candidate_education_institute = 4;</code>
+     * <code>optional string scheduledInterviewDate = 3;</code>
      */
-    public Builder setCandidateEducationInstitute(
+    public Builder setScheduledInterviewDate(
         java.lang.String value) {
       if (value == null) {
     throw new NullPointerException();
   }
   
-      candidateEducationInstitute_ = value;
+      scheduledInterviewDate_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>optional string candidate_education_institute = 4;</code>
+     * <code>optional string scheduledInterviewDate = 3;</code>
      */
-    public Builder clearCandidateEducationInstitute() {
+    public Builder clearScheduledInterviewDate() {
       
-      candidateEducationInstitute_ = getDefaultInstance().getCandidateEducationInstitute();
+      scheduledInterviewDate_ = getDefaultInstance().getScheduledInterviewDate();
       onChanged();
       return this;
     }
     /**
-     * <code>optional string candidate_education_institute = 4;</code>
+     * <code>optional string scheduledInterviewDate = 3;</code>
      */
-    public Builder setCandidateEducationInstituteBytes(
+    public Builder setScheduledInterviewDateBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
       
-      candidateEducationInstitute_ = value;
-      onChanged();
-      return this;
-    }
-
-    private int candidateEducationCompletionStatus_ ;
-    /**
-     * <code>optional int32 candidate_education_completion_status = 5;</code>
-     */
-    public int getCandidateEducationCompletionStatus() {
-      return candidateEducationCompletionStatus_;
-    }
-    /**
-     * <code>optional int32 candidate_education_completion_status = 5;</code>
-     */
-    public Builder setCandidateEducationCompletionStatus(int value) {
-      
-      candidateEducationCompletionStatus_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>optional int32 candidate_education_completion_status = 5;</code>
-     */
-    public Builder clearCandidateEducationCompletionStatus() {
-      
-      candidateEducationCompletionStatus_ = 0;
+      scheduledInterviewDate_ = value;
       onChanged();
       return this;
     }
 
     private long jobPostId_ ;
     /**
-     * <code>optional int64 jobPostId = 6;</code>
+     * <code>optional int64 jobPostId = 4;</code>
      */
     public long getJobPostId() {
       return jobPostId_;
     }
     /**
-     * <code>optional int64 jobPostId = 6;</code>
+     * <code>optional int64 jobPostId = 4;</code>
      */
     public Builder setJobPostId(long value) {
       
@@ -739,7 +659,7 @@ public  final class UpdateCandidateEducationProfileRequest extends
       return this;
     }
     /**
-     * <code>optional int64 jobPostId = 6;</code>
+     * <code>optional int64 jobPostId = 4;</code>
      */
     public Builder clearJobPostId() {
       
@@ -748,15 +668,41 @@ public  final class UpdateCandidateEducationProfileRequest extends
       return this;
     }
 
+    private long scheduledInterviewDateInMills_ ;
+    /**
+     * <code>optional int64 scheduledInterviewDateInMills = 5;</code>
+     */
+    public long getScheduledInterviewDateInMills() {
+      return scheduledInterviewDateInMills_;
+    }
+    /**
+     * <code>optional int64 scheduledInterviewDateInMills = 5;</code>
+     */
+    public Builder setScheduledInterviewDateInMills(long value) {
+      
+      scheduledInterviewDateInMills_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional int64 scheduledInterviewDateInMills = 5;</code>
+     */
+    public Builder clearScheduledInterviewDateInMills() {
+      
+      scheduledInterviewDateInMills_ = 0L;
+      onChanged();
+      return this;
+    }
+
     private boolean isFinalFragment_ ;
     /**
-     * <code>optional bool isFinalFragment = 7;</code>
+     * <code>optional bool isFinalFragment = 6;</code>
      */
     public boolean getIsFinalFragment() {
       return isFinalFragment_;
     }
     /**
-     * <code>optional bool isFinalFragment = 7;</code>
+     * <code>optional bool isFinalFragment = 6;</code>
      */
     public Builder setIsFinalFragment(boolean value) {
       
@@ -765,7 +711,7 @@ public  final class UpdateCandidateEducationProfileRequest extends
       return this;
     }
     /**
-     * <code>optional bool isFinalFragment = 7;</code>
+     * <code>optional bool isFinalFragment = 6;</code>
      */
     public Builder clearIsFinalFragment() {
       
@@ -784,27 +730,27 @@ public  final class UpdateCandidateEducationProfileRequest extends
     }
 
 
-    // @@protoc_insertion_point(builder_scope:in.trujobs.proto.UpdateCandidateEducationProfileRequest)
+    // @@protoc_insertion_point(builder_scope:in.trujobs.proto.UpdateCandidateInterviewDetailRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:in.trujobs.proto.UpdateCandidateEducationProfileRequest)
-  private static final in.trujobs.proto.UpdateCandidateEducationProfileRequest DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:in.trujobs.proto.UpdateCandidateInterviewDetailRequest)
+  private static final in.trujobs.proto.UpdateCandidateInterviewDetailRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new in.trujobs.proto.UpdateCandidateEducationProfileRequest();
+    DEFAULT_INSTANCE = new in.trujobs.proto.UpdateCandidateInterviewDetailRequest();
   }
 
-  public static in.trujobs.proto.UpdateCandidateEducationProfileRequest getDefaultInstance() {
+  public static in.trujobs.proto.UpdateCandidateInterviewDetailRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<UpdateCandidateEducationProfileRequest>
-      PARSER = new com.google.protobuf.AbstractParser<UpdateCandidateEducationProfileRequest>() {
-    public UpdateCandidateEducationProfileRequest parsePartialFrom(
+  private static final com.google.protobuf.Parser<UpdateCandidateInterviewDetailRequest>
+      PARSER = new com.google.protobuf.AbstractParser<UpdateCandidateInterviewDetailRequest>() {
+    public UpdateCandidateInterviewDetailRequest parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       try {
-        return new UpdateCandidateEducationProfileRequest(input, extensionRegistry);
+        return new UpdateCandidateInterviewDetailRequest(input, extensionRegistry);
       } catch (RuntimeException e) {
         if (e.getCause() instanceof
             com.google.protobuf.InvalidProtocolBufferException) {
@@ -816,16 +762,16 @@ public  final class UpdateCandidateEducationProfileRequest extends
     }
   };
 
-  public static com.google.protobuf.Parser<UpdateCandidateEducationProfileRequest> parser() {
+  public static com.google.protobuf.Parser<UpdateCandidateInterviewDetailRequest> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<UpdateCandidateEducationProfileRequest> getParserForType() {
+  public com.google.protobuf.Parser<UpdateCandidateInterviewDetailRequest> getParserForType() {
     return PARSER;
   }
 
-  public in.trujobs.proto.UpdateCandidateEducationProfileRequest getDefaultInstanceForType() {
+  public in.trujobs.proto.UpdateCandidateInterviewDetailRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 
