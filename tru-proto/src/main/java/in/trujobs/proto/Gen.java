@@ -729,20 +729,19 @@ public final class Gen {
       "Response\0228\n\006status\030\001 \001(\0162(.in.trujobs.pr" +
       "oto.GenericResponse.Status\"<\n\006Status\022\013\n\007" +
       "UNKNOWN\020\000\022\013\n\007FAILURE\020\001\022\013\n\007SUCCESS\020\002\022\013\n\007I" +
-      "NVALID\020\003\"\310\001\n%UpdateCandidateInterviewDet" +
+      "NVALID\020\003\"\250\001\n%UpdateCandidateInterviewDet" +
       "ailRequest\022\030\n\020candidate_mobile\030\001 \001(\t\022\022\n\n" +
-      "timeSlotId\030\002 \001(\005\022\036\n\026scheduledInterviewDa",
-      "te\030\003 \001(\t\022\021\n\tjobPostId\030\004 \001(\003\022%\n\035scheduled" +
-      "InterviewDateInMills\030\005 \001(\003\022\027\n\017isFinalFra" +
-      "gment\030\006 \001(\010\"-\n\030GetInterviewSlotsRequest\022" +
-      "\021\n\tjobPostId\030\001 \001(\003\"T\n\031GetInterviewSlotsR" +
-      "esponse\0227\n\016interviewSlots\030\001 \003(\0132\037.in.tru" +
-      "jobs.proto.InterviewSlot\"r\n\rInterviewSlo" +
-      "t\022J\n\027interviewTimeSlotObject\030\001 \001(\0132).in." +
-      "trujobs.proto.InterviewTimeSlotObject\022\025\n" +
-      "\rinterviewDays\030\002 \001(\t\"<\n\027InterviewTimeSlo" +
-      "tObject\022\016\n\006slotId\030\001 \001(\005\022\021\n\tslotTitle\030\002 \001",
-      "(\tB\002P\001b\006proto3"
+      "timeSlotId\030\002 \001(\005\022\021\n\tjobPostId\030\004 \001(\003\022%\n\035s",
+      "cheduledInterviewDateInMills\030\005 \001(\003\022\027\n\017is" +
+      "FinalFragment\030\006 \001(\010\"-\n\030GetInterviewSlots" +
+      "Request\022\021\n\tjobPostId\030\001 \001(\003\"T\n\031GetIntervi" +
+      "ewSlotsResponse\0227\n\016interviewSlots\030\001 \003(\0132" +
+      "\037.in.trujobs.proto.InterviewSlot\"r\n\rInte" +
+      "rviewSlot\022J\n\027interviewTimeSlotObject\030\001 \001" +
+      "(\0132).in.trujobs.proto.InterviewTimeSlotO" +
+      "bject\022\025\n\rinterviewDays\030\002 \001(\t\"<\n\027Intervie" +
+      "wTimeSlotObject\022\016\n\006slotId\030\001 \001(\005\022\021\n\tslotT" +
+      "itle\030\002 \001(\tB\002P\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1181,7 +1180,7 @@ public final class Gen {
     internal_static_in_trujobs_proto_UpdateCandidateInterviewDetailRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_UpdateCandidateInterviewDetailRequest_descriptor,
-        new java.lang.String[] { "CandidateMobile", "TimeSlotId", "ScheduledInterviewDate", "JobPostId", "ScheduledInterviewDateInMills", "IsFinalFragment", });
+        new java.lang.String[] { "CandidateMobile", "TimeSlotId", "JobPostId", "ScheduledInterviewDateInMills", "IsFinalFragment", });
     internal_static_in_trujobs_proto_GetInterviewSlotsRequest_descriptor =
       getDescriptor().getMessageTypes().get(71);
     internal_static_in_trujobs_proto_GetInterviewSlotsRequest_fieldAccessorTable = new

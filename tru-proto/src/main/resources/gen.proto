@@ -649,7 +649,6 @@ message GenericResponse {
 message UpdateCandidateInterviewDetailRequest {
     string candidate_mobile = 1;
     int32 timeSlotId = 2;
-    string scheduledInterviewDate = 3;
     int64 jobPostId = 4;
     int64 scheduledInterviewDateInMills = 5;
     bool isFinalFragment = 6;

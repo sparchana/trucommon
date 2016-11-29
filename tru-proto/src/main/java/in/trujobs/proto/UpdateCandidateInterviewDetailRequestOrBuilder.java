@@ -23,16 +23,6 @@ public interface UpdateCandidateInterviewDetailRequestOrBuilder extends
   int getTimeSlotId();
 
   /**
-   * <code>optional string scheduledInterviewDate = 3;</code>
-   */
-  java.lang.String getScheduledInterviewDate();
-  /**
-   * <code>optional string scheduledInterviewDate = 3;</code>
-   */
-  com.google.protobuf.ByteString
-      getScheduledInterviewDateBytes();
-
-  /**
    * <code>optional int64 jobPostId = 4;</code>
    */
   long getJobPostId();

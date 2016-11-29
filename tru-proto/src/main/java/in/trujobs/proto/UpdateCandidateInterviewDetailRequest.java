@@ -17,7 +17,6 @@ public  final class UpdateCandidateInterviewDetailRequest extends
   private UpdateCandidateInterviewDetailRequest() {
     candidateMobile_ = "";
     timeSlotId_ = 0;
-    scheduledInterviewDate_ = "";
     jobPostId_ = 0L;
     scheduledInterviewDateInMills_ = 0L;
     isFinalFragment_ = false;
@@ -56,12 +55,6 @@ public  final class UpdateCandidateInterviewDetailRequest extends
           case 16: {
 
             timeSlotId_ = input.readInt32();
-            break;
-          }
-          case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            scheduledInterviewDate_ = s;
             break;
           }
           case 32: {
@@ -146,40 +139,6 @@ public  final class UpdateCandidateInterviewDetailRequest extends
     return timeSlotId_;
   }
 
-  public static final int SCHEDULEDINTERVIEWDATE_FIELD_NUMBER = 3;
-  private volatile java.lang.Object scheduledInterviewDate_;
-  /**
-   * <code>optional string scheduledInterviewDate = 3;</code>
-   */
-  public java.lang.String getScheduledInterviewDate() {
-    java.lang.Object ref = scheduledInterviewDate_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      scheduledInterviewDate_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>optional string scheduledInterviewDate = 3;</code>
-   */
-  public com.google.protobuf.ByteString
-      getScheduledInterviewDateBytes() {
-    java.lang.Object ref = scheduledInterviewDate_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      scheduledInterviewDate_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
   public static final int JOBPOSTID_FIELD_NUMBER = 4;
   private long jobPostId_;
   /**
@@ -225,9 +184,6 @@ public  final class UpdateCandidateInterviewDetailRequest extends
     if (timeSlotId_ != 0) {
       output.writeInt32(2, timeSlotId_);
     }
-    if (!getScheduledInterviewDateBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 3, scheduledInterviewDate_);
-    }
     if (jobPostId_ != 0L) {
       output.writeInt64(4, jobPostId_);
     }
@@ -250,9 +206,6 @@ public  final class UpdateCandidateInterviewDetailRequest extends
     if (timeSlotId_ != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(2, timeSlotId_);
-    }
-    if (!getScheduledInterviewDateBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(3, scheduledInterviewDate_);
     }
     if (jobPostId_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
@@ -381,8 +334,6 @@ public  final class UpdateCandidateInterviewDetailRequest extends
 
       timeSlotId_ = 0;
 
-      scheduledInterviewDate_ = "";
-
       jobPostId_ = 0L;
 
       scheduledInterviewDateInMills_ = 0L;
@@ -413,7 +364,6 @@ public  final class UpdateCandidateInterviewDetailRequest extends
       in.trujobs.proto.UpdateCandidateInterviewDetailRequest result = new in.trujobs.proto.UpdateCandidateInterviewDetailRequest(this);
       result.candidateMobile_ = candidateMobile_;
       result.timeSlotId_ = timeSlotId_;
-      result.scheduledInterviewDate_ = scheduledInterviewDate_;
       result.jobPostId_ = jobPostId_;
       result.scheduledInterviewDateInMills_ = scheduledInterviewDateInMills_;
       result.isFinalFragment_ = isFinalFragment_;
@@ -438,10 +388,6 @@ public  final class UpdateCandidateInterviewDetailRequest extends
       }
       if (other.getTimeSlotId() != 0) {
         setTimeSlotId(other.getTimeSlotId());
-      }
-      if (!other.getScheduledInterviewDate().isEmpty()) {
-        scheduledInterviewDate_ = other.scheduledInterviewDate_;
-        onChanged();
       }
       if (other.getJobPostId() != 0L) {
         setJobPostId(other.getJobPostId());
@@ -569,75 +515,6 @@ public  final class UpdateCandidateInterviewDetailRequest extends
     public Builder clearTimeSlotId() {
       
       timeSlotId_ = 0;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object scheduledInterviewDate_ = "";
-    /**
-     * <code>optional string scheduledInterviewDate = 3;</code>
-     */
-    public java.lang.String getScheduledInterviewDate() {
-      java.lang.Object ref = scheduledInterviewDate_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        scheduledInterviewDate_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>optional string scheduledInterviewDate = 3;</code>
-     */
-    public com.google.protobuf.ByteString
-        getScheduledInterviewDateBytes() {
-      java.lang.Object ref = scheduledInterviewDate_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        scheduledInterviewDate_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>optional string scheduledInterviewDate = 3;</code>
-     */
-    public Builder setScheduledInterviewDate(
-        java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
-      scheduledInterviewDate_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>optional string scheduledInterviewDate = 3;</code>
-     */
-    public Builder clearScheduledInterviewDate() {
-      
-      scheduledInterviewDate_ = getDefaultInstance().getScheduledInterviewDate();
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>optional string scheduledInterviewDate = 3;</code>
-     */
-    public Builder setScheduledInterviewDateBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
-      scheduledInterviewDate_ = value;
       onChanged();
       return this;
     }
