@@ -17,7 +17,7 @@ public  final class UpdateInterviewRequest extends
   private UpdateInterviewRequest() {
     candidateMobile_ = "";
     jpId_ = 0L;
-    val_ = 0;
+    interviewStatus_ = 0;
   }
 
   @java.lang.Override
@@ -57,7 +57,7 @@ public  final class UpdateInterviewRequest extends
           }
           case 24: {
 
-            val_ = input.readInt32();
+            interviewStatus_ = input.readInt32();
             break;
           }
         }
@@ -127,13 +127,13 @@ public  final class UpdateInterviewRequest extends
     return jpId_;
   }
 
-  public static final int VAL_FIELD_NUMBER = 3;
-  private int val_;
+  public static final int INTERVIEWSTATUS_FIELD_NUMBER = 3;
+  private int interviewStatus_;
   /**
-   * <code>optional int32 val = 3;</code>
+   * <code>optional int32 interviewStatus = 3;</code>
    */
-  public int getVal() {
-    return val_;
+  public int getInterviewStatus() {
+    return interviewStatus_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -154,8 +154,8 @@ public  final class UpdateInterviewRequest extends
     if (jpId_ != 0L) {
       output.writeInt64(2, jpId_);
     }
-    if (val_ != 0) {
-      output.writeInt32(3, val_);
+    if (interviewStatus_ != 0) {
+      output.writeInt32(3, interviewStatus_);
     }
   }
 
@@ -171,9 +171,9 @@ public  final class UpdateInterviewRequest extends
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(2, jpId_);
     }
-    if (val_ != 0) {
+    if (interviewStatus_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(3, val_);
+        .computeInt32Size(3, interviewStatus_);
     }
     memoizedSize = size;
     return size;
@@ -290,7 +290,7 @@ public  final class UpdateInterviewRequest extends
 
       jpId_ = 0L;
 
-      val_ = 0;
+      interviewStatus_ = 0;
 
       return this;
     }
@@ -316,7 +316,7 @@ public  final class UpdateInterviewRequest extends
       in.trujobs.proto.UpdateInterviewRequest result = new in.trujobs.proto.UpdateInterviewRequest(this);
       result.candidateMobile_ = candidateMobile_;
       result.jpId_ = jpId_;
-      result.val_ = val_;
+      result.interviewStatus_ = interviewStatus_;
       onBuilt();
       return result;
     }
@@ -339,8 +339,8 @@ public  final class UpdateInterviewRequest extends
       if (other.getJpId() != 0L) {
         setJpId(other.getJpId());
       }
-      if (other.getVal() != 0) {
-        setVal(other.getVal());
+      if (other.getInterviewStatus() != 0) {
+        setInterviewStatus(other.getInterviewStatus());
       }
       onChanged();
       return this;
@@ -463,28 +463,28 @@ public  final class UpdateInterviewRequest extends
       return this;
     }
 
-    private int val_ ;
+    private int interviewStatus_ ;
     /**
-     * <code>optional int32 val = 3;</code>
+     * <code>optional int32 interviewStatus = 3;</code>
      */
-    public int getVal() {
-      return val_;
+    public int getInterviewStatus() {
+      return interviewStatus_;
     }
     /**
-     * <code>optional int32 val = 3;</code>
+     * <code>optional int32 interviewStatus = 3;</code>
      */
-    public Builder setVal(int value) {
+    public Builder setInterviewStatus(int value) {
       
-      val_ = value;
+      interviewStatus_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>optional int32 val = 3;</code>
+     * <code>optional int32 interviewStatus = 3;</code>
      */
-    public Builder clearVal() {
+    public Builder clearInterviewStatus() {
       
-      val_ = 0;
+      interviewStatus_ = 0;
       onChanged();
       return this;
     }

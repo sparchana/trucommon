@@ -536,7 +536,7 @@ message LocalityObjectResponse {
 message UpdateInterviewRequest {
     string candidate_mobile = 1;
     int64 jpId = 2;
-    int32 val = 3;
+    int32 interviewStatus = 3;
 }
 
 message UpdateInterviewResponse {
@@ -551,8 +551,8 @@ message UpdateInterviewResponse {
 message UpdateCandidateStatusRequest {
     string candidate_mobile = 1;
     int64 jpId = 2;
-    int32 val = 3;
-    int64 reasonval = 4;
+    int32 candidateStatus = 3;
+    int64 notGoingReason = 4;
 }
 
 message UpdateCandidateStatusResponse {

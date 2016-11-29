@@ -23,12 +23,12 @@ public interface UpdateCandidateStatusRequestOrBuilder extends
   long getJpId();
 
   /**
-   * <code>optional int32 val = 3;</code>
+   * <code>optional int32 candidateStatus = 3;</code>
    */
-  int getVal();
+  int getCandidateStatus();
 
   /**
-   * <code>optional int64 reasonval = 4;</code>
+   * <code>optional int64 notGoingReason = 4;</code>
    */
-  long getReasonval();
+  long getNotGoingReason();
 }

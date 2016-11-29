@@ -610,23 +610,24 @@ public final class Gen {
       "e\0222\n\010locality\030\003 \001(\0132 .in.trujobs.proto.L" +
       "ocalityObject\"/\n\006Status\022\013\n\007UNKNOWN\020\000\022\013\n\007" +
       "SUCCESS\020\001\022\013\n\007FAILURE\020\002\"6\n\004Type\022\r\n\tUNDEFI" +
-      "NED\020\000\022\017\n\013FOR_PLACEID\020\001\022\016\n\nFOR_LATLNG\020\002\"M" +
+      "NED\020\000\022\017\n\013FOR_PLACEID\020\001\022\016\n\nFOR_LATLNG\020\002\"Y" +
       "\n\026UpdateInterviewRequest\022\030\n\020candidate_mo",
-      "bile\030\001 \001(\t\022\014\n\004jpId\030\002 \001(\003\022\013\n\003val\030\003 \001(\005\"\214\001" +
-      "\n\027UpdateInterviewResponse\022@\n\006status\030\001 \001(" +
-      "\01620.in.trujobs.proto.UpdateInterviewResp" +
-      "onse.Status\"/\n\006Status\022\013\n\007UNKNOWN\020\000\022\013\n\007SU" +
-      "CCESS\020\001\022\013\n\007FAILURE\020\002\"f\n\034UpdateCandidateS" +
-      "tatusRequest\022\030\n\020candidate_mobile\030\001 \001(\t\022\014" +
-      "\n\004jpId\030\002 \001(\003\022\013\n\003val\030\003 \001(\005\022\021\n\treasonval\030\004" +
-      " \001(\003\"\230\001\n\035UpdateCandidateStatusResponse\022F" +
-      "\n\006status\030\001 \001(\01626.in.trujobs.proto.Update" +
-      "CandidateStatusResponse.Status\"/\n\006Status",
-      "\022\013\n\007UNKNOWN\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007FAILURE\020\002\"" +
-      "N\n\026NotGoingReasonResponse\0224\n\014reasonObjec" +
-      "t\030\001 \003(\0132\036.in.trujobs.proto.ReasonObject\"" +
-      "5\n\014ReasonObject\022\020\n\010reasonId\030\001 \001(\003\022\023\n\013rea" +
-      "sonTitle\030\002 \001(\tB\002P\001b\006proto3"
+      "bile\030\001 \001(\t\022\014\n\004jpId\030\002 \001(\003\022\027\n\017interviewSta" +
+      "tus\030\003 \001(\005\"\214\001\n\027UpdateInterviewResponse\022@\n" +
+      "\006status\030\001 \001(\01620.in.trujobs.proto.UpdateI" +
+      "nterviewResponse.Status\"/\n\006Status\022\013\n\007UNK" +
+      "NOWN\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007FAILURE\020\002\"w\n\034Upda" +
+      "teCandidateStatusRequest\022\030\n\020candidate_mo" +
+      "bile\030\001 \001(\t\022\014\n\004jpId\030\002 \001(\003\022\027\n\017candidateSta" +
+      "tus\030\003 \001(\005\022\026\n\016notGoingReason\030\004 \001(\003\"\230\001\n\035Up" +
+      "dateCandidateStatusResponse\022F\n\006status\030\001 " +
+      "\001(\01626.in.trujobs.proto.UpdateCandidateSt",
+      "atusResponse.Status\"/\n\006Status\022\013\n\007UNKNOWN" +
+      "\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007FAILURE\020\002\"N\n\026NotGoing" +
+      "ReasonResponse\0224\n\014reasonObject\030\001 \003(\0132\036.i" +
+      "n.trujobs.proto.ReasonObject\"5\n\014ReasonOb" +
+      "ject\022\020\n\010reasonId\030\001 \001(\003\022\023\n\013reasonTitle\030\002 " +
+      "\001(\tB\002P\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -987,7 +988,7 @@ public final class Gen {
     internal_static_in_trujobs_proto_UpdateInterviewRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_UpdateInterviewRequest_descriptor,
-        new java.lang.String[] { "CandidateMobile", "JpId", "Val", });
+        new java.lang.String[] { "CandidateMobile", "JpId", "InterviewStatus", });
     internal_static_in_trujobs_proto_UpdateInterviewResponse_descriptor =
       getDescriptor().getMessageTypes().get(58);
     internal_static_in_trujobs_proto_UpdateInterviewResponse_fieldAccessorTable = new
@@ -999,7 +1000,7 @@ public final class Gen {
     internal_static_in_trujobs_proto_UpdateCandidateStatusRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_UpdateCandidateStatusRequest_descriptor,
-        new java.lang.String[] { "CandidateMobile", "JpId", "Val", "Reasonval", });
+        new java.lang.String[] { "CandidateMobile", "JpId", "CandidateStatus", "NotGoingReason", });
     internal_static_in_trujobs_proto_UpdateCandidateStatusResponse_descriptor =
       getDescriptor().getMessageTypes().get(60);
     internal_static_in_trujobs_proto_UpdateCandidateStatusResponse_fieldAccessorTable = new

@@ -17,8 +17,8 @@ public  final class UpdateCandidateStatusRequest extends
   private UpdateCandidateStatusRequest() {
     candidateMobile_ = "";
     jpId_ = 0L;
-    val_ = 0;
-    reasonval_ = 0L;
+    candidateStatus_ = 0;
+    notGoingReason_ = 0L;
   }
 
   @java.lang.Override
@@ -58,12 +58,12 @@ public  final class UpdateCandidateStatusRequest extends
           }
           case 24: {
 
-            val_ = input.readInt32();
+            candidateStatus_ = input.readInt32();
             break;
           }
           case 32: {
 
-            reasonval_ = input.readInt64();
+            notGoingReason_ = input.readInt64();
             break;
           }
         }
@@ -133,22 +133,22 @@ public  final class UpdateCandidateStatusRequest extends
     return jpId_;
   }
 
-  public static final int VAL_FIELD_NUMBER = 3;
-  private int val_;
+  public static final int CANDIDATESTATUS_FIELD_NUMBER = 3;
+  private int candidateStatus_;
   /**
-   * <code>optional int32 val = 3;</code>
+   * <code>optional int32 candidateStatus = 3;</code>
    */
-  public int getVal() {
-    return val_;
+  public int getCandidateStatus() {
+    return candidateStatus_;
   }
 
-  public static final int REASONVAL_FIELD_NUMBER = 4;
-  private long reasonval_;
+  public static final int NOTGOINGREASON_FIELD_NUMBER = 4;
+  private long notGoingReason_;
   /**
-   * <code>optional int64 reasonval = 4;</code>
+   * <code>optional int64 notGoingReason = 4;</code>
    */
-  public long getReasonval() {
-    return reasonval_;
+  public long getNotGoingReason() {
+    return notGoingReason_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -169,11 +169,11 @@ public  final class UpdateCandidateStatusRequest extends
     if (jpId_ != 0L) {
       output.writeInt64(2, jpId_);
     }
-    if (val_ != 0) {
-      output.writeInt32(3, val_);
+    if (candidateStatus_ != 0) {
+      output.writeInt32(3, candidateStatus_);
     }
-    if (reasonval_ != 0L) {
-      output.writeInt64(4, reasonval_);
+    if (notGoingReason_ != 0L) {
+      output.writeInt64(4, notGoingReason_);
     }
   }
 
@@ -189,13 +189,13 @@ public  final class UpdateCandidateStatusRequest extends
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(2, jpId_);
     }
-    if (val_ != 0) {
+    if (candidateStatus_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(3, val_);
+        .computeInt32Size(3, candidateStatus_);
     }
-    if (reasonval_ != 0L) {
+    if (notGoingReason_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(4, reasonval_);
+        .computeInt64Size(4, notGoingReason_);
     }
     memoizedSize = size;
     return size;
@@ -312,9 +312,9 @@ public  final class UpdateCandidateStatusRequest extends
 
       jpId_ = 0L;
 
-      val_ = 0;
+      candidateStatus_ = 0;
 
-      reasonval_ = 0L;
+      notGoingReason_ = 0L;
 
       return this;
     }
@@ -340,8 +340,8 @@ public  final class UpdateCandidateStatusRequest extends
       in.trujobs.proto.UpdateCandidateStatusRequest result = new in.trujobs.proto.UpdateCandidateStatusRequest(this);
       result.candidateMobile_ = candidateMobile_;
       result.jpId_ = jpId_;
-      result.val_ = val_;
-      result.reasonval_ = reasonval_;
+      result.candidateStatus_ = candidateStatus_;
+      result.notGoingReason_ = notGoingReason_;
       onBuilt();
       return result;
     }
@@ -364,11 +364,11 @@ public  final class UpdateCandidateStatusRequest extends
       if (other.getJpId() != 0L) {
         setJpId(other.getJpId());
       }
-      if (other.getVal() != 0) {
-        setVal(other.getVal());
+      if (other.getCandidateStatus() != 0) {
+        setCandidateStatus(other.getCandidateStatus());
       }
-      if (other.getReasonval() != 0L) {
-        setReasonval(other.getReasonval());
+      if (other.getNotGoingReason() != 0L) {
+        setNotGoingReason(other.getNotGoingReason());
       }
       onChanged();
       return this;
@@ -491,54 +491,54 @@ public  final class UpdateCandidateStatusRequest extends
       return this;
     }
 
-    private int val_ ;
+    private int candidateStatus_ ;
     /**
-     * <code>optional int32 val = 3;</code>
+     * <code>optional int32 candidateStatus = 3;</code>
      */
-    public int getVal() {
-      return val_;
+    public int getCandidateStatus() {
+      return candidateStatus_;
     }
     /**
-     * <code>optional int32 val = 3;</code>
+     * <code>optional int32 candidateStatus = 3;</code>
      */
-    public Builder setVal(int value) {
+    public Builder setCandidateStatus(int value) {
       
-      val_ = value;
+      candidateStatus_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>optional int32 val = 3;</code>
+     * <code>optional int32 candidateStatus = 3;</code>
      */
-    public Builder clearVal() {
+    public Builder clearCandidateStatus() {
       
-      val_ = 0;
+      candidateStatus_ = 0;
       onChanged();
       return this;
     }
 
-    private long reasonval_ ;
+    private long notGoingReason_ ;
     /**
-     * <code>optional int64 reasonval = 4;</code>
+     * <code>optional int64 notGoingReason = 4;</code>
      */
-    public long getReasonval() {
-      return reasonval_;
+    public long getNotGoingReason() {
+      return notGoingReason_;
     }
     /**
-     * <code>optional int64 reasonval = 4;</code>
+     * <code>optional int64 notGoingReason = 4;</code>
      */
-    public Builder setReasonval(long value) {
+    public Builder setNotGoingReason(long value) {
       
-      reasonval_ = value;
+      notGoingReason_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>optional int64 reasonval = 4;</code>
+     * <code>optional int64 notGoingReason = 4;</code>
      */
-    public Builder clearReasonval() {
+    public Builder clearNotGoingReason() {
       
-      reasonval_ = 0L;
+      notGoingReason_ = 0L;
       onChanged();
       return this;
     }

@@ -23,7 +23,7 @@ public interface UpdateInterviewRequestOrBuilder extends
   long getJpId();
 
   /**
-   * <code>optional int32 val = 3;</code>
+   * <code>optional int32 interviewStatus = 3;</code>
    */
-  int getVal();
+  int getInterviewStatus();
 }
