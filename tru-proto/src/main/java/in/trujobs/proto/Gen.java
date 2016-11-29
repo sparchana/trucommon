@@ -174,10 +174,30 @@ public final class Gen {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_in_trujobs_proto_CandidateAppliedJobsResponse_fieldAccessorTable;
   static com.google.protobuf.Descriptors.Descriptor
+    internal_static_in_trujobs_proto_CandidateAppliedJobPostWorkFlowResponse_descriptor;
+  static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_in_trujobs_proto_CandidateAppliedJobPostWorkFlowResponse_fieldAccessorTable;
+  static com.google.protobuf.Descriptors.Descriptor
     internal_static_in_trujobs_proto_JobApplicationObject_descriptor;
   static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_in_trujobs_proto_JobApplicationObject_fieldAccessorTable;
+  static com.google.protobuf.Descriptors.Descriptor
+    internal_static_in_trujobs_proto_JobPostWorkFlowObject_descriptor;
+  static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_in_trujobs_proto_JobPostWorkFlowObject_fieldAccessorTable;
+  static com.google.protobuf.Descriptors.Descriptor
+    internal_static_in_trujobs_proto_LastActiveValueObject_descriptor;
+  static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_in_trujobs_proto_LastActiveValueObject_fieldAccessorTable;
+  static com.google.protobuf.Descriptors.Descriptor
+    internal_static_in_trujobs_proto_JobPostWorkFlowStatus_descriptor;
+  static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_in_trujobs_proto_JobPostWorkFlowStatus_fieldAccessorTable;
   static com.google.protobuf.Descriptors.Descriptor
     internal_static_in_trujobs_proto_UpdateCandidateBasicProfileRequest_descriptor;
   static
@@ -383,6 +403,36 @@ public final class Gen {
   static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_in_trujobs_proto_InterviewTimeSlotObject_fieldAccessorTable;
+  static com.google.protobuf.Descriptors.Descriptor
+    internal_static_in_trujobs_proto_NotGoingReasonResponse_descriptor;
+  static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_in_trujobs_proto_NotGoingReasonResponse_fieldAccessorTable;
+  static com.google.protobuf.Descriptors.Descriptor
+    internal_static_in_trujobs_proto_ReasonObject_descriptor;
+  static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_in_trujobs_proto_ReasonObject_fieldAccessorTable;
+  static com.google.protobuf.Descriptors.Descriptor
+    internal_static_in_trujobs_proto_UpdateInterviewRequest_descriptor;
+  static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_in_trujobs_proto_UpdateInterviewRequest_fieldAccessorTable;
+  static com.google.protobuf.Descriptors.Descriptor
+    internal_static_in_trujobs_proto_UpdateInterviewResponse_descriptor;
+  static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_in_trujobs_proto_UpdateInterviewResponse_fieldAccessorTable;
+  static com.google.protobuf.Descriptors.Descriptor
+    internal_static_in_trujobs_proto_UpdateCandidateStatusRequest_descriptor;
+  static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_in_trujobs_proto_UpdateCandidateStatusRequest_fieldAccessorTable;
+  static com.google.protobuf.Descriptors.Descriptor
+    internal_static_in_trujobs_proto_UpdateCandidateStatusResponse_descriptor;
+  static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_in_trujobs_proto_UpdateCandidateStatusResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -541,207 +591,242 @@ public final class Gen {
       "oto.CandidateAppliedJobsResponse.Status\022" +
       ">\n\016jobApplication\030\002 \003(\0132&.in.trujobs.pro" +
       "to.JobApplicationObject\"/\n\006Status\022\013\n\007UNK" +
-      "NOWN\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007FAILURE\020\002\"\304\001\n\024Job",
-      "ApplicationObject\022\030\n\020jobApplicationId\030\001 " +
-      "\001(\003\022#\n\033jobApplicationAppliedMillis\030\002 \001(\003" +
-      "\0220\n\007jobPost\030\003 \001(\0132\037.in.trujobs.proto.Job" +
-      "PostObject\022;\n\021preScreenLocation\030\004 \001(\0132 ." +
-      "in.trujobs.proto.LocalityObject\"\201\002\n\"Upda" +
-      "teCandidateBasicProfileRequest\022\030\n\020candid" +
-      "ate_mobile\030\001 \001(\t\022\034\n\024candidate_first_name" +
-      "\030\002 \001(\t\022\033\n\023candidate_last_name\030\003 \001(\t\022 \n\030c" +
-      "andidate_timeshift_pref\030\004 \001(\003\022\030\n\020candida" +
-      "te_gender\030\005 \001(\005\022\024\n\014candidateDOB\030\006 \001(\t\0224\n",
-      "\013jobRolePref\030\007 \003(\0132\037.in.trujobs.proto.Jo" +
-      "bRoleObject\"\212\003\n\'UpdateCandidateExperienc" +
-      "eProfileRequest\022\030\n\020candidate_mobile\030\001 \001(" +
-      "\t\022\"\n\032candidate_total_experience\030\002 \001(\005\022\035\n" +
-      "\025candidate_is_employed\030\003 \001(\005\022!\n\031candidat" +
-      "e_current_company\030\004 \001(\t\022 \n\030candidate_cur" +
-      "rent_salary\030\005 \001(\003\0229\n\020current_job_role\030\006 " +
-      "\001(\0132\037.in.trujobs.proto.JobRoleObject\022A\n\022" +
-      "candidate_language\030\007 \003(\0132%.in.trujobs.pr" +
-      "oto.LanguageKnownObject\022?\n\017candidate_ski",
-      "ll\030\010 \003(\0132&.in.trujobs.proto.CandidateSki" +
-      "llObject\"\201\002\n&UpdateCandidateEducationPro" +
-      "fileRequest\022\030\n\020candidate_mobile\030\001 \001(\t\022!\n" +
-      "\031candidate_education_level\030\002 \001(\003\022\030\n\020cand" +
-      "idate_degree\030\003 \001(\003\022%\n\035candidate_educatio" +
-      "n_institute\030\004 \001(\t\022-\n%candidate_education" +
-      "_completion_status\030\005 \001(\005\022\021\n\tjobPostId\030\006 " +
-      "\001(\003\022\027\n\017isFinalFragment\030\007 \001(\010\"\244\001\n#UpdateC" +
-      "andidateBasicProfileResponse\022L\n\006status\030\001" +
-      " \001(\0162<.in.trujobs.proto.UpdateCandidateB",
-      "asicProfileResponse.Status\"/\n\006Status\022\013\n\007" +
-      "UNKNOWN\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007FAILURE\020\002\"\344\001\n&" +
-      "GetCandidateBasicProfileStaticResponse\022O" +
-      "\n\006status\030\001 \001(\0162?.in.trujobs.proto.GetCan" +
-      "didateBasicProfileStaticResponse.Status\022" +
-      "8\n\rtimeShiftList\030\002 \003(\0132!.in.trujobs.prot" +
-      "o.TimeShiftObject\"/\n\006Status\022\013\n\007UNKNOWN\020\000" +
-      "\022\013\n\007SUCCESS\020\001\022\013\n\007FAILURE\020\002\"\324\002\n+GetCandid" +
-      "ateExperienceProfileStaticResponse\022T\n\006st" +
-      "atus\030\001 \001(\0162D.in.trujobs.proto.GetCandida",
-      "teExperienceProfileStaticResponse.Status" +
-      "\0228\n\016languageObject\030\002 \003(\0132 .in.trujobs.pr" +
-      "oto.LanguageObject\0222\n\013skillObject\030\003 \003(\0132" +
-      "\035.in.trujobs.proto.SkillObject\0220\n\007jobRol" +
-      "e\030\004 \003(\0132\037.in.trujobs.proto.JobRoleObject" +
-      "\"/\n\006Status\022\013\n\007UNKNOWN\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007" +
-      "FAILURE\020\002\"\244\002\n*GetCandidateEducationProfi" +
-      "leStaticResponse\022S\n\006status\030\001 \001(\0162C.in.tr" +
-      "ujobs.proto.GetCandidateEducationProfile" +
-      "StaticResponse.Status\0224\n\014degreeObject\030\002 ",
-      "\003(\0132\036.in.trujobs.proto.DegreeObject\022:\n\017e" +
-      "ducationObject\030\003 \003(\0132!.in.trujobs.proto." +
-      "EducationObject\"/\n\006Status\022\013\n\007UNKNOWN\020\000\022\013" +
-      "\n\007SUCCESS\020\001\022\013\n\007FAILURE\020\002\":\n\016LanguageObje" +
-      "ct\022\022\n\nlanguageId\030\001 \001(\005\022\024\n\014languageName\030\002" +
-      " \001(\t\"H\n\013SkillObject\022\017\n\007skillId\030\001 \001(\005\022\021\n\t" +
-      "skillName\030\002 \001(\t\022\025\n\rskillQuestion\030\003 \001(\t\"|" +
-      "\n\023LanguageKnownObject\022\027\n\017languageKnownId" +
-      "\030\001 \001(\005\022\032\n\022languageUnderstand\030\002 \001(\005\022\025\n\rla" +
-      "nguageSpeak\030\003 \001(\005\022\031\n\021languageReadWrite\030\004",
-      " \001(\005\"7\n\024CandidateSkillObject\022\017\n\007skillId\030" +
-      "\001 \001(\005\022\016\n\006answer\030\002 \001(\010\"6\n\032FetchCandidateA" +
-      "lertRequest\022\030\n\020candidate_mobile\030\001 \001(\t\"\312\005" +
-      "\n\020JobFilterRequest\0229\n\006salary\030\001 \001(\0162).in." +
-      "trujobs.proto.JobFilterRequest.Salary\022:\n" +
-      "\003exp\030\002 \001(\0162-.in.trujobs.proto.JobFilterR" +
-      "equest.Experience\0229\n\003edu\030\003 \001(\0162,.in.truj" +
-      "obs.proto.JobFilterRequest.Education\0229\n\006" +
-      "gender\030\004 \001(\0162).in.trujobs.proto.JobFilte" +
-      "rRequest.Gender\022\033\n\023sort_by_date_posted\030\005",
-      " \001(\010\022\026\n\016sort_by_salary\030\006 \001(\010\022\030\n\020candidat" +
-      "e_mobile\030\007 \001(\t\022\033\n\023job_search_latitude\030\010 " +
-      "\001(\001\022\034\n\024job_search_longitude\030\t \001(\001\"t\n\006Sal" +
-      "ary\022\016\n\nANY_SALARY\020\000\022\020\n\014EIGHT_K_PLUS\020\001\022\016\n" +
-      "\nTEN_K_PLUS\020\002\022\021\n\rTWELVE_K_PLUS\020\003\022\022\n\016FIFT" +
-      "EEN_K_PLUS\020\004\022\021\n\rTWENTY_K_PLUS\020\005\">\n\nExper" +
-      "ience\022\022\n\016ANY_EXPERIENCE\020\000\022\013\n\007FRESHER\020\001\022\017" +
-      "\n\013EXPERIENCED\020\002\"Y\n\tEducation\022\021\n\rANY_EDUC" +
-      "ATION\020\000\022\n\n\006LT_TEN\020\001\022\014\n\010TEN_PASS\020\002\022\017\n\013TWE" +
-      "LVE_PASS\020\003\022\006\n\002UG\020\004\022\006\n\002PG\020\005\".\n\006Gender\022\016\n\n",
-      "ANY_GENDER\020\000\022\010\n\004MALE\020\001\022\n\n\006FEMALE\020\002\"\221\003\n\033F" +
-      "etchCandidateAlertResponse\022D\n\006status\030\001 \001" +
-      "(\01624.in.trujobs.proto.FetchCandidateAler" +
-      "tResponse.Status\022E\n\talertType\030\002 \001(\01622.in" +
-      ".trujobs.proto.FetchCandidateAlertRespon" +
-      "se.Type\022\024\n\014alertMessage\030\003 \001(\t\"\"\n\006Status\022" +
-      "\013\n\007UNKNOWN\020\000\022\013\n\007SUCCESS\020\001\"\252\001\n\004Type\022\013\n\007DE" +
-      "FAULT\020\000\022\024\n\020COMPLETE_PROFILE\020\001\022\027\n\023INTERVI" +
-      "EW_SCHEDULED\020\002\022\032\n\026JOINING_DATE_CONFIRMED" +
-      "\020\003\022\027\n\023PROFILE_DEACTIVATED\020\004\022\030\n\024NEW_JOBS_",
-      "IN_LOCALITY\020\005\022\027\n\023COMPLETE_ASSESSMENT\020\006\"\366" +
-      "\001\n\020JobSearchRequest\022\020\n\010latitude\030\001 \001(\001\022\021\n" +
-      "\tlongitude\030\002 \001(\001\022\030\n\020candidate_mobile\030\003 \001" +
-      "(\t\022<\n\020jobFilterRequest\030\004 \001(\0132\".in.trujob" +
-      "s.proto.JobFilterRequest\022N\n\031jobSearchByJ" +
-      "obRoleRequest\030\005 \001(\0132+.in.trujobs.proto.J" +
-      "obSearchByJobRoleRequest\022\025\n\rlocality_nam" +
-      "e\030\006 \001(\t\"_\n\031JobSearchByJobRoleRequest\022\024\n\014" +
-      "jobRoleIdOne\030\001 \001(\003\022\024\n\014jobRoleIdTwo\030\002 \001(\003" +
-      "\022\026\n\016JobRoleIdThree\030\003 \001(\003\"O\n\026LatLngOrPlac",
-      "eIdRequest\022\020\n\010latitude\030\001 \001(\001\022\021\n\tlongitud" +
-      "e\030\002 \001(\001\022\020\n\010place_id\030\003 \001(\t\"\263\002\n\026LocalityOb" +
-      "jectResponse\022?\n\006status\030\001 \001(\0162/.in.trujob" +
-      "s.proto.LocalityObjectResponse.Status\022;\n" +
-      "\004type\030\002 \001(\0162-.in.trujobs.proto.LocalityO" +
-      "bjectResponse.Type\0222\n\010locality\030\003 \001(\0132 .i" +
-      "n.trujobs.proto.LocalityObject\"/\n\006Status" +
+      "NOWN\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007FAILURE\020\002\"\364\001\n\'Can",
+      "didateAppliedJobPostWorkFlowResponse\022P\n\006" +
+      "status\030\001 \001(\0162@.in.trujobs.proto.Candidat" +
+      "eAppliedJobPostWorkFlowResponse.Status\022F" +
+      "\n\025jobPostWorkFlowObject\030\002 \003(\0132\'.in.trujo" +
+      "bs.proto.JobPostWorkFlowObject\"/\n\006Status" +
       "\022\013\n\007UNKNOWN\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007FAILURE\020\002\"" +
-      "6\n\004Type\022\r\n\tUNDEFINED\020\000\022\017\n\013FOR_PLACEID\020\001\022" +
-      "\016\n\nFOR_LATLNG\020\002\"u\n\035PreScreenPopulateProt",
-      "oRequest\022\023\n\013candidateId\030\001 \001(\003\022\021\n\tjobPost" +
-      "Id\030\002 \001(\003\022\023\n\013rePreScreen\030\003 \001(\010\022\027\n\017candida" +
-      "teMobile\030\004 \001(\t\"\265\006\n\036PreScreenPopulateProt" +
-      "oResponse\022G\n\006status\030\001 \001(\01627.in.trujobs.p" +
-      "roto.PreScreenPopulateProtoResponse.Stat" +
-      "us\022\026\n\npropertyId\030\002 \003(\005B\002\020\001\022?\n\014documentLi" +
-      "st\030\003 \001(\0132).in.trujobs.proto.PreScreenDoc" +
-      "umentObject\022?\n\014languageList\030\004 \001(\0132).in.t" +
-      "rujobs.proto.PreScreenLanguageObject\0229\n\t" +
-      "assetList\030\005 \001(\0132&.in.trujobs.proto.PreSc",
-      "reenAssetObject\0221\n\003age\030\006 \001(\0132$.in.trujob" +
-      "s.proto.PreScreenAgeObject\022?\n\nexperience" +
-      "\030\007 \001(\0132+.in.trujobs.proto.PreScreenExper" +
-      "ienceObject\022=\n\teducation\030\010 \001(\0132*.in.truj" +
-      "obs.proto.PreScreenEducationObject\0227\n\006ge" +
-      "nder\030\t \001(\0132\'.in.trujobs.proto.PreScreenG" +
-      "enderObject\0227\n\006salary\030\n \001(\0132\'.in.trujobs" +
-      ".proto.PreScreenSalaryObject\022\022\n\nshouldSh" +
-      "ow\030\013 \001(\010\022\021\n\tjobPostId\030\014 \001(\003\022\023\n\013candidate" +
-      "Id\030\r \001(\003\022\034\n\024preScreenCompanyName\030\016 \001(\t\022\031",
-      "\n\021preScreenJobTitle\030\017 \001(\t\022\035\n\025preScreenJo" +
-      "bRoleTitle\030\020 \001(\t\"<\n\006Status\022\013\n\007UNKNOWN\020\000\022" +
-      "\013\n\007FAILURE\020\001\022\013\n\007SUCCESS\020\002\022\013\n\007INVALID\020\003\"\221" +
-      "\001\n\027PreScreenDocumentObject\0227\n\016jobPostIdP" +
-      "roof\030\001 \003(\0132\037.in.trujobs.proto.IdProofObj" +
-      "ect\022\022\n\nisMatching\030\002 \001(\010\022\022\n\npropertyId\030\003 " +
-      "\001(\005\022\025\n\rpropertyTitle\030\004 \001(\t\"\223\001\n\027PreScreen" +
-      "LanguageObject\0229\n\017jobPostLanguage\030\001 \003(\0132" +
-      " .in.trujobs.proto.LanguageObject\022\022\n\nisM" +
-      "atching\030\002 \001(\010\022\022\n\npropertyId\030\003 \001(\005\022\025\n\rpro",
-      "pertyTitle\030\004 \001(\t\"\212\001\n\024PreScreenAssetObjec" +
-      "t\0223\n\014jobPostAsset\030\001 \003(\0132\035.in.trujobs.pro" +
-      "to.AssetObject\022\022\n\nisMatching\030\002 \001(\010\022\022\n\npr" +
-      "opertyId\030\003 \001(\005\022\025\n\rpropertyTitle\030\004 \001(\t\"S\n" +
-      "\022PreScreenAgeObject\022\022\n\nisMatching\030\001 \001(\010\022" +
-      "\022\n\npropertyId\030\002 \001(\005\022\025\n\rpropertyTitle\030\003 \001" +
-      "(\t\"Z\n\031PreScreenExperienceObject\022\022\n\nisMat" +
-      "ching\030\001 \001(\010\022\022\n\npropertyId\030\002 \001(\005\022\025\n\rprope" +
-      "rtyTitle\030\003 \001(\t\"Y\n\030PreScreenEducationObje" +
-      "ct\022\022\n\nisMatching\030\001 \001(\010\022\022\n\npropertyId\030\002 \001",
-      "(\005\022\025\n\rpropertyTitle\030\003 \001(\t\"V\n\025PreScreenGe" +
-      "nderObject\022\022\n\nisMatching\030\001 \001(\010\022\022\n\nproper" +
-      "tyId\030\002 \001(\005\022\025\n\rpropertyTitle\030\003 \001(\t\"V\n\025Pre" +
-      "ScreenSalaryObject\022\022\n\nisMatching\030\001 \001(\010\022\022" +
-      "\n\npropertyId\030\002 \001(\005\022\025\n\rpropertyTitle\030\003 \001(" +
-      "\t\"b\n\027IdProofObjectWithNumber\0220\n\007idProof\030" +
-      "\001 \001(\0132\037.in.trujobs.proto.IdProofObject\022\025" +
-      "\n\ridProofNumber\030\002 \001(\t\"I\n\rIdProofObject\022\021" +
-      "\n\tidProofId\030\001 \001(\005\022\023\n\013idProofName\030\002 \001(\t\022\020" +
-      "\n\010isCommon\030\003 \001(\010\"D\n\013AssetObject\022\017\n\007asset",
-      "Id\030\001 \001(\005\022\022\n\nassetTitle\030\002 \001(\t\022\020\n\010isCommon" +
-      "\030\003 \001(\010\"\242\001\n\036UpdateCandidateDocumentReques" +
-      "t\022\030\n\020candidate_mobile\030\001 \001(\t\022:\n\007idProof\030\002" +
-      " \003(\0132).in.trujobs.proto.IdProofObjectWit" +
-      "hNumber\022\021\n\tjobPostId\030\003 \001(\003\022\027\n\017isFinalFra" +
-      "gment\030\004 \001(\010\"\252\001\n\036UpdateCandidateLanguageR" +
-      "equest\022\030\n\020candidate_mobile\030\001 \001(\t\022B\n\023lang" +
-      "uageKnownObject\030\002 \003(\0132%.in.trujobs.proto" +
-      ".LanguageKnownObject\022\021\n\tjobPostId\030\003 \001(\003\022" +
-      "\027\n\017isFinalFragment\030\004 \001(\010\"\253\002\n UpdateCandi",
-      "dateExperienceRequest\022\030\n\020candidate_mobil" +
+      "\304\001\n\024JobApplicationObject\022\030\n\020jobApplicati" +
+      "onId\030\001 \001(\003\022#\n\033jobApplicationAppliedMilli" +
+      "s\030\002 \001(\003\0220\n\007jobPost\030\003 \001(\0132\037.in.trujobs.pr" +
+      "oto.JobPostObject\022;\n\021preScreenLocation\030\004",
+      " \001(\0132 .in.trujobs.proto.LocalityObject\"\374" +
+      "\002\n\025JobPostWorkFlowObject\022\031\n\021jobPostWorkf" +
+      "lowId\030\001 \001(\003\022\024\n\014workflowUUId\030\002 \001(\t\022\032\n\022cre" +
+      "ationTimeMillis\030\003 \001(\003\022\033\n\023interviewDateMi" +
+      "llis\030\004 \001(\003\022\024\n\014interviewLat\030\005 \001(\001\022\024\n\014inte" +
+      "rviewLng\030\006 \001(\001\022J\n\027InterviewTimeSlotObjec" +
+      "t\030\007 \001(\0132).in.trujobs.proto.InterviewTime" +
+      "SlotObject\022I\n\030candidateInterviewStatus\030\010" +
+      " \001(\0132\'.in.trujobs.proto.JobPostWorkFlowS" +
+      "tatus\0226\n\rjobPostObject\030\t \001(\0132\037.in.trujob",
+      "s.proto.JobPostObject\"F\n\025LastActiveValue" +
+      "Object\022\024\n\014lastActiveId\030\001 \001(\005\022\027\n\017lastActi" +
+      "veValue\030\002 \001(\t\">\n\025JobPostWorkFlowStatus\022\020" +
+      "\n\010statusId\030\001 \001(\003\022\023\n\013statusTitle\030\002 \001(\t\"\201\002" +
+      "\n\"UpdateCandidateBasicProfileRequest\022\030\n\020" +
+      "candidate_mobile\030\001 \001(\t\022\034\n\024candidate_firs" +
+      "t_name\030\002 \001(\t\022\033\n\023candidate_last_name\030\003 \001(" +
+      "\t\022 \n\030candidate_timeshift_pref\030\004 \001(\003\022\030\n\020c" +
+      "andidate_gender\030\005 \001(\005\022\024\n\014candidateDOB\030\006 " +
+      "\001(\t\0224\n\013jobRolePref\030\007 \003(\0132\037.in.trujobs.pr",
+      "oto.JobRoleObject\"\212\003\n\'UpdateCandidateExp" +
+      "erienceProfileRequest\022\030\n\020candidate_mobil" +
       "e\030\001 \001(\t\022\"\n\032candidate_total_experience\030\002 " +
       "\001(\005\022\035\n\025candidate_is_employed\030\003 \001(\005\022!\n\031ca" +
       "ndidate_current_company\030\004 \001(\t\022 \n\030candida" +
       "te_current_salary\030\005 \001(\003\0229\n\020current_job_r" +
       "ole\030\006 \001(\0132\037.in.trujobs.proto.JobRoleObje" +
-      "ct\022\021\n\tjobPostId\030\007 \001(\003\022\027\n\017isFinalFragment" +
-      "\030\010 \001(\010\"\203\002\n\033UpdateCandidateOtherRequest\022\030" +
-      "\n\020candidate_mobile\030\001 \001(\t\022\026\n\npropertyId\030\002" +
-      " \003(\005B\002\020\001\022\024\n\014candidateDOB\030\003 \001(\t\022$\n\034candid",
-      "ateLastWithdrawnSalary\030\004 \001(\003\022 \n\030candidat" +
-      "e_timeshift_pref\030\005 \001(\003\022\027\n\017candidateGende" +
-      "r\030\006 \001(\005\022\017\n\007assetId\030\007 \003(\005\022\021\n\tjobPostId\030\010 " +
-      "\001(\003\022\027\n\017isFinalFragment\030\t \001(\010\"\211\001\n\017Generic" +
-      "Response\0228\n\006status\030\001 \001(\0162(.in.trujobs.pr" +
-      "oto.GenericResponse.Status\"<\n\006Status\022\013\n\007" +
-      "UNKNOWN\020\000\022\013\n\007FAILURE\020\001\022\013\n\007SUCCESS\020\002\022\013\n\007I" +
-      "NVALID\020\003\"\250\001\n%UpdateCandidateInterviewDet" +
-      "ailRequest\022\030\n\020candidate_mobile\030\001 \001(\t\022\022\n\n" +
-      "timeSlotId\030\002 \001(\005\022\021\n\tjobPostId\030\004 \001(\003\022%\n\035s",
-      "cheduledInterviewDateInMills\030\005 \001(\003\022\027\n\017is" +
-      "FinalFragment\030\006 \001(\010\"-\n\030GetInterviewSlots" +
-      "Request\022\021\n\tjobPostId\030\001 \001(\003\"T\n\031GetIntervi" +
-      "ewSlotsResponse\0227\n\016interviewSlots\030\001 \003(\0132" +
-      "\037.in.trujobs.proto.InterviewSlot\"r\n\rInte" +
-      "rviewSlot\022J\n\027interviewTimeSlotObject\030\001 \001" +
-      "(\0132).in.trujobs.proto.InterviewTimeSlotO" +
-      "bject\022\025\n\rinterviewDays\030\002 \001(\t\"<\n\027Intervie" +
-      "wTimeSlotObject\022\016\n\006slotId\030\001 \001(\005\022\021\n\tslotT" +
-      "itle\030\002 \001(\tB\002P\001b\006proto3"
+      "ct\022A\n\022candidate_language\030\007 \003(\0132%.in.truj" +
+      "obs.proto.LanguageKnownObject\022?\n\017candida" +
+      "te_skill\030\010 \003(\0132&.in.trujobs.proto.Candid",
+      "ateSkillObject\"\201\002\n&UpdateCandidateEducat" +
+      "ionProfileRequest\022\030\n\020candidate_mobile\030\001 " +
+      "\001(\t\022!\n\031candidate_education_level\030\002 \001(\003\022\030" +
+      "\n\020candidate_degree\030\003 \001(\003\022%\n\035candidate_ed" +
+      "ucation_institute\030\004 \001(\t\022-\n%candidate_edu" +
+      "cation_completion_status\030\005 \001(\005\022\021\n\tjobPos" +
+      "tId\030\006 \001(\003\022\027\n\017isFinalFragment\030\007 \001(\010\"\244\001\n#U" +
+      "pdateCandidateBasicProfileResponse\022L\n\006st" +
+      "atus\030\001 \001(\0162<.in.trujobs.proto.UpdateCand" +
+      "idateBasicProfileResponse.Status\"/\n\006Stat",
+      "us\022\013\n\007UNKNOWN\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007FAILURE\020" +
+      "\002\"\344\001\n&GetCandidateBasicProfileStaticResp" +
+      "onse\022O\n\006status\030\001 \001(\0162?.in.trujobs.proto." +
+      "GetCandidateBasicProfileStaticResponse.S" +
+      "tatus\0228\n\rtimeShiftList\030\002 \003(\0132!.in.trujob" +
+      "s.proto.TimeShiftObject\"/\n\006Status\022\013\n\007UNK" +
+      "NOWN\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007FAILURE\020\002\"\324\002\n+Get" +
+      "CandidateExperienceProfileStaticResponse" +
+      "\022T\n\006status\030\001 \001(\0162D.in.trujobs.proto.GetC" +
+      "andidateExperienceProfileStaticResponse.",
+      "Status\0228\n\016languageObject\030\002 \003(\0132 .in.truj" +
+      "obs.proto.LanguageObject\0222\n\013skillObject\030" +
+      "\003 \003(\0132\035.in.trujobs.proto.SkillObject\0220\n\007" +
+      "jobRole\030\004 \003(\0132\037.in.trujobs.proto.JobRole" +
+      "Object\"/\n\006Status\022\013\n\007UNKNOWN\020\000\022\013\n\007SUCCESS" +
+      "\020\001\022\013\n\007FAILURE\020\002\"\244\002\n*GetCandidateEducatio" +
+      "nProfileStaticResponse\022S\n\006status\030\001 \001(\0162C" +
+      ".in.trujobs.proto.GetCandidateEducationP" +
+      "rofileStaticResponse.Status\0224\n\014degreeObj" +
+      "ect\030\002 \003(\0132\036.in.trujobs.proto.DegreeObjec",
+      "t\022:\n\017educationObject\030\003 \003(\0132!.in.trujobs." +
+      "proto.EducationObject\"/\n\006Status\022\013\n\007UNKNO" +
+      "WN\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007FAILURE\020\002\":\n\016Langua" +
+      "geObject\022\022\n\nlanguageId\030\001 \001(\005\022\024\n\014language" +
+      "Name\030\002 \001(\t\"H\n\013SkillObject\022\017\n\007skillId\030\001 \001" +
+      "(\005\022\021\n\tskillName\030\002 \001(\t\022\025\n\rskillQuestion\030\003" +
+      " \001(\t\"|\n\023LanguageKnownObject\022\027\n\017languageK" +
+      "nownId\030\001 \001(\005\022\032\n\022languageUnderstand\030\002 \001(\005" +
+      "\022\025\n\rlanguageSpeak\030\003 \001(\005\022\031\n\021languageReadW" +
+      "rite\030\004 \001(\005\"7\n\024CandidateSkillObject\022\017\n\007sk",
+      "illId\030\001 \001(\005\022\016\n\006answer\030\002 \001(\010\"6\n\032FetchCand" +
+      "idateAlertRequest\022\030\n\020candidate_mobile\030\001 " +
+      "\001(\t\"\312\005\n\020JobFilterRequest\0229\n\006salary\030\001 \001(\016" +
+      "2).in.trujobs.proto.JobFilterRequest.Sal" +
+      "ary\022:\n\003exp\030\002 \001(\0162-.in.trujobs.proto.JobF" +
+      "ilterRequest.Experience\0229\n\003edu\030\003 \001(\0162,.i" +
+      "n.trujobs.proto.JobFilterRequest.Educati" +
+      "on\0229\n\006gender\030\004 \001(\0162).in.trujobs.proto.Jo" +
+      "bFilterRequest.Gender\022\033\n\023sort_by_date_po" +
+      "sted\030\005 \001(\010\022\026\n\016sort_by_salary\030\006 \001(\010\022\030\n\020ca",
+      "ndidate_mobile\030\007 \001(\t\022\033\n\023job_search_latit" +
+      "ude\030\010 \001(\001\022\034\n\024job_search_longitude\030\t \001(\001\"" +
+      "t\n\006Salary\022\016\n\nANY_SALARY\020\000\022\020\n\014EIGHT_K_PLU" +
+      "S\020\001\022\016\n\nTEN_K_PLUS\020\002\022\021\n\rTWELVE_K_PLUS\020\003\022\022" +
+      "\n\016FIFTEEN_K_PLUS\020\004\022\021\n\rTWENTY_K_PLUS\020\005\">\n" +
+      "\nExperience\022\022\n\016ANY_EXPERIENCE\020\000\022\013\n\007FRESH" +
+      "ER\020\001\022\017\n\013EXPERIENCED\020\002\"Y\n\tEducation\022\021\n\rAN" +
+      "Y_EDUCATION\020\000\022\n\n\006LT_TEN\020\001\022\014\n\010TEN_PASS\020\002\022" +
+      "\017\n\013TWELVE_PASS\020\003\022\006\n\002UG\020\004\022\006\n\002PG\020\005\".\n\006Gend" +
+      "er\022\016\n\nANY_GENDER\020\000\022\010\n\004MALE\020\001\022\n\n\006FEMALE\020\002",
+      "\"\221\003\n\033FetchCandidateAlertResponse\022D\n\006stat" +
+      "us\030\001 \001(\01624.in.trujobs.proto.FetchCandida" +
+      "teAlertResponse.Status\022E\n\talertType\030\002 \001(" +
+      "\01622.in.trujobs.proto.FetchCandidateAlert" +
+      "Response.Type\022\024\n\014alertMessage\030\003 \001(\t\"\"\n\006S" +
+      "tatus\022\013\n\007UNKNOWN\020\000\022\013\n\007SUCCESS\020\001\"\252\001\n\004Type" +
+      "\022\013\n\007DEFAULT\020\000\022\024\n\020COMPLETE_PROFILE\020\001\022\027\n\023I" +
+      "NTERVIEW_SCHEDULED\020\002\022\032\n\026JOINING_DATE_CON" +
+      "FIRMED\020\003\022\027\n\023PROFILE_DEACTIVATED\020\004\022\030\n\024NEW" +
+      "_JOBS_IN_LOCALITY\020\005\022\027\n\023COMPLETE_ASSESSME",
+      "NT\020\006\"\366\001\n\020JobSearchRequest\022\020\n\010latitude\030\001 " +
+      "\001(\001\022\021\n\tlongitude\030\002 \001(\001\022\030\n\020candidate_mobi" +
+      "le\030\003 \001(\t\022<\n\020jobFilterRequest\030\004 \001(\0132\".in." +
+      "trujobs.proto.JobFilterRequest\022N\n\031jobSea" +
+      "rchByJobRoleRequest\030\005 \001(\0132+.in.trujobs.p" +
+      "roto.JobSearchByJobRoleRequest\022\025\n\rlocali" +
+      "ty_name\030\006 \001(\t\"_\n\031JobSearchByJobRoleReque" +
+      "st\022\024\n\014jobRoleIdOne\030\001 \001(\003\022\024\n\014jobRoleIdTwo" +
+      "\030\002 \001(\003\022\026\n\016JobRoleIdThree\030\003 \001(\003\"O\n\026LatLng" +
+      "OrPlaceIdRequest\022\020\n\010latitude\030\001 \001(\001\022\021\n\tlo",
+      "ngitude\030\002 \001(\001\022\020\n\010place_id\030\003 \001(\t\"\263\002\n\026Loca" +
+      "lityObjectResponse\022?\n\006status\030\001 \001(\0162/.in." +
+      "trujobs.proto.LocalityObjectResponse.Sta" +
+      "tus\022;\n\004type\030\002 \001(\0162-.in.trujobs.proto.Loc" +
+      "alityObjectResponse.Type\0222\n\010locality\030\003 \001" +
+      "(\0132 .in.trujobs.proto.LocalityObject\"/\n\006" +
+      "Status\022\013\n\007UNKNOWN\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007FAIL" +
+      "URE\020\002\"6\n\004Type\022\r\n\tUNDEFINED\020\000\022\017\n\013FOR_PLAC" +
+      "EID\020\001\022\016\n\nFOR_LATLNG\020\002\"u\n\035PreScreenPopula" +
+      "teProtoRequest\022\023\n\013candidateId\030\001 \001(\003\022\021\n\tj",
+      "obPostId\030\002 \001(\003\022\023\n\013rePreScreen\030\003 \001(\010\022\027\n\017c" +
+      "andidateMobile\030\004 \001(\t\"\265\006\n\036PreScreenPopula" +
+      "teProtoResponse\022G\n\006status\030\001 \001(\01627.in.tru" +
+      "jobs.proto.PreScreenPopulateProtoRespons" +
+      "e.Status\022\026\n\npropertyId\030\002 \003(\005B\002\020\001\022?\n\014docu" +
+      "mentList\030\003 \001(\0132).in.trujobs.proto.PreScr" +
+      "eenDocumentObject\022?\n\014languageList\030\004 \001(\0132" +
+      ").in.trujobs.proto.PreScreenLanguageObje" +
+      "ct\0229\n\tassetList\030\005 \001(\0132&.in.trujobs.proto" +
+      ".PreScreenAssetObject\0221\n\003age\030\006 \001(\0132$.in.",
+      "trujobs.proto.PreScreenAgeObject\022?\n\nexpe" +
+      "rience\030\007 \001(\0132+.in.trujobs.proto.PreScree" +
+      "nExperienceObject\022=\n\teducation\030\010 \001(\0132*.i" +
+      "n.trujobs.proto.PreScreenEducationObject" +
+      "\0227\n\006gender\030\t \001(\0132\'.in.trujobs.proto.PreS" +
+      "creenGenderObject\0227\n\006salary\030\n \001(\0132\'.in.t" +
+      "rujobs.proto.PreScreenSalaryObject\022\022\n\nsh" +
+      "ouldShow\030\013 \001(\010\022\021\n\tjobPostId\030\014 \001(\003\022\023\n\013can" +
+      "didateId\030\r \001(\003\022\034\n\024preScreenCompanyName\030\016" +
+      " \001(\t\022\031\n\021preScreenJobTitle\030\017 \001(\t\022\035\n\025preSc",
+      "reenJobRoleTitle\030\020 \001(\t\"<\n\006Status\022\013\n\007UNKN" +
+      "OWN\020\000\022\013\n\007FAILURE\020\001\022\013\n\007SUCCESS\020\002\022\013\n\007INVAL" +
+      "ID\020\003\"\221\001\n\027PreScreenDocumentObject\0227\n\016jobP" +
+      "ostIdProof\030\001 \003(\0132\037.in.trujobs.proto.IdPr" +
+      "oofObject\022\022\n\nisMatching\030\002 \001(\010\022\022\n\npropert" +
+      "yId\030\003 \001(\005\022\025\n\rpropertyTitle\030\004 \001(\t\"\223\001\n\027Pre" +
+      "ScreenLanguageObject\0229\n\017jobPostLanguage\030" +
+      "\001 \003(\0132 .in.trujobs.proto.LanguageObject\022" +
+      "\022\n\nisMatching\030\002 \001(\010\022\022\n\npropertyId\030\003 \001(\005\022" +
+      "\025\n\rpropertyTitle\030\004 \001(\t\"\212\001\n\024PreScreenAsse",
+      "tObject\0223\n\014jobPostAsset\030\001 \003(\0132\035.in.trujo" +
+      "bs.proto.AssetObject\022\022\n\nisMatching\030\002 \001(\010" +
+      "\022\022\n\npropertyId\030\003 \001(\005\022\025\n\rpropertyTitle\030\004 " +
+      "\001(\t\"S\n\022PreScreenAgeObject\022\022\n\nisMatching\030" +
+      "\001 \001(\010\022\022\n\npropertyId\030\002 \001(\005\022\025\n\rpropertyTit" +
+      "le\030\003 \001(\t\"Z\n\031PreScreenExperienceObject\022\022\n" +
+      "\nisMatching\030\001 \001(\010\022\022\n\npropertyId\030\002 \001(\005\022\025\n" +
+      "\rpropertyTitle\030\003 \001(\t\"Y\n\030PreScreenEducati" +
+      "onObject\022\022\n\nisMatching\030\001 \001(\010\022\022\n\nproperty" +
+      "Id\030\002 \001(\005\022\025\n\rpropertyTitle\030\003 \001(\t\"V\n\025PreSc",
+      "reenGenderObject\022\022\n\nisMatching\030\001 \001(\010\022\022\n\n" +
+      "propertyId\030\002 \001(\005\022\025\n\rpropertyTitle\030\003 \001(\t\"" +
+      "V\n\025PreScreenSalaryObject\022\022\n\nisMatching\030\001" +
+      " \001(\010\022\022\n\npropertyId\030\002 \001(\005\022\025\n\rpropertyTitl" +
+      "e\030\003 \001(\t\"b\n\027IdProofObjectWithNumber\0220\n\007id" +
+      "Proof\030\001 \001(\0132\037.in.trujobs.proto.IdProofOb" +
+      "ject\022\025\n\ridProofNumber\030\002 \001(\t\"I\n\rIdProofOb" +
+      "ject\022\021\n\tidProofId\030\001 \001(\005\022\023\n\013idProofName\030\002" +
+      " \001(\t\022\020\n\010isCommon\030\003 \001(\010\"D\n\013AssetObject\022\017\n" +
+      "\007assetId\030\001 \001(\005\022\022\n\nassetTitle\030\002 \001(\t\022\020\n\010is",
+      "Common\030\003 \001(\010\"\242\001\n\036UpdateCandidateDocument" +
+      "Request\022\030\n\020candidate_mobile\030\001 \001(\t\022:\n\007idP" +
+      "roof\030\002 \003(\0132).in.trujobs.proto.IdProofObj" +
+      "ectWithNumber\022\021\n\tjobPostId\030\003 \001(\003\022\027\n\017isFi" +
+      "nalFragment\030\004 \001(\010\"\252\001\n\036UpdateCandidateLan" +
+      "guageRequest\022\030\n\020candidate_mobile\030\001 \001(\t\022B" +
+      "\n\023languageKnownObject\030\002 \003(\0132%.in.trujobs" +
+      ".proto.LanguageKnownObject\022\021\n\tjobPostId\030" +
+      "\003 \001(\003\022\027\n\017isFinalFragment\030\004 \001(\010\"\253\002\n Updat" +
+      "eCandidateExperienceRequest\022\030\n\020candidate",
+      "_mobile\030\001 \001(\t\022\"\n\032candidate_total_experie" +
+      "nce\030\002 \001(\005\022\035\n\025candidate_is_employed\030\003 \001(\005" +
+      "\022!\n\031candidate_current_company\030\004 \001(\t\022 \n\030c" +
+      "andidate_current_salary\030\005 \001(\003\0229\n\020current" +
+      "_job_role\030\006 \001(\0132\037.in.trujobs.proto.JobRo" +
+      "leObject\022\021\n\tjobPostId\030\007 \001(\003\022\027\n\017isFinalFr" +
+      "agment\030\010 \001(\010\"\203\002\n\033UpdateCandidateOtherReq" +
+      "uest\022\030\n\020candidate_mobile\030\001 \001(\t\022\026\n\nproper" +
+      "tyId\030\002 \003(\005B\002\020\001\022\024\n\014candidateDOB\030\003 \001(\t\022$\n\034" +
+      "candidateLastWithdrawnSalary\030\004 \001(\003\022 \n\030ca",
+      "ndidate_timeshift_pref\030\005 \001(\003\022\027\n\017candidat" +
+      "eGender\030\006 \001(\005\022\017\n\007assetId\030\007 \003(\005\022\021\n\tjobPos" +
+      "tId\030\010 \001(\003\022\027\n\017isFinalFragment\030\t \001(\010\"\211\001\n\017G" +
+      "enericResponse\0228\n\006status\030\001 \001(\0162(.in.truj" +
+      "obs.proto.GenericResponse.Status\"<\n\006Stat" +
+      "us\022\013\n\007UNKNOWN\020\000\022\013\n\007FAILURE\020\001\022\013\n\007SUCCESS\020" +
+      "\002\022\013\n\007INVALID\020\003\"\250\001\n%UpdateCandidateInterv" +
+      "iewDetailRequest\022\030\n\020candidate_mobile\030\001 \001" +
+      "(\t\022\022\n\ntimeSlotId\030\002 \001(\005\022\021\n\tjobPostId\030\004 \001(" +
+      "\003\022%\n\035scheduledInterviewDateInMills\030\005 \001(\003",
+      "\022\027\n\017isFinalFragment\030\006 \001(\010\"-\n\030GetIntervie" +
+      "wSlotsRequest\022\021\n\tjobPostId\030\001 \001(\003\"T\n\031GetI" +
+      "nterviewSlotsResponse\0227\n\016interviewSlots\030" +
+      "\001 \003(\0132\037.in.trujobs.proto.InterviewSlot\"r" +
+      "\n\rInterviewSlot\022J\n\027interviewTimeSlotObje" +
+      "ct\030\001 \001(\0132).in.trujobs.proto.InterviewTim" +
+      "eSlotObject\022\025\n\rinterviewDays\030\002 \001(\t\"<\n\027In" +
+      "terviewTimeSlotObject\022\016\n\006slotId\030\001 \001(\005\022\021\n" +
+      "\tslotTitle\030\002 \001(\t\"N\n\026NotGoingReasonRespon" +
+      "se\0224\n\014reasonObject\030\001 \003(\0132\036.in.trujobs.pr",
+      "oto.ReasonObject\"5\n\014ReasonObject\022\020\n\010reas" +
+      "onId\030\001 \001(\003\022\023\n\013reasonTitle\030\002 \001(\t\"Y\n\026Updat" +
+      "eInterviewRequest\022\030\n\020candidate_mobile\030\001 " +
+      "\001(\t\022\014\n\004jpId\030\002 \001(\003\022\027\n\017interviewStatus\030\003 \001" +
+      "(\005\"\214\001\n\027UpdateInterviewResponse\022@\n\006status" +
+      "\030\001 \001(\01620.in.trujobs.proto.UpdateIntervie" +
+      "wResponse.Status\"/\n\006Status\022\013\n\007UNKNOWN\020\000\022" +
+      "\013\n\007SUCCESS\020\001\022\013\n\007FAILURE\020\002\"w\n\034UpdateCandi" +
+      "dateStatusRequest\022\030\n\020candidate_mobile\030\001 " +
+      "\001(\t\022\014\n\004jpId\030\002 \001(\003\022\027\n\017candidateStatus\030\003 \001",
+      "(\005\022\026\n\016notGoingReason\030\004 \001(\003\"\230\001\n\035UpdateCan" +
+      "didateStatusResponse\022F\n\006status\030\001 \001(\01626.i" +
+      "n.trujobs.proto.UpdateCandidateStatusRes" +
+      "ponse.Status\"/\n\006Status\022\013\n\007UNKNOWN\020\000\022\013\n\007S" +
+      "UCCESS\020\001\022\013\n\007FAILURE\020\002B\002P\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -953,258 +1038,318 @@ public final class Gen {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_CandidateAppliedJobsResponse_descriptor,
         new java.lang.String[] { "Status", "JobApplication", });
-    internal_static_in_trujobs_proto_JobApplicationObject_descriptor =
+    internal_static_in_trujobs_proto_CandidateAppliedJobPostWorkFlowResponse_descriptor =
       getDescriptor().getMessageTypes().get(33);
+    internal_static_in_trujobs_proto_CandidateAppliedJobPostWorkFlowResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_in_trujobs_proto_CandidateAppliedJobPostWorkFlowResponse_descriptor,
+        new java.lang.String[] { "Status", "JobPostWorkFlowObject", });
+    internal_static_in_trujobs_proto_JobApplicationObject_descriptor =
+      getDescriptor().getMessageTypes().get(34);
     internal_static_in_trujobs_proto_JobApplicationObject_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_JobApplicationObject_descriptor,
         new java.lang.String[] { "JobApplicationId", "JobApplicationAppliedMillis", "JobPost", "PreScreenLocation", });
+    internal_static_in_trujobs_proto_JobPostWorkFlowObject_descriptor =
+      getDescriptor().getMessageTypes().get(35);
+    internal_static_in_trujobs_proto_JobPostWorkFlowObject_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_in_trujobs_proto_JobPostWorkFlowObject_descriptor,
+        new java.lang.String[] { "JobPostWorkflowId", "WorkflowUUId", "CreationTimeMillis", "InterviewDateMillis", "InterviewLat", "InterviewLng", "InterviewTimeSlotObject", "CandidateInterviewStatus", "JobPostObject", });
+    internal_static_in_trujobs_proto_LastActiveValueObject_descriptor =
+      getDescriptor().getMessageTypes().get(36);
+    internal_static_in_trujobs_proto_LastActiveValueObject_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_in_trujobs_proto_LastActiveValueObject_descriptor,
+        new java.lang.String[] { "LastActiveId", "LastActiveValue", });
+    internal_static_in_trujobs_proto_JobPostWorkFlowStatus_descriptor =
+      getDescriptor().getMessageTypes().get(37);
+    internal_static_in_trujobs_proto_JobPostWorkFlowStatus_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_in_trujobs_proto_JobPostWorkFlowStatus_descriptor,
+        new java.lang.String[] { "StatusId", "StatusTitle", });
     internal_static_in_trujobs_proto_UpdateCandidateBasicProfileRequest_descriptor =
-      getDescriptor().getMessageTypes().get(34);
+      getDescriptor().getMessageTypes().get(38);
     internal_static_in_trujobs_proto_UpdateCandidateBasicProfileRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_UpdateCandidateBasicProfileRequest_descriptor,
         new java.lang.String[] { "CandidateMobile", "CandidateFirstName", "CandidateLastName", "CandidateTimeshiftPref", "CandidateGender", "CandidateDOB", "JobRolePref", });
     internal_static_in_trujobs_proto_UpdateCandidateExperienceProfileRequest_descriptor =
-      getDescriptor().getMessageTypes().get(35);
+      getDescriptor().getMessageTypes().get(39);
     internal_static_in_trujobs_proto_UpdateCandidateExperienceProfileRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_UpdateCandidateExperienceProfileRequest_descriptor,
         new java.lang.String[] { "CandidateMobile", "CandidateTotalExperience", "CandidateIsEmployed", "CandidateCurrentCompany", "CandidateCurrentSalary", "CurrentJobRole", "CandidateLanguage", "CandidateSkill", });
     internal_static_in_trujobs_proto_UpdateCandidateEducationProfileRequest_descriptor =
-      getDescriptor().getMessageTypes().get(36);
+      getDescriptor().getMessageTypes().get(40);
     internal_static_in_trujobs_proto_UpdateCandidateEducationProfileRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_UpdateCandidateEducationProfileRequest_descriptor,
         new java.lang.String[] { "CandidateMobile", "CandidateEducationLevel", "CandidateDegree", "CandidateEducationInstitute", "CandidateEducationCompletionStatus", "JobPostId", "IsFinalFragment", });
     internal_static_in_trujobs_proto_UpdateCandidateBasicProfileResponse_descriptor =
-      getDescriptor().getMessageTypes().get(37);
+      getDescriptor().getMessageTypes().get(41);
     internal_static_in_trujobs_proto_UpdateCandidateBasicProfileResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_UpdateCandidateBasicProfileResponse_descriptor,
         new java.lang.String[] { "Status", });
     internal_static_in_trujobs_proto_GetCandidateBasicProfileStaticResponse_descriptor =
-      getDescriptor().getMessageTypes().get(38);
+      getDescriptor().getMessageTypes().get(42);
     internal_static_in_trujobs_proto_GetCandidateBasicProfileStaticResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_GetCandidateBasicProfileStaticResponse_descriptor,
         new java.lang.String[] { "Status", "TimeShiftList", });
     internal_static_in_trujobs_proto_GetCandidateExperienceProfileStaticResponse_descriptor =
-      getDescriptor().getMessageTypes().get(39);
+      getDescriptor().getMessageTypes().get(43);
     internal_static_in_trujobs_proto_GetCandidateExperienceProfileStaticResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_GetCandidateExperienceProfileStaticResponse_descriptor,
         new java.lang.String[] { "Status", "LanguageObject", "SkillObject", "JobRole", });
     internal_static_in_trujobs_proto_GetCandidateEducationProfileStaticResponse_descriptor =
-      getDescriptor().getMessageTypes().get(40);
+      getDescriptor().getMessageTypes().get(44);
     internal_static_in_trujobs_proto_GetCandidateEducationProfileStaticResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_GetCandidateEducationProfileStaticResponse_descriptor,
         new java.lang.String[] { "Status", "DegreeObject", "EducationObject", });
     internal_static_in_trujobs_proto_LanguageObject_descriptor =
-      getDescriptor().getMessageTypes().get(41);
+      getDescriptor().getMessageTypes().get(45);
     internal_static_in_trujobs_proto_LanguageObject_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_LanguageObject_descriptor,
         new java.lang.String[] { "LanguageId", "LanguageName", });
     internal_static_in_trujobs_proto_SkillObject_descriptor =
-      getDescriptor().getMessageTypes().get(42);
+      getDescriptor().getMessageTypes().get(46);
     internal_static_in_trujobs_proto_SkillObject_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_SkillObject_descriptor,
         new java.lang.String[] { "SkillId", "SkillName", "SkillQuestion", });
     internal_static_in_trujobs_proto_LanguageKnownObject_descriptor =
-      getDescriptor().getMessageTypes().get(43);
+      getDescriptor().getMessageTypes().get(47);
     internal_static_in_trujobs_proto_LanguageKnownObject_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_LanguageKnownObject_descriptor,
         new java.lang.String[] { "LanguageKnownId", "LanguageUnderstand", "LanguageSpeak", "LanguageReadWrite", });
     internal_static_in_trujobs_proto_CandidateSkillObject_descriptor =
-      getDescriptor().getMessageTypes().get(44);
+      getDescriptor().getMessageTypes().get(48);
     internal_static_in_trujobs_proto_CandidateSkillObject_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_CandidateSkillObject_descriptor,
         new java.lang.String[] { "SkillId", "Answer", });
     internal_static_in_trujobs_proto_FetchCandidateAlertRequest_descriptor =
-      getDescriptor().getMessageTypes().get(45);
+      getDescriptor().getMessageTypes().get(49);
     internal_static_in_trujobs_proto_FetchCandidateAlertRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_FetchCandidateAlertRequest_descriptor,
         new java.lang.String[] { "CandidateMobile", });
     internal_static_in_trujobs_proto_JobFilterRequest_descriptor =
-      getDescriptor().getMessageTypes().get(46);
+      getDescriptor().getMessageTypes().get(50);
     internal_static_in_trujobs_proto_JobFilterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_JobFilterRequest_descriptor,
         new java.lang.String[] { "Salary", "Exp", "Edu", "Gender", "SortByDatePosted", "SortBySalary", "CandidateMobile", "JobSearchLatitude", "JobSearchLongitude", });
     internal_static_in_trujobs_proto_FetchCandidateAlertResponse_descriptor =
-      getDescriptor().getMessageTypes().get(47);
+      getDescriptor().getMessageTypes().get(51);
     internal_static_in_trujobs_proto_FetchCandidateAlertResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_FetchCandidateAlertResponse_descriptor,
         new java.lang.String[] { "Status", "AlertType", "AlertMessage", });
     internal_static_in_trujobs_proto_JobSearchRequest_descriptor =
-      getDescriptor().getMessageTypes().get(48);
+      getDescriptor().getMessageTypes().get(52);
     internal_static_in_trujobs_proto_JobSearchRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_JobSearchRequest_descriptor,
         new java.lang.String[] { "Latitude", "Longitude", "CandidateMobile", "JobFilterRequest", "JobSearchByJobRoleRequest", "LocalityName", });
     internal_static_in_trujobs_proto_JobSearchByJobRoleRequest_descriptor =
-      getDescriptor().getMessageTypes().get(49);
+      getDescriptor().getMessageTypes().get(53);
     internal_static_in_trujobs_proto_JobSearchByJobRoleRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_JobSearchByJobRoleRequest_descriptor,
         new java.lang.String[] { "JobRoleIdOne", "JobRoleIdTwo", "JobRoleIdThree", });
     internal_static_in_trujobs_proto_LatLngOrPlaceIdRequest_descriptor =
-      getDescriptor().getMessageTypes().get(50);
+      getDescriptor().getMessageTypes().get(54);
     internal_static_in_trujobs_proto_LatLngOrPlaceIdRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_LatLngOrPlaceIdRequest_descriptor,
         new java.lang.String[] { "Latitude", "Longitude", "PlaceId", });
     internal_static_in_trujobs_proto_LocalityObjectResponse_descriptor =
-      getDescriptor().getMessageTypes().get(51);
+      getDescriptor().getMessageTypes().get(55);
     internal_static_in_trujobs_proto_LocalityObjectResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_LocalityObjectResponse_descriptor,
         new java.lang.String[] { "Status", "Type", "Locality", });
     internal_static_in_trujobs_proto_PreScreenPopulateProtoRequest_descriptor =
-      getDescriptor().getMessageTypes().get(52);
+      getDescriptor().getMessageTypes().get(56);
     internal_static_in_trujobs_proto_PreScreenPopulateProtoRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_PreScreenPopulateProtoRequest_descriptor,
         new java.lang.String[] { "CandidateId", "JobPostId", "RePreScreen", "CandidateMobile", });
     internal_static_in_trujobs_proto_PreScreenPopulateProtoResponse_descriptor =
-      getDescriptor().getMessageTypes().get(53);
+      getDescriptor().getMessageTypes().get(57);
     internal_static_in_trujobs_proto_PreScreenPopulateProtoResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_PreScreenPopulateProtoResponse_descriptor,
         new java.lang.String[] { "Status", "PropertyId", "DocumentList", "LanguageList", "AssetList", "Age", "Experience", "Education", "Gender", "Salary", "ShouldShow", "JobPostId", "CandidateId", "PreScreenCompanyName", "PreScreenJobTitle", "PreScreenJobRoleTitle", });
     internal_static_in_trujobs_proto_PreScreenDocumentObject_descriptor =
-      getDescriptor().getMessageTypes().get(54);
+      getDescriptor().getMessageTypes().get(58);
     internal_static_in_trujobs_proto_PreScreenDocumentObject_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_PreScreenDocumentObject_descriptor,
         new java.lang.String[] { "JobPostIdProof", "IsMatching", "PropertyId", "PropertyTitle", });
     internal_static_in_trujobs_proto_PreScreenLanguageObject_descriptor =
-      getDescriptor().getMessageTypes().get(55);
+      getDescriptor().getMessageTypes().get(59);
     internal_static_in_trujobs_proto_PreScreenLanguageObject_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_PreScreenLanguageObject_descriptor,
         new java.lang.String[] { "JobPostLanguage", "IsMatching", "PropertyId", "PropertyTitle", });
     internal_static_in_trujobs_proto_PreScreenAssetObject_descriptor =
-      getDescriptor().getMessageTypes().get(56);
+      getDescriptor().getMessageTypes().get(60);
     internal_static_in_trujobs_proto_PreScreenAssetObject_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_PreScreenAssetObject_descriptor,
         new java.lang.String[] { "JobPostAsset", "IsMatching", "PropertyId", "PropertyTitle", });
     internal_static_in_trujobs_proto_PreScreenAgeObject_descriptor =
-      getDescriptor().getMessageTypes().get(57);
+      getDescriptor().getMessageTypes().get(61);
     internal_static_in_trujobs_proto_PreScreenAgeObject_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_PreScreenAgeObject_descriptor,
         new java.lang.String[] { "IsMatching", "PropertyId", "PropertyTitle", });
     internal_static_in_trujobs_proto_PreScreenExperienceObject_descriptor =
-      getDescriptor().getMessageTypes().get(58);
+      getDescriptor().getMessageTypes().get(62);
     internal_static_in_trujobs_proto_PreScreenExperienceObject_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_PreScreenExperienceObject_descriptor,
         new java.lang.String[] { "IsMatching", "PropertyId", "PropertyTitle", });
     internal_static_in_trujobs_proto_PreScreenEducationObject_descriptor =
-      getDescriptor().getMessageTypes().get(59);
+      getDescriptor().getMessageTypes().get(63);
     internal_static_in_trujobs_proto_PreScreenEducationObject_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_PreScreenEducationObject_descriptor,
         new java.lang.String[] { "IsMatching", "PropertyId", "PropertyTitle", });
     internal_static_in_trujobs_proto_PreScreenGenderObject_descriptor =
-      getDescriptor().getMessageTypes().get(60);
+      getDescriptor().getMessageTypes().get(64);
     internal_static_in_trujobs_proto_PreScreenGenderObject_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_PreScreenGenderObject_descriptor,
         new java.lang.String[] { "IsMatching", "PropertyId", "PropertyTitle", });
     internal_static_in_trujobs_proto_PreScreenSalaryObject_descriptor =
-      getDescriptor().getMessageTypes().get(61);
+      getDescriptor().getMessageTypes().get(65);
     internal_static_in_trujobs_proto_PreScreenSalaryObject_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_PreScreenSalaryObject_descriptor,
         new java.lang.String[] { "IsMatching", "PropertyId", "PropertyTitle", });
     internal_static_in_trujobs_proto_IdProofObjectWithNumber_descriptor =
-      getDescriptor().getMessageTypes().get(62);
+      getDescriptor().getMessageTypes().get(66);
     internal_static_in_trujobs_proto_IdProofObjectWithNumber_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_IdProofObjectWithNumber_descriptor,
         new java.lang.String[] { "IdProof", "IdProofNumber", });
     internal_static_in_trujobs_proto_IdProofObject_descriptor =
-      getDescriptor().getMessageTypes().get(63);
+      getDescriptor().getMessageTypes().get(67);
     internal_static_in_trujobs_proto_IdProofObject_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_IdProofObject_descriptor,
         new java.lang.String[] { "IdProofId", "IdProofName", "IsCommon", });
     internal_static_in_trujobs_proto_AssetObject_descriptor =
-      getDescriptor().getMessageTypes().get(64);
+      getDescriptor().getMessageTypes().get(68);
     internal_static_in_trujobs_proto_AssetObject_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_AssetObject_descriptor,
         new java.lang.String[] { "AssetId", "AssetTitle", "IsCommon", });
     internal_static_in_trujobs_proto_UpdateCandidateDocumentRequest_descriptor =
-      getDescriptor().getMessageTypes().get(65);
+      getDescriptor().getMessageTypes().get(69);
     internal_static_in_trujobs_proto_UpdateCandidateDocumentRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_UpdateCandidateDocumentRequest_descriptor,
         new java.lang.String[] { "CandidateMobile", "IdProof", "JobPostId", "IsFinalFragment", });
     internal_static_in_trujobs_proto_UpdateCandidateLanguageRequest_descriptor =
-      getDescriptor().getMessageTypes().get(66);
+      getDescriptor().getMessageTypes().get(70);
     internal_static_in_trujobs_proto_UpdateCandidateLanguageRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_UpdateCandidateLanguageRequest_descriptor,
         new java.lang.String[] { "CandidateMobile", "LanguageKnownObject", "JobPostId", "IsFinalFragment", });
     internal_static_in_trujobs_proto_UpdateCandidateExperienceRequest_descriptor =
-      getDescriptor().getMessageTypes().get(67);
+      getDescriptor().getMessageTypes().get(71);
     internal_static_in_trujobs_proto_UpdateCandidateExperienceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_UpdateCandidateExperienceRequest_descriptor,
         new java.lang.String[] { "CandidateMobile", "CandidateTotalExperience", "CandidateIsEmployed", "CandidateCurrentCompany", "CandidateCurrentSalary", "CurrentJobRole", "JobPostId", "IsFinalFragment", });
     internal_static_in_trujobs_proto_UpdateCandidateOtherRequest_descriptor =
-      getDescriptor().getMessageTypes().get(68);
+      getDescriptor().getMessageTypes().get(72);
     internal_static_in_trujobs_proto_UpdateCandidateOtherRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_UpdateCandidateOtherRequest_descriptor,
         new java.lang.String[] { "CandidateMobile", "PropertyId", "CandidateDOB", "CandidateLastWithdrawnSalary", "CandidateTimeshiftPref", "CandidateGender", "AssetId", "JobPostId", "IsFinalFragment", });
     internal_static_in_trujobs_proto_GenericResponse_descriptor =
-      getDescriptor().getMessageTypes().get(69);
+      getDescriptor().getMessageTypes().get(73);
     internal_static_in_trujobs_proto_GenericResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_GenericResponse_descriptor,
         new java.lang.String[] { "Status", });
     internal_static_in_trujobs_proto_UpdateCandidateInterviewDetailRequest_descriptor =
-      getDescriptor().getMessageTypes().get(70);
+      getDescriptor().getMessageTypes().get(74);
     internal_static_in_trujobs_proto_UpdateCandidateInterviewDetailRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_UpdateCandidateInterviewDetailRequest_descriptor,
         new java.lang.String[] { "CandidateMobile", "TimeSlotId", "JobPostId", "ScheduledInterviewDateInMills", "IsFinalFragment", });
     internal_static_in_trujobs_proto_GetInterviewSlotsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(71);
+      getDescriptor().getMessageTypes().get(75);
     internal_static_in_trujobs_proto_GetInterviewSlotsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_GetInterviewSlotsRequest_descriptor,
         new java.lang.String[] { "JobPostId", });
     internal_static_in_trujobs_proto_GetInterviewSlotsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(72);
+      getDescriptor().getMessageTypes().get(76);
     internal_static_in_trujobs_proto_GetInterviewSlotsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_GetInterviewSlotsResponse_descriptor,
         new java.lang.String[] { "InterviewSlots", });
     internal_static_in_trujobs_proto_InterviewSlot_descriptor =
-      getDescriptor().getMessageTypes().get(73);
+      getDescriptor().getMessageTypes().get(77);
     internal_static_in_trujobs_proto_InterviewSlot_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_InterviewSlot_descriptor,
         new java.lang.String[] { "InterviewTimeSlotObject", "InterviewDays", });
     internal_static_in_trujobs_proto_InterviewTimeSlotObject_descriptor =
-      getDescriptor().getMessageTypes().get(74);
+      getDescriptor().getMessageTypes().get(78);
     internal_static_in_trujobs_proto_InterviewTimeSlotObject_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_InterviewTimeSlotObject_descriptor,
         new java.lang.String[] { "SlotId", "SlotTitle", });
+    internal_static_in_trujobs_proto_NotGoingReasonResponse_descriptor =
+      getDescriptor().getMessageTypes().get(79);
+    internal_static_in_trujobs_proto_NotGoingReasonResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_in_trujobs_proto_NotGoingReasonResponse_descriptor,
+        new java.lang.String[] { "ReasonObject", });
+    internal_static_in_trujobs_proto_ReasonObject_descriptor =
+      getDescriptor().getMessageTypes().get(80);
+    internal_static_in_trujobs_proto_ReasonObject_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_in_trujobs_proto_ReasonObject_descriptor,
+        new java.lang.String[] { "ReasonId", "ReasonTitle", });
+    internal_static_in_trujobs_proto_UpdateInterviewRequest_descriptor =
+      getDescriptor().getMessageTypes().get(81);
+    internal_static_in_trujobs_proto_UpdateInterviewRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_in_trujobs_proto_UpdateInterviewRequest_descriptor,
+        new java.lang.String[] { "CandidateMobile", "JpId", "InterviewStatus", });
+    internal_static_in_trujobs_proto_UpdateInterviewResponse_descriptor =
+      getDescriptor().getMessageTypes().get(82);
+    internal_static_in_trujobs_proto_UpdateInterviewResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_in_trujobs_proto_UpdateInterviewResponse_descriptor,
+        new java.lang.String[] { "Status", });
+    internal_static_in_trujobs_proto_UpdateCandidateStatusRequest_descriptor =
+      getDescriptor().getMessageTypes().get(83);
+    internal_static_in_trujobs_proto_UpdateCandidateStatusRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_in_trujobs_proto_UpdateCandidateStatusRequest_descriptor,
+        new java.lang.String[] { "CandidateMobile", "JpId", "CandidateStatus", "NotGoingReason", });
+    internal_static_in_trujobs_proto_UpdateCandidateStatusResponse_descriptor =
+      getDescriptor().getMessageTypes().get(84);
+    internal_static_in_trujobs_proto_UpdateCandidateStatusResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_in_trujobs_proto_UpdateCandidateStatusResponse_descriptor,
+        new java.lang.String[] { "Status", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
