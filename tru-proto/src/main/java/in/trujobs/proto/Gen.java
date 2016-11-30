@@ -433,6 +433,16 @@ public final class Gen {
   static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_in_trujobs_proto_UpdateCandidateStatusResponse_fieldAccessorTable;
+  static com.google.protobuf.Descriptors.Descriptor
+    internal_static_in_trujobs_proto_CheckInterviewSlotRequest_descriptor;
+  static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_in_trujobs_proto_CheckInterviewSlotRequest_fieldAccessorTable;
+  static com.google.protobuf.Descriptors.Descriptor
+    internal_static_in_trujobs_proto_CheckInterviewSlotResponse_descriptor;
+  static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_in_trujobs_proto_CheckInterviewSlotResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -826,7 +836,13 @@ public final class Gen {
       "didateStatusResponse\022F\n\006status\030\001 \001(\01626.i" +
       "n.trujobs.proto.UpdateCandidateStatusRes" +
       "ponse.Status\"/\n\006Status\022\013\n\007UNKNOWN\020\000\022\013\n\007S" +
-      "UCCESS\020\001\022\013\n\007FAILURE\020\002B\002P\001b\006proto3"
+      "UCCESS\020\001\022\013\n\007FAILURE\020\002\".\n\031CheckInterviewS" +
+      "lotRequest\022\021\n\tjobPostId\030\001 \001(\003\"\274\001\n\032CheckI" +
+      "nterviewSlotResponse\022\033\n\023shouldShowInterv" +
+      "iew\030\001 \001(\010\022C\n\006status\030\002 \001(\01623.in.trujobs.p" +
+      "roto.CheckInterviewSlotResponse.Status\"<" +
+      "\n\006Status\022\013\n\007UNKNOWN\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007FA",
+      "ILURE\020\002\022\013\n\007INVALID\020\003B\002P\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1350,6 +1366,18 @@ public final class Gen {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_UpdateCandidateStatusResponse_descriptor,
         new java.lang.String[] { "Status", });
+    internal_static_in_trujobs_proto_CheckInterviewSlotRequest_descriptor =
+      getDescriptor().getMessageTypes().get(85);
+    internal_static_in_trujobs_proto_CheckInterviewSlotRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_in_trujobs_proto_CheckInterviewSlotRequest_descriptor,
+        new java.lang.String[] { "JobPostId", });
+    internal_static_in_trujobs_proto_CheckInterviewSlotResponse_descriptor =
+      getDescriptor().getMessageTypes().get(86);
+    internal_static_in_trujobs_proto_CheckInterviewSlotResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_in_trujobs_proto_CheckInterviewSlotResponse_descriptor,
+        new java.lang.String[] { "ShouldShowInterview", "Status", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

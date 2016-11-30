@@ -747,3 +747,19 @@ message UpdateCandidateStatusResponse {
     }
     Status status = 1;
 }
+
+message CheckInterviewSlotRequest {
+    int64 jobPostId = 1;
+}
+
+
+message CheckInterviewSlotResponse {
+    enum Status {
+        UNKNOWN = 0;
+        SUCCESS = 1;
+        FAILURE = 2;
+        INVALID = 3;
+    }
+    bool shouldShowInterview = 1;
+    Status status = 2;
+}
