@@ -17,6 +17,11 @@ public  final class ApplyJobResponse extends
   private ApplyJobResponse() {
     status_ = 0;
     isPreScreenAvailable_ = false;
+    isInterviewAvailable_ = false;
+    companyName_ = "";
+    jobRoleTitle_ = "";
+    jobTitle_ = "";
+    jobPostId_ = 0L;
   }
 
   @java.lang.Override
@@ -52,6 +57,34 @@ public  final class ApplyJobResponse extends
           case 16: {
 
             isPreScreenAvailable_ = input.readBool();
+            break;
+          }
+          case 24: {
+
+            isInterviewAvailable_ = input.readBool();
+            break;
+          }
+          case 34: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            companyName_ = s;
+            break;
+          }
+          case 42: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            jobRoleTitle_ = s;
+            break;
+          }
+          case 50: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            jobTitle_ = s;
+            break;
+          }
+          case 56: {
+
+            jobPostId_ = input.readInt64();
             break;
           }
         }
@@ -231,6 +264,126 @@ public  final class ApplyJobResponse extends
     return isPreScreenAvailable_;
   }
 
+  public static final int ISINTERVIEWAVAILABLE_FIELD_NUMBER = 3;
+  private boolean isInterviewAvailable_;
+  /**
+   * <code>optional bool isInterviewAvailable = 3;</code>
+   */
+  public boolean getIsInterviewAvailable() {
+    return isInterviewAvailable_;
+  }
+
+  public static final int COMPANYNAME_FIELD_NUMBER = 4;
+  private volatile java.lang.Object companyName_;
+  /**
+   * <code>optional string companyName = 4;</code>
+   */
+  public java.lang.String getCompanyName() {
+    java.lang.Object ref = companyName_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      companyName_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>optional string companyName = 4;</code>
+   */
+  public com.google.protobuf.ByteString
+      getCompanyNameBytes() {
+    java.lang.Object ref = companyName_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      companyName_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int JOBROLETITLE_FIELD_NUMBER = 5;
+  private volatile java.lang.Object jobRoleTitle_;
+  /**
+   * <code>optional string jobRoleTitle = 5;</code>
+   */
+  public java.lang.String getJobRoleTitle() {
+    java.lang.Object ref = jobRoleTitle_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      jobRoleTitle_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>optional string jobRoleTitle = 5;</code>
+   */
+  public com.google.protobuf.ByteString
+      getJobRoleTitleBytes() {
+    java.lang.Object ref = jobRoleTitle_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      jobRoleTitle_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int JOBTITLE_FIELD_NUMBER = 6;
+  private volatile java.lang.Object jobTitle_;
+  /**
+   * <code>optional string jobTitle = 6;</code>
+   */
+  public java.lang.String getJobTitle() {
+    java.lang.Object ref = jobTitle_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      jobTitle_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>optional string jobTitle = 6;</code>
+   */
+  public com.google.protobuf.ByteString
+      getJobTitleBytes() {
+    java.lang.Object ref = jobTitle_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      jobTitle_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int JOBPOSTID_FIELD_NUMBER = 7;
+  private long jobPostId_;
+  /**
+   * <code>optional int64 jobPostId = 7;</code>
+   */
+  public long getJobPostId() {
+    return jobPostId_;
+  }
+
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -249,6 +402,21 @@ public  final class ApplyJobResponse extends
     if (isPreScreenAvailable_ != false) {
       output.writeBool(2, isPreScreenAvailable_);
     }
+    if (isInterviewAvailable_ != false) {
+      output.writeBool(3, isInterviewAvailable_);
+    }
+    if (!getCompanyNameBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 4, companyName_);
+    }
+    if (!getJobRoleTitleBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 5, jobRoleTitle_);
+    }
+    if (!getJobTitleBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 6, jobTitle_);
+    }
+    if (jobPostId_ != 0L) {
+      output.writeInt64(7, jobPostId_);
+    }
   }
 
   public int getSerializedSize() {
@@ -263,6 +431,23 @@ public  final class ApplyJobResponse extends
     if (isPreScreenAvailable_ != false) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(2, isPreScreenAvailable_);
+    }
+    if (isInterviewAvailable_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(3, isInterviewAvailable_);
+    }
+    if (!getCompanyNameBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(4, companyName_);
+    }
+    if (!getJobRoleTitleBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(5, jobRoleTitle_);
+    }
+    if (!getJobTitleBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(6, jobTitle_);
+    }
+    if (jobPostId_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(7, jobPostId_);
     }
     memoizedSize = size;
     return size;
@@ -379,6 +564,16 @@ public  final class ApplyJobResponse extends
 
       isPreScreenAvailable_ = false;
 
+      isInterviewAvailable_ = false;
+
+      companyName_ = "";
+
+      jobRoleTitle_ = "";
+
+      jobTitle_ = "";
+
+      jobPostId_ = 0L;
+
       return this;
     }
 
@@ -403,6 +598,11 @@ public  final class ApplyJobResponse extends
       in.trujobs.proto.ApplyJobResponse result = new in.trujobs.proto.ApplyJobResponse(this);
       result.status_ = status_;
       result.isPreScreenAvailable_ = isPreScreenAvailable_;
+      result.isInterviewAvailable_ = isInterviewAvailable_;
+      result.companyName_ = companyName_;
+      result.jobRoleTitle_ = jobRoleTitle_;
+      result.jobTitle_ = jobTitle_;
+      result.jobPostId_ = jobPostId_;
       onBuilt();
       return result;
     }
@@ -423,6 +623,24 @@ public  final class ApplyJobResponse extends
       }
       if (other.getIsPreScreenAvailable() != false) {
         setIsPreScreenAvailable(other.getIsPreScreenAvailable());
+      }
+      if (other.getIsInterviewAvailable() != false) {
+        setIsInterviewAvailable(other.getIsInterviewAvailable());
+      }
+      if (!other.getCompanyName().isEmpty()) {
+        companyName_ = other.companyName_;
+        onChanged();
+      }
+      if (!other.getJobRoleTitle().isEmpty()) {
+        jobRoleTitle_ = other.jobRoleTitle_;
+        onChanged();
+      }
+      if (!other.getJobTitle().isEmpty()) {
+        jobTitle_ = other.jobTitle_;
+        onChanged();
+      }
+      if (other.getJobPostId() != 0L) {
+        setJobPostId(other.getJobPostId());
       }
       onChanged();
       return this;
@@ -516,6 +734,265 @@ public  final class ApplyJobResponse extends
     public Builder clearIsPreScreenAvailable() {
       
       isPreScreenAvailable_ = false;
+      onChanged();
+      return this;
+    }
+
+    private boolean isInterviewAvailable_ ;
+    /**
+     * <code>optional bool isInterviewAvailable = 3;</code>
+     */
+    public boolean getIsInterviewAvailable() {
+      return isInterviewAvailable_;
+    }
+    /**
+     * <code>optional bool isInterviewAvailable = 3;</code>
+     */
+    public Builder setIsInterviewAvailable(boolean value) {
+      
+      isInterviewAvailable_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional bool isInterviewAvailable = 3;</code>
+     */
+    public Builder clearIsInterviewAvailable() {
+      
+      isInterviewAvailable_ = false;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object companyName_ = "";
+    /**
+     * <code>optional string companyName = 4;</code>
+     */
+    public java.lang.String getCompanyName() {
+      java.lang.Object ref = companyName_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        companyName_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>optional string companyName = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getCompanyNameBytes() {
+      java.lang.Object ref = companyName_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        companyName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>optional string companyName = 4;</code>
+     */
+    public Builder setCompanyName(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      companyName_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional string companyName = 4;</code>
+     */
+    public Builder clearCompanyName() {
+      
+      companyName_ = getDefaultInstance().getCompanyName();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional string companyName = 4;</code>
+     */
+    public Builder setCompanyNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      companyName_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object jobRoleTitle_ = "";
+    /**
+     * <code>optional string jobRoleTitle = 5;</code>
+     */
+    public java.lang.String getJobRoleTitle() {
+      java.lang.Object ref = jobRoleTitle_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        jobRoleTitle_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>optional string jobRoleTitle = 5;</code>
+     */
+    public com.google.protobuf.ByteString
+        getJobRoleTitleBytes() {
+      java.lang.Object ref = jobRoleTitle_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        jobRoleTitle_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>optional string jobRoleTitle = 5;</code>
+     */
+    public Builder setJobRoleTitle(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      jobRoleTitle_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional string jobRoleTitle = 5;</code>
+     */
+    public Builder clearJobRoleTitle() {
+      
+      jobRoleTitle_ = getDefaultInstance().getJobRoleTitle();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional string jobRoleTitle = 5;</code>
+     */
+    public Builder setJobRoleTitleBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      jobRoleTitle_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object jobTitle_ = "";
+    /**
+     * <code>optional string jobTitle = 6;</code>
+     */
+    public java.lang.String getJobTitle() {
+      java.lang.Object ref = jobTitle_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        jobTitle_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>optional string jobTitle = 6;</code>
+     */
+    public com.google.protobuf.ByteString
+        getJobTitleBytes() {
+      java.lang.Object ref = jobTitle_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        jobTitle_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>optional string jobTitle = 6;</code>
+     */
+    public Builder setJobTitle(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      jobTitle_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional string jobTitle = 6;</code>
+     */
+    public Builder clearJobTitle() {
+      
+      jobTitle_ = getDefaultInstance().getJobTitle();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional string jobTitle = 6;</code>
+     */
+    public Builder setJobTitleBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      jobTitle_ = value;
+      onChanged();
+      return this;
+    }
+
+    private long jobPostId_ ;
+    /**
+     * <code>optional int64 jobPostId = 7;</code>
+     */
+    public long getJobPostId() {
+      return jobPostId_;
+    }
+    /**
+     * <code>optional int64 jobPostId = 7;</code>
+     */
+    public Builder setJobPostId(long value) {
+      
+      jobPostId_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional int64 jobPostId = 7;</code>
+     */
+    public Builder clearJobPostId() {
+      
+      jobPostId_ = 0L;
       onChanged();
       return this;
     }

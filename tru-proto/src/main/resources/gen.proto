@@ -158,6 +158,11 @@ message ApplyJobResponse{
     }
     Status status = 1;
     bool isPreScreenAvailable = 2;
+    bool isInterviewAvailable = 3;
+    string companyName = 4;
+    string jobRoleTitle = 5;
+    string jobTitle = 6;
+    int64 jobPostId = 7;
 }
 
 message AddJobRoleRequest {
