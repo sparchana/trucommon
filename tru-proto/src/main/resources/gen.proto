@@ -112,6 +112,7 @@ message JobPostObject {
     int32 jobPostEndTime = 21;
     int32 isApplied = 22;
     int32 jobPostSource = 23;
+    string recruiterName = 24;
 }
 
 message JobPostDetailRequest{
