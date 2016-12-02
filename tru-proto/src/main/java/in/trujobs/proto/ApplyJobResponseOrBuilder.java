@@ -15,4 +15,9 @@ public interface ApplyJobResponseOrBuilder extends
    * <code>optional .in.trujobs.proto.ApplyJobResponse.Status status = 1;</code>
    */
   in.trujobs.proto.ApplyJobResponse.Status getStatus();
+
+  /**
+   * <code>optional bool isPreScreenAvailable = 2;</code>
+   */
+  boolean getIsPreScreenAvailable();
 }

@@ -16,6 +16,7 @@ public  final class ApplyJobResponse extends
   }
   private ApplyJobResponse() {
     status_ = 0;
+    isPreScreenAvailable_ = false;
   }
 
   @java.lang.Override
@@ -46,6 +47,11 @@ public  final class ApplyJobResponse extends
             int rawValue = input.readEnum();
 
             status_ = rawValue;
+            break;
+          }
+          case 16: {
+
+            isPreScreenAvailable_ = input.readBool();
             break;
           }
         }
@@ -216,6 +222,15 @@ public  final class ApplyJobResponse extends
     return result == null ? in.trujobs.proto.ApplyJobResponse.Status.UNRECOGNIZED : result;
   }
 
+  public static final int ISPRESCREENAVAILABLE_FIELD_NUMBER = 2;
+  private boolean isPreScreenAvailable_;
+  /**
+   * <code>optional bool isPreScreenAvailable = 2;</code>
+   */
+  public boolean getIsPreScreenAvailable() {
+    return isPreScreenAvailable_;
+  }
+
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -231,6 +246,9 @@ public  final class ApplyJobResponse extends
     if (status_ != in.trujobs.proto.ApplyJobResponse.Status.UNKNOWN.getNumber()) {
       output.writeEnum(1, status_);
     }
+    if (isPreScreenAvailable_ != false) {
+      output.writeBool(2, isPreScreenAvailable_);
+    }
   }
 
   public int getSerializedSize() {
@@ -241,6 +259,10 @@ public  final class ApplyJobResponse extends
     if (status_ != in.trujobs.proto.ApplyJobResponse.Status.UNKNOWN.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(1, status_);
+    }
+    if (isPreScreenAvailable_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(2, isPreScreenAvailable_);
     }
     memoizedSize = size;
     return size;
@@ -355,6 +377,8 @@ public  final class ApplyJobResponse extends
       super.clear();
       status_ = 0;
 
+      isPreScreenAvailable_ = false;
+
       return this;
     }
 
@@ -378,6 +402,7 @@ public  final class ApplyJobResponse extends
     public in.trujobs.proto.ApplyJobResponse buildPartial() {
       in.trujobs.proto.ApplyJobResponse result = new in.trujobs.proto.ApplyJobResponse(this);
       result.status_ = status_;
+      result.isPreScreenAvailable_ = isPreScreenAvailable_;
       onBuilt();
       return result;
     }
@@ -395,6 +420,9 @@ public  final class ApplyJobResponse extends
       if (other == in.trujobs.proto.ApplyJobResponse.getDefaultInstance()) return this;
       if (other.status_ != 0) {
         setStatusValue(other.getStatusValue());
+      }
+      if (other.getIsPreScreenAvailable() != false) {
+        setIsPreScreenAvailable(other.getIsPreScreenAvailable());
       }
       onChanged();
       return this;
@@ -462,6 +490,32 @@ public  final class ApplyJobResponse extends
     public Builder clearStatus() {
       
       status_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private boolean isPreScreenAvailable_ ;
+    /**
+     * <code>optional bool isPreScreenAvailable = 2;</code>
+     */
+    public boolean getIsPreScreenAvailable() {
+      return isPreScreenAvailable_;
+    }
+    /**
+     * <code>optional bool isPreScreenAvailable = 2;</code>
+     */
+    public Builder setIsPreScreenAvailable(boolean value) {
+      
+      isPreScreenAvailable_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional bool isPreScreenAvailable = 2;</code>
+     */
+    public Builder clearIsPreScreenAvailable() {
+      
+      isPreScreenAvailable_ = false;
       onChanged();
       return this;
     }
