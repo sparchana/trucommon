@@ -35,6 +35,7 @@ public  final class JobPostObject extends
     jobPostEndTime_ = 0;
     isApplied_ = 0;
     jobPostSource_ = 0;
+    recruiterName_ = "";
   }
 
   @java.lang.Override
@@ -210,6 +211,12 @@ public  final class JobPostObject extends
           case 184: {
 
             jobPostSource_ = input.readInt32();
+            break;
+          }
+          case 194: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            recruiterName_ = s;
             break;
           }
         }
@@ -734,6 +741,40 @@ public  final class JobPostObject extends
     return jobPostSource_;
   }
 
+  public static final int RECRUITERNAME_FIELD_NUMBER = 24;
+  private volatile java.lang.Object recruiterName_;
+  /**
+   * <code>optional string recruiterName = 24;</code>
+   */
+  public java.lang.String getRecruiterName() {
+    java.lang.Object ref = recruiterName_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      recruiterName_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>optional string recruiterName = 24;</code>
+   */
+  public com.google.protobuf.ByteString
+      getRecruiterNameBytes() {
+    java.lang.Object ref = recruiterName_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      recruiterName_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -814,6 +855,9 @@ public  final class JobPostObject extends
     }
     if (jobPostSource_ != 0) {
       output.writeInt32(23, jobPostSource_);
+    }
+    if (!getRecruiterNameBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 24, recruiterName_);
     }
   }
 
@@ -904,6 +948,9 @@ public  final class JobPostObject extends
     if (jobPostSource_ != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(23, jobPostSource_);
+    }
+    if (!getRecruiterNameBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(24, recruiterName_);
     }
     memoizedSize = size;
     return size;
@@ -1079,6 +1126,8 @@ public  final class JobPostObject extends
 
       jobPostSource_ = 0;
 
+      recruiterName_ = "";
+
       return this;
     }
 
@@ -1146,6 +1195,7 @@ public  final class JobPostObject extends
       result.jobPostEndTime_ = jobPostEndTime_;
       result.isApplied_ = isApplied_;
       result.jobPostSource_ = jobPostSource_;
+      result.recruiterName_ = recruiterName_;
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -1262,6 +1312,10 @@ public  final class JobPostObject extends
       }
       if (other.getJobPostSource() != 0) {
         setJobPostSource(other.getJobPostSource());
+      }
+      if (!other.getRecruiterName().isEmpty()) {
+        recruiterName_ = other.recruiterName_;
+        onChanged();
       }
       onChanged();
       return this;
@@ -2758,6 +2812,75 @@ public  final class JobPostObject extends
     public Builder clearJobPostSource() {
       
       jobPostSource_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object recruiterName_ = "";
+    /**
+     * <code>optional string recruiterName = 24;</code>
+     */
+    public java.lang.String getRecruiterName() {
+      java.lang.Object ref = recruiterName_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        recruiterName_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>optional string recruiterName = 24;</code>
+     */
+    public com.google.protobuf.ByteString
+        getRecruiterNameBytes() {
+      java.lang.Object ref = recruiterName_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        recruiterName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>optional string recruiterName = 24;</code>
+     */
+    public Builder setRecruiterName(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      recruiterName_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional string recruiterName = 24;</code>
+     */
+    public Builder clearRecruiterName() {
+      
+      recruiterName_ = getDefaultInstance().getRecruiterName();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional string recruiterName = 24;</code>
+     */
+    public Builder setRecruiterNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      recruiterName_ = value;
       onChanged();
       return this;
     }
