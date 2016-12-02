@@ -20,6 +20,8 @@ public  final class UpdateCandidateEducationProfileRequest extends
     candidateDegree_ = 0L;
     candidateEducationInstitute_ = "";
     candidateEducationCompletionStatus_ = 0;
+    jobPostId_ = 0L;
+    isFinalFragment_ = false;
   }
 
   @java.lang.Override
@@ -71,6 +73,16 @@ public  final class UpdateCandidateEducationProfileRequest extends
           case 40: {
 
             candidateEducationCompletionStatus_ = input.readInt32();
+            break;
+          }
+          case 48: {
+
+            jobPostId_ = input.readInt64();
+            break;
+          }
+          case 56: {
+
+            isFinalFragment_ = input.readBool();
             break;
           }
         }
@@ -192,6 +204,24 @@ public  final class UpdateCandidateEducationProfileRequest extends
     return candidateEducationCompletionStatus_;
   }
 
+  public static final int JOBPOSTID_FIELD_NUMBER = 6;
+  private long jobPostId_;
+  /**
+   * <code>optional int64 jobPostId = 6;</code>
+   */
+  public long getJobPostId() {
+    return jobPostId_;
+  }
+
+  public static final int ISFINALFRAGMENT_FIELD_NUMBER = 7;
+  private boolean isFinalFragment_;
+  /**
+   * <code>optional bool isFinalFragment = 7;</code>
+   */
+  public boolean getIsFinalFragment() {
+    return isFinalFragment_;
+  }
+
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -219,6 +249,12 @@ public  final class UpdateCandidateEducationProfileRequest extends
     if (candidateEducationCompletionStatus_ != 0) {
       output.writeInt32(5, candidateEducationCompletionStatus_);
     }
+    if (jobPostId_ != 0L) {
+      output.writeInt64(6, jobPostId_);
+    }
+    if (isFinalFragment_ != false) {
+      output.writeBool(7, isFinalFragment_);
+    }
   }
 
   public int getSerializedSize() {
@@ -243,6 +279,14 @@ public  final class UpdateCandidateEducationProfileRequest extends
     if (candidateEducationCompletionStatus_ != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(5, candidateEducationCompletionStatus_);
+    }
+    if (jobPostId_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(6, jobPostId_);
+    }
+    if (isFinalFragment_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(7, isFinalFragment_);
     }
     memoizedSize = size;
     return size;
@@ -365,6 +409,10 @@ public  final class UpdateCandidateEducationProfileRequest extends
 
       candidateEducationCompletionStatus_ = 0;
 
+      jobPostId_ = 0L;
+
+      isFinalFragment_ = false;
+
       return this;
     }
 
@@ -392,6 +440,8 @@ public  final class UpdateCandidateEducationProfileRequest extends
       result.candidateDegree_ = candidateDegree_;
       result.candidateEducationInstitute_ = candidateEducationInstitute_;
       result.candidateEducationCompletionStatus_ = candidateEducationCompletionStatus_;
+      result.jobPostId_ = jobPostId_;
+      result.isFinalFragment_ = isFinalFragment_;
       onBuilt();
       return result;
     }
@@ -423,6 +473,12 @@ public  final class UpdateCandidateEducationProfileRequest extends
       }
       if (other.getCandidateEducationCompletionStatus() != 0) {
         setCandidateEducationCompletionStatus(other.getCandidateEducationCompletionStatus());
+      }
+      if (other.getJobPostId() != 0L) {
+        setJobPostId(other.getJobPostId());
+      }
+      if (other.getIsFinalFragment() != false) {
+        setIsFinalFragment(other.getIsFinalFragment());
       }
       onChanged();
       return this;
@@ -662,6 +718,58 @@ public  final class UpdateCandidateEducationProfileRequest extends
     public Builder clearCandidateEducationCompletionStatus() {
       
       candidateEducationCompletionStatus_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private long jobPostId_ ;
+    /**
+     * <code>optional int64 jobPostId = 6;</code>
+     */
+    public long getJobPostId() {
+      return jobPostId_;
+    }
+    /**
+     * <code>optional int64 jobPostId = 6;</code>
+     */
+    public Builder setJobPostId(long value) {
+      
+      jobPostId_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional int64 jobPostId = 6;</code>
+     */
+    public Builder clearJobPostId() {
+      
+      jobPostId_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private boolean isFinalFragment_ ;
+    /**
+     * <code>optional bool isFinalFragment = 7;</code>
+     */
+    public boolean getIsFinalFragment() {
+      return isFinalFragment_;
+    }
+    /**
+     * <code>optional bool isFinalFragment = 7;</code>
+     */
+    public Builder setIsFinalFragment(boolean value) {
+      
+      isFinalFragment_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional bool isFinalFragment = 7;</code>
+     */
+    public Builder clearIsFinalFragment() {
+      
+      isFinalFragment_ = false;
       onChanged();
       return this;
     }

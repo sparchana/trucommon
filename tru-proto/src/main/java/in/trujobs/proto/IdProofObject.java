@@ -4,19 +4,20 @@
 package in.trujobs.proto;
 
 /**
- * Protobuf type {@code in.trujobs.proto.InterviewTimeSlotObject}
+ * Protobuf type {@code in.trujobs.proto.IdProofObject}
  */
-public  final class InterviewTimeSlotObject extends
+public  final class IdProofObject extends
     com.google.protobuf.GeneratedMessage implements
-    // @@protoc_insertion_point(message_implements:in.trujobs.proto.InterviewTimeSlotObject)
-    InterviewTimeSlotObjectOrBuilder {
-  // Use InterviewTimeSlotObject.newBuilder() to construct.
-  private InterviewTimeSlotObject(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    // @@protoc_insertion_point(message_implements:in.trujobs.proto.IdProofObject)
+    IdProofObjectOrBuilder {
+  // Use IdProofObject.newBuilder() to construct.
+  private IdProofObject(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-  private InterviewTimeSlotObject() {
-    slotId_ = 0;
-    slotTitle_ = "";
+  private IdProofObject() {
+    idProofId_ = 0;
+    idProofName_ = "";
+    isCommon_ = false;
   }
 
   @java.lang.Override
@@ -24,7 +25,7 @@ public  final class InterviewTimeSlotObject extends
   getUnknownFields() {
     return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
   }
-  private InterviewTimeSlotObject(
+  private IdProofObject(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
     this();
@@ -45,13 +46,18 @@ public  final class InterviewTimeSlotObject extends
           }
           case 8: {
 
-            slotId_ = input.readInt32();
+            idProofId_ = input.readInt32();
             break;
           }
           case 18: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            slotTitle_ = s;
+            idProofName_ = s;
+            break;
+          }
+          case 24: {
+
+            isCommon_ = input.readBool();
             break;
           }
         }
@@ -68,57 +74,66 @@ public  final class InterviewTimeSlotObject extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_InterviewTimeSlotObject_descriptor;
+    return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_IdProofObject_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_InterviewTimeSlotObject_fieldAccessorTable
+    return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_IdProofObject_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            in.trujobs.proto.InterviewTimeSlotObject.class, in.trujobs.proto.InterviewTimeSlotObject.Builder.class);
+            in.trujobs.proto.IdProofObject.class, in.trujobs.proto.IdProofObject.Builder.class);
   }
 
-  public static final int SLOTID_FIELD_NUMBER = 1;
-  private int slotId_;
+  public static final int IDPROOFID_FIELD_NUMBER = 1;
+  private int idProofId_;
   /**
-   * <code>optional int32 slotId = 1;</code>
+   * <code>optional int32 idProofId = 1;</code>
    */
-  public int getSlotId() {
-    return slotId_;
+  public int getIdProofId() {
+    return idProofId_;
   }
 
-  public static final int SLOTTITLE_FIELD_NUMBER = 2;
-  private volatile java.lang.Object slotTitle_;
+  public static final int IDPROOFNAME_FIELD_NUMBER = 2;
+  private volatile java.lang.Object idProofName_;
   /**
-   * <code>optional string slotTitle = 2;</code>
+   * <code>optional string idProofName = 2;</code>
    */
-  public java.lang.String getSlotTitle() {
-    java.lang.Object ref = slotTitle_;
+  public java.lang.String getIdProofName() {
+    java.lang.Object ref = idProofName_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      slotTitle_ = s;
+      idProofName_ = s;
       return s;
     }
   }
   /**
-   * <code>optional string slotTitle = 2;</code>
+   * <code>optional string idProofName = 2;</code>
    */
   public com.google.protobuf.ByteString
-      getSlotTitleBytes() {
-    java.lang.Object ref = slotTitle_;
+      getIdProofNameBytes() {
+    java.lang.Object ref = idProofName_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      slotTitle_ = b;
+      idProofName_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
+  }
+
+  public static final int ISCOMMON_FIELD_NUMBER = 3;
+  private boolean isCommon_;
+  /**
+   * <code>optional bool isCommon = 3;</code>
+   */
+  public boolean getIsCommon() {
+    return isCommon_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -133,11 +148,14 @@ public  final class InterviewTimeSlotObject extends
 
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (slotId_ != 0) {
-      output.writeInt32(1, slotId_);
+    if (idProofId_ != 0) {
+      output.writeInt32(1, idProofId_);
     }
-    if (!getSlotTitleBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 2, slotTitle_);
+    if (!getIdProofNameBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 2, idProofName_);
+    }
+    if (isCommon_ != false) {
+      output.writeBool(3, isCommon_);
     }
   }
 
@@ -146,65 +164,69 @@ public  final class InterviewTimeSlotObject extends
     if (size != -1) return size;
 
     size = 0;
-    if (slotId_ != 0) {
+    if (idProofId_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(1, slotId_);
+        .computeInt32Size(1, idProofId_);
     }
-    if (!getSlotTitleBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(2, slotTitle_);
+    if (!getIdProofNameBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(2, idProofName_);
+    }
+    if (isCommon_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(3, isCommon_);
     }
     memoizedSize = size;
     return size;
   }
 
   private static final long serialVersionUID = 0L;
-  public static in.trujobs.proto.InterviewTimeSlotObject parseFrom(
+  public static in.trujobs.proto.IdProofObject parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static in.trujobs.proto.InterviewTimeSlotObject parseFrom(
+  public static in.trujobs.proto.IdProofObject parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static in.trujobs.proto.InterviewTimeSlotObject parseFrom(byte[] data)
+  public static in.trujobs.proto.IdProofObject parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static in.trujobs.proto.InterviewTimeSlotObject parseFrom(
+  public static in.trujobs.proto.IdProofObject parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static in.trujobs.proto.InterviewTimeSlotObject parseFrom(java.io.InputStream input)
+  public static in.trujobs.proto.IdProofObject parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return PARSER.parseFrom(input);
   }
-  public static in.trujobs.proto.InterviewTimeSlotObject parseFrom(
+  public static in.trujobs.proto.IdProofObject parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return PARSER.parseFrom(input, extensionRegistry);
   }
-  public static in.trujobs.proto.InterviewTimeSlotObject parseDelimitedFrom(java.io.InputStream input)
+  public static in.trujobs.proto.IdProofObject parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return PARSER.parseDelimitedFrom(input);
   }
-  public static in.trujobs.proto.InterviewTimeSlotObject parseDelimitedFrom(
+  public static in.trujobs.proto.IdProofObject parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return PARSER.parseDelimitedFrom(input, extensionRegistry);
   }
-  public static in.trujobs.proto.InterviewTimeSlotObject parseFrom(
+  public static in.trujobs.proto.IdProofObject parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return PARSER.parseFrom(input);
   }
-  public static in.trujobs.proto.InterviewTimeSlotObject parseFrom(
+  public static in.trujobs.proto.IdProofObject parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -215,7 +237,7 @@ public  final class InterviewTimeSlotObject extends
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(in.trujobs.proto.InterviewTimeSlotObject prototype) {
+  public static Builder newBuilder(in.trujobs.proto.IdProofObject prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   public Builder toBuilder() {
@@ -230,25 +252,25 @@ public  final class InterviewTimeSlotObject extends
     return builder;
   }
   /**
-   * Protobuf type {@code in.trujobs.proto.InterviewTimeSlotObject}
+   * Protobuf type {@code in.trujobs.proto.IdProofObject}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:in.trujobs.proto.InterviewTimeSlotObject)
-      in.trujobs.proto.InterviewTimeSlotObjectOrBuilder {
+      // @@protoc_insertion_point(builder_implements:in.trujobs.proto.IdProofObject)
+      in.trujobs.proto.IdProofObjectOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_InterviewTimeSlotObject_descriptor;
+      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_IdProofObject_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_InterviewTimeSlotObject_fieldAccessorTable
+      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_IdProofObject_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              in.trujobs.proto.InterviewTimeSlotObject.class, in.trujobs.proto.InterviewTimeSlotObject.Builder.class);
+              in.trujobs.proto.IdProofObject.class, in.trujobs.proto.IdProofObject.Builder.class);
     }
 
-    // Construct using in.trujobs.proto.InterviewTimeSlotObject.newBuilder()
+    // Construct using in.trujobs.proto.IdProofObject.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -264,55 +286,61 @@ public  final class InterviewTimeSlotObject extends
     }
     public Builder clear() {
       super.clear();
-      slotId_ = 0;
+      idProofId_ = 0;
 
-      slotTitle_ = "";
+      idProofName_ = "";
+
+      isCommon_ = false;
 
       return this;
     }
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_InterviewTimeSlotObject_descriptor;
+      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_IdProofObject_descriptor;
     }
 
-    public in.trujobs.proto.InterviewTimeSlotObject getDefaultInstanceForType() {
-      return in.trujobs.proto.InterviewTimeSlotObject.getDefaultInstance();
+    public in.trujobs.proto.IdProofObject getDefaultInstanceForType() {
+      return in.trujobs.proto.IdProofObject.getDefaultInstance();
     }
 
-    public in.trujobs.proto.InterviewTimeSlotObject build() {
-      in.trujobs.proto.InterviewTimeSlotObject result = buildPartial();
+    public in.trujobs.proto.IdProofObject build() {
+      in.trujobs.proto.IdProofObject result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
       return result;
     }
 
-    public in.trujobs.proto.InterviewTimeSlotObject buildPartial() {
-      in.trujobs.proto.InterviewTimeSlotObject result = new in.trujobs.proto.InterviewTimeSlotObject(this);
-      result.slotId_ = slotId_;
-      result.slotTitle_ = slotTitle_;
+    public in.trujobs.proto.IdProofObject buildPartial() {
+      in.trujobs.proto.IdProofObject result = new in.trujobs.proto.IdProofObject(this);
+      result.idProofId_ = idProofId_;
+      result.idProofName_ = idProofName_;
+      result.isCommon_ = isCommon_;
       onBuilt();
       return result;
     }
 
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof in.trujobs.proto.InterviewTimeSlotObject) {
-        return mergeFrom((in.trujobs.proto.InterviewTimeSlotObject)other);
+      if (other instanceof in.trujobs.proto.IdProofObject) {
+        return mergeFrom((in.trujobs.proto.IdProofObject)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(in.trujobs.proto.InterviewTimeSlotObject other) {
-      if (other == in.trujobs.proto.InterviewTimeSlotObject.getDefaultInstance()) return this;
-      if (other.getSlotId() != 0) {
-        setSlotId(other.getSlotId());
+    public Builder mergeFrom(in.trujobs.proto.IdProofObject other) {
+      if (other == in.trujobs.proto.IdProofObject.getDefaultInstance()) return this;
+      if (other.getIdProofId() != 0) {
+        setIdProofId(other.getIdProofId());
       }
-      if (!other.getSlotTitle().isEmpty()) {
-        slotTitle_ = other.slotTitle_;
+      if (!other.getIdProofName().isEmpty()) {
+        idProofName_ = other.idProofName_;
         onChanged();
+      }
+      if (other.getIsCommon() != false) {
+        setIsCommon(other.getIsCommon());
       }
       onChanged();
       return this;
@@ -326,11 +354,11 @@ public  final class InterviewTimeSlotObject extends
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      in.trujobs.proto.InterviewTimeSlotObject parsedMessage = null;
+      in.trujobs.proto.IdProofObject parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (in.trujobs.proto.InterviewTimeSlotObject) e.getUnfinishedMessage();
+        parsedMessage = (in.trujobs.proto.IdProofObject) e.getUnfinishedMessage();
         throw e;
       } finally {
         if (parsedMessage != null) {
@@ -340,97 +368,123 @@ public  final class InterviewTimeSlotObject extends
       return this;
     }
 
-    private int slotId_ ;
+    private int idProofId_ ;
     /**
-     * <code>optional int32 slotId = 1;</code>
+     * <code>optional int32 idProofId = 1;</code>
      */
-    public int getSlotId() {
-      return slotId_;
+    public int getIdProofId() {
+      return idProofId_;
     }
     /**
-     * <code>optional int32 slotId = 1;</code>
+     * <code>optional int32 idProofId = 1;</code>
      */
-    public Builder setSlotId(int value) {
+    public Builder setIdProofId(int value) {
       
-      slotId_ = value;
+      idProofId_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>optional int32 slotId = 1;</code>
+     * <code>optional int32 idProofId = 1;</code>
      */
-    public Builder clearSlotId() {
+    public Builder clearIdProofId() {
       
-      slotId_ = 0;
+      idProofId_ = 0;
       onChanged();
       return this;
     }
 
-    private java.lang.Object slotTitle_ = "";
+    private java.lang.Object idProofName_ = "";
     /**
-     * <code>optional string slotTitle = 2;</code>
+     * <code>optional string idProofName = 2;</code>
      */
-    public java.lang.String getSlotTitle() {
-      java.lang.Object ref = slotTitle_;
+    public java.lang.String getIdProofName() {
+      java.lang.Object ref = idProofName_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        slotTitle_ = s;
+        idProofName_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>optional string slotTitle = 2;</code>
+     * <code>optional string idProofName = 2;</code>
      */
     public com.google.protobuf.ByteString
-        getSlotTitleBytes() {
-      java.lang.Object ref = slotTitle_;
+        getIdProofNameBytes() {
+      java.lang.Object ref = idProofName_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        slotTitle_ = b;
+        idProofName_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>optional string slotTitle = 2;</code>
+     * <code>optional string idProofName = 2;</code>
      */
-    public Builder setSlotTitle(
+    public Builder setIdProofName(
         java.lang.String value) {
       if (value == null) {
     throw new NullPointerException();
   }
   
-      slotTitle_ = value;
+      idProofName_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>optional string slotTitle = 2;</code>
+     * <code>optional string idProofName = 2;</code>
      */
-    public Builder clearSlotTitle() {
+    public Builder clearIdProofName() {
       
-      slotTitle_ = getDefaultInstance().getSlotTitle();
+      idProofName_ = getDefaultInstance().getIdProofName();
       onChanged();
       return this;
     }
     /**
-     * <code>optional string slotTitle = 2;</code>
+     * <code>optional string idProofName = 2;</code>
      */
-    public Builder setSlotTitleBytes(
+    public Builder setIdProofNameBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
       
-      slotTitle_ = value;
+      idProofName_ = value;
+      onChanged();
+      return this;
+    }
+
+    private boolean isCommon_ ;
+    /**
+     * <code>optional bool isCommon = 3;</code>
+     */
+    public boolean getIsCommon() {
+      return isCommon_;
+    }
+    /**
+     * <code>optional bool isCommon = 3;</code>
+     */
+    public Builder setIsCommon(boolean value) {
+      
+      isCommon_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional bool isCommon = 3;</code>
+     */
+    public Builder clearIsCommon() {
+      
+      isCommon_ = false;
       onChanged();
       return this;
     }
@@ -445,27 +499,27 @@ public  final class InterviewTimeSlotObject extends
     }
 
 
-    // @@protoc_insertion_point(builder_scope:in.trujobs.proto.InterviewTimeSlotObject)
+    // @@protoc_insertion_point(builder_scope:in.trujobs.proto.IdProofObject)
   }
 
-  // @@protoc_insertion_point(class_scope:in.trujobs.proto.InterviewTimeSlotObject)
-  private static final in.trujobs.proto.InterviewTimeSlotObject DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:in.trujobs.proto.IdProofObject)
+  private static final in.trujobs.proto.IdProofObject DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new in.trujobs.proto.InterviewTimeSlotObject();
+    DEFAULT_INSTANCE = new in.trujobs.proto.IdProofObject();
   }
 
-  public static in.trujobs.proto.InterviewTimeSlotObject getDefaultInstance() {
+  public static in.trujobs.proto.IdProofObject getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<InterviewTimeSlotObject>
-      PARSER = new com.google.protobuf.AbstractParser<InterviewTimeSlotObject>() {
-    public InterviewTimeSlotObject parsePartialFrom(
+  private static final com.google.protobuf.Parser<IdProofObject>
+      PARSER = new com.google.protobuf.AbstractParser<IdProofObject>() {
+    public IdProofObject parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       try {
-        return new InterviewTimeSlotObject(input, extensionRegistry);
+        return new IdProofObject(input, extensionRegistry);
       } catch (RuntimeException e) {
         if (e.getCause() instanceof
             com.google.protobuf.InvalidProtocolBufferException) {
@@ -477,16 +531,16 @@ public  final class InterviewTimeSlotObject extends
     }
   };
 
-  public static com.google.protobuf.Parser<InterviewTimeSlotObject> parser() {
+  public static com.google.protobuf.Parser<IdProofObject> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<InterviewTimeSlotObject> getParserForType() {
+  public com.google.protobuf.Parser<IdProofObject> getParserForType() {
     return PARSER;
   }
 
-  public in.trujobs.proto.InterviewTimeSlotObject getDefaultInstanceForType() {
+  public in.trujobs.proto.IdProofObject getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

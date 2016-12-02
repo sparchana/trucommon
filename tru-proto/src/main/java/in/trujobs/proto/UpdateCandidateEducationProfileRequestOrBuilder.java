@@ -41,4 +41,14 @@ public interface UpdateCandidateEducationProfileRequestOrBuilder extends
    * <code>optional int32 candidate_education_completion_status = 5;</code>
    */
   int getCandidateEducationCompletionStatus();
+
+  /**
+   * <code>optional int64 jobPostId = 6;</code>
+   */
+  long getJobPostId();
+
+  /**
+   * <code>optional bool isFinalFragment = 7;</code>
+   */
+  boolean getIsFinalFragment();
 }
