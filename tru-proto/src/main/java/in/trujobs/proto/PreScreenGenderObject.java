@@ -4,19 +4,20 @@
 package in.trujobs.proto;
 
 /**
- * Protobuf type {@code in.trujobs.proto.InterviewTimeSlotObject}
+ * Protobuf type {@code in.trujobs.proto.PreScreenGenderObject}
  */
-public  final class InterviewTimeSlotObject extends
+public  final class PreScreenGenderObject extends
     com.google.protobuf.GeneratedMessage implements
-    // @@protoc_insertion_point(message_implements:in.trujobs.proto.InterviewTimeSlotObject)
-    InterviewTimeSlotObjectOrBuilder {
-  // Use InterviewTimeSlotObject.newBuilder() to construct.
-  private InterviewTimeSlotObject(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    // @@protoc_insertion_point(message_implements:in.trujobs.proto.PreScreenGenderObject)
+    PreScreenGenderObjectOrBuilder {
+  // Use PreScreenGenderObject.newBuilder() to construct.
+  private PreScreenGenderObject(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-  private InterviewTimeSlotObject() {
-    slotId_ = 0;
-    slotTitle_ = "";
+  private PreScreenGenderObject() {
+    isMatching_ = false;
+    propertyId_ = 0;
+    propertyTitle_ = "";
   }
 
   @java.lang.Override
@@ -24,7 +25,7 @@ public  final class InterviewTimeSlotObject extends
   getUnknownFields() {
     return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
   }
-  private InterviewTimeSlotObject(
+  private PreScreenGenderObject(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
     this();
@@ -45,13 +46,18 @@ public  final class InterviewTimeSlotObject extends
           }
           case 8: {
 
-            slotId_ = input.readInt32();
+            isMatching_ = input.readBool();
             break;
           }
-          case 18: {
+          case 16: {
+
+            propertyId_ = input.readInt32();
+            break;
+          }
+          case 26: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            slotTitle_ = s;
+            propertyTitle_ = s;
             break;
           }
         }
@@ -68,53 +74,62 @@ public  final class InterviewTimeSlotObject extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_InterviewTimeSlotObject_descriptor;
+    return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_PreScreenGenderObject_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_InterviewTimeSlotObject_fieldAccessorTable
+    return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_PreScreenGenderObject_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            in.trujobs.proto.InterviewTimeSlotObject.class, in.trujobs.proto.InterviewTimeSlotObject.Builder.class);
+            in.trujobs.proto.PreScreenGenderObject.class, in.trujobs.proto.PreScreenGenderObject.Builder.class);
   }
 
-  public static final int SLOTID_FIELD_NUMBER = 1;
-  private int slotId_;
+  public static final int ISMATCHING_FIELD_NUMBER = 1;
+  private boolean isMatching_;
   /**
-   * <code>optional int32 slotId = 1;</code>
+   * <code>optional bool isMatching = 1;</code>
    */
-  public int getSlotId() {
-    return slotId_;
+  public boolean getIsMatching() {
+    return isMatching_;
   }
 
-  public static final int SLOTTITLE_FIELD_NUMBER = 2;
-  private volatile java.lang.Object slotTitle_;
+  public static final int PROPERTYID_FIELD_NUMBER = 2;
+  private int propertyId_;
   /**
-   * <code>optional string slotTitle = 2;</code>
+   * <code>optional int32 propertyId = 2;</code>
    */
-  public java.lang.String getSlotTitle() {
-    java.lang.Object ref = slotTitle_;
+  public int getPropertyId() {
+    return propertyId_;
+  }
+
+  public static final int PROPERTYTITLE_FIELD_NUMBER = 3;
+  private volatile java.lang.Object propertyTitle_;
+  /**
+   * <code>optional string propertyTitle = 3;</code>
+   */
+  public java.lang.String getPropertyTitle() {
+    java.lang.Object ref = propertyTitle_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      slotTitle_ = s;
+      propertyTitle_ = s;
       return s;
     }
   }
   /**
-   * <code>optional string slotTitle = 2;</code>
+   * <code>optional string propertyTitle = 3;</code>
    */
   public com.google.protobuf.ByteString
-      getSlotTitleBytes() {
-    java.lang.Object ref = slotTitle_;
+      getPropertyTitleBytes() {
+    java.lang.Object ref = propertyTitle_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      slotTitle_ = b;
+      propertyTitle_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -133,11 +148,14 @@ public  final class InterviewTimeSlotObject extends
 
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (slotId_ != 0) {
-      output.writeInt32(1, slotId_);
+    if (isMatching_ != false) {
+      output.writeBool(1, isMatching_);
     }
-    if (!getSlotTitleBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 2, slotTitle_);
+    if (propertyId_ != 0) {
+      output.writeInt32(2, propertyId_);
+    }
+    if (!getPropertyTitleBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 3, propertyTitle_);
     }
   }
 
@@ -146,65 +164,69 @@ public  final class InterviewTimeSlotObject extends
     if (size != -1) return size;
 
     size = 0;
-    if (slotId_ != 0) {
+    if (isMatching_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(1, slotId_);
+        .computeBoolSize(1, isMatching_);
     }
-    if (!getSlotTitleBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(2, slotTitle_);
+    if (propertyId_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(2, propertyId_);
+    }
+    if (!getPropertyTitleBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(3, propertyTitle_);
     }
     memoizedSize = size;
     return size;
   }
 
   private static final long serialVersionUID = 0L;
-  public static in.trujobs.proto.InterviewTimeSlotObject parseFrom(
+  public static in.trujobs.proto.PreScreenGenderObject parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static in.trujobs.proto.InterviewTimeSlotObject parseFrom(
+  public static in.trujobs.proto.PreScreenGenderObject parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static in.trujobs.proto.InterviewTimeSlotObject parseFrom(byte[] data)
+  public static in.trujobs.proto.PreScreenGenderObject parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static in.trujobs.proto.InterviewTimeSlotObject parseFrom(
+  public static in.trujobs.proto.PreScreenGenderObject parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static in.trujobs.proto.InterviewTimeSlotObject parseFrom(java.io.InputStream input)
+  public static in.trujobs.proto.PreScreenGenderObject parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return PARSER.parseFrom(input);
   }
-  public static in.trujobs.proto.InterviewTimeSlotObject parseFrom(
+  public static in.trujobs.proto.PreScreenGenderObject parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return PARSER.parseFrom(input, extensionRegistry);
   }
-  public static in.trujobs.proto.InterviewTimeSlotObject parseDelimitedFrom(java.io.InputStream input)
+  public static in.trujobs.proto.PreScreenGenderObject parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return PARSER.parseDelimitedFrom(input);
   }
-  public static in.trujobs.proto.InterviewTimeSlotObject parseDelimitedFrom(
+  public static in.trujobs.proto.PreScreenGenderObject parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return PARSER.parseDelimitedFrom(input, extensionRegistry);
   }
-  public static in.trujobs.proto.InterviewTimeSlotObject parseFrom(
+  public static in.trujobs.proto.PreScreenGenderObject parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return PARSER.parseFrom(input);
   }
-  public static in.trujobs.proto.InterviewTimeSlotObject parseFrom(
+  public static in.trujobs.proto.PreScreenGenderObject parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -215,7 +237,7 @@ public  final class InterviewTimeSlotObject extends
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(in.trujobs.proto.InterviewTimeSlotObject prototype) {
+  public static Builder newBuilder(in.trujobs.proto.PreScreenGenderObject prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   public Builder toBuilder() {
@@ -230,25 +252,25 @@ public  final class InterviewTimeSlotObject extends
     return builder;
   }
   /**
-   * Protobuf type {@code in.trujobs.proto.InterviewTimeSlotObject}
+   * Protobuf type {@code in.trujobs.proto.PreScreenGenderObject}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:in.trujobs.proto.InterviewTimeSlotObject)
-      in.trujobs.proto.InterviewTimeSlotObjectOrBuilder {
+      // @@protoc_insertion_point(builder_implements:in.trujobs.proto.PreScreenGenderObject)
+      in.trujobs.proto.PreScreenGenderObjectOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_InterviewTimeSlotObject_descriptor;
+      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_PreScreenGenderObject_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_InterviewTimeSlotObject_fieldAccessorTable
+      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_PreScreenGenderObject_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              in.trujobs.proto.InterviewTimeSlotObject.class, in.trujobs.proto.InterviewTimeSlotObject.Builder.class);
+              in.trujobs.proto.PreScreenGenderObject.class, in.trujobs.proto.PreScreenGenderObject.Builder.class);
     }
 
-    // Construct using in.trujobs.proto.InterviewTimeSlotObject.newBuilder()
+    // Construct using in.trujobs.proto.PreScreenGenderObject.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -264,54 +286,60 @@ public  final class InterviewTimeSlotObject extends
     }
     public Builder clear() {
       super.clear();
-      slotId_ = 0;
+      isMatching_ = false;
 
-      slotTitle_ = "";
+      propertyId_ = 0;
+
+      propertyTitle_ = "";
 
       return this;
     }
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_InterviewTimeSlotObject_descriptor;
+      return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_PreScreenGenderObject_descriptor;
     }
 
-    public in.trujobs.proto.InterviewTimeSlotObject getDefaultInstanceForType() {
-      return in.trujobs.proto.InterviewTimeSlotObject.getDefaultInstance();
+    public in.trujobs.proto.PreScreenGenderObject getDefaultInstanceForType() {
+      return in.trujobs.proto.PreScreenGenderObject.getDefaultInstance();
     }
 
-    public in.trujobs.proto.InterviewTimeSlotObject build() {
-      in.trujobs.proto.InterviewTimeSlotObject result = buildPartial();
+    public in.trujobs.proto.PreScreenGenderObject build() {
+      in.trujobs.proto.PreScreenGenderObject result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
       return result;
     }
 
-    public in.trujobs.proto.InterviewTimeSlotObject buildPartial() {
-      in.trujobs.proto.InterviewTimeSlotObject result = new in.trujobs.proto.InterviewTimeSlotObject(this);
-      result.slotId_ = slotId_;
-      result.slotTitle_ = slotTitle_;
+    public in.trujobs.proto.PreScreenGenderObject buildPartial() {
+      in.trujobs.proto.PreScreenGenderObject result = new in.trujobs.proto.PreScreenGenderObject(this);
+      result.isMatching_ = isMatching_;
+      result.propertyId_ = propertyId_;
+      result.propertyTitle_ = propertyTitle_;
       onBuilt();
       return result;
     }
 
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof in.trujobs.proto.InterviewTimeSlotObject) {
-        return mergeFrom((in.trujobs.proto.InterviewTimeSlotObject)other);
+      if (other instanceof in.trujobs.proto.PreScreenGenderObject) {
+        return mergeFrom((in.trujobs.proto.PreScreenGenderObject)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(in.trujobs.proto.InterviewTimeSlotObject other) {
-      if (other == in.trujobs.proto.InterviewTimeSlotObject.getDefaultInstance()) return this;
-      if (other.getSlotId() != 0) {
-        setSlotId(other.getSlotId());
+    public Builder mergeFrom(in.trujobs.proto.PreScreenGenderObject other) {
+      if (other == in.trujobs.proto.PreScreenGenderObject.getDefaultInstance()) return this;
+      if (other.getIsMatching() != false) {
+        setIsMatching(other.getIsMatching());
       }
-      if (!other.getSlotTitle().isEmpty()) {
-        slotTitle_ = other.slotTitle_;
+      if (other.getPropertyId() != 0) {
+        setPropertyId(other.getPropertyId());
+      }
+      if (!other.getPropertyTitle().isEmpty()) {
+        propertyTitle_ = other.propertyTitle_;
         onChanged();
       }
       onChanged();
@@ -326,11 +354,11 @@ public  final class InterviewTimeSlotObject extends
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      in.trujobs.proto.InterviewTimeSlotObject parsedMessage = null;
+      in.trujobs.proto.PreScreenGenderObject parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (in.trujobs.proto.InterviewTimeSlotObject) e.getUnfinishedMessage();
+        parsedMessage = (in.trujobs.proto.PreScreenGenderObject) e.getUnfinishedMessage();
         throw e;
       } finally {
         if (parsedMessage != null) {
@@ -340,97 +368,123 @@ public  final class InterviewTimeSlotObject extends
       return this;
     }
 
-    private int slotId_ ;
+    private boolean isMatching_ ;
     /**
-     * <code>optional int32 slotId = 1;</code>
+     * <code>optional bool isMatching = 1;</code>
      */
-    public int getSlotId() {
-      return slotId_;
+    public boolean getIsMatching() {
+      return isMatching_;
     }
     /**
-     * <code>optional int32 slotId = 1;</code>
+     * <code>optional bool isMatching = 1;</code>
      */
-    public Builder setSlotId(int value) {
+    public Builder setIsMatching(boolean value) {
       
-      slotId_ = value;
+      isMatching_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>optional int32 slotId = 1;</code>
+     * <code>optional bool isMatching = 1;</code>
      */
-    public Builder clearSlotId() {
+    public Builder clearIsMatching() {
       
-      slotId_ = 0;
+      isMatching_ = false;
       onChanged();
       return this;
     }
 
-    private java.lang.Object slotTitle_ = "";
+    private int propertyId_ ;
     /**
-     * <code>optional string slotTitle = 2;</code>
+     * <code>optional int32 propertyId = 2;</code>
      */
-    public java.lang.String getSlotTitle() {
-      java.lang.Object ref = slotTitle_;
+    public int getPropertyId() {
+      return propertyId_;
+    }
+    /**
+     * <code>optional int32 propertyId = 2;</code>
+     */
+    public Builder setPropertyId(int value) {
+      
+      propertyId_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional int32 propertyId = 2;</code>
+     */
+    public Builder clearPropertyId() {
+      
+      propertyId_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object propertyTitle_ = "";
+    /**
+     * <code>optional string propertyTitle = 3;</code>
+     */
+    public java.lang.String getPropertyTitle() {
+      java.lang.Object ref = propertyTitle_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        slotTitle_ = s;
+        propertyTitle_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>optional string slotTitle = 2;</code>
+     * <code>optional string propertyTitle = 3;</code>
      */
     public com.google.protobuf.ByteString
-        getSlotTitleBytes() {
-      java.lang.Object ref = slotTitle_;
+        getPropertyTitleBytes() {
+      java.lang.Object ref = propertyTitle_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        slotTitle_ = b;
+        propertyTitle_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>optional string slotTitle = 2;</code>
+     * <code>optional string propertyTitle = 3;</code>
      */
-    public Builder setSlotTitle(
+    public Builder setPropertyTitle(
         java.lang.String value) {
       if (value == null) {
     throw new NullPointerException();
   }
   
-      slotTitle_ = value;
+      propertyTitle_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>optional string slotTitle = 2;</code>
+     * <code>optional string propertyTitle = 3;</code>
      */
-    public Builder clearSlotTitle() {
+    public Builder clearPropertyTitle() {
       
-      slotTitle_ = getDefaultInstance().getSlotTitle();
+      propertyTitle_ = getDefaultInstance().getPropertyTitle();
       onChanged();
       return this;
     }
     /**
-     * <code>optional string slotTitle = 2;</code>
+     * <code>optional string propertyTitle = 3;</code>
      */
-    public Builder setSlotTitleBytes(
+    public Builder setPropertyTitleBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
       
-      slotTitle_ = value;
+      propertyTitle_ = value;
       onChanged();
       return this;
     }
@@ -445,27 +499,27 @@ public  final class InterviewTimeSlotObject extends
     }
 
 
-    // @@protoc_insertion_point(builder_scope:in.trujobs.proto.InterviewTimeSlotObject)
+    // @@protoc_insertion_point(builder_scope:in.trujobs.proto.PreScreenGenderObject)
   }
 
-  // @@protoc_insertion_point(class_scope:in.trujobs.proto.InterviewTimeSlotObject)
-  private static final in.trujobs.proto.InterviewTimeSlotObject DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:in.trujobs.proto.PreScreenGenderObject)
+  private static final in.trujobs.proto.PreScreenGenderObject DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new in.trujobs.proto.InterviewTimeSlotObject();
+    DEFAULT_INSTANCE = new in.trujobs.proto.PreScreenGenderObject();
   }
 
-  public static in.trujobs.proto.InterviewTimeSlotObject getDefaultInstance() {
+  public static in.trujobs.proto.PreScreenGenderObject getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<InterviewTimeSlotObject>
-      PARSER = new com.google.protobuf.AbstractParser<InterviewTimeSlotObject>() {
-    public InterviewTimeSlotObject parsePartialFrom(
+  private static final com.google.protobuf.Parser<PreScreenGenderObject>
+      PARSER = new com.google.protobuf.AbstractParser<PreScreenGenderObject>() {
+    public PreScreenGenderObject parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       try {
-        return new InterviewTimeSlotObject(input, extensionRegistry);
+        return new PreScreenGenderObject(input, extensionRegistry);
       } catch (RuntimeException e) {
         if (e.getCause() instanceof
             com.google.protobuf.InvalidProtocolBufferException) {
@@ -477,16 +531,16 @@ public  final class InterviewTimeSlotObject extends
     }
   };
 
-  public static com.google.protobuf.Parser<InterviewTimeSlotObject> parser() {
+  public static com.google.protobuf.Parser<PreScreenGenderObject> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<InterviewTimeSlotObject> getParserForType() {
+  public com.google.protobuf.Parser<PreScreenGenderObject> getParserForType() {
     return PARSER;
   }
 
-  public in.trujobs.proto.InterviewTimeSlotObject getDefaultInstanceForType() {
+  public in.trujobs.proto.PreScreenGenderObject getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

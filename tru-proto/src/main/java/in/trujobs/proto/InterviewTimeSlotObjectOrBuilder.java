@@ -8,17 +8,17 @@ public interface InterviewTimeSlotObjectOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>optional int64 slotId = 1;</code>
+   * <code>optional int32 slotId = 1;</code>
    */
-  long getSlotId();
+  int getSlotId();
 
   /**
-   * <code>optional string slotName = 2;</code>
+   * <code>optional string slotTitle = 2;</code>
    */
-  java.lang.String getSlotName();
+  java.lang.String getSlotTitle();
   /**
-   * <code>optional string slotName = 2;</code>
+   * <code>optional string slotTitle = 2;</code>
    */
   com.google.protobuf.ByteString
-      getSlotNameBytes();
+      getSlotTitleBytes();
 }

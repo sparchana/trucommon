@@ -15,4 +15,49 @@ public interface ApplyJobResponseOrBuilder extends
    * <code>optional .in.trujobs.proto.ApplyJobResponse.Status status = 1;</code>
    */
   in.trujobs.proto.ApplyJobResponse.Status getStatus();
+
+  /**
+   * <code>optional bool isPreScreenAvailable = 2;</code>
+   */
+  boolean getIsPreScreenAvailable();
+
+  /**
+   * <code>optional bool isInterviewAvailable = 3;</code>
+   */
+  boolean getIsInterviewAvailable();
+
+  /**
+   * <code>optional string companyName = 4;</code>
+   */
+  java.lang.String getCompanyName();
+  /**
+   * <code>optional string companyName = 4;</code>
+   */
+  com.google.protobuf.ByteString
+      getCompanyNameBytes();
+
+  /**
+   * <code>optional string jobRoleTitle = 5;</code>
+   */
+  java.lang.String getJobRoleTitle();
+  /**
+   * <code>optional string jobRoleTitle = 5;</code>
+   */
+  com.google.protobuf.ByteString
+      getJobRoleTitleBytes();
+
+  /**
+   * <code>optional string jobTitle = 6;</code>
+   */
+  java.lang.String getJobTitle();
+  /**
+   * <code>optional string jobTitle = 6;</code>
+   */
+  com.google.protobuf.ByteString
+      getJobTitleBytes();
+
+  /**
+   * <code>optional int64 jobPostId = 7;</code>
+   */
+  long getJobPostId();
 }

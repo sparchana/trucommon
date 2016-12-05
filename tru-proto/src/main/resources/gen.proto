@@ -158,6 +158,12 @@ message ApplyJobResponse{
         NO_JOB = 5;
     }
     Status status = 1;
+    bool isPreScreenAvailable = 2;
+    bool isInterviewAvailable = 3;
+    string companyName = 4;
+    string jobRoleTitle = 5;
+    string jobTitle = 6;
+    int64 jobPostId = 7;
 }
 
 message AddJobRoleRequest {
@@ -333,10 +339,6 @@ message LastActiveValueObject{
 	string lastActiveValue = 2;
 }
 
-message InterviewTimeSlotObject {
-	int64 slotId = 1;
-	string slotName = 2;
-}
 
 message JobPostWorkFlowStatus {
 	int64 statusId = 1;
@@ -370,6 +372,8 @@ message UpdateCandidateEducationProfileRequest {
     int64 candidate_degree = 3;
     string candidate_education_institute = 4;
     int32 candidate_education_completion_status = 5;
+    int64 jobPostId = 6;
+    bool isFinalFragment = 7;
 }
 
 message UpdateCandidateBasicProfileResponse {
@@ -534,6 +538,192 @@ message LocalityObjectResponse {
     LocalityObject locality = 3;
 }
 
+message PreScreenPopulateProtoRequest {
+    int64 candidateId = 1;   
+    int64 jobPostId = 2;   
+    bool rePreScreen = 3;
+    string candidateMobile = 4;
+}
+
+message PreScreenPopulateProtoResponse {
+    enum Status {
+        UNKNOWN = 0;
+        FAILURE = 1;
+        SUCCESS = 2;
+        INVALID = 3;
+    }
+    Status status = 1;
+    repeated int32 propertyId = 2[packed=true];
+    PreScreenDocumentObject documentList = 3;
+    PreScreenLanguageObject languageList = 4;
+    PreScreenAssetObject assetList = 5;
+    PreScreenAgeObject age = 6;
+    PreScreenExperienceObject experience = 7;
+    PreScreenEducationObject education = 8;
+    PreScreenGenderObject gender = 9;
+    PreScreenSalaryObject salary = 10;
+    bool shouldShow = 11;
+    int64 jobPostId = 12;
+    int64 candidateId = 13;
+    string preScreenCompanyName = 14;
+    string preScreenJobTitle = 15;
+    string preScreenJobRoleTitle = 16;
+}
+
+message PreScreenDocumentObject {
+    repeated IdProofObject jobPostIdProof = 1;
+    bool isMatching = 2;
+    int32 propertyId = 3;
+    string propertyTitle = 4;
+}
+
+message PreScreenLanguageObject {
+    repeated LanguageObject jobPostLanguage = 1;  
+    bool isMatching = 2;  
+    int32 propertyId = 3;
+    string propertyTitle = 4;
+}
+
+message PreScreenAssetObject {
+    repeated AssetObject jobPostAsset = 1;    
+    bool isMatching = 2;
+    int32 propertyId = 3;
+    string propertyTitle = 4;
+}
+
+message PreScreenAgeObject {
+    bool isMatching = 1;
+    int32 propertyId = 2;
+    string propertyTitle = 3;
+}
+
+message PreScreenExperienceObject {
+    bool isMatching = 1;
+    int32 propertyId = 2;
+    string propertyTitle = 3;
+}
+
+message PreScreenEducationObject {
+    bool isMatching = 1;
+    int32 propertyId = 2;
+    string propertyTitle = 3;
+}
+
+message PreScreenGenderObject {
+    bool isMatching = 1;
+    int32 propertyId = 2;
+    string propertyTitle = 3;
+}
+
+message PreScreenSalaryObject {
+    bool isMatching = 1;
+    int32 propertyId = 2;
+    string propertyTitle = 3;
+}
+
+message IdProofObjectWithNumber {
+    IdProofObject idProof = 1;
+    string idProofNumber = 2;
+}
+
+message IdProofObject {
+    int32 idProofId = 1;
+    string idProofName = 2;
+    bool isCommon = 3;
+}
+
+message AssetObject {
+    int32 assetId = 1;
+    string assetTitle = 2;
+    bool isCommon = 3;
+}
+
+message UpdateCandidateDocumentRequest {
+    string candidate_mobile = 1;
+    repeated IdProofObjectWithNumber idProof = 2;
+    int64 jobPostId = 3;
+    bool isFinalFragment = 4;
+}
+
+message UpdateCandidateLanguageRequest {
+    string candidate_mobile = 1;
+    repeated LanguageKnownObject languageKnownObject = 2;
+    int64 jobPostId = 3;
+    bool isFinalFragment = 4;
+}
+
+message UpdateCandidateExperienceRequest {
+    string candidate_mobile = 1;
+    int32 candidate_total_experience = 2;
+    int32 candidate_is_employed = 3;
+    string candidate_current_company = 4;
+    int64 candidate_current_salary = 5;
+    JobRoleObject current_job_role = 6;
+    int64 jobPostId = 7; 
+    bool isFinalFragment = 8;
+}
+
+message UpdateCandidateOtherRequest {
+    string candidate_mobile = 1;
+    repeated int32 propertyId = 2[packed=true];
+    string candidateDOB = 3;
+    int64 candidateLastWithdrawnSalary = 4;
+    int64 candidate_timeshift_pref = 5;
+    int32 candidateGender = 6;
+    repeated int32 assetId = 7;
+    int64 jobPostId = 8;
+    bool isFinalFragment = 9;
+
+}
+
+message GenericResponse {
+    enum Status {
+        UNKNOWN = 0;
+        FAILURE = 1;
+        SUCCESS = 2;
+        INVALID = 3;
+    }
+    Status status = 1;
+}
+
+message UpdateCandidateInterviewDetailRequest {
+    string candidate_mobile = 1;
+    int32 timeSlotId = 2;
+    int64 jobPostId = 4;
+    int64 scheduledInterviewDateInMills = 5;
+    bool isFinalFragment = 6;
+}
+
+message GetInterviewSlotsRequest {
+    int64 jobPostId = 1;
+}
+
+
+message GetInterviewSlotsResponse {
+    repeated InterviewSlot interviewSlots = 1;
+}
+
+message InterviewSlot {
+    InterviewTimeSlotObject interviewTimeSlotObject = 1;
+    string interviewDays = 2;
+}
+
+message InterviewTimeSlotObject {
+    int32 slotId = 1;
+    string slotTitle = 2;
+}
+
+
+message NotGoingReasonResponse {
+    repeated ReasonObject reasonObject = 1;
+}
+
+message ReasonObject {
+    int64 reasonId = 1;
+    string reasonTitle = 2;
+}
+
+
 message UpdateInterviewRequest {
     string candidate_mobile = 1;
     int64 jpId = 2;
@@ -565,13 +755,19 @@ message UpdateCandidateStatusResponse {
     Status status = 1;
 }
 
-message NotGoingReasonResponse {
-    repeated ReasonObject reasonObject = 1;
+message CheckInterviewSlotRequest {
+    int64 jobPostId = 1;
 }
 
-message ReasonObject {
-	int64 reasonId = 1;
-	string reasonTitle = 2;
+message CheckInterviewSlotResponse {
+    enum Status {
+        UNKNOWN = 0;
+        SUCCESS = 1;
+        FAILURE = 2;
+        INVALID = 3;
+    }
+    bool shouldShowInterview = 1;
+    Status status = 2;
 }
 
 message UpdateTokenRequest {
