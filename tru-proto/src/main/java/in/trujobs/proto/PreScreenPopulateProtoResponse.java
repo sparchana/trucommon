@@ -23,6 +23,7 @@ public  final class PreScreenPopulateProtoResponse extends
     preScreenCompanyName_ = "";
     preScreenJobTitle_ = "";
     preScreenJobRoleTitle_ = "";
+    hpPropertyId_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -213,6 +214,27 @@ public  final class PreScreenPopulateProtoResponse extends
             preScreenJobRoleTitle_ = s;
             break;
           }
+          case 136: {
+            if (!((mutable_bitField0_ & 0x00010000) == 0x00010000)) {
+              hpPropertyId_ = new java.util.ArrayList<java.lang.Integer>();
+              mutable_bitField0_ |= 0x00010000;
+            }
+            hpPropertyId_.add(input.readInt32());
+            break;
+          }
+          case 138: {
+            int length = input.readRawVarint32();
+            int limit = input.pushLimit(length);
+            if (!((mutable_bitField0_ & 0x00010000) == 0x00010000) && input.getBytesUntilLimit() > 0) {
+              hpPropertyId_ = new java.util.ArrayList<java.lang.Integer>();
+              mutable_bitField0_ |= 0x00010000;
+            }
+            while (input.getBytesUntilLimit() > 0) {
+              hpPropertyId_.add(input.readInt32());
+            }
+            input.popLimit(limit);
+            break;
+          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -224,6 +246,9 @@ public  final class PreScreenPopulateProtoResponse extends
     } finally {
       if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
         propertyId_ = java.util.Collections.unmodifiableList(propertyId_);
+      }
+      if (((mutable_bitField0_ & 0x00010000) == 0x00010000)) {
+        hpPropertyId_ = java.util.Collections.unmodifiableList(hpPropertyId_);
       }
       makeExtensionsImmutable();
     }
@@ -687,6 +712,29 @@ public  final class PreScreenPopulateProtoResponse extends
     }
   }
 
+  public static final int HPPROPERTYID_FIELD_NUMBER = 17;
+  private java.util.List<java.lang.Integer> hpPropertyId_;
+  /**
+   * <code>repeated int32 hpPropertyId = 17 [packed = true];</code>
+   */
+  public java.util.List<java.lang.Integer>
+      getHpPropertyIdList() {
+    return hpPropertyId_;
+  }
+  /**
+   * <code>repeated int32 hpPropertyId = 17 [packed = true];</code>
+   */
+  public int getHpPropertyIdCount() {
+    return hpPropertyId_.size();
+  }
+  /**
+   * <code>repeated int32 hpPropertyId = 17 [packed = true];</code>
+   */
+  public int getHpPropertyId(int index) {
+    return hpPropertyId_.get(index);
+  }
+  private int hpPropertyIdMemoizedSerializedSize = -1;
+
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -751,6 +799,13 @@ public  final class PreScreenPopulateProtoResponse extends
     }
     if (!getPreScreenJobRoleTitleBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessage.writeString(output, 16, preScreenJobRoleTitle_);
+    }
+    if (getHpPropertyIdList().size() > 0) {
+      output.writeRawVarint32(138);
+      output.writeRawVarint32(hpPropertyIdMemoizedSerializedSize);
+    }
+    for (int i = 0; i < hpPropertyId_.size(); i++) {
+      output.writeInt32NoTag(hpPropertyId_.get(i));
     }
   }
 
@@ -829,6 +884,20 @@ public  final class PreScreenPopulateProtoResponse extends
     }
     if (!getPreScreenJobRoleTitleBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(16, preScreenJobRoleTitle_);
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < hpPropertyId_.size(); i++) {
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeInt32SizeNoTag(hpPropertyId_.get(i));
+      }
+      size += dataSize;
+      if (!getHpPropertyIdList().isEmpty()) {
+        size += 2;
+        size += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(dataSize);
+      }
+      hpPropertyIdMemoizedSerializedSize = dataSize;
     }
     memoizedSize = size;
     return size;
@@ -1005,6 +1074,8 @@ public  final class PreScreenPopulateProtoResponse extends
 
       preScreenJobRoleTitle_ = "";
 
+      hpPropertyId_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00010000);
       return this;
     }
 
@@ -1081,6 +1152,11 @@ public  final class PreScreenPopulateProtoResponse extends
       result.preScreenCompanyName_ = preScreenCompanyName_;
       result.preScreenJobTitle_ = preScreenJobTitle_;
       result.preScreenJobRoleTitle_ = preScreenJobRoleTitle_;
+      if (((bitField0_ & 0x00010000) == 0x00010000)) {
+        hpPropertyId_ = java.util.Collections.unmodifiableList(hpPropertyId_);
+        bitField0_ = (bitField0_ & ~0x00010000);
+      }
+      result.hpPropertyId_ = hpPropertyId_;
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -1153,6 +1229,16 @@ public  final class PreScreenPopulateProtoResponse extends
       }
       if (!other.getPreScreenJobRoleTitle().isEmpty()) {
         preScreenJobRoleTitle_ = other.preScreenJobRoleTitle_;
+        onChanged();
+      }
+      if (!other.hpPropertyId_.isEmpty()) {
+        if (hpPropertyId_.isEmpty()) {
+          hpPropertyId_ = other.hpPropertyId_;
+          bitField0_ = (bitField0_ & ~0x00010000);
+        } else {
+          ensureHpPropertyIdIsMutable();
+          hpPropertyId_.addAll(other.hpPropertyId_);
+        }
         onChanged();
       }
       onChanged();
@@ -2509,6 +2595,72 @@ public  final class PreScreenPopulateProtoResponse extends
   checkByteStringIsUtf8(value);
       
       preScreenJobRoleTitle_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.util.List<java.lang.Integer> hpPropertyId_ = java.util.Collections.emptyList();
+    private void ensureHpPropertyIdIsMutable() {
+      if (!((bitField0_ & 0x00010000) == 0x00010000)) {
+        hpPropertyId_ = new java.util.ArrayList<java.lang.Integer>(hpPropertyId_);
+        bitField0_ |= 0x00010000;
+       }
+    }
+    /**
+     * <code>repeated int32 hpPropertyId = 17 [packed = true];</code>
+     */
+    public java.util.List<java.lang.Integer>
+        getHpPropertyIdList() {
+      return java.util.Collections.unmodifiableList(hpPropertyId_);
+    }
+    /**
+     * <code>repeated int32 hpPropertyId = 17 [packed = true];</code>
+     */
+    public int getHpPropertyIdCount() {
+      return hpPropertyId_.size();
+    }
+    /**
+     * <code>repeated int32 hpPropertyId = 17 [packed = true];</code>
+     */
+    public int getHpPropertyId(int index) {
+      return hpPropertyId_.get(index);
+    }
+    /**
+     * <code>repeated int32 hpPropertyId = 17 [packed = true];</code>
+     */
+    public Builder setHpPropertyId(
+        int index, int value) {
+      ensureHpPropertyIdIsMutable();
+      hpPropertyId_.set(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated int32 hpPropertyId = 17 [packed = true];</code>
+     */
+    public Builder addHpPropertyId(int value) {
+      ensureHpPropertyIdIsMutable();
+      hpPropertyId_.add(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated int32 hpPropertyId = 17 [packed = true];</code>
+     */
+    public Builder addAllHpPropertyId(
+        java.lang.Iterable<? extends java.lang.Integer> values) {
+      ensureHpPropertyIdIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, hpPropertyId_);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated int32 hpPropertyId = 17 [packed = true];</code>
+     */
+    public Builder clearHpPropertyId() {
+      hpPropertyId_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00010000);
       onChanged();
       return this;
     }

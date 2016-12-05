@@ -568,6 +568,7 @@ message PreScreenPopulateProtoResponse {
     string preScreenCompanyName = 14;
     string preScreenJobTitle = 15;
     string preScreenJobRoleTitle = 16;
+    repeated int32 hpPropertyId = 17[packed=true];
 }
 
 message PreScreenDocumentObject {
