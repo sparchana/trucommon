@@ -573,3 +573,30 @@ message ReasonObject {
 	int64 reasonId = 1;
 	string reasonTitle = 2;
 }
+
+message UpdateTokenRequest {
+    string candidate_id = 1;
+    string token = 2;
+}
+
+message UpdateTokenResponse {
+    enum Status {
+        UNKNOWN = 0;
+        SUCCESS = 1;
+        FAILURE = 2;
+    }
+    Status status = 1;
+}
+
+message LogoutCandidateRequest {
+    string candidate_id = 1;
+}
+
+message LogoutCandidateResponse {
+    enum Status {
+        UNKNOWN = 0;
+        SUCCESS = 1;
+        FAILURE = 2;
+    }
+    Status status = 1;
+}
