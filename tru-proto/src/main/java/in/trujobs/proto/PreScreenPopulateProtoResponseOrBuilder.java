@@ -177,4 +177,17 @@ public interface PreScreenPopulateProtoResponseOrBuilder extends
    */
   com.google.protobuf.ByteString
       getPreScreenJobRoleTitleBytes();
+
+  /**
+   * <code>repeated int32 hpPropertyId = 17 [packed = true];</code>
+   */
+  java.util.List<java.lang.Integer> getHpPropertyIdList();
+  /**
+   * <code>repeated int32 hpPropertyId = 17 [packed = true];</code>
+   */
+  int getHpPropertyIdCount();
+  /**
+   * <code>repeated int32 hpPropertyId = 17 [packed = true];</code>
+   */
+  int getHpPropertyId(int index);
 }
