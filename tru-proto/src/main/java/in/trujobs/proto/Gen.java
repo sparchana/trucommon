@@ -463,6 +463,26 @@ public final class Gen {
   static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_in_trujobs_proto_LogoutCandidateResponse_fieldAccessorTable;
+  static com.google.protobuf.Descriptors.Descriptor
+    internal_static_in_trujobs_proto_FeedbackReasonResponse_descriptor;
+  static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_in_trujobs_proto_FeedbackReasonResponse_fieldAccessorTable;
+  static com.google.protobuf.Descriptors.Descriptor
+    internal_static_in_trujobs_proto_FeedbackReasonObject_descriptor;
+  static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_in_trujobs_proto_FeedbackReasonObject_fieldAccessorTable;
+  static com.google.protobuf.Descriptors.Descriptor
+    internal_static_in_trujobs_proto_AddFeedbackRequest_descriptor;
+  static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_in_trujobs_proto_AddFeedbackRequest_fieldAccessorTable;
+  static com.google.protobuf.Descriptors.Descriptor
+    internal_static_in_trujobs_proto_AddFeedbackResponse_descriptor;
+  static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_in_trujobs_proto_AddFeedbackResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -876,8 +896,19 @@ public final class Gen {
       "te_id\030\001 \001(\t\"\214\001\n\027LogoutCandidateResponse\022" +
       "@\n\006status\030\001 \001(\01620.in.trujobs.proto.Logou" +
       "tCandidateResponse.Status\"/\n\006Status\022\013\n\007U" +
-      "NKNOWN\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007FAILURE\020\002B\002P\001b\006" +
-      "proto3"
+      "NKNOWN\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007FAILURE\020\002\"^\n\026Fe" +
+      "edbackReasonResponse\022D\n\024feedbackReasonOb" +
+      "ject\030\001 \003(\0132&.in.trujobs.proto.FeedbackRe" +
+      "asonObject\"Q\n\024FeedbackReasonObject\022\020\n\010re" +
+      "asonId\030\001 \001(\003\022\023\n\013reasonTitle\030\002 \001(\t\022\022\n\nrea" +
+      "sonType\030\003 \001(\005\"\206\001\n\022AddFeedbackRequest\022\024\n\014",
+      "candidate_id\030\001 \001(\003\022\024\n\014rating_score\030\002 \001(\005" +
+      "\022D\n\024feedbackReasonObject\030\003 \003(\0132&.in.truj" +
+      "obs.proto.FeedbackReasonObject\"\204\001\n\023AddFe" +
+      "edbackResponse\022<\n\006status\030\001 \001(\0162,.in.truj" +
+      "obs.proto.AddFeedbackResponse.Status\"/\n\006" +
+      "Status\022\013\n\007UNKNOWN\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007FAIL" +
+      "URE\020\002B\002P\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1436,6 +1467,30 @@ public final class Gen {
     internal_static_in_trujobs_proto_LogoutCandidateResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_LogoutCandidateResponse_descriptor,
+        new java.lang.String[] { "Status", });
+    internal_static_in_trujobs_proto_FeedbackReasonResponse_descriptor =
+      getDescriptor().getMessageTypes().get(91);
+    internal_static_in_trujobs_proto_FeedbackReasonResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_in_trujobs_proto_FeedbackReasonResponse_descriptor,
+        new java.lang.String[] { "FeedbackReasonObject", });
+    internal_static_in_trujobs_proto_FeedbackReasonObject_descriptor =
+      getDescriptor().getMessageTypes().get(92);
+    internal_static_in_trujobs_proto_FeedbackReasonObject_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_in_trujobs_proto_FeedbackReasonObject_descriptor,
+        new java.lang.String[] { "ReasonId", "ReasonTitle", "ReasonType", });
+    internal_static_in_trujobs_proto_AddFeedbackRequest_descriptor =
+      getDescriptor().getMessageTypes().get(93);
+    internal_static_in_trujobs_proto_AddFeedbackRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_in_trujobs_proto_AddFeedbackRequest_descriptor,
+        new java.lang.String[] { "CandidateId", "RatingScore", "FeedbackReasonObject", });
+    internal_static_in_trujobs_proto_AddFeedbackResponse_descriptor =
+      getDescriptor().getMessageTypes().get(94);
+    internal_static_in_trujobs_proto_AddFeedbackResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_in_trujobs_proto_AddFeedbackResponse_descriptor,
         new java.lang.String[] { "Status", });
   }
 
