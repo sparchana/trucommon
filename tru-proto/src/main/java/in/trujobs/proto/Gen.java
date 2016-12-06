@@ -463,6 +463,16 @@ public final class Gen {
   static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_in_trujobs_proto_LogoutCandidateResponse_fieldAccessorTable;
+  static com.google.protobuf.Descriptors.Descriptor
+    internal_static_in_trujobs_proto_FeedbackReasonResponse_descriptor;
+  static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_in_trujobs_proto_FeedbackReasonResponse_fieldAccessorTable;
+  static com.google.protobuf.Descriptors.Descriptor
+    internal_static_in_trujobs_proto_FeedbackReasonObject_descriptor;
+  static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_in_trujobs_proto_FeedbackReasonObject_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -876,7 +886,11 @@ public final class Gen {
       "idateResponse\022@\n\006status\030\001 \001(\01620.in.trujo" +
       "bs.proto.LogoutCandidateResponse.Status\"" +
       "/\n\006Status\022\013\n\007UNKNOWN\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007F" +
-      "AILURE\020\002B\002P\001b\006proto3"
+      "AILURE\020\002\"^\n\026FeedbackReasonResponse\022D\n\024fe" +
+      "edbackReasonObject\030\001 \003(\0132&.in.trujobs.pr" +
+      "oto.FeedbackReasonObject\"Q\n\024FeedbackReas" +
+      "onObject\022\020\n\010reasonId\030\001 \001(\003\022\023\n\013reasonTitl" +
+      "e\030\002 \001(\t\022\022\n\nreasonType\030\003 \001(\005B\002P\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1436,6 +1450,18 @@ public final class Gen {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_LogoutCandidateResponse_descriptor,
         new java.lang.String[] { "Status", });
+    internal_static_in_trujobs_proto_FeedbackReasonResponse_descriptor =
+      getDescriptor().getMessageTypes().get(91);
+    internal_static_in_trujobs_proto_FeedbackReasonResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_in_trujobs_proto_FeedbackReasonResponse_descriptor,
+        new java.lang.String[] { "FeedbackReasonObject", });
+    internal_static_in_trujobs_proto_FeedbackReasonObject_descriptor =
+      getDescriptor().getMessageTypes().get(92);
+    internal_static_in_trujobs_proto_FeedbackReasonObject_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_in_trujobs_proto_FeedbackReasonObject_descriptor,
+        new java.lang.String[] { "ReasonId", "ReasonTitle", "ReasonType", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

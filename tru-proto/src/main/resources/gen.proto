@@ -713,7 +713,6 @@ message InterviewTimeSlotObject {
     string slotTitle = 2;
 }
 
-
 message NotGoingReasonResponse {
     repeated ReasonObject reasonObject = 1;
 }
@@ -722,7 +721,6 @@ message ReasonObject {
     int64 reasonId = 1;
     string reasonTitle = 2;
 }
-
 
 message UpdateInterviewRequest {
     string candidate_mobile = 1;
@@ -795,4 +793,14 @@ message LogoutCandidateResponse {
         FAILURE = 2;
     }
     Status status = 1;
+}
+
+message FeedbackReasonResponse {
+    repeated FeedbackReasonObject feedbackReasonObject = 1;
+}
+
+message FeedbackReasonObject {
+    int64 reasonId = 1;
+    string reasonTitle = 2;
+    int32 reasonType = 3;
 }
