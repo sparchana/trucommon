@@ -804,3 +804,18 @@ message FeedbackReasonObject {
     string reasonTitle = 2;
     int32 reasonType = 3;
 }
+
+message AddFeedbackRequest {
+    int64 candidate_id = 1;
+    int32 rating_score = 2;
+    repeated FeedbackReasonObject feedbackReasonObject = 3;
+}
+
+message AddFeedbackResponse {
+    enum Status {
+        UNKNOWN = 0;
+        SUCCESS = 1;
+        FAILURE = 2;
+    }
+    Status status = 1;
+}
