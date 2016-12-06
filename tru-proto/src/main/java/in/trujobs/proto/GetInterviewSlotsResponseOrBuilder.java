@@ -30,4 +30,10 @@ public interface GetInterviewSlotsResponseOrBuilder extends
    */
   in.trujobs.proto.InterviewSlotOrBuilder getInterviewSlotsOrBuilder(
       int index);
+
+  /**
+   * <code>map&lt;string, .in.trujobs.proto.InterviewDateTime&gt; interviewSlotsMap = 2;</code>
+   */
+  java.util.Map<java.lang.String, in.trujobs.proto.InterviewDateTime>
+  getInterviewSlotsMap();
 }

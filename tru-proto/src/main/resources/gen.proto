@@ -702,6 +702,12 @@ message GetInterviewSlotsRequest {
 
 message GetInterviewSlotsResponse {
     repeated InterviewSlot interviewSlots = 1;
+    map<string, InterviewDateTime> interviewSlotsMap = 2;
+}
+
+message InterviewDateTime {
+        int64 interviewDateMillis = 1;
+        InterviewTimeSlotObject interviewTimeSlot = 2;
 }
 
 message InterviewSlot {
@@ -723,7 +729,6 @@ message ReasonObject {
     int64 reasonId = 1;
     string reasonTitle = 2;
 }
-
 
 message UpdateInterviewRequest {
     string candidate_mobile = 1;
