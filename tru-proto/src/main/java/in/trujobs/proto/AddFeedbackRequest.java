@@ -18,6 +18,7 @@ public  final class AddFeedbackRequest extends
     candidateId_ = 0L;
     ratingScore_ = 0;
     feedbackReasonObject_ = java.util.Collections.emptyList();
+    feedbackComment_ = "";
   }
 
   @java.lang.Override
@@ -60,6 +61,12 @@ public  final class AddFeedbackRequest extends
               mutable_bitField0_ |= 0x00000004;
             }
             feedbackReasonObject_.add(input.readMessage(in.trujobs.proto.FeedbackReasonObject.parser(), extensionRegistry));
+            break;
+          }
+          case 34: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            feedbackComment_ = s;
             break;
           }
         }
@@ -143,6 +150,40 @@ public  final class AddFeedbackRequest extends
     return feedbackReasonObject_.get(index);
   }
 
+  public static final int FEEDBACKCOMMENT_FIELD_NUMBER = 4;
+  private volatile java.lang.Object feedbackComment_;
+  /**
+   * <code>optional string feedbackComment = 4;</code>
+   */
+  public java.lang.String getFeedbackComment() {
+    java.lang.Object ref = feedbackComment_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      feedbackComment_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>optional string feedbackComment = 4;</code>
+   */
+  public com.google.protobuf.ByteString
+      getFeedbackCommentBytes() {
+    java.lang.Object ref = feedbackComment_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      feedbackComment_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -164,6 +205,9 @@ public  final class AddFeedbackRequest extends
     for (int i = 0; i < feedbackReasonObject_.size(); i++) {
       output.writeMessage(3, feedbackReasonObject_.get(i));
     }
+    if (!getFeedbackCommentBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 4, feedbackComment_);
+    }
   }
 
   public int getSerializedSize() {
@@ -182,6 +226,9 @@ public  final class AddFeedbackRequest extends
     for (int i = 0; i < feedbackReasonObject_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, feedbackReasonObject_.get(i));
+    }
+    if (!getFeedbackCommentBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(4, feedbackComment_);
     }
     memoizedSize = size;
     return size;
@@ -305,6 +352,8 @@ public  final class AddFeedbackRequest extends
       } else {
         feedbackReasonObjectBuilder_.clear();
       }
+      feedbackComment_ = "";
+
       return this;
     }
 
@@ -340,6 +389,7 @@ public  final class AddFeedbackRequest extends
       } else {
         result.feedbackReasonObject_ = feedbackReasonObjectBuilder_.build();
       }
+      result.feedbackComment_ = feedbackComment_;
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -387,6 +437,10 @@ public  final class AddFeedbackRequest extends
             feedbackReasonObjectBuilder_.addAllMessages(other.feedbackReasonObject_);
           }
         }
+      }
+      if (!other.getFeedbackComment().isEmpty()) {
+        feedbackComment_ = other.feedbackComment_;
+        onChanged();
       }
       onChanged();
       return this;
@@ -705,6 +759,75 @@ public  final class AddFeedbackRequest extends
         feedbackReasonObject_ = null;
       }
       return feedbackReasonObjectBuilder_;
+    }
+
+    private java.lang.Object feedbackComment_ = "";
+    /**
+     * <code>optional string feedbackComment = 4;</code>
+     */
+    public java.lang.String getFeedbackComment() {
+      java.lang.Object ref = feedbackComment_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        feedbackComment_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>optional string feedbackComment = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getFeedbackCommentBytes() {
+      java.lang.Object ref = feedbackComment_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        feedbackComment_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>optional string feedbackComment = 4;</code>
+     */
+    public Builder setFeedbackComment(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      feedbackComment_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional string feedbackComment = 4;</code>
+     */
+    public Builder clearFeedbackComment() {
+      
+      feedbackComment_ = getDefaultInstance().getFeedbackComment();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional string feedbackComment = 4;</code>
+     */
+    public Builder setFeedbackCommentBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      feedbackComment_ = value;
+      onChanged();
+      return this;
     }
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {

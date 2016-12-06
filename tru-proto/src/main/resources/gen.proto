@@ -810,6 +810,7 @@ message AddFeedbackRequest {
     int64 candidate_id = 1;
     int32 rating_score = 2;
     repeated FeedbackReasonObject feedbackReasonObject = 3;
+    string feedbackComment = 4;
 }
 
 message AddFeedbackResponse {

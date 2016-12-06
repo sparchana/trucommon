@@ -40,4 +40,14 @@ public interface AddFeedbackRequestOrBuilder extends
    */
   in.trujobs.proto.FeedbackReasonObjectOrBuilder getFeedbackReasonObjectOrBuilder(
       int index);
+
+  /**
+   * <code>optional string feedbackComment = 4;</code>
+   */
+  java.lang.String getFeedbackComment();
+  /**
+   * <code>optional string feedbackComment = 4;</code>
+   */
+  com.google.protobuf.ByteString
+      getFeedbackCommentBytes();
 }
