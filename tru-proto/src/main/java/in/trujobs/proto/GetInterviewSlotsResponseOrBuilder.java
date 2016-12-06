@@ -8,26 +8,8 @@ public interface GetInterviewSlotsResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .in.trujobs.proto.InterviewSlot interviewSlots = 1;</code>
+   * <code>map&lt;string, .in.trujobs.proto.InterviewDateTime&gt; interviewSlotsMap = 1;</code>
    */
-  java.util.List<in.trujobs.proto.InterviewSlot> 
-      getInterviewSlotsList();
-  /**
-   * <code>repeated .in.trujobs.proto.InterviewSlot interviewSlots = 1;</code>
-   */
-  in.trujobs.proto.InterviewSlot getInterviewSlots(int index);
-  /**
-   * <code>repeated .in.trujobs.proto.InterviewSlot interviewSlots = 1;</code>
-   */
-  int getInterviewSlotsCount();
-  /**
-   * <code>repeated .in.trujobs.proto.InterviewSlot interviewSlots = 1;</code>
-   */
-  java.util.List<? extends in.trujobs.proto.InterviewSlotOrBuilder> 
-      getInterviewSlotsOrBuilderList();
-  /**
-   * <code>repeated .in.trujobs.proto.InterviewSlot interviewSlots = 1;</code>
-   */
-  in.trujobs.proto.InterviewSlotOrBuilder getInterviewSlotsOrBuilder(
-      int index);
+  java.util.Map<java.lang.String, in.trujobs.proto.InterviewDateTime>
+  getInterviewSlotsMap();
 }

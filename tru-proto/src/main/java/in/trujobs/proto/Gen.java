@@ -394,10 +394,15 @@ public final class Gen {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_in_trujobs_proto_GetInterviewSlotsResponse_fieldAccessorTable;
   static com.google.protobuf.Descriptors.Descriptor
-    internal_static_in_trujobs_proto_InterviewSlot_descriptor;
+    internal_static_in_trujobs_proto_GetInterviewSlotsResponse_InterviewSlotsMapEntry_descriptor;
   static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_in_trujobs_proto_InterviewSlot_fieldAccessorTable;
+      internal_static_in_trujobs_proto_GetInterviewSlotsResponse_InterviewSlotsMapEntry_fieldAccessorTable;
+  static com.google.protobuf.Descriptors.Descriptor
+    internal_static_in_trujobs_proto_InterviewDateTime_descriptor;
+  static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_in_trujobs_proto_InterviewDateTime_fieldAccessorTable;
   static com.google.protobuf.Descriptors.Descriptor
     internal_static_in_trujobs_proto_InterviewTimeSlotObject_descriptor;
   static
@@ -838,46 +843,49 @@ public final class Gen {
       "lotId\030\002 \001(\005\022\021\n\tjobPostId\030\004 \001(\003\022%\n\035schedu" +
       "ledInterviewDateInMills\030\005 \001(\003\022\027\n\017isFinal" +
       "Fragment\030\006 \001(\010\"-\n\030GetInterviewSlotsReque" +
-      "st\022\021\n\tjobPostId\030\001 \001(\003\"T\n\031GetInterviewSlo" +
-      "tsResponse\0227\n\016interviewSlots\030\001 \003(\0132\037.in." +
-      "trujobs.proto.InterviewSlot\"r\n\rInterview" +
-      "Slot\022J\n\027interviewTimeSlotObject\030\001 \001(\0132).",
-      "in.trujobs.proto.InterviewTimeSlotObject" +
-      "\022\025\n\rinterviewDays\030\002 \001(\t\"<\n\027InterviewTime" +
-      "SlotObject\022\016\n\006slotId\030\001 \001(\005\022\021\n\tslotTitle\030" +
-      "\002 \001(\t\"N\n\026NotGoingReasonResponse\0224\n\014reaso" +
-      "nObject\030\001 \003(\0132\036.in.trujobs.proto.ReasonO" +
-      "bject\"5\n\014ReasonObject\022\020\n\010reasonId\030\001 \001(\003\022" +
-      "\023\n\013reasonTitle\030\002 \001(\t\"Y\n\026UpdateInterviewR" +
-      "equest\022\030\n\020candidate_mobile\030\001 \001(\t\022\014\n\004jpId" +
-      "\030\002 \001(\003\022\027\n\017interviewStatus\030\003 \001(\005\"\214\001\n\027Upda" +
-      "teInterviewResponse\022@\n\006status\030\001 \001(\01620.in",
-      ".trujobs.proto.UpdateInterviewResponse.S" +
-      "tatus\"/\n\006Status\022\013\n\007UNKNOWN\020\000\022\013\n\007SUCCESS\020" +
-      "\001\022\013\n\007FAILURE\020\002\"w\n\034UpdateCandidateStatusR" +
-      "equest\022\030\n\020candidate_mobile\030\001 \001(\t\022\014\n\004jpId" +
-      "\030\002 \001(\003\022\027\n\017candidateStatus\030\003 \001(\005\022\026\n\016notGo" +
-      "ingReason\030\004 \001(\003\"\230\001\n\035UpdateCandidateStatu" +
-      "sResponse\022F\n\006status\030\001 \001(\01626.in.trujobs.p" +
-      "roto.UpdateCandidateStatusResponse.Statu" +
-      "s\"/\n\006Status\022\013\n\007UNKNOWN\020\000\022\013\n\007SUCCESS\020\001\022\013\n" +
-      "\007FAILURE\020\002\".\n\031CheckInterviewSlotRequest\022",
-      "\021\n\tjobPostId\030\001 \001(\003\"\274\001\n\032CheckInterviewSlo" +
-      "tResponse\022\033\n\023shouldShowInterview\030\001 \001(\010\022C" +
-      "\n\006status\030\002 \001(\01623.in.trujobs.proto.CheckI" +
-      "nterviewSlotResponse.Status\"<\n\006Status\022\013\n" +
-      "\007UNKNOWN\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007FAILURE\020\002\022\013\n\007" +
-      "INVALID\020\003\"9\n\022UpdateTokenRequest\022\024\n\014candi" +
-      "date_id\030\001 \001(\t\022\r\n\005token\030\002 \001(\t\"\204\001\n\023UpdateT" +
-      "okenResponse\022<\n\006status\030\001 \001(\0162,.in.trujob" +
-      "s.proto.UpdateTokenResponse.Status\"/\n\006St" +
-      "atus\022\013\n\007UNKNOWN\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007FAILUR",
-      "E\020\002\".\n\026LogoutCandidateRequest\022\024\n\014candida" +
-      "te_id\030\001 \001(\t\"\214\001\n\027LogoutCandidateResponse\022" +
-      "@\n\006status\030\001 \001(\01620.in.trujobs.proto.Logou" +
-      "tCandidateResponse.Status\"/\n\006Status\022\013\n\007U" +
-      "NKNOWN\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007FAILURE\020\002B\002P\001b\006" +
-      "proto3"
+      "st\022\021\n\tjobPostId\030\001 \001(\003\"\331\001\n\031GetInterviewSl" +
+      "otsResponse\022]\n\021interviewSlotsMap\030\001 \003(\0132B" +
+      ".in.trujobs.proto.GetInterviewSlotsRespo" +
+      "nse.InterviewSlotsMapEntry\032]\n\026InterviewS",
+      "lotsMapEntry\022\013\n\003key\030\001 \001(\t\0222\n\005value\030\002 \001(\013" +
+      "2#.in.trujobs.proto.InterviewDateTime:\0028" +
+      "\001\"v\n\021InterviewDateTime\022\033\n\023interviewDateM" +
+      "illis\030\001 \001(\003\022D\n\021interviewTimeSlot\030\002 \001(\0132)" +
+      ".in.trujobs.proto.InterviewTimeSlotObjec" +
+      "t\"<\n\027InterviewTimeSlotObject\022\016\n\006slotId\030\001" +
+      " \001(\005\022\021\n\tslotTitle\030\002 \001(\t\"N\n\026NotGoingReaso" +
+      "nResponse\0224\n\014reasonObject\030\001 \003(\0132\036.in.tru" +
+      "jobs.proto.ReasonObject\"5\n\014ReasonObject\022" +
+      "\020\n\010reasonId\030\001 \001(\003\022\023\n\013reasonTitle\030\002 \001(\t\"Y",
+      "\n\026UpdateInterviewRequest\022\030\n\020candidate_mo" +
+      "bile\030\001 \001(\t\022\014\n\004jpId\030\002 \001(\003\022\027\n\017interviewSta" +
+      "tus\030\003 \001(\005\"\214\001\n\027UpdateInterviewResponse\022@\n" +
+      "\006status\030\001 \001(\01620.in.trujobs.proto.UpdateI" +
+      "nterviewResponse.Status\"/\n\006Status\022\013\n\007UNK" +
+      "NOWN\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007FAILURE\020\002\"w\n\034Upda" +
+      "teCandidateStatusRequest\022\030\n\020candidate_mo" +
+      "bile\030\001 \001(\t\022\014\n\004jpId\030\002 \001(\003\022\027\n\017candidateSta" +
+      "tus\030\003 \001(\005\022\026\n\016notGoingReason\030\004 \001(\003\"\230\001\n\035Up" +
+      "dateCandidateStatusResponse\022F\n\006status\030\001 ",
+      "\001(\01626.in.trujobs.proto.UpdateCandidateSt" +
+      "atusResponse.Status\"/\n\006Status\022\013\n\007UNKNOWN" +
+      "\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007FAILURE\020\002\".\n\031CheckInt" +
+      "erviewSlotRequest\022\021\n\tjobPostId\030\001 \001(\003\"\274\001\n" +
+      "\032CheckInterviewSlotResponse\022\033\n\023shouldSho" +
+      "wInterview\030\001 \001(\010\022C\n\006status\030\002 \001(\01623.in.tr" +
+      "ujobs.proto.CheckInterviewSlotResponse.S" +
+      "tatus\"<\n\006Status\022\013\n\007UNKNOWN\020\000\022\013\n\007SUCCESS\020" +
+      "\001\022\013\n\007FAILURE\020\002\022\013\n\007INVALID\020\003\"9\n\022UpdateTok" +
+      "enRequest\022\024\n\014candidate_id\030\001 \001(\t\022\r\n\005token",
+      "\030\002 \001(\t\"\204\001\n\023UpdateTokenResponse\022<\n\006status" +
+      "\030\001 \001(\0162,.in.trujobs.proto.UpdateTokenRes" +
+      "ponse.Status\"/\n\006Status\022\013\n\007UNKNOWN\020\000\022\013\n\007S" +
+      "UCCESS\020\001\022\013\n\007FAILURE\020\002\".\n\026LogoutCandidate" +
+      "Request\022\024\n\014candidate_id\030\001 \001(\t\"\214\001\n\027Logout" +
+      "CandidateResponse\022@\n\006status\030\001 \001(\01620.in.t" +
+      "rujobs.proto.LogoutCandidateResponse.Sta" +
+      "tus\"/\n\006Status\022\013\n\007UNKNOWN\020\000\022\013\n\007SUCCESS\020\001\022" +
+      "\013\n\007FAILURE\020\002B\002P\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1352,13 +1360,19 @@ public final class Gen {
     internal_static_in_trujobs_proto_GetInterviewSlotsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_GetInterviewSlotsResponse_descriptor,
-        new java.lang.String[] { "InterviewSlots", });
-    internal_static_in_trujobs_proto_InterviewSlot_descriptor =
-      getDescriptor().getMessageTypes().get(77);
-    internal_static_in_trujobs_proto_InterviewSlot_fieldAccessorTable = new
+        new java.lang.String[] { "InterviewSlotsMap", });
+    internal_static_in_trujobs_proto_GetInterviewSlotsResponse_InterviewSlotsMapEntry_descriptor =
+      internal_static_in_trujobs_proto_GetInterviewSlotsResponse_descriptor.getNestedTypes().get(0);
+    internal_static_in_trujobs_proto_GetInterviewSlotsResponse_InterviewSlotsMapEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_in_trujobs_proto_InterviewSlot_descriptor,
-        new java.lang.String[] { "InterviewTimeSlotObject", "InterviewDays", });
+        internal_static_in_trujobs_proto_GetInterviewSlotsResponse_InterviewSlotsMapEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_in_trujobs_proto_InterviewDateTime_descriptor =
+      getDescriptor().getMessageTypes().get(77);
+    internal_static_in_trujobs_proto_InterviewDateTime_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_in_trujobs_proto_InterviewDateTime_descriptor,
+        new java.lang.String[] { "InterviewDateMillis", "InterviewTimeSlot", });
     internal_static_in_trujobs_proto_InterviewTimeSlotObject_descriptor =
       getDescriptor().getMessageTypes().get(78);
     internal_static_in_trujobs_proto_InterviewTimeSlotObject_fieldAccessorTable = new
