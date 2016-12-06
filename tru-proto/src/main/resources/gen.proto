@@ -760,7 +760,6 @@ message CheckInterviewSlotRequest {
     int64 jobPostId = 1;
 }
 
-
 message CheckInterviewSlotResponse {
     enum Status {
         UNKNOWN = 0;
@@ -770,4 +769,31 @@ message CheckInterviewSlotResponse {
     }
     bool shouldShowInterview = 1;
     Status status = 2;
+}
+
+message UpdateTokenRequest {
+    string candidate_id = 1;
+    string token = 2;
+}
+
+message UpdateTokenResponse {
+    enum Status {
+        UNKNOWN = 0;
+        SUCCESS = 1;
+        FAILURE = 2;
+    }
+    Status status = 1;
+}
+
+message LogoutCandidateRequest {
+    string candidate_id = 1;
+}
+
+message LogoutCandidateResponse {
+    enum Status {
+        UNKNOWN = 0;
+        SUCCESS = 1;
+        FAILURE = 2;
+    }
+    Status status = 1;
 }

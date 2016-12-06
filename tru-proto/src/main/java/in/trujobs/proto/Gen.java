@@ -443,6 +443,26 @@ public final class Gen {
   static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_in_trujobs_proto_CheckInterviewSlotResponse_fieldAccessorTable;
+  static com.google.protobuf.Descriptors.Descriptor
+    internal_static_in_trujobs_proto_UpdateTokenRequest_descriptor;
+  static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_in_trujobs_proto_UpdateTokenRequest_fieldAccessorTable;
+  static com.google.protobuf.Descriptors.Descriptor
+    internal_static_in_trujobs_proto_UpdateTokenResponse_descriptor;
+  static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_in_trujobs_proto_UpdateTokenResponse_fieldAccessorTable;
+  static com.google.protobuf.Descriptors.Descriptor
+    internal_static_in_trujobs_proto_LogoutCandidateRequest_descriptor;
+  static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_in_trujobs_proto_LogoutCandidateRequest_fieldAccessorTable;
+  static com.google.protobuf.Descriptors.Descriptor
+    internal_static_in_trujobs_proto_LogoutCandidateResponse_descriptor;
+  static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_in_trujobs_proto_LogoutCandidateResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -847,7 +867,17 @@ public final class Gen {
       "\n\006status\030\002 \001(\01623.in.trujobs.proto.CheckI" +
       "nterviewSlotResponse.Status\"<\n\006Status\022\013\n" +
       "\007UNKNOWN\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007FAILURE\020\002\022\013\n\007" +
-      "INVALID\020\003B\002P\001b\006proto3"
+      "INVALID\020\003\"9\n\022UpdateTokenRequest\022\024\n\014candi" +
+      "date_id\030\001 \001(\t\022\r\n\005token\030\002 \001(\t\"\204\001\n\023UpdateT" +
+      "okenResponse\022<\n\006status\030\001 \001(\0162,.in.trujob" +
+      "s.proto.UpdateTokenResponse.Status\"/\n\006St" +
+      "atus\022\013\n\007UNKNOWN\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007FAILUR",
+      "E\020\002\".\n\026LogoutCandidateRequest\022\024\n\014candida" +
+      "te_id\030\001 \001(\t\"\214\001\n\027LogoutCandidateResponse\022" +
+      "@\n\006status\030\001 \001(\01620.in.trujobs.proto.Logou" +
+      "tCandidateResponse.Status\"/\n\006Status\022\013\n\007U" +
+      "NKNOWN\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007FAILURE\020\002B\002P\001b\006" +
+      "proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1383,6 +1413,30 @@ public final class Gen {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_CheckInterviewSlotResponse_descriptor,
         new java.lang.String[] { "ShouldShowInterview", "Status", });
+    internal_static_in_trujobs_proto_UpdateTokenRequest_descriptor =
+      getDescriptor().getMessageTypes().get(87);
+    internal_static_in_trujobs_proto_UpdateTokenRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_in_trujobs_proto_UpdateTokenRequest_descriptor,
+        new java.lang.String[] { "CandidateId", "Token", });
+    internal_static_in_trujobs_proto_UpdateTokenResponse_descriptor =
+      getDescriptor().getMessageTypes().get(88);
+    internal_static_in_trujobs_proto_UpdateTokenResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_in_trujobs_proto_UpdateTokenResponse_descriptor,
+        new java.lang.String[] { "Status", });
+    internal_static_in_trujobs_proto_LogoutCandidateRequest_descriptor =
+      getDescriptor().getMessageTypes().get(89);
+    internal_static_in_trujobs_proto_LogoutCandidateRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_in_trujobs_proto_LogoutCandidateRequest_descriptor,
+        new java.lang.String[] { "CandidateId", });
+    internal_static_in_trujobs_proto_LogoutCandidateResponse_descriptor =
+      getDescriptor().getMessageTypes().get(90);
+    internal_static_in_trujobs_proto_LogoutCandidateResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_in_trujobs_proto_LogoutCandidateResponse_descriptor,
+        new java.lang.String[] { "Status", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
