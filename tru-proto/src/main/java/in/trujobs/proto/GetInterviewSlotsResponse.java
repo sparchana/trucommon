@@ -15,7 +15,6 @@ public  final class GetInterviewSlotsResponse extends
     super(builder);
   }
   private GetInterviewSlotsResponse() {
-    interviewSlots_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -44,10 +43,14 @@ public  final class GetInterviewSlotsResponse extends
           }
           case 10: {
             if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-              interviewSlots_ = new java.util.ArrayList<in.trujobs.proto.InterviewSlot>();
+              interviewSlotsMap_ = com.google.protobuf.MapField.newMapField(
+                  InterviewSlotsMapDefaultEntryHolder.defaultEntry);
               mutable_bitField0_ |= 0x00000001;
             }
-            interviewSlots_.add(input.readMessage(in.trujobs.proto.InterviewSlot.parser(), extensionRegistry));
+            com.google.protobuf.MapEntry<java.lang.String, in.trujobs.proto.InterviewDateTime>
+            interviewSlotsMap = input.readMessage(
+                InterviewSlotsMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+            interviewSlotsMap_.getMutableMap().put(interviewSlotsMap.getKey(), interviewSlotsMap.getValue());
             break;
           }
         }
@@ -59,9 +62,6 @@ public  final class GetInterviewSlotsResponse extends
           new com.google.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this));
     } finally {
-      if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-        interviewSlots_ = java.util.Collections.unmodifiableList(interviewSlots_);
-      }
       makeExtensionsImmutable();
     }
   }
@@ -70,6 +70,17 @@ public  final class GetInterviewSlotsResponse extends
     return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_GetInterviewSlotsResponse_descriptor;
   }
 
+  @SuppressWarnings({"rawtypes"})
+  protected com.google.protobuf.MapField internalGetMapField(
+      int number) {
+    switch (number) {
+      case 1:
+        return internalGetInterviewSlotsMap();
+      default:
+        throw new RuntimeException(
+            "Invalid map field number: " + number);
+    }
+  }
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
     return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_GetInterviewSlotsResponse_fieldAccessorTable
@@ -77,39 +88,34 @@ public  final class GetInterviewSlotsResponse extends
             in.trujobs.proto.GetInterviewSlotsResponse.class, in.trujobs.proto.GetInterviewSlotsResponse.Builder.class);
   }
 
-  public static final int INTERVIEWSLOTS_FIELD_NUMBER = 1;
-  private java.util.List<in.trujobs.proto.InterviewSlot> interviewSlots_;
-  /**
-   * <code>repeated .in.trujobs.proto.InterviewSlot interviewSlots = 1;</code>
-   */
-  public java.util.List<in.trujobs.proto.InterviewSlot> getInterviewSlotsList() {
-    return interviewSlots_;
+  public static final int INTERVIEWSLOTSMAP_FIELD_NUMBER = 1;
+  private static final class InterviewSlotsMapDefaultEntryHolder {
+    static final com.google.protobuf.MapEntry<
+        java.lang.String, in.trujobs.proto.InterviewDateTime> defaultEntry =
+            com.google.protobuf.MapEntry
+            .<java.lang.String, in.trujobs.proto.InterviewDateTime>newDefaultInstance(
+                in.trujobs.proto.Gen.internal_static_in_trujobs_proto_GetInterviewSlotsResponse_InterviewSlotsMapEntry_descriptor, 
+                com.google.protobuf.WireFormat.FieldType.STRING,
+                "",
+                com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                in.trujobs.proto.InterviewDateTime.getDefaultInstance());
+  }
+  private com.google.protobuf.MapField<
+      java.lang.String, in.trujobs.proto.InterviewDateTime> interviewSlotsMap_;
+  private com.google.protobuf.MapField<java.lang.String, in.trujobs.proto.InterviewDateTime>
+  internalGetInterviewSlotsMap() {
+    if (interviewSlotsMap_ == null) {
+      return com.google.protobuf.MapField.emptyMapField(
+          InterviewSlotsMapDefaultEntryHolder.defaultEntry);
+   }
+    return interviewSlotsMap_;
   }
   /**
-   * <code>repeated .in.trujobs.proto.InterviewSlot interviewSlots = 1;</code>
+   * <code>map&lt;string, .in.trujobs.proto.InterviewDateTime&gt; interviewSlotsMap = 1;</code>
    */
-  public java.util.List<? extends in.trujobs.proto.InterviewSlotOrBuilder> 
-      getInterviewSlotsOrBuilderList() {
-    return interviewSlots_;
-  }
-  /**
-   * <code>repeated .in.trujobs.proto.InterviewSlot interviewSlots = 1;</code>
-   */
-  public int getInterviewSlotsCount() {
-    return interviewSlots_.size();
-  }
-  /**
-   * <code>repeated .in.trujobs.proto.InterviewSlot interviewSlots = 1;</code>
-   */
-  public in.trujobs.proto.InterviewSlot getInterviewSlots(int index) {
-    return interviewSlots_.get(index);
-  }
-  /**
-   * <code>repeated .in.trujobs.proto.InterviewSlot interviewSlots = 1;</code>
-   */
-  public in.trujobs.proto.InterviewSlotOrBuilder getInterviewSlotsOrBuilder(
-      int index) {
-    return interviewSlots_.get(index);
+
+  public java.util.Map<java.lang.String, in.trujobs.proto.InterviewDateTime> getInterviewSlotsMap() {
+    return internalGetInterviewSlotsMap().getMap();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -124,8 +130,14 @@ public  final class GetInterviewSlotsResponse extends
 
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    for (int i = 0; i < interviewSlots_.size(); i++) {
-      output.writeMessage(1, interviewSlots_.get(i));
+    for (java.util.Map.Entry<java.lang.String, in.trujobs.proto.InterviewDateTime> entry
+         : internalGetInterviewSlotsMap().getMap().entrySet()) {
+      com.google.protobuf.MapEntry<java.lang.String, in.trujobs.proto.InterviewDateTime>
+      interviewSlotsMap = InterviewSlotsMapDefaultEntryHolder.defaultEntry.newBuilderForType()
+          .setKey(entry.getKey())
+          .setValue(entry.getValue())
+          .build();
+      output.writeMessage(1, interviewSlotsMap);
     }
   }
 
@@ -134,9 +146,15 @@ public  final class GetInterviewSlotsResponse extends
     if (size != -1) return size;
 
     size = 0;
-    for (int i = 0; i < interviewSlots_.size(); i++) {
+    for (java.util.Map.Entry<java.lang.String, in.trujobs.proto.InterviewDateTime> entry
+         : internalGetInterviewSlotsMap().getMap().entrySet()) {
+      com.google.protobuf.MapEntry<java.lang.String, in.trujobs.proto.InterviewDateTime>
+      interviewSlotsMap = InterviewSlotsMapDefaultEntryHolder.defaultEntry.newBuilderForType()
+          .setKey(entry.getKey())
+          .setValue(entry.getValue())
+          .build();
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, interviewSlots_.get(i));
+          .computeMessageSize(1, interviewSlotsMap);
     }
     memoizedSize = size;
     return size;
@@ -226,6 +244,28 @@ public  final class GetInterviewSlotsResponse extends
       return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_GetInterviewSlotsResponse_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 1:
+          return internalGetInterviewSlotsMap();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @SuppressWarnings({"rawtypes"})
+    protected com.google.protobuf.MapField internalGetMutableMapField(
+        int number) {
+      switch (number) {
+        case 1:
+          return internalGetMutableInterviewSlotsMap();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return in.trujobs.proto.Gen.internal_static_in_trujobs_proto_GetInterviewSlotsResponse_fieldAccessorTable
@@ -245,17 +285,11 @@ public  final class GetInterviewSlotsResponse extends
     }
     private void maybeForceBuilderInitialization() {
       if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-        getInterviewSlotsFieldBuilder();
       }
     }
     public Builder clear() {
       super.clear();
-      if (interviewSlotsBuilder_ == null) {
-        interviewSlots_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
-      } else {
-        interviewSlotsBuilder_.clear();
-      }
+      internalGetMutableInterviewSlotsMap().clear();
       return this;
     }
 
@@ -279,15 +313,8 @@ public  final class GetInterviewSlotsResponse extends
     public in.trujobs.proto.GetInterviewSlotsResponse buildPartial() {
       in.trujobs.proto.GetInterviewSlotsResponse result = new in.trujobs.proto.GetInterviewSlotsResponse(this);
       int from_bitField0_ = bitField0_;
-      if (interviewSlotsBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          interviewSlots_ = java.util.Collections.unmodifiableList(interviewSlots_);
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.interviewSlots_ = interviewSlots_;
-      } else {
-        result.interviewSlots_ = interviewSlotsBuilder_.build();
-      }
+      result.interviewSlotsMap_ = internalGetInterviewSlotsMap();
+      result.interviewSlotsMap_.makeImmutable();
       onBuilt();
       return result;
     }
@@ -303,32 +330,8 @@ public  final class GetInterviewSlotsResponse extends
 
     public Builder mergeFrom(in.trujobs.proto.GetInterviewSlotsResponse other) {
       if (other == in.trujobs.proto.GetInterviewSlotsResponse.getDefaultInstance()) return this;
-      if (interviewSlotsBuilder_ == null) {
-        if (!other.interviewSlots_.isEmpty()) {
-          if (interviewSlots_.isEmpty()) {
-            interviewSlots_ = other.interviewSlots_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-          } else {
-            ensureInterviewSlotsIsMutable();
-            interviewSlots_.addAll(other.interviewSlots_);
-          }
-          onChanged();
-        }
-      } else {
-        if (!other.interviewSlots_.isEmpty()) {
-          if (interviewSlotsBuilder_.isEmpty()) {
-            interviewSlotsBuilder_.dispose();
-            interviewSlotsBuilder_ = null;
-            interviewSlots_ = other.interviewSlots_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-            interviewSlotsBuilder_ = 
-              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                 getInterviewSlotsFieldBuilder() : null;
-          } else {
-            interviewSlotsBuilder_.addAllMessages(other.interviewSlots_);
-          }
-        }
-      }
+      internalGetMutableInterviewSlotsMap().mergeFrom(
+          other.internalGetInterviewSlotsMap());
       onChanged();
       return this;
     }
@@ -356,244 +359,48 @@ public  final class GetInterviewSlotsResponse extends
     }
     private int bitField0_;
 
-    private java.util.List<in.trujobs.proto.InterviewSlot> interviewSlots_ =
-      java.util.Collections.emptyList();
-    private void ensureInterviewSlotsIsMutable() {
-      if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-        interviewSlots_ = new java.util.ArrayList<in.trujobs.proto.InterviewSlot>(interviewSlots_);
-        bitField0_ |= 0x00000001;
-       }
+    private com.google.protobuf.MapField<
+        java.lang.String, in.trujobs.proto.InterviewDateTime> interviewSlotsMap_;
+    private com.google.protobuf.MapField<java.lang.String, in.trujobs.proto.InterviewDateTime>
+    internalGetInterviewSlotsMap() {
+      if (interviewSlotsMap_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            InterviewSlotsMapDefaultEntryHolder.defaultEntry);
+     }
+      return interviewSlotsMap_;
     }
-
-    private com.google.protobuf.RepeatedFieldBuilder<
-        in.trujobs.proto.InterviewSlot, in.trujobs.proto.InterviewSlot.Builder, in.trujobs.proto.InterviewSlotOrBuilder> interviewSlotsBuilder_;
-
-    /**
-     * <code>repeated .in.trujobs.proto.InterviewSlot interviewSlots = 1;</code>
-     */
-    public java.util.List<in.trujobs.proto.InterviewSlot> getInterviewSlotsList() {
-      if (interviewSlotsBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(interviewSlots_);
-      } else {
-        return interviewSlotsBuilder_.getMessageList();
+    private com.google.protobuf.MapField<java.lang.String, in.trujobs.proto.InterviewDateTime>
+    internalGetMutableInterviewSlotsMap() {
+      onChanged();;
+      if (interviewSlotsMap_ == null) {
+        interviewSlotsMap_ = com.google.protobuf.MapField.newMapField(
+            InterviewSlotsMapDefaultEntryHolder.defaultEntry);
       }
-    }
-    /**
-     * <code>repeated .in.trujobs.proto.InterviewSlot interviewSlots = 1;</code>
-     */
-    public int getInterviewSlotsCount() {
-      if (interviewSlotsBuilder_ == null) {
-        return interviewSlots_.size();
-      } else {
-        return interviewSlotsBuilder_.getCount();
+      if (!interviewSlotsMap_.isMutable()) {
+        interviewSlotsMap_ = interviewSlotsMap_.copy();
       }
+      return interviewSlotsMap_;
     }
     /**
-     * <code>repeated .in.trujobs.proto.InterviewSlot interviewSlots = 1;</code>
+     * <code>map&lt;string, .in.trujobs.proto.InterviewDateTime&gt; interviewSlotsMap = 1;</code>
      */
-    public in.trujobs.proto.InterviewSlot getInterviewSlots(int index) {
-      if (interviewSlotsBuilder_ == null) {
-        return interviewSlots_.get(index);
-      } else {
-        return interviewSlotsBuilder_.getMessage(index);
-      }
+    public java.util.Map<java.lang.String, in.trujobs.proto.InterviewDateTime> getInterviewSlotsMap() {
+      return internalGetInterviewSlotsMap().getMap();
     }
     /**
-     * <code>repeated .in.trujobs.proto.InterviewSlot interviewSlots = 1;</code>
+     * <code>map&lt;string, .in.trujobs.proto.InterviewDateTime&gt; interviewSlotsMap = 1;</code>
      */
-    public Builder setInterviewSlots(
-        int index, in.trujobs.proto.InterviewSlot value) {
-      if (interviewSlotsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureInterviewSlotsIsMutable();
-        interviewSlots_.set(index, value);
-        onChanged();
-      } else {
-        interviewSlotsBuilder_.setMessage(index, value);
-      }
+    public java.util.Map<java.lang.String, in.trujobs.proto.InterviewDateTime>
+    getMutableInterviewSlotsMap() {
+      return internalGetMutableInterviewSlotsMap().getMutableMap();
+    }
+    /**
+     * <code>map&lt;string, .in.trujobs.proto.InterviewDateTime&gt; interviewSlotsMap = 1;</code>
+     */
+    public Builder putAllInterviewSlotsMap(
+        java.util.Map<java.lang.String, in.trujobs.proto.InterviewDateTime> values) {
+      getMutableInterviewSlotsMap().putAll(values);
       return this;
-    }
-    /**
-     * <code>repeated .in.trujobs.proto.InterviewSlot interviewSlots = 1;</code>
-     */
-    public Builder setInterviewSlots(
-        int index, in.trujobs.proto.InterviewSlot.Builder builderForValue) {
-      if (interviewSlotsBuilder_ == null) {
-        ensureInterviewSlotsIsMutable();
-        interviewSlots_.set(index, builderForValue.build());
-        onChanged();
-      } else {
-        interviewSlotsBuilder_.setMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .in.trujobs.proto.InterviewSlot interviewSlots = 1;</code>
-     */
-    public Builder addInterviewSlots(in.trujobs.proto.InterviewSlot value) {
-      if (interviewSlotsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureInterviewSlotsIsMutable();
-        interviewSlots_.add(value);
-        onChanged();
-      } else {
-        interviewSlotsBuilder_.addMessage(value);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .in.trujobs.proto.InterviewSlot interviewSlots = 1;</code>
-     */
-    public Builder addInterviewSlots(
-        int index, in.trujobs.proto.InterviewSlot value) {
-      if (interviewSlotsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureInterviewSlotsIsMutable();
-        interviewSlots_.add(index, value);
-        onChanged();
-      } else {
-        interviewSlotsBuilder_.addMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .in.trujobs.proto.InterviewSlot interviewSlots = 1;</code>
-     */
-    public Builder addInterviewSlots(
-        in.trujobs.proto.InterviewSlot.Builder builderForValue) {
-      if (interviewSlotsBuilder_ == null) {
-        ensureInterviewSlotsIsMutable();
-        interviewSlots_.add(builderForValue.build());
-        onChanged();
-      } else {
-        interviewSlotsBuilder_.addMessage(builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .in.trujobs.proto.InterviewSlot interviewSlots = 1;</code>
-     */
-    public Builder addInterviewSlots(
-        int index, in.trujobs.proto.InterviewSlot.Builder builderForValue) {
-      if (interviewSlotsBuilder_ == null) {
-        ensureInterviewSlotsIsMutable();
-        interviewSlots_.add(index, builderForValue.build());
-        onChanged();
-      } else {
-        interviewSlotsBuilder_.addMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .in.trujobs.proto.InterviewSlot interviewSlots = 1;</code>
-     */
-    public Builder addAllInterviewSlots(
-        java.lang.Iterable<? extends in.trujobs.proto.InterviewSlot> values) {
-      if (interviewSlotsBuilder_ == null) {
-        ensureInterviewSlotsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, interviewSlots_);
-        onChanged();
-      } else {
-        interviewSlotsBuilder_.addAllMessages(values);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .in.trujobs.proto.InterviewSlot interviewSlots = 1;</code>
-     */
-    public Builder clearInterviewSlots() {
-      if (interviewSlotsBuilder_ == null) {
-        interviewSlots_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-      } else {
-        interviewSlotsBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .in.trujobs.proto.InterviewSlot interviewSlots = 1;</code>
-     */
-    public Builder removeInterviewSlots(int index) {
-      if (interviewSlotsBuilder_ == null) {
-        ensureInterviewSlotsIsMutable();
-        interviewSlots_.remove(index);
-        onChanged();
-      } else {
-        interviewSlotsBuilder_.remove(index);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .in.trujobs.proto.InterviewSlot interviewSlots = 1;</code>
-     */
-    public in.trujobs.proto.InterviewSlot.Builder getInterviewSlotsBuilder(
-        int index) {
-      return getInterviewSlotsFieldBuilder().getBuilder(index);
-    }
-    /**
-     * <code>repeated .in.trujobs.proto.InterviewSlot interviewSlots = 1;</code>
-     */
-    public in.trujobs.proto.InterviewSlotOrBuilder getInterviewSlotsOrBuilder(
-        int index) {
-      if (interviewSlotsBuilder_ == null) {
-        return interviewSlots_.get(index);  } else {
-        return interviewSlotsBuilder_.getMessageOrBuilder(index);
-      }
-    }
-    /**
-     * <code>repeated .in.trujobs.proto.InterviewSlot interviewSlots = 1;</code>
-     */
-    public java.util.List<? extends in.trujobs.proto.InterviewSlotOrBuilder> 
-         getInterviewSlotsOrBuilderList() {
-      if (interviewSlotsBuilder_ != null) {
-        return interviewSlotsBuilder_.getMessageOrBuilderList();
-      } else {
-        return java.util.Collections.unmodifiableList(interviewSlots_);
-      }
-    }
-    /**
-     * <code>repeated .in.trujobs.proto.InterviewSlot interviewSlots = 1;</code>
-     */
-    public in.trujobs.proto.InterviewSlot.Builder addInterviewSlotsBuilder() {
-      return getInterviewSlotsFieldBuilder().addBuilder(
-          in.trujobs.proto.InterviewSlot.getDefaultInstance());
-    }
-    /**
-     * <code>repeated .in.trujobs.proto.InterviewSlot interviewSlots = 1;</code>
-     */
-    public in.trujobs.proto.InterviewSlot.Builder addInterviewSlotsBuilder(
-        int index) {
-      return getInterviewSlotsFieldBuilder().addBuilder(
-          index, in.trujobs.proto.InterviewSlot.getDefaultInstance());
-    }
-    /**
-     * <code>repeated .in.trujobs.proto.InterviewSlot interviewSlots = 1;</code>
-     */
-    public java.util.List<in.trujobs.proto.InterviewSlot.Builder> 
-         getInterviewSlotsBuilderList() {
-      return getInterviewSlotsFieldBuilder().getBuilderList();
-    }
-    private com.google.protobuf.RepeatedFieldBuilder<
-        in.trujobs.proto.InterviewSlot, in.trujobs.proto.InterviewSlot.Builder, in.trujobs.proto.InterviewSlotOrBuilder> 
-        getInterviewSlotsFieldBuilder() {
-      if (interviewSlotsBuilder_ == null) {
-        interviewSlotsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-            in.trujobs.proto.InterviewSlot, in.trujobs.proto.InterviewSlot.Builder, in.trujobs.proto.InterviewSlotOrBuilder>(
-                interviewSlots_,
-                ((bitField0_ & 0x00000001) == 0x00000001),
-                getParentForChildren(),
-                isClean());
-        interviewSlots_ = null;
-      }
-      return interviewSlotsBuilder_;
     }
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
