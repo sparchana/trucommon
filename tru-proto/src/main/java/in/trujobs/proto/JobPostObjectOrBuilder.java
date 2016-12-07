@@ -209,4 +209,14 @@ public interface JobPostObjectOrBuilder extends
    * <code>optional int32 jobPostSource = 23;</code>
    */
   int getJobPostSource();
+
+  /**
+   * <code>optional string recruiterName = 24;</code>
+   */
+  java.lang.String getRecruiterName();
+  /**
+   * <code>optional string recruiterName = 24;</code>
+   */
+  com.google.protobuf.ByteString
+      getRecruiterNameBytes();
 }
