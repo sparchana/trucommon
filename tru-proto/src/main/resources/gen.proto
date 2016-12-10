@@ -714,6 +714,10 @@ message InterviewTimeSlotObject {
     string slotTitle = 2;
 }
 
+message NotGoingReasonRequest {
+    int64 type_id = 1;
+}
+
 message NotGoingReasonResponse {
     repeated ReasonObject reasonObject = 1;
 }
