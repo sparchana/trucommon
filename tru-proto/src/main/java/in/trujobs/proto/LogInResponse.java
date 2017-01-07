@@ -203,6 +203,10 @@ public  final class LogInResponse extends
      * <code>WRONG_PASSWORD = 4;</code>
      */
     WRONG_PASSWORD(4, 4),
+    /**
+     * <code>NO_AUTH = 5;</code>
+     */
+    NO_AUTH(5, 5),
     UNRECOGNIZED(-1, -1),
     ;
 
@@ -226,6 +230,10 @@ public  final class LogInResponse extends
      * <code>WRONG_PASSWORD = 4;</code>
      */
     public static final int WRONG_PASSWORD_VALUE = 4;
+    /**
+     * <code>NO_AUTH = 5;</code>
+     */
+    public static final int NO_AUTH_VALUE = 5;
 
 
     public final int getNumber() {
@@ -243,6 +251,7 @@ public  final class LogInResponse extends
         case 2: return FAILURE;
         case 3: return NO_USER;
         case 4: return WRONG_PASSWORD;
+        case 5: return NO_AUTH;
         default: return null;
       }
     }

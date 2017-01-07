@@ -22,6 +22,7 @@ message LogInResponse {
         FAILURE = 2;
         NO_USER = 3;
         WRONG_PASSWORD = 4;
+        NO_AUTH = 5;
     }
     Status status = 1;
     int64 leadId = 2;
@@ -69,6 +70,7 @@ message ResetPasswordResponse {
         SUCCESS = 1;
         FAILURE = 2;
         USER_EXISTS = 3;
+        NO_AUTH = 5;
     }
     Status status = 1;
     int32 otp = 2;
@@ -113,6 +115,7 @@ message JobPostObject {
     int32 isApplied = 22;
     int32 jobPostSource = 23;
     string recruiterName = 24;
+    string recruiterMobile = 25;
 }
 
 message JobPostDetailRequest{

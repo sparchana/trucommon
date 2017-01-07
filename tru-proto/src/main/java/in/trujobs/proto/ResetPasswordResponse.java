@@ -99,6 +99,10 @@ public  final class ResetPasswordResponse extends
      * <code>USER_EXISTS = 3;</code>
      */
     USER_EXISTS(3, 3),
+    /**
+     * <code>NO_AUTH = 5;</code>
+     */
+    NO_AUTH(4, 5),
     UNRECOGNIZED(-1, -1),
     ;
 
@@ -118,6 +122,10 @@ public  final class ResetPasswordResponse extends
      * <code>USER_EXISTS = 3;</code>
      */
     public static final int USER_EXISTS_VALUE = 3;
+    /**
+     * <code>NO_AUTH = 5;</code>
+     */
+    public static final int NO_AUTH_VALUE = 5;
 
 
     public final int getNumber() {
@@ -134,6 +142,7 @@ public  final class ResetPasswordResponse extends
         case 1: return SUCCESS;
         case 2: return FAILURE;
         case 3: return USER_EXISTS;
+        case 5: return NO_AUTH;
         default: return null;
       }
     }
