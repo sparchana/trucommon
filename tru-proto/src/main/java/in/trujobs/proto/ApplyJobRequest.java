@@ -18,6 +18,7 @@ public  final class ApplyJobRequest extends
     candidateMobile_ = "";
     jobPostId_ = 0L;
     localityId_ = 0L;
+    appVersion_ = 0D;
   }
 
   @java.lang.Override
@@ -58,6 +59,11 @@ public  final class ApplyJobRequest extends
           case 24: {
 
             localityId_ = input.readInt64();
+            break;
+          }
+          case 33: {
+
+            appVersion_ = input.readDouble();
             break;
           }
         }
@@ -136,6 +142,15 @@ public  final class ApplyJobRequest extends
     return localityId_;
   }
 
+  public static final int APPVERSION_FIELD_NUMBER = 4;
+  private double appVersion_;
+  /**
+   * <code>optional double appVersion = 4;</code>
+   */
+  public double getAppVersion() {
+    return appVersion_;
+  }
+
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -157,6 +172,9 @@ public  final class ApplyJobRequest extends
     if (localityId_ != 0L) {
       output.writeInt64(3, localityId_);
     }
+    if (appVersion_ != 0D) {
+      output.writeDouble(4, appVersion_);
+    }
   }
 
   public int getSerializedSize() {
@@ -174,6 +192,10 @@ public  final class ApplyJobRequest extends
     if (localityId_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(3, localityId_);
+    }
+    if (appVersion_ != 0D) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(4, appVersion_);
     }
     memoizedSize = size;
     return size;
@@ -292,6 +314,8 @@ public  final class ApplyJobRequest extends
 
       localityId_ = 0L;
 
+      appVersion_ = 0D;
+
       return this;
     }
 
@@ -317,6 +341,7 @@ public  final class ApplyJobRequest extends
       result.candidateMobile_ = candidateMobile_;
       result.jobPostId_ = jobPostId_;
       result.localityId_ = localityId_;
+      result.appVersion_ = appVersion_;
       onBuilt();
       return result;
     }
@@ -341,6 +366,9 @@ public  final class ApplyJobRequest extends
       }
       if (other.getLocalityId() != 0L) {
         setLocalityId(other.getLocalityId());
+      }
+      if (other.getAppVersion() != 0D) {
+        setAppVersion(other.getAppVersion());
       }
       onChanged();
       return this;
@@ -485,6 +513,32 @@ public  final class ApplyJobRequest extends
     public Builder clearLocalityId() {
       
       localityId_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private double appVersion_ ;
+    /**
+     * <code>optional double appVersion = 4;</code>
+     */
+    public double getAppVersion() {
+      return appVersion_;
+    }
+    /**
+     * <code>optional double appVersion = 4;</code>
+     */
+    public Builder setAppVersion(double value) {
+      
+      appVersion_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional double appVersion = 4;</code>
+     */
+    public Builder clearAppVersion() {
+      
+      appVersion_ = 0D;
       onChanged();
       return this;
     }

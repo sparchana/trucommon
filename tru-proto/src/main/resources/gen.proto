@@ -146,6 +146,7 @@ message ApplyJobRequest{
     string candidateMobile = 1;
     int64 jobPostId = 2;
     int64 localityId = 3;
+    double appVersion = 4;
 }
 
 message ApplyJobResponse{
@@ -164,6 +165,10 @@ message ApplyJobResponse{
     string jobRoleTitle = 5;
     string jobTitle = 6;
     int64 jobPostId = 7;
+    bool isCandidateDeActive = 8;
+    string deActiveHeadMessage = 9;
+    string deActiveTitleMessage = 10;
+    string deActiveBodyMessage = 11;
 }
 
 message AddJobRoleRequest {

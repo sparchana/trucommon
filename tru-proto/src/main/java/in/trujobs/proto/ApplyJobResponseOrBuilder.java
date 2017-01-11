@@ -60,4 +60,39 @@ public interface ApplyJobResponseOrBuilder extends
    * <code>optional int64 jobPostId = 7;</code>
    */
   long getJobPostId();
+
+  /**
+   * <code>optional bool isCandidateDeActive = 8;</code>
+   */
+  boolean getIsCandidateDeActive();
+
+  /**
+   * <code>optional string deActiveHeadMessage = 9;</code>
+   */
+  java.lang.String getDeActiveHeadMessage();
+  /**
+   * <code>optional string deActiveHeadMessage = 9;</code>
+   */
+  com.google.protobuf.ByteString
+      getDeActiveHeadMessageBytes();
+
+  /**
+   * <code>optional string deActiveTitleMessage = 10;</code>
+   */
+  java.lang.String getDeActiveTitleMessage();
+  /**
+   * <code>optional string deActiveTitleMessage = 10;</code>
+   */
+  com.google.protobuf.ByteString
+      getDeActiveTitleMessageBytes();
+
+  /**
+   * <code>optional string deActiveBodyMessage = 11;</code>
+   */
+  java.lang.String getDeActiveBodyMessage();
+  /**
+   * <code>optional string deActiveBodyMessage = 11;</code>
+   */
+  com.google.protobuf.ByteString
+      getDeActiveBodyMessageBytes();
 }
