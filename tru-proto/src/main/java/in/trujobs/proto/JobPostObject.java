@@ -36,6 +36,7 @@ public  final class JobPostObject extends
     isApplied_ = 0;
     jobPostSource_ = 0;
     recruiterName_ = "";
+    recruiterMobile_ = "";
   }
 
   @java.lang.Override
@@ -217,6 +218,12 @@ public  final class JobPostObject extends
             java.lang.String s = input.readStringRequireUtf8();
 
             recruiterName_ = s;
+            break;
+          }
+          case 202: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            recruiterMobile_ = s;
             break;
           }
         }
@@ -775,6 +782,40 @@ public  final class JobPostObject extends
     }
   }
 
+  public static final int RECRUITERMOBILE_FIELD_NUMBER = 25;
+  private volatile java.lang.Object recruiterMobile_;
+  /**
+   * <code>optional string recruiterMobile = 25;</code>
+   */
+  public java.lang.String getRecruiterMobile() {
+    java.lang.Object ref = recruiterMobile_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      recruiterMobile_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>optional string recruiterMobile = 25;</code>
+   */
+  public com.google.protobuf.ByteString
+      getRecruiterMobileBytes() {
+    java.lang.Object ref = recruiterMobile_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      recruiterMobile_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -858,6 +899,9 @@ public  final class JobPostObject extends
     }
     if (!getRecruiterNameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessage.writeString(output, 24, recruiterName_);
+    }
+    if (!getRecruiterMobileBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 25, recruiterMobile_);
     }
   }
 
@@ -951,6 +995,9 @@ public  final class JobPostObject extends
     }
     if (!getRecruiterNameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(24, recruiterName_);
+    }
+    if (!getRecruiterMobileBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(25, recruiterMobile_);
     }
     memoizedSize = size;
     return size;
@@ -1128,6 +1175,8 @@ public  final class JobPostObject extends
 
       recruiterName_ = "";
 
+      recruiterMobile_ = "";
+
       return this;
     }
 
@@ -1196,6 +1245,7 @@ public  final class JobPostObject extends
       result.isApplied_ = isApplied_;
       result.jobPostSource_ = jobPostSource_;
       result.recruiterName_ = recruiterName_;
+      result.recruiterMobile_ = recruiterMobile_;
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -1315,6 +1365,10 @@ public  final class JobPostObject extends
       }
       if (!other.getRecruiterName().isEmpty()) {
         recruiterName_ = other.recruiterName_;
+        onChanged();
+      }
+      if (!other.getRecruiterMobile().isEmpty()) {
+        recruiterMobile_ = other.recruiterMobile_;
         onChanged();
       }
       onChanged();
@@ -2881,6 +2935,75 @@ public  final class JobPostObject extends
   checkByteStringIsUtf8(value);
       
       recruiterName_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object recruiterMobile_ = "";
+    /**
+     * <code>optional string recruiterMobile = 25;</code>
+     */
+    public java.lang.String getRecruiterMobile() {
+      java.lang.Object ref = recruiterMobile_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        recruiterMobile_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>optional string recruiterMobile = 25;</code>
+     */
+    public com.google.protobuf.ByteString
+        getRecruiterMobileBytes() {
+      java.lang.Object ref = recruiterMobile_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        recruiterMobile_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>optional string recruiterMobile = 25;</code>
+     */
+    public Builder setRecruiterMobile(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      recruiterMobile_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional string recruiterMobile = 25;</code>
+     */
+    public Builder clearRecruiterMobile() {
+      
+      recruiterMobile_ = getDefaultInstance().getRecruiterMobile();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional string recruiterMobile = 25;</code>
+     */
+    public Builder setRecruiterMobileBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      recruiterMobile_ = value;
       onChanged();
       return this;
     }
