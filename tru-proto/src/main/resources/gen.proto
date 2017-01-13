@@ -12,7 +12,8 @@ message TestMessage {
 
 message LogInRequest {
     string candidateMobile = 1;
-    string candidatePassword = 2; 
+    string candidatePassword = 2;
+    int32 appVersionCode = 3;
 }
 
 message LogInResponse {
@@ -62,6 +63,7 @@ message SignUpResponse {
 message ResetPasswordRequest {
     string mobile = 1;
     string password = 2;
+    int32 appVersionCode = 3;
 }
 
 message ResetPasswordResponse {
