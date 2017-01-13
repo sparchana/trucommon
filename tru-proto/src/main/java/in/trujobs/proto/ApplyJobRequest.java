@@ -18,7 +18,7 @@ public  final class ApplyJobRequest extends
     candidateMobile_ = "";
     jobPostId_ = 0L;
     localityId_ = 0L;
-    appVersion_ = 0D;
+    appVersionCode_ = 0;
   }
 
   @java.lang.Override
@@ -61,9 +61,9 @@ public  final class ApplyJobRequest extends
             localityId_ = input.readInt64();
             break;
           }
-          case 33: {
+          case 32: {
 
-            appVersion_ = input.readDouble();
+            appVersionCode_ = input.readInt32();
             break;
           }
         }
@@ -142,13 +142,13 @@ public  final class ApplyJobRequest extends
     return localityId_;
   }
 
-  public static final int APPVERSION_FIELD_NUMBER = 4;
-  private double appVersion_;
+  public static final int APPVERSIONCODE_FIELD_NUMBER = 4;
+  private int appVersionCode_;
   /**
-   * <code>optional double appVersion = 4;</code>
+   * <code>optional int32 appVersionCode = 4;</code>
    */
-  public double getAppVersion() {
-    return appVersion_;
+  public int getAppVersionCode() {
+    return appVersionCode_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -172,8 +172,8 @@ public  final class ApplyJobRequest extends
     if (localityId_ != 0L) {
       output.writeInt64(3, localityId_);
     }
-    if (appVersion_ != 0D) {
-      output.writeDouble(4, appVersion_);
+    if (appVersionCode_ != 0) {
+      output.writeInt32(4, appVersionCode_);
     }
   }
 
@@ -193,9 +193,9 @@ public  final class ApplyJobRequest extends
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(3, localityId_);
     }
-    if (appVersion_ != 0D) {
+    if (appVersionCode_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeDoubleSize(4, appVersion_);
+        .computeInt32Size(4, appVersionCode_);
     }
     memoizedSize = size;
     return size;
@@ -314,7 +314,7 @@ public  final class ApplyJobRequest extends
 
       localityId_ = 0L;
 
-      appVersion_ = 0D;
+      appVersionCode_ = 0;
 
       return this;
     }
@@ -341,7 +341,7 @@ public  final class ApplyJobRequest extends
       result.candidateMobile_ = candidateMobile_;
       result.jobPostId_ = jobPostId_;
       result.localityId_ = localityId_;
-      result.appVersion_ = appVersion_;
+      result.appVersionCode_ = appVersionCode_;
       onBuilt();
       return result;
     }
@@ -367,8 +367,8 @@ public  final class ApplyJobRequest extends
       if (other.getLocalityId() != 0L) {
         setLocalityId(other.getLocalityId());
       }
-      if (other.getAppVersion() != 0D) {
-        setAppVersion(other.getAppVersion());
+      if (other.getAppVersionCode() != 0) {
+        setAppVersionCode(other.getAppVersionCode());
       }
       onChanged();
       return this;
@@ -517,28 +517,28 @@ public  final class ApplyJobRequest extends
       return this;
     }
 
-    private double appVersion_ ;
+    private int appVersionCode_ ;
     /**
-     * <code>optional double appVersion = 4;</code>
+     * <code>optional int32 appVersionCode = 4;</code>
      */
-    public double getAppVersion() {
-      return appVersion_;
+    public int getAppVersionCode() {
+      return appVersionCode_;
     }
     /**
-     * <code>optional double appVersion = 4;</code>
+     * <code>optional int32 appVersionCode = 4;</code>
      */
-    public Builder setAppVersion(double value) {
+    public Builder setAppVersionCode(int value) {
       
-      appVersion_ = value;
+      appVersionCode_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>optional double appVersion = 4;</code>
+     * <code>optional int32 appVersionCode = 4;</code>
      */
-    public Builder clearAppVersion() {
+    public Builder clearAppVersionCode() {
       
-      appVersion_ = 0D;
+      appVersionCode_ = 0;
       onChanged();
       return this;
     }

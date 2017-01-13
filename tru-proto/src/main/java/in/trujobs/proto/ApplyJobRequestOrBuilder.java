@@ -28,7 +28,7 @@ public interface ApplyJobRequestOrBuilder extends
   long getLocalityId();
 
   /**
-   * <code>optional double appVersion = 4;</code>
+   * <code>optional int32 appVersionCode = 4;</code>
    */
-  double getAppVersion();
+  int getAppVersionCode();
 }

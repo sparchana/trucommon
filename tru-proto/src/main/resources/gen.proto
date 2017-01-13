@@ -146,7 +146,7 @@ message ApplyJobRequest{
     string candidateMobile = 1;
     int64 jobPostId = 2;
     int64 localityId = 3;
-    double appVersion = 4;
+    int32 appVersionCode = 4;
 }
 
 message ApplyJobResponse{
