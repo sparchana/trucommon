@@ -504,431 +504,432 @@ public final class Gen {
     java.lang.String[] descriptorData = {
       "\n\tgen.proto\022\020in.trujobs.proto\"1\n\013TestMes" +
       "sage\022\020\n\010testName\030\001 \001(\t\022\020\n\010testPage\030\002 \001(\t" +
-      "\"B\n\014LogInRequest\022\027\n\017candidateMobile\030\001 \001(" +
-      "\t\022\031\n\021candidatePassword\030\002 \001(\t\"\221\005\n\rLogInRe" +
-      "sponse\0226\n\006status\030\001 \001(\0162&.in.trujobs.prot" +
-      "o.LogInResponse.Status\022\016\n\006leadId\030\002 \001(\003\022\023" +
-      "\n\013candidateId\030\003 \001(\003\022\027\n\017candidateGender\030\004" +
-      " \001(\005\022\032\n\022candidateFirstName\030\005 \001(\t\022\031\n\021cand" +
-      "idateLastName\030\006 \001(\t\022\033\n\023candidateIsAssess" +
-      "ed\030\007 \001(\005\022\022\n\nsession_id\030\010 \001(\t\022\035\n\025session_",
-      "expiry_millis\030\t \001(\003\022\022\n\nminProfile\030\n \001(\005\022" +
-      "\036\n\026candidateJobPrefStatus\030\013 \001(\005\022#\n\033candi" +
-      "dateHomeLocalityStatus\030\014 \001(\005\022\035\n\025candidat" +
-      "eHomeLatitude\030\r \001(\001\022\036\n\026candidateHomeLong" +
-      "itude\030\016 \001(\001\022!\n\031candidatePrefJobRoleIdOne" +
-      "\030\017 \001(\003\022!\n\031candidatePrefJobRoleIdTwo\030\020 \001(" +
-      "\003\022#\n\033candidatePrefJobRoleIdThree\030\021 \001(\003\022!" +
-      "\n\031candidateHomeLocalityName\030\022 \001(\t\"]\n\006Sta" +
+      "\"Z\n\014LogInRequest\022\027\n\017candidateMobile\030\001 \001(" +
+      "\t\022\031\n\021candidatePassword\030\002 \001(\t\022\026\n\016appVersi" +
+      "onCode\030\003 \001(\005\"\221\005\n\rLogInResponse\0226\n\006status" +
+      "\030\001 \001(\0162&.in.trujobs.proto.LogInResponse." +
+      "Status\022\016\n\006leadId\030\002 \001(\003\022\023\n\013candidateId\030\003 " +
+      "\001(\003\022\027\n\017candidateGender\030\004 \001(\005\022\032\n\022candidat" +
+      "eFirstName\030\005 \001(\t\022\031\n\021candidateLastName\030\006 " +
+      "\001(\t\022\033\n\023candidateIsAssessed\030\007 \001(\005\022\022\n\nsess",
+      "ion_id\030\010 \001(\t\022\035\n\025session_expiry_millis\030\t " +
+      "\001(\003\022\022\n\nminProfile\030\n \001(\005\022\036\n\026candidateJobP" +
+      "refStatus\030\013 \001(\005\022#\n\033candidateHomeLocality" +
+      "Status\030\014 \001(\005\022\035\n\025candidateHomeLatitude\030\r " +
+      "\001(\001\022\036\n\026candidateHomeLongitude\030\016 \001(\001\022!\n\031c" +
+      "andidatePrefJobRoleIdOne\030\017 \001(\003\022!\n\031candid" +
+      "atePrefJobRoleIdTwo\030\020 \001(\003\022#\n\033candidatePr" +
+      "efJobRoleIdThree\030\021 \001(\003\022!\n\031candidateHomeL" +
+      "ocalityName\030\022 \001(\t\"]\n\006Status\022\013\n\007UNKNOWN\020\000" +
+      "\022\013\n\007SUCCESS\020\001\022\013\n\007FAILURE\020\002\022\013\n\007NO_USER\020\003\022",
+      "\022\n\016WRONG_PASSWORD\020\004\022\013\n\007NO_AUTH\020\005\"-\n\rSign" +
+      "UpRequest\022\014\n\004name\030\001 \001(\t\022\016\n\006mobile\030\002 \001(\t\"" +
+      "\224\001\n\016SignUpResponse\0227\n\006status\030\001 \001(\0162\'.in." +
+      "trujobs.proto.SignUpResponse.Status\022\024\n\014g" +
+      "eneratedOtp\030\002 \001(\005\"3\n\006Status\022\013\n\007UNKNOWN\020\000" +
+      "\022\013\n\007SUCCESS\020\001\022\017\n\013USER_EXISTS\020\003\"P\n\024ResetP" +
+      "asswordRequest\022\016\n\006mobile\030\001 \001(\t\022\020\n\010passwo" +
+      "rd\030\002 \001(\t\022\026\n\016appVersionCode\030\003 \001(\005\"\263\001\n\025Res" +
+      "etPasswordResponse\022>\n\006status\030\001 \001(\0162..in." +
+      "trujobs.proto.ResetPasswordResponse.Stat",
+      "us\022\013\n\003otp\030\002 \001(\005\"M\n\006Status\022\013\n\007UNKNOWN\020\000\022\013" +
+      "\n\007SUCCESS\020\001\022\013\n\007FAILURE\020\002\022\017\n\013USER_EXISTS\020" +
+      "\003\022\013\n\007NO_AUTH\020\005\"C\n\017JobRoleResponse\0220\n\007job" +
+      "Role\030\001 \003(\0132\037.in.trujobs.proto.JobRoleObj" +
+      "ect\"L\n\rJobRoleObject\022\021\n\tjobRoleId\030\001 \001(\003\022" +
+      "\023\n\013jobRoleName\030\002 \001(\t\022\023\n\013jobRoleIcon\030\003 \001(" +
+      "\t\"C\n\017JobPostResponse\0220\n\007jobPost\030\001 \003(\0132\037." +
+      "in.trujobs.proto.JobPostObject\"\204\006\n\rJobPo" +
+      "stObject\022\021\n\tjobPostId\030\001 \001(\003\022\024\n\014jobPostTi" +
+      "tle\030\002 \001(\t\022\032\n\022jobPostCompanyName\030\003 \001(\t\022\030\n",
+      "\020jobPostMinSalary\030\004 \001(\003\022\030\n\020jobPostMaxSal" +
+      "ary\030\005 \001(\003\0229\n\017jobPostLocality\030\006 \003(\0132 .in." +
+      "trujobs.proto.LocalityObject\022\032\n\022jobPostC" +
+      "ompanyLogo\030\007 \001(\t\022=\n\021jobPostExperience\030\010 " +
+      "\001(\0132\".in.trujobs.proto.ExperienceObject\022" +
+      "7\n\014jobPostShift\030\t \001(\0132!.in.trujobs.proto" +
+      ".TimeShiftObject\022\021\n\tvacancies\030\n \001(\005\022\032\n\022j" +
+      "obPostDescription\030\013 \001(\t\022\031\n\021jobPostIncent" +
+      "ives\030\014 \001(\t\022\036\n\026jobPostMinRequirements\030\r \001" +
+      "(\t\022\026\n\016jobPostAddress\030\016 \001(\t\022\033\n\023jobPostWor",
+      "kFromHome\030\017 \001(\005\022\032\n\022jobPostWorkingDays\030\020 " +
+      "\001(\t\0224\n\teducation\030\021 \001(\0132!.in.trujobs.prot" +
+      "o.EducationObject\022\017\n\007jobRole\030\022 \001(\t\022\035\n\025jo" +
+      "bPostCreationMillis\030\023 \001(\003\022\030\n\020jobPostStar" +
+      "tTime\030\024 \001(\005\022\026\n\016jobPostEndTime\030\025 \001(\005\022\021\n\ti" +
+      "sApplied\030\026 \001(\005\022\025\n\rjobPostSource\030\027 \001(\005\022\025\n" +
+      "\rrecruiterName\030\030 \001(\t\022\027\n\017recruiterMobile\030" +
+      "\031 \001(\t\")\n\024JobPostDetailRequest\022\021\n\tjobPost" +
+      "Id\030\001 \001(\003\"f\n\016LocalityObject\022\022\n\nlocalityId" +
+      "\030\001 \001(\003\022\024\n\014localityName\030\002 \001(\t\022\013\n\003lat\030\003 \001(",
+      "\001\022\013\n\003lng\030\004 \001(\001\022\020\n\010place_id\030\005 \001(\t\"@\n\020Expe" +
+      "rienceObject\022\024\n\014experienceId\030\001 \001(\003\022\026\n\016ex" +
+      "perienceType\030\002 \001(\t\"=\n\017EducationObject\022\023\n" +
+      "\013educationId\030\001 \001(\003\022\025\n\reducationName\030\002 \001(" +
+      "\t\"=\n\017TimeShiftObject\022\023\n\013timeShiftId\030\001 \001(" +
+      "\003\022\025\n\rtimeShiftName\030\002 \001(\t\"i\n\017ApplyJobRequ" +
+      "est\022\027\n\017candidateMobile\030\001 \001(\t\022\021\n\tjobPostI" +
+      "d\030\002 \001(\003\022\022\n\nlocalityId\030\003 \001(\003\022\026\n\016appVersio" +
+      "nCode\030\004 \001(\005\"\262\003\n\020ApplyJobResponse\0229\n\006stat" +
+      "us\030\001 \001(\0162).in.trujobs.proto.ApplyJobResp",
+      "onse.Status\022\034\n\024isPreScreenAvailable\030\002 \001(" +
+      "\010\022\034\n\024isInterviewAvailable\030\003 \001(\010\022\023\n\013compa" +
+      "nyName\030\004 \001(\t\022\024\n\014jobRoleTitle\030\005 \001(\t\022\020\n\010jo" +
+      "bTitle\030\006 \001(\t\022\021\n\tjobPostId\030\007 \001(\003\022\033\n\023isCan" +
+      "didateDeActive\030\010 \001(\010\022\033\n\023deActiveHeadMess" +
+      "age\030\t \001(\t\022\034\n\024deActiveTitleMessage\030\n \001(\t\022" +
+      "\033\n\023deActiveBodyMessage\030\013 \001(\t\"b\n\006Status\022\013" +
+      "\n\007UNKNOWN\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007FAILURE\020\002\022\023\n" +
+      "\017ALREADY_APPLIED\020\003\022\020\n\014NO_CANDIDATE\020\004\022\n\n\006" +
+      "NO_JOB\020\005\"|\n\021AddJobRoleRequest\022\027\n\017candida",
+      "teMobile\030\001 \001(\t\022\030\n\020jobRolePrefOneId\030\002 \001(\003" +
+      "\022\030\n\020jobRolePrefTwoId\030\003 \001(\003\022\032\n\022jobRolePre" +
+      "fThreeId\030\004 \001(\003\"\202\001\n\022AddJobRoleResponse\022;\n" +
+      "\006status\030\001 \001(\0162+.in.trujobs.proto.AddJobR" +
+      "oleResponse.Status\"/\n\006Status\022\013\n\007UNKNOWN\020" +
+      "\000\022\013\n\007SUCCESS\020\001\022\013\n\007FAILURE\020\002\"6\n\033Candidate" +
+      "InformationRequest\022\027\n\017candidateMobile\030\001 " +
+      "\001(\t\"\205\002\n\037GetCandidateInformationResponse\022" +
+      "H\n\006status\030\001 \001(\01628.in.trujobs.proto.GetCa" +
+      "ndidateInformationResponse.Status\0224\n\tcan",
+      "didate\030\002 \001(\0132!.in.trujobs.proto.Candidat" +
+      "eObject\0221\n\010jobRoles\030\003 \003(\0132\037.in.trujobs.p" +
+      "roto.JobRoleObject\"/\n\006Status\022\013\n\007UNKNOWN\020" +
+      "\000\022\013\n\007SUCCESS\020\001\022\013\n\007FAILURE\020\002\"\202\010\n\017Candidat" +
+      "eObject\022\023\n\013candidateId\030\001 \001(\003\022\032\n\022candidat" +
+      "eFirstName\030\002 \001(\t\022\031\n\021candidateLastName\030\003 " +
+      "\001(\t\022\033\n\023candidateIsAssessed\030\004 \001(\005\022#\n\033cand" +
+      "idateMinProfileComplete\030\005 \001(\005\022\027\n\017candida" +
+      "teGender\030\006 \001(\005\022\027\n\017candidateMobile\030\007 \001(\t\022" +
+      "\024\n\014candidateAge\030\010 \001(\005\022$\n\034candidateLastWi",
+      "thdrawnSalary\030\t \001(\003\022?\n\025candidateHomeloca" +
+      "lity\030\n \001(\0132 .in.trujobs.proto.LocalityOb" +
+      "ject\022?\n\025candidateLocationPref\030\013 \003(\0132 .in" +
+      ".trujobs.proto.LocalityObject\022=\n\024candida" +
+      "teJobRolePref\030\014 \003(\0132\037.in.trujobs.proto.J" +
+      "obRoleObject\022A\n\026candidateTimeShiftPref\030\r" +
+      " \001(\0132!.in.trujobs.proto.TimeShiftObject\022" +
+      "F\n\022candidateEducation\030\016 \001(\0132*.in.trujobs" +
+      ".proto.CandidateEducationObject\022 \n\030candi" +
+      "dateTotalExperience\030\017 \001(\005\022\037\n\027candidateCu",
+      "rrentCompany\030\020 \001(\t\022\032\n\022candidateDobMillis" +
+      "\030\021 \001(\003\022\033\n\023candidateIsEmployed\030\022 \001(\005\022B\n\023l" +
+      "anguageKnownObject\030\023 \003(\0132%.in.trujobs.pr" +
+      "oto.LanguageKnownObject\022D\n\024candidateSkil" +
+      "lObject\030\024 \003(\0132&.in.trujobs.proto.Candida" +
+      "teSkillObject\022@\n\027candidateCurrentJobRole" +
+      "\030\025 \001(\0132\037.in.trujobs.proto.JobRoleObject\022" +
+      "\'\n\037candidateProfileCompletePercent\030\026 \001(\002" +
+      "\022!\n\031candidateTotalAppliedJobs\030\027 \001(\005\022\023\n\013a" +
+      "ppliedJobs\030\030 \001(\005\"F\n\030GetJobPostDetailsReq",
+      "uest\022\021\n\tjobPostId\030\001 \001(\003\022\027\n\017candidateMobi" +
+      "le\030\002 \001(\t\"\213\002\n\031GetJobPostDetailsResponse\022B" +
+      "\n\006status\030\001 \001(\01622.in.trujobs.proto.GetJob" +
+      "PostDetailsResponse.Status\0220\n\007jobPost\030\002 " +
+      "\001(\0132\037.in.trujobs.proto.JobPostObject\0220\n\007" +
+      "company\030\003 \001(\0132\037.in.trujobs.proto.Company" +
+      "Object\022\026\n\016alreadyApplied\030\004 \001(\010\".\n\006Status" +
+      "\022\013\n\007UNKNOWN\020\000\022\013\n\007SUCCESS\020\001\022\n\n\006NO_JOB\020\002\"\346" +
+      "\002\n\rCompanyObject\022\021\n\tcompanyId\030\001 \001(\003\022\023\n\013c" +
+      "ompanyName\030\002 \001(\t\022\034\n\024companyEmployeeCount",
+      "\030\003 \001(\t\022\026\n\016companyWebsite\030\004 \001(\t\022\032\n\022compan" +
+      "yDescription\030\005 \001(\t\022\026\n\016companyAddress\030\006 \001" +
+      "(\t\022\023\n\013companyLogo\030\007 \001(\t\0228\n\013companyType\030\t" +
+      " \001(\0132#.in.trujobs.proto.CompanyTypeObjec" +
+      "t\0229\n\017companyLocality\030\n \001(\0132 .in.trujobs." +
+      "proto.LocalityObject\0229\n\020companyOtherJobs" +
+      "\030\013 \003(\0132\037.in.trujobs.proto.JobPostObject\"" +
+      "C\n\021CompanyTypeObject\022\025\n\rcompanyTypeId\030\001 " +
+      "\001(\003\022\027\n\017companyTypeName\030\002 \001(\t\"\234\001\n\023HomeLoc" +
+      "alityRequest\022\022\n\nlocalityId\030\001 \001(\003\022\013\n\003lat\030",
+      "\002 \001(\001\022\013\n\003lng\030\003 \001(\001\022\025\n\rlocality_name\030\004 \001(" +
+      "\t\022\020\n\010place_id\030\005 \001(\t\022\030\n\020candidate_mobile\030" +
+      "\006 \001(\t\022\024\n\014candidate_id\030\007 \001(\003\"\232\001\n\024HomeLoca" +
+      "lityResponse\022=\n\006status\030\001 \001(\0162-.in.trujob" +
+      "s.proto.HomeLocalityResponse.Status\"C\n\006S" +
+      "tatus\022\013\n\007UNKNOWN\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007FAILU" +
+      "RE\020\002\022\022\n\016USER_NOT_FOUND\020\003\"\310\001\n\030CandidateEd" +
+      "ucationObject\0224\n\teducation\030\001 \001(\0132!.in.tr" +
+      "ujobs.proto.EducationObject\022.\n\006degree\030\002 " +
+      "\001(\0132\036.in.trujobs.proto.DegreeObject\022\032\n\022c",
+      "andidateInstitute\030\003 \001(\t\022*\n\"candidateEduc" +
+      "ationCompletionStatus\030\004 \001(\005\"4\n\014DegreeObj" +
+      "ect\022\020\n\010degreeId\030\001 \001(\003\022\022\n\ndegreeName\030\002 \001(" +
+      "\t\"7\n\033CandidateAppliedJobsRequest\022\030\n\020cand" +
+      "idate_mobile\030\001 \001(\t\"\326\001\n\034CandidateAppliedJ" +
+      "obsResponse\022E\n\006status\030\001 \001(\01625.in.trujobs" +
+      ".proto.CandidateAppliedJobsResponse.Stat" +
+      "us\022>\n\016jobApplication\030\002 \003(\0132&.in.trujobs." +
+      "proto.JobApplicationObject\"/\n\006Status\022\013\n\007" +
+      "UNKNOWN\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007FAILURE\020\002\"\364\001\n\'",
+      "CandidateAppliedJobPostWorkFlowResponse\022" +
+      "P\n\006status\030\001 \001(\0162@.in.trujobs.proto.Candi" +
+      "dateAppliedJobPostWorkFlowResponse.Statu" +
+      "s\022F\n\025jobPostWorkFlowObject\030\002 \003(\0132\'.in.tr" +
+      "ujobs.proto.JobPostWorkFlowObject\"/\n\006Sta" +
       "tus\022\013\n\007UNKNOWN\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007FAILURE" +
-      "\020\002\022\013\n\007NO_USER\020\003\022\022\n\016WRONG_PASSWORD\020\004\022\013\n\007N",
-      "O_AUTH\020\005\"-\n\rSignUpRequest\022\014\n\004name\030\001 \001(\t\022" +
-      "\016\n\006mobile\030\002 \001(\t\"\224\001\n\016SignUpResponse\0227\n\006st" +
-      "atus\030\001 \001(\0162\'.in.trujobs.proto.SignUpResp" +
-      "onse.Status\022\024\n\014generatedOtp\030\002 \001(\005\"3\n\006Sta" +
-      "tus\022\013\n\007UNKNOWN\020\000\022\013\n\007SUCCESS\020\001\022\017\n\013USER_EX" +
-      "ISTS\020\003\"8\n\024ResetPasswordRequest\022\016\n\006mobile" +
-      "\030\001 \001(\t\022\020\n\010password\030\002 \001(\t\"\263\001\n\025ResetPasswo" +
-      "rdResponse\022>\n\006status\030\001 \001(\0162..in.trujobs." +
-      "proto.ResetPasswordResponse.Status\022\013\n\003ot" +
-      "p\030\002 \001(\005\"M\n\006Status\022\013\n\007UNKNOWN\020\000\022\013\n\007SUCCES",
-      "S\020\001\022\013\n\007FAILURE\020\002\022\017\n\013USER_EXISTS\020\003\022\013\n\007NO_" +
-      "AUTH\020\005\"C\n\017JobRoleResponse\0220\n\007jobRole\030\001 \003" +
-      "(\0132\037.in.trujobs.proto.JobRoleObject\"L\n\rJ" +
-      "obRoleObject\022\021\n\tjobRoleId\030\001 \001(\003\022\023\n\013jobRo" +
-      "leName\030\002 \001(\t\022\023\n\013jobRoleIcon\030\003 \001(\t\"C\n\017Job" +
-      "PostResponse\0220\n\007jobPost\030\001 \003(\0132\037.in.trujo" +
-      "bs.proto.JobPostObject\"\204\006\n\rJobPostObject" +
-      "\022\021\n\tjobPostId\030\001 \001(\003\022\024\n\014jobPostTitle\030\002 \001(" +
-      "\t\022\032\n\022jobPostCompanyName\030\003 \001(\t\022\030\n\020jobPost" +
-      "MinSalary\030\004 \001(\003\022\030\n\020jobPostMaxSalary\030\005 \001(",
-      "\003\0229\n\017jobPostLocality\030\006 \003(\0132 .in.trujobs." +
-      "proto.LocalityObject\022\032\n\022jobPostCompanyLo" +
-      "go\030\007 \001(\t\022=\n\021jobPostExperience\030\010 \001(\0132\".in" +
-      ".trujobs.proto.ExperienceObject\0227\n\014jobPo" +
-      "stShift\030\t \001(\0132!.in.trujobs.proto.TimeShi" +
-      "ftObject\022\021\n\tvacancies\030\n \001(\005\022\032\n\022jobPostDe" +
-      "scription\030\013 \001(\t\022\031\n\021jobPostIncentives\030\014 \001" +
-      "(\t\022\036\n\026jobPostMinRequirements\030\r \001(\t\022\026\n\016jo" +
-      "bPostAddress\030\016 \001(\t\022\033\n\023jobPostWorkFromHom" +
-      "e\030\017 \001(\005\022\032\n\022jobPostWorkingDays\030\020 \001(\t\0224\n\te",
-      "ducation\030\021 \001(\0132!.in.trujobs.proto.Educat" +
-      "ionObject\022\017\n\007jobRole\030\022 \001(\t\022\035\n\025jobPostCre" +
-      "ationMillis\030\023 \001(\003\022\030\n\020jobPostStartTime\030\024 " +
-      "\001(\005\022\026\n\016jobPostEndTime\030\025 \001(\005\022\021\n\tisApplied" +
-      "\030\026 \001(\005\022\025\n\rjobPostSource\030\027 \001(\005\022\025\n\rrecruit" +
-      "erName\030\030 \001(\t\022\027\n\017recruiterMobile\030\031 \001(\t\")\n" +
-      "\024JobPostDetailRequest\022\021\n\tjobPostId\030\001 \001(\003" +
-      "\"f\n\016LocalityObject\022\022\n\nlocalityId\030\001 \001(\003\022\024" +
-      "\n\014localityName\030\002 \001(\t\022\013\n\003lat\030\003 \001(\001\022\013\n\003lng" +
-      "\030\004 \001(\001\022\020\n\010place_id\030\005 \001(\t\"@\n\020ExperienceOb",
-      "ject\022\024\n\014experienceId\030\001 \001(\003\022\026\n\016experience" +
-      "Type\030\002 \001(\t\"=\n\017EducationObject\022\023\n\013educati" +
-      "onId\030\001 \001(\003\022\025\n\reducationName\030\002 \001(\t\"=\n\017Tim" +
-      "eShiftObject\022\023\n\013timeShiftId\030\001 \001(\003\022\025\n\rtim" +
-      "eShiftName\030\002 \001(\t\"i\n\017ApplyJobRequest\022\027\n\017c" +
-      "andidateMobile\030\001 \001(\t\022\021\n\tjobPostId\030\002 \001(\003\022" +
-      "\022\n\nlocalityId\030\003 \001(\003\022\026\n\016appVersionCode\030\004 " +
-      "\001(\005\"\262\003\n\020ApplyJobResponse\0229\n\006status\030\001 \001(\016" +
-      "2).in.trujobs.proto.ApplyJobResponse.Sta" +
-      "tus\022\034\n\024isPreScreenAvailable\030\002 \001(\010\022\034\n\024isI",
-      "nterviewAvailable\030\003 \001(\010\022\023\n\013companyName\030\004" +
-      " \001(\t\022\024\n\014jobRoleTitle\030\005 \001(\t\022\020\n\010jobTitle\030\006" +
-      " \001(\t\022\021\n\tjobPostId\030\007 \001(\003\022\033\n\023isCandidateDe" +
-      "Active\030\010 \001(\010\022\033\n\023deActiveHeadMessage\030\t \001(" +
-      "\t\022\034\n\024deActiveTitleMessage\030\n \001(\t\022\033\n\023deAct" +
-      "iveBodyMessage\030\013 \001(\t\"b\n\006Status\022\013\n\007UNKNOW" +
-      "N\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007FAILURE\020\002\022\023\n\017ALREADY" +
-      "_APPLIED\020\003\022\020\n\014NO_CANDIDATE\020\004\022\n\n\006NO_JOB\020\005" +
-      "\"|\n\021AddJobRoleRequest\022\027\n\017candidateMobile" +
-      "\030\001 \001(\t\022\030\n\020jobRolePrefOneId\030\002 \001(\003\022\030\n\020jobR",
-      "olePrefTwoId\030\003 \001(\003\022\032\n\022jobRolePrefThreeId" +
-      "\030\004 \001(\003\"\202\001\n\022AddJobRoleResponse\022;\n\006status\030" +
-      "\001 \001(\0162+.in.trujobs.proto.AddJobRoleRespo" +
-      "nse.Status\"/\n\006Status\022\013\n\007UNKNOWN\020\000\022\013\n\007SUC" +
-      "CESS\020\001\022\013\n\007FAILURE\020\002\"6\n\033CandidateInformat" +
-      "ionRequest\022\027\n\017candidateMobile\030\001 \001(\t\"\205\002\n\037" +
-      "GetCandidateInformationResponse\022H\n\006statu" +
-      "s\030\001 \001(\01628.in.trujobs.proto.GetCandidateI" +
-      "nformationResponse.Status\0224\n\tcandidate\030\002" +
-      " \001(\0132!.in.trujobs.proto.CandidateObject\022",
-      "1\n\010jobRoles\030\003 \003(\0132\037.in.trujobs.proto.Job" +
-      "RoleObject\"/\n\006Status\022\013\n\007UNKNOWN\020\000\022\013\n\007SUC" +
-      "CESS\020\001\022\013\n\007FAILURE\020\002\"\202\010\n\017CandidateObject\022" +
-      "\023\n\013candidateId\030\001 \001(\003\022\032\n\022candidateFirstNa" +
-      "me\030\002 \001(\t\022\031\n\021candidateLastName\030\003 \001(\t\022\033\n\023c" +
-      "andidateIsAssessed\030\004 \001(\005\022#\n\033candidateMin" +
-      "ProfileComplete\030\005 \001(\005\022\027\n\017candidateGender" +
-      "\030\006 \001(\005\022\027\n\017candidateMobile\030\007 \001(\t\022\024\n\014candi" +
-      "dateAge\030\010 \001(\005\022$\n\034candidateLastWithdrawnS" +
-      "alary\030\t \001(\003\022?\n\025candidateHomelocality\030\n \001",
-      "(\0132 .in.trujobs.proto.LocalityObject\022?\n\025" +
-      "candidateLocationPref\030\013 \003(\0132 .in.trujobs" +
-      ".proto.LocalityObject\022=\n\024candidateJobRol" +
-      "ePref\030\014 \003(\0132\037.in.trujobs.proto.JobRoleOb" +
-      "ject\022A\n\026candidateTimeShiftPref\030\r \001(\0132!.i" +
-      "n.trujobs.proto.TimeShiftObject\022F\n\022candi" +
-      "dateEducation\030\016 \001(\0132*.in.trujobs.proto.C" +
-      "andidateEducationObject\022 \n\030candidateTota" +
-      "lExperience\030\017 \001(\005\022\037\n\027candidateCurrentCom" +
-      "pany\030\020 \001(\t\022\032\n\022candidateDobMillis\030\021 \001(\003\022\033",
-      "\n\023candidateIsEmployed\030\022 \001(\005\022B\n\023languageK" +
-      "nownObject\030\023 \003(\0132%.in.trujobs.proto.Lang" +
-      "uageKnownObject\022D\n\024candidateSkillObject\030" +
-      "\024 \003(\0132&.in.trujobs.proto.CandidateSkillO" +
-      "bject\022@\n\027candidateCurrentJobRole\030\025 \001(\0132\037" +
-      ".in.trujobs.proto.JobRoleObject\022\'\n\037candi" +
-      "dateProfileCompletePercent\030\026 \001(\002\022!\n\031cand" +
-      "idateTotalAppliedJobs\030\027 \001(\005\022\023\n\013appliedJo" +
-      "bs\030\030 \001(\005\"F\n\030GetJobPostDetailsRequest\022\021\n\t" +
-      "jobPostId\030\001 \001(\003\022\027\n\017candidateMobile\030\002 \001(\t",
-      "\"\213\002\n\031GetJobPostDetailsResponse\022B\n\006status" +
-      "\030\001 \001(\01622.in.trujobs.proto.GetJobPostDeta" +
-      "ilsResponse.Status\0220\n\007jobPost\030\002 \001(\0132\037.in" +
-      ".trujobs.proto.JobPostObject\0220\n\007company\030" +
-      "\003 \001(\0132\037.in.trujobs.proto.CompanyObject\022\026" +
-      "\n\016alreadyApplied\030\004 \001(\010\".\n\006Status\022\013\n\007UNKN" +
-      "OWN\020\000\022\013\n\007SUCCESS\020\001\022\n\n\006NO_JOB\020\002\"\346\002\n\rCompa" +
-      "nyObject\022\021\n\tcompanyId\030\001 \001(\003\022\023\n\013companyNa" +
-      "me\030\002 \001(\t\022\034\n\024companyEmployeeCount\030\003 \001(\t\022\026" +
-      "\n\016companyWebsite\030\004 \001(\t\022\032\n\022companyDescrip",
-      "tion\030\005 \001(\t\022\026\n\016companyAddress\030\006 \001(\t\022\023\n\013co" +
-      "mpanyLogo\030\007 \001(\t\0228\n\013companyType\030\t \001(\0132#.i" +
-      "n.trujobs.proto.CompanyTypeObject\0229\n\017com" +
-      "panyLocality\030\n \001(\0132 .in.trujobs.proto.Lo" +
-      "calityObject\0229\n\020companyOtherJobs\030\013 \003(\0132\037" +
-      ".in.trujobs.proto.JobPostObject\"C\n\021Compa" +
-      "nyTypeObject\022\025\n\rcompanyTypeId\030\001 \001(\003\022\027\n\017c" +
-      "ompanyTypeName\030\002 \001(\t\"\234\001\n\023HomeLocalityReq" +
-      "uest\022\022\n\nlocalityId\030\001 \001(\003\022\013\n\003lat\030\002 \001(\001\022\013\n" +
-      "\003lng\030\003 \001(\001\022\025\n\rlocality_name\030\004 \001(\t\022\020\n\010pla",
-      "ce_id\030\005 \001(\t\022\030\n\020candidate_mobile\030\006 \001(\t\022\024\n" +
-      "\014candidate_id\030\007 \001(\003\"\232\001\n\024HomeLocalityResp" +
-      "onse\022=\n\006status\030\001 \001(\0162-.in.trujobs.proto." +
-      "HomeLocalityResponse.Status\"C\n\006Status\022\013\n" +
-      "\007UNKNOWN\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007FAILURE\020\002\022\022\n\016" +
-      "USER_NOT_FOUND\020\003\"\310\001\n\030CandidateEducationO" +
-      "bject\0224\n\teducation\030\001 \001(\0132!.in.trujobs.pr" +
-      "oto.EducationObject\022.\n\006degree\030\002 \001(\0132\036.in" +
-      ".trujobs.proto.DegreeObject\022\032\n\022candidate" +
-      "Institute\030\003 \001(\t\022*\n\"candidateEducationCom",
-      "pletionStatus\030\004 \001(\005\"4\n\014DegreeObject\022\020\n\010d" +
-      "egreeId\030\001 \001(\003\022\022\n\ndegreeName\030\002 \001(\t\"7\n\033Can" +
-      "didateAppliedJobsRequest\022\030\n\020candidate_mo" +
-      "bile\030\001 \001(\t\"\326\001\n\034CandidateAppliedJobsRespo" +
-      "nse\022E\n\006status\030\001 \001(\01625.in.trujobs.proto.C" +
-      "andidateAppliedJobsResponse.Status\022>\n\016jo" +
-      "bApplication\030\002 \003(\0132&.in.trujobs.proto.Jo" +
-      "bApplicationObject\"/\n\006Status\022\013\n\007UNKNOWN\020" +
-      "\000\022\013\n\007SUCCESS\020\001\022\013\n\007FAILURE\020\002\"\364\001\n\'Candidat" +
-      "eAppliedJobPostWorkFlowResponse\022P\n\006statu",
-      "s\030\001 \001(\0162@.in.trujobs.proto.CandidateAppl" +
-      "iedJobPostWorkFlowResponse.Status\022F\n\025job" +
-      "PostWorkFlowObject\030\002 \003(\0132\'.in.trujobs.pr" +
-      "oto.JobPostWorkFlowObject\"/\n\006Status\022\013\n\007U" +
-      "NKNOWN\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007FAILURE\020\002\"\304\001\n\024J" +
-      "obApplicationObject\022\030\n\020jobApplicationId\030" +
-      "\001 \001(\003\022#\n\033jobApplicationAppliedMillis\030\002 \001" +
-      "(\003\0220\n\007jobPost\030\003 \001(\0132\037.in.trujobs.proto.J" +
-      "obPostObject\022;\n\021preScreenLocation\030\004 \001(\0132" +
-      " .in.trujobs.proto.LocalityObject\"\374\002\n\025Jo",
-      "bPostWorkFlowObject\022\031\n\021jobPostWorkflowId" +
-      "\030\001 \001(\003\022\024\n\014workflowUUId\030\002 \001(\t\022\032\n\022creation" +
-      "TimeMillis\030\003 \001(\003\022\033\n\023interviewDateMillis\030" +
-      "\004 \001(\003\022\024\n\014interviewLat\030\005 \001(\001\022\024\n\014interview" +
-      "Lng\030\006 \001(\001\022J\n\027InterviewTimeSlotObject\030\007 \001" +
-      "(\0132).in.trujobs.proto.InterviewTimeSlotO" +
-      "bject\022I\n\030candidateInterviewStatus\030\010 \001(\0132" +
-      "\'.in.trujobs.proto.JobPostWorkFlowStatus" +
-      "\0226\n\rjobPostObject\030\t \001(\0132\037.in.trujobs.pro" +
-      "to.JobPostObject\"F\n\025LastActiveValueObjec",
-      "t\022\024\n\014lastActiveId\030\001 \001(\005\022\027\n\017lastActiveVal" +
-      "ue\030\002 \001(\t\">\n\025JobPostWorkFlowStatus\022\020\n\010sta" +
-      "tusId\030\001 \001(\003\022\023\n\013statusTitle\030\002 \001(\t\"\201\002\n\"Upd" +
-      "ateCandidateBasicProfileRequest\022\030\n\020candi" +
-      "date_mobile\030\001 \001(\t\022\034\n\024candidate_first_nam" +
-      "e\030\002 \001(\t\022\033\n\023candidate_last_name\030\003 \001(\t\022 \n\030" +
-      "candidate_timeshift_pref\030\004 \001(\003\022\030\n\020candid" +
-      "ate_gender\030\005 \001(\005\022\024\n\014candidateDOB\030\006 \001(\t\0224" +
-      "\n\013jobRolePref\030\007 \003(\0132\037.in.trujobs.proto.J" +
-      "obRoleObject\"\212\003\n\'UpdateCandidateExperien",
-      "ceProfileRequest\022\030\n\020candidate_mobile\030\001 \001" +
+      "\020\002\"\304\001\n\024JobApplicationObject\022\030\n\020jobApplic" +
+      "ationId\030\001 \001(\003\022#\n\033jobApplicationAppliedMi" +
+      "llis\030\002 \001(\003\0220\n\007jobPost\030\003 \001(\0132\037.in.trujobs" +
+      ".proto.JobPostObject\022;\n\021preScreenLocatio",
+      "n\030\004 \001(\0132 .in.trujobs.proto.LocalityObjec" +
+      "t\"\374\002\n\025JobPostWorkFlowObject\022\031\n\021jobPostWo" +
+      "rkflowId\030\001 \001(\003\022\024\n\014workflowUUId\030\002 \001(\t\022\032\n\022" +
+      "creationTimeMillis\030\003 \001(\003\022\033\n\023interviewDat" +
+      "eMillis\030\004 \001(\003\022\024\n\014interviewLat\030\005 \001(\001\022\024\n\014i" +
+      "nterviewLng\030\006 \001(\001\022J\n\027InterviewTimeSlotOb" +
+      "ject\030\007 \001(\0132).in.trujobs.proto.InterviewT" +
+      "imeSlotObject\022I\n\030candidateInterviewStatu" +
+      "s\030\010 \001(\0132\'.in.trujobs.proto.JobPostWorkFl" +
+      "owStatus\0226\n\rjobPostObject\030\t \001(\0132\037.in.tru",
+      "jobs.proto.JobPostObject\"F\n\025LastActiveVa" +
+      "lueObject\022\024\n\014lastActiveId\030\001 \001(\005\022\027\n\017lastA" +
+      "ctiveValue\030\002 \001(\t\">\n\025JobPostWorkFlowStatu" +
+      "s\022\020\n\010statusId\030\001 \001(\003\022\023\n\013statusTitle\030\002 \001(\t" +
+      "\"\201\002\n\"UpdateCandidateBasicProfileRequest\022" +
+      "\030\n\020candidate_mobile\030\001 \001(\t\022\034\n\024candidate_f" +
+      "irst_name\030\002 \001(\t\022\033\n\023candidate_last_name\030\003" +
+      " \001(\t\022 \n\030candidate_timeshift_pref\030\004 \001(\003\022\030" +
+      "\n\020candidate_gender\030\005 \001(\005\022\024\n\014candidateDOB" +
+      "\030\006 \001(\t\0224\n\013jobRolePref\030\007 \003(\0132\037.in.trujobs",
+      ".proto.JobRoleObject\"\212\003\n\'UpdateCandidate" +
+      "ExperienceProfileRequest\022\030\n\020candidate_mo" +
+      "bile\030\001 \001(\t\022\"\n\032candidate_total_experience" +
+      "\030\002 \001(\005\022\035\n\025candidate_is_employed\030\003 \001(\005\022!\n" +
+      "\031candidate_current_company\030\004 \001(\t\022 \n\030cand" +
+      "idate_current_salary\030\005 \001(\003\0229\n\020current_jo" +
+      "b_role\030\006 \001(\0132\037.in.trujobs.proto.JobRoleO" +
+      "bject\022A\n\022candidate_language\030\007 \003(\0132%.in.t" +
+      "rujobs.proto.LanguageKnownObject\022?\n\017cand" +
+      "idate_skill\030\010 \003(\0132&.in.trujobs.proto.Can",
+      "didateSkillObject\"\201\002\n&UpdateCandidateEdu" +
+      "cationProfileRequest\022\030\n\020candidate_mobile" +
+      "\030\001 \001(\t\022!\n\031candidate_education_level\030\002 \001(" +
+      "\003\022\030\n\020candidate_degree\030\003 \001(\003\022%\n\035candidate" +
+      "_education_institute\030\004 \001(\t\022-\n%candidate_" +
+      "education_completion_status\030\005 \001(\005\022\021\n\tjob" +
+      "PostId\030\006 \001(\003\022\027\n\017isFinalFragment\030\007 \001(\010\"\244\001" +
+      "\n#UpdateCandidateBasicProfileResponse\022L\n" +
+      "\006status\030\001 \001(\0162<.in.trujobs.proto.UpdateC" +
+      "andidateBasicProfileResponse.Status\"/\n\006S",
+      "tatus\022\013\n\007UNKNOWN\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007FAILU" +
+      "RE\020\002\"\344\001\n&GetCandidateBasicProfileStaticR" +
+      "esponse\022O\n\006status\030\001 \001(\0162?.in.trujobs.pro" +
+      "to.GetCandidateBasicProfileStaticRespons" +
+      "e.Status\0228\n\rtimeShiftList\030\002 \003(\0132!.in.tru" +
+      "jobs.proto.TimeShiftObject\"/\n\006Status\022\013\n\007" +
+      "UNKNOWN\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007FAILURE\020\002\"\324\002\n+" +
+      "GetCandidateExperienceProfileStaticRespo" +
+      "nse\022T\n\006status\030\001 \001(\0162D.in.trujobs.proto.G" +
+      "etCandidateExperienceProfileStaticRespon",
+      "se.Status\0228\n\016languageObject\030\002 \003(\0132 .in.t" +
+      "rujobs.proto.LanguageObject\0222\n\013skillObje" +
+      "ct\030\003 \003(\0132\035.in.trujobs.proto.SkillObject\022" +
+      "0\n\007jobRole\030\004 \003(\0132\037.in.trujobs.proto.JobR" +
+      "oleObject\"/\n\006Status\022\013\n\007UNKNOWN\020\000\022\013\n\007SUCC" +
+      "ESS\020\001\022\013\n\007FAILURE\020\002\"\244\002\n*GetCandidateEduca" +
+      "tionProfileStaticResponse\022S\n\006status\030\001 \001(" +
+      "\0162C.in.trujobs.proto.GetCandidateEducati" +
+      "onProfileStaticResponse.Status\0224\n\014degree" +
+      "Object\030\002 \003(\0132\036.in.trujobs.proto.DegreeOb",
+      "ject\022:\n\017educationObject\030\003 \003(\0132!.in.trujo" +
+      "bs.proto.EducationObject\"/\n\006Status\022\013\n\007UN" +
+      "KNOWN\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007FAILURE\020\002\":\n\016Lan" +
+      "guageObject\022\022\n\nlanguageId\030\001 \001(\005\022\024\n\014langu" +
+      "ageName\030\002 \001(\t\"H\n\013SkillObject\022\017\n\007skillId\030" +
+      "\001 \001(\005\022\021\n\tskillName\030\002 \001(\t\022\025\n\rskillQuestio" +
+      "n\030\003 \001(\t\"|\n\023LanguageKnownObject\022\027\n\017langua" +
+      "geKnownId\030\001 \001(\005\022\032\n\022languageUnderstand\030\002 " +
+      "\001(\005\022\025\n\rlanguageSpeak\030\003 \001(\005\022\031\n\021languageRe" +
+      "adWrite\030\004 \001(\005\"7\n\024CandidateSkillObject\022\017\n",
+      "\007skillId\030\001 \001(\005\022\016\n\006answer\030\002 \001(\010\"6\n\032FetchC" +
+      "andidateAlertRequest\022\030\n\020candidate_mobile" +
+      "\030\001 \001(\t\"\312\005\n\020JobFilterRequest\0229\n\006salary\030\001 " +
+      "\001(\0162).in.trujobs.proto.JobFilterRequest." +
+      "Salary\022:\n\003exp\030\002 \001(\0162-.in.trujobs.proto.J" +
+      "obFilterRequest.Experience\0229\n\003edu\030\003 \001(\0162" +
+      ",.in.trujobs.proto.JobFilterRequest.Educ" +
+      "ation\0229\n\006gender\030\004 \001(\0162).in.trujobs.proto" +
+      ".JobFilterRequest.Gender\022\033\n\023sort_by_date" +
+      "_posted\030\005 \001(\010\022\026\n\016sort_by_salary\030\006 \001(\010\022\030\n",
+      "\020candidate_mobile\030\007 \001(\t\022\033\n\023job_search_la" +
+      "titude\030\010 \001(\001\022\034\n\024job_search_longitude\030\t \001" +
+      "(\001\"t\n\006Salary\022\016\n\nANY_SALARY\020\000\022\020\n\014EIGHT_K_" +
+      "PLUS\020\001\022\016\n\nTEN_K_PLUS\020\002\022\021\n\rTWELVE_K_PLUS\020" +
+      "\003\022\022\n\016FIFTEEN_K_PLUS\020\004\022\021\n\rTWENTY_K_PLUS\020\005" +
+      "\">\n\nExperience\022\022\n\016ANY_EXPERIENCE\020\000\022\013\n\007FR" +
+      "ESHER\020\001\022\017\n\013EXPERIENCED\020\002\"Y\n\tEducation\022\021\n" +
+      "\rANY_EDUCATION\020\000\022\n\n\006LT_TEN\020\001\022\014\n\010TEN_PASS" +
+      "\020\002\022\017\n\013TWELVE_PASS\020\003\022\006\n\002UG\020\004\022\006\n\002PG\020\005\".\n\006G" +
+      "ender\022\016\n\nANY_GENDER\020\000\022\010\n\004MALE\020\001\022\n\n\006FEMAL",
+      "E\020\002\"\221\003\n\033FetchCandidateAlertResponse\022D\n\006s" +
+      "tatus\030\001 \001(\01624.in.trujobs.proto.FetchCand" +
+      "idateAlertResponse.Status\022E\n\talertType\030\002" +
+      " \001(\01622.in.trujobs.proto.FetchCandidateAl" +
+      "ertResponse.Type\022\024\n\014alertMessage\030\003 \001(\t\"\"" +
+      "\n\006Status\022\013\n\007UNKNOWN\020\000\022\013\n\007SUCCESS\020\001\"\252\001\n\004T" +
+      "ype\022\013\n\007DEFAULT\020\000\022\024\n\020COMPLETE_PROFILE\020\001\022\027" +
+      "\n\023INTERVIEW_SCHEDULED\020\002\022\032\n\026JOINING_DATE_" +
+      "CONFIRMED\020\003\022\027\n\023PROFILE_DEACTIVATED\020\004\022\030\n\024" +
+      "NEW_JOBS_IN_LOCALITY\020\005\022\027\n\023COMPLETE_ASSES",
+      "SMENT\020\006\"\366\001\n\020JobSearchRequest\022\020\n\010latitude" +
+      "\030\001 \001(\001\022\021\n\tlongitude\030\002 \001(\001\022\030\n\020candidate_m" +
+      "obile\030\003 \001(\t\022<\n\020jobFilterRequest\030\004 \001(\0132\"." +
+      "in.trujobs.proto.JobFilterRequest\022N\n\031job" +
+      "SearchByJobRoleRequest\030\005 \001(\0132+.in.trujob" +
+      "s.proto.JobSearchByJobRoleRequest\022\025\n\rloc" +
+      "ality_name\030\006 \001(\t\"_\n\031JobSearchByJobRoleRe" +
+      "quest\022\024\n\014jobRoleIdOne\030\001 \001(\003\022\024\n\014jobRoleId" +
+      "Two\030\002 \001(\003\022\026\n\016JobRoleIdThree\030\003 \001(\003\"O\n\026Lat" +
+      "LngOrPlaceIdRequest\022\020\n\010latitude\030\001 \001(\001\022\021\n",
+      "\tlongitude\030\002 \001(\001\022\020\n\010place_id\030\003 \001(\t\"\263\002\n\026L" +
+      "ocalityObjectResponse\022?\n\006status\030\001 \001(\0162/." +
+      "in.trujobs.proto.LocalityObjectResponse." +
+      "Status\022;\n\004type\030\002 \001(\0162-.in.trujobs.proto." +
+      "LocalityObjectResponse.Type\0222\n\010locality\030" +
+      "\003 \001(\0132 .in.trujobs.proto.LocalityObject\"" +
+      "/\n\006Status\022\013\n\007UNKNOWN\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007F" +
+      "AILURE\020\002\"6\n\004Type\022\r\n\tUNDEFINED\020\000\022\017\n\013FOR_P" +
+      "LACEID\020\001\022\016\n\nFOR_LATLNG\020\002\"u\n\035PreScreenPop" +
+      "ulateProtoRequest\022\023\n\013candidateId\030\001 \001(\003\022\021",
+      "\n\tjobPostId\030\002 \001(\003\022\023\n\013rePreScreen\030\003 \001(\010\022\027" +
+      "\n\017candidateMobile\030\004 \001(\t\"\317\006\n\036PreScreenPop" +
+      "ulateProtoResponse\022G\n\006status\030\001 \001(\01627.in." +
+      "trujobs.proto.PreScreenPopulateProtoResp" +
+      "onse.Status\022\026\n\npropertyId\030\002 \003(\005B\002\020\001\022?\n\014d" +
+      "ocumentList\030\003 \001(\0132).in.trujobs.proto.Pre" +
+      "ScreenDocumentObject\022?\n\014languageList\030\004 \001" +
+      "(\0132).in.trujobs.proto.PreScreenLanguageO" +
+      "bject\0229\n\tassetList\030\005 \001(\0132&.in.trujobs.pr" +
+      "oto.PreScreenAssetObject\0221\n\003age\030\006 \001(\0132$.",
+      "in.trujobs.proto.PreScreenAgeObject\022?\n\ne" +
+      "xperience\030\007 \001(\0132+.in.trujobs.proto.PreSc" +
+      "reenExperienceObject\022=\n\teducation\030\010 \001(\0132" +
+      "*.in.trujobs.proto.PreScreenEducationObj" +
+      "ect\0227\n\006gender\030\t \001(\0132\'.in.trujobs.proto.P" +
+      "reScreenGenderObject\0227\n\006salary\030\n \001(\0132\'.i" +
+      "n.trujobs.proto.PreScreenSalaryObject\022\022\n" +
+      "\nshouldShow\030\013 \001(\010\022\021\n\tjobPostId\030\014 \001(\003\022\023\n\013" +
+      "candidateId\030\r \001(\003\022\034\n\024preScreenCompanyNam" +
+      "e\030\016 \001(\t\022\031\n\021preScreenJobTitle\030\017 \001(\t\022\035\n\025pr",
+      "eScreenJobRoleTitle\030\020 \001(\t\022\030\n\014hpPropertyI" +
+      "d\030\021 \003(\005B\002\020\001\"<\n\006Status\022\013\n\007UNKNOWN\020\000\022\013\n\007FA" +
+      "ILURE\020\001\022\013\n\007SUCCESS\020\002\022\013\n\007INVALID\020\003\"\221\001\n\027Pr" +
+      "eScreenDocumentObject\0227\n\016jobPostIdProof\030" +
+      "\001 \003(\0132\037.in.trujobs.proto.IdProofObject\022\022" +
+      "\n\nisMatching\030\002 \001(\010\022\022\n\npropertyId\030\003 \001(\005\022\025" +
+      "\n\rpropertyTitle\030\004 \001(\t\"\223\001\n\027PreScreenLangu" +
+      "ageObject\0229\n\017jobPostLanguage\030\001 \003(\0132 .in." +
+      "trujobs.proto.LanguageObject\022\022\n\nisMatchi" +
+      "ng\030\002 \001(\010\022\022\n\npropertyId\030\003 \001(\005\022\025\n\rproperty",
+      "Title\030\004 \001(\t\"\212\001\n\024PreScreenAssetObject\0223\n\014" +
+      "jobPostAsset\030\001 \003(\0132\035.in.trujobs.proto.As" +
+      "setObject\022\022\n\nisMatching\030\002 \001(\010\022\022\n\npropert" +
+      "yId\030\003 \001(\005\022\025\n\rpropertyTitle\030\004 \001(\t\"S\n\022PreS" +
+      "creenAgeObject\022\022\n\nisMatching\030\001 \001(\010\022\022\n\npr" +
+      "opertyId\030\002 \001(\005\022\025\n\rpropertyTitle\030\003 \001(\t\"Z\n" +
+      "\031PreScreenExperienceObject\022\022\n\nisMatching" +
+      "\030\001 \001(\010\022\022\n\npropertyId\030\002 \001(\005\022\025\n\rpropertyTi" +
+      "tle\030\003 \001(\t\"Y\n\030PreScreenEducationObject\022\022\n" +
+      "\nisMatching\030\001 \001(\010\022\022\n\npropertyId\030\002 \001(\005\022\025\n",
+      "\rpropertyTitle\030\003 \001(\t\"V\n\025PreScreenGenderO" +
+      "bject\022\022\n\nisMatching\030\001 \001(\010\022\022\n\npropertyId\030" +
+      "\002 \001(\005\022\025\n\rpropertyTitle\030\003 \001(\t\"V\n\025PreScree" +
+      "nSalaryObject\022\022\n\nisMatching\030\001 \001(\010\022\022\n\npro" +
+      "pertyId\030\002 \001(\005\022\025\n\rpropertyTitle\030\003 \001(\t\"b\n\027" +
+      "IdProofObjectWithNumber\0220\n\007idProof\030\001 \001(\013" +
+      "2\037.in.trujobs.proto.IdProofObject\022\025\n\ridP" +
+      "roofNumber\030\002 \001(\t\"I\n\rIdProofObject\022\021\n\tidP" +
+      "roofId\030\001 \001(\005\022\023\n\013idProofName\030\002 \001(\t\022\020\n\010isC" +
+      "ommon\030\003 \001(\010\"D\n\013AssetObject\022\017\n\007assetId\030\001 ",
+      "\001(\005\022\022\n\nassetTitle\030\002 \001(\t\022\020\n\010isCommon\030\003 \001(" +
+      "\010\"\242\001\n\036UpdateCandidateDocumentRequest\022\030\n\020" +
+      "candidate_mobile\030\001 \001(\t\022:\n\007idProof\030\002 \003(\0132" +
+      ").in.trujobs.proto.IdProofObjectWithNumb" +
+      "er\022\021\n\tjobPostId\030\003 \001(\003\022\027\n\017isFinalFragment" +
+      "\030\004 \001(\010\"\252\001\n\036UpdateCandidateLanguageReques" +
+      "t\022\030\n\020candidate_mobile\030\001 \001(\t\022B\n\023languageK" +
+      "nownObject\030\002 \003(\0132%.in.trujobs.proto.Lang" +
+      "uageKnownObject\022\021\n\tjobPostId\030\003 \001(\003\022\027\n\017is" +
+      "FinalFragment\030\004 \001(\010\"\253\002\n UpdateCandidateE",
+      "xperienceRequest\022\030\n\020candidate_mobile\030\001 \001" +
       "(\t\022\"\n\032candidate_total_experience\030\002 \001(\005\022\035" +
       "\n\025candidate_is_employed\030\003 \001(\005\022!\n\031candida" +
       "te_current_company\030\004 \001(\t\022 \n\030candidate_cu" +
       "rrent_salary\030\005 \001(\003\0229\n\020current_job_role\030\006" +
-      " \001(\0132\037.in.trujobs.proto.JobRoleObject\022A\n" +
-      "\022candidate_language\030\007 \003(\0132%.in.trujobs.p" +
-      "roto.LanguageKnownObject\022?\n\017candidate_sk" +
-      "ill\030\010 \003(\0132&.in.trujobs.proto.CandidateSk" +
-      "illObject\"\201\002\n&UpdateCandidateEducationPr",
-      "ofileRequest\022\030\n\020candidate_mobile\030\001 \001(\t\022!" +
-      "\n\031candidate_education_level\030\002 \001(\003\022\030\n\020can" +
-      "didate_degree\030\003 \001(\003\022%\n\035candidate_educati" +
-      "on_institute\030\004 \001(\t\022-\n%candidate_educatio" +
-      "n_completion_status\030\005 \001(\005\022\021\n\tjobPostId\030\006" +
-      " \001(\003\022\027\n\017isFinalFragment\030\007 \001(\010\"\244\001\n#Update" +
-      "CandidateBasicProfileResponse\022L\n\006status\030" +
-      "\001 \001(\0162<.in.trujobs.proto.UpdateCandidate" +
-      "BasicProfileResponse.Status\"/\n\006Status\022\013\n" +
-      "\007UNKNOWN\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007FAILURE\020\002\"\344\001\n",
-      "&GetCandidateBasicProfileStaticResponse\022" +
-      "O\n\006status\030\001 \001(\0162?.in.trujobs.proto.GetCa" +
-      "ndidateBasicProfileStaticResponse.Status" +
-      "\0228\n\rtimeShiftList\030\002 \003(\0132!.in.trujobs.pro" +
-      "to.TimeShiftObject\"/\n\006Status\022\013\n\007UNKNOWN\020" +
-      "\000\022\013\n\007SUCCESS\020\001\022\013\n\007FAILURE\020\002\"\324\002\n+GetCandi" +
-      "dateExperienceProfileStaticResponse\022T\n\006s" +
-      "tatus\030\001 \001(\0162D.in.trujobs.proto.GetCandid" +
-      "ateExperienceProfileStaticResponse.Statu" +
-      "s\0228\n\016languageObject\030\002 \003(\0132 .in.trujobs.p",
-      "roto.LanguageObject\0222\n\013skillObject\030\003 \003(\013" +
-      "2\035.in.trujobs.proto.SkillObject\0220\n\007jobRo" +
-      "le\030\004 \003(\0132\037.in.trujobs.proto.JobRoleObjec" +
-      "t\"/\n\006Status\022\013\n\007UNKNOWN\020\000\022\013\n\007SUCCESS\020\001\022\013\n" +
-      "\007FAILURE\020\002\"\244\002\n*GetCandidateEducationProf" +
-      "ileStaticResponse\022S\n\006status\030\001 \001(\0162C.in.t" +
-      "rujobs.proto.GetCandidateEducationProfil" +
-      "eStaticResponse.Status\0224\n\014degreeObject\030\002" +
-      " \003(\0132\036.in.trujobs.proto.DegreeObject\022:\n\017" +
-      "educationObject\030\003 \003(\0132!.in.trujobs.proto",
-      ".EducationObject\"/\n\006Status\022\013\n\007UNKNOWN\020\000\022" +
-      "\013\n\007SUCCESS\020\001\022\013\n\007FAILURE\020\002\":\n\016LanguageObj" +
-      "ect\022\022\n\nlanguageId\030\001 \001(\005\022\024\n\014languageName\030" +
-      "\002 \001(\t\"H\n\013SkillObject\022\017\n\007skillId\030\001 \001(\005\022\021\n" +
-      "\tskillName\030\002 \001(\t\022\025\n\rskillQuestion\030\003 \001(\t\"" +
-      "|\n\023LanguageKnownObject\022\027\n\017languageKnownI" +
-      "d\030\001 \001(\005\022\032\n\022languageUnderstand\030\002 \001(\005\022\025\n\rl" +
-      "anguageSpeak\030\003 \001(\005\022\031\n\021languageReadWrite\030" +
-      "\004 \001(\005\"7\n\024CandidateSkillObject\022\017\n\007skillId" +
-      "\030\001 \001(\005\022\016\n\006answer\030\002 \001(\010\"6\n\032FetchCandidate",
-      "AlertRequest\022\030\n\020candidate_mobile\030\001 \001(\t\"\312" +
-      "\005\n\020JobFilterRequest\0229\n\006salary\030\001 \001(\0162).in" +
-      ".trujobs.proto.JobFilterRequest.Salary\022:" +
-      "\n\003exp\030\002 \001(\0162-.in.trujobs.proto.JobFilter" +
-      "Request.Experience\0229\n\003edu\030\003 \001(\0162,.in.tru" +
-      "jobs.proto.JobFilterRequest.Education\0229\n" +
-      "\006gender\030\004 \001(\0162).in.trujobs.proto.JobFilt" +
-      "erRequest.Gender\022\033\n\023sort_by_date_posted\030" +
-      "\005 \001(\010\022\026\n\016sort_by_salary\030\006 \001(\010\022\030\n\020candida" +
-      "te_mobile\030\007 \001(\t\022\033\n\023job_search_latitude\030\010",
-      " \001(\001\022\034\n\024job_search_longitude\030\t \001(\001\"t\n\006Sa" +
-      "lary\022\016\n\nANY_SALARY\020\000\022\020\n\014EIGHT_K_PLUS\020\001\022\016" +
-      "\n\nTEN_K_PLUS\020\002\022\021\n\rTWELVE_K_PLUS\020\003\022\022\n\016FIF" +
-      "TEEN_K_PLUS\020\004\022\021\n\rTWENTY_K_PLUS\020\005\">\n\nExpe" +
-      "rience\022\022\n\016ANY_EXPERIENCE\020\000\022\013\n\007FRESHER\020\001\022" +
-      "\017\n\013EXPERIENCED\020\002\"Y\n\tEducation\022\021\n\rANY_EDU" +
-      "CATION\020\000\022\n\n\006LT_TEN\020\001\022\014\n\010TEN_PASS\020\002\022\017\n\013TW" +
-      "ELVE_PASS\020\003\022\006\n\002UG\020\004\022\006\n\002PG\020\005\".\n\006Gender\022\016\n" +
-      "\nANY_GENDER\020\000\022\010\n\004MALE\020\001\022\n\n\006FEMALE\020\002\"\221\003\n\033" +
-      "FetchCandidateAlertResponse\022D\n\006status\030\001 ",
-      "\001(\01624.in.trujobs.proto.FetchCandidateAle" +
-      "rtResponse.Status\022E\n\talertType\030\002 \001(\01622.i" +
-      "n.trujobs.proto.FetchCandidateAlertRespo" +
-      "nse.Type\022\024\n\014alertMessage\030\003 \001(\t\"\"\n\006Status" +
-      "\022\013\n\007UNKNOWN\020\000\022\013\n\007SUCCESS\020\001\"\252\001\n\004Type\022\013\n\007D" +
-      "EFAULT\020\000\022\024\n\020COMPLETE_PROFILE\020\001\022\027\n\023INTERV" +
-      "IEW_SCHEDULED\020\002\022\032\n\026JOINING_DATE_CONFIRME" +
-      "D\020\003\022\027\n\023PROFILE_DEACTIVATED\020\004\022\030\n\024NEW_JOBS" +
-      "_IN_LOCALITY\020\005\022\027\n\023COMPLETE_ASSESSMENT\020\006\"" +
-      "\366\001\n\020JobSearchRequest\022\020\n\010latitude\030\001 \001(\001\022\021",
-      "\n\tlongitude\030\002 \001(\001\022\030\n\020candidate_mobile\030\003 " +
-      "\001(\t\022<\n\020jobFilterRequest\030\004 \001(\0132\".in.trujo" +
-      "bs.proto.JobFilterRequest\022N\n\031jobSearchBy" +
-      "JobRoleRequest\030\005 \001(\0132+.in.trujobs.proto." +
-      "JobSearchByJobRoleRequest\022\025\n\rlocality_na" +
-      "me\030\006 \001(\t\"_\n\031JobSearchByJobRoleRequest\022\024\n" +
-      "\014jobRoleIdOne\030\001 \001(\003\022\024\n\014jobRoleIdTwo\030\002 \001(" +
-      "\003\022\026\n\016JobRoleIdThree\030\003 \001(\003\"O\n\026LatLngOrPla" +
-      "ceIdRequest\022\020\n\010latitude\030\001 \001(\001\022\021\n\tlongitu" +
-      "de\030\002 \001(\001\022\020\n\010place_id\030\003 \001(\t\"\263\002\n\026LocalityO",
-      "bjectResponse\022?\n\006status\030\001 \001(\0162/.in.trujo" +
-      "bs.proto.LocalityObjectResponse.Status\022;" +
-      "\n\004type\030\002 \001(\0162-.in.trujobs.proto.Locality" +
-      "ObjectResponse.Type\0222\n\010locality\030\003 \001(\0132 ." +
-      "in.trujobs.proto.LocalityObject\"/\n\006Statu" +
-      "s\022\013\n\007UNKNOWN\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007FAILURE\020\002" +
-      "\"6\n\004Type\022\r\n\tUNDEFINED\020\000\022\017\n\013FOR_PLACEID\020\001" +
-      "\022\016\n\nFOR_LATLNG\020\002\"u\n\035PreScreenPopulatePro" +
-      "toRequest\022\023\n\013candidateId\030\001 \001(\003\022\021\n\tjobPos" +
-      "tId\030\002 \001(\003\022\023\n\013rePreScreen\030\003 \001(\010\022\027\n\017candid",
-      "ateMobile\030\004 \001(\t\"\317\006\n\036PreScreenPopulatePro" +
-      "toResponse\022G\n\006status\030\001 \001(\01627.in.trujobs." +
-      "proto.PreScreenPopulateProtoResponse.Sta" +
-      "tus\022\026\n\npropertyId\030\002 \003(\005B\002\020\001\022?\n\014documentL" +
-      "ist\030\003 \001(\0132).in.trujobs.proto.PreScreenDo" +
-      "cumentObject\022?\n\014languageList\030\004 \001(\0132).in." +
-      "trujobs.proto.PreScreenLanguageObject\0229\n" +
-      "\tassetList\030\005 \001(\0132&.in.trujobs.proto.PreS" +
-      "creenAssetObject\0221\n\003age\030\006 \001(\0132$.in.trujo" +
-      "bs.proto.PreScreenAgeObject\022?\n\nexperienc",
-      "e\030\007 \001(\0132+.in.trujobs.proto.PreScreenExpe" +
-      "rienceObject\022=\n\teducation\030\010 \001(\0132*.in.tru" +
-      "jobs.proto.PreScreenEducationObject\0227\n\006g" +
-      "ender\030\t \001(\0132\'.in.trujobs.proto.PreScreen" +
-      "GenderObject\0227\n\006salary\030\n \001(\0132\'.in.trujob" +
-      "s.proto.PreScreenSalaryObject\022\022\n\nshouldS" +
-      "how\030\013 \001(\010\022\021\n\tjobPostId\030\014 \001(\003\022\023\n\013candidat" +
-      "eId\030\r \001(\003\022\034\n\024preScreenCompanyName\030\016 \001(\t\022" +
-      "\031\n\021preScreenJobTitle\030\017 \001(\t\022\035\n\025preScreenJ" +
-      "obRoleTitle\030\020 \001(\t\022\030\n\014hpPropertyId\030\021 \003(\005B",
-      "\002\020\001\"<\n\006Status\022\013\n\007UNKNOWN\020\000\022\013\n\007FAILURE\020\001\022" +
-      "\013\n\007SUCCESS\020\002\022\013\n\007INVALID\020\003\"\221\001\n\027PreScreenD" +
-      "ocumentObject\0227\n\016jobPostIdProof\030\001 \003(\0132\037." +
-      "in.trujobs.proto.IdProofObject\022\022\n\nisMatc" +
-      "hing\030\002 \001(\010\022\022\n\npropertyId\030\003 \001(\005\022\025\n\rproper" +
-      "tyTitle\030\004 \001(\t\"\223\001\n\027PreScreenLanguageObjec" +
-      "t\0229\n\017jobPostLanguage\030\001 \003(\0132 .in.trujobs." +
-      "proto.LanguageObject\022\022\n\nisMatching\030\002 \001(\010" +
-      "\022\022\n\npropertyId\030\003 \001(\005\022\025\n\rpropertyTitle\030\004 " +
-      "\001(\t\"\212\001\n\024PreScreenAssetObject\0223\n\014jobPostA",
-      "sset\030\001 \003(\0132\035.in.trujobs.proto.AssetObjec" +
-      "t\022\022\n\nisMatching\030\002 \001(\010\022\022\n\npropertyId\030\003 \001(" +
-      "\005\022\025\n\rpropertyTitle\030\004 \001(\t\"S\n\022PreScreenAge" +
-      "Object\022\022\n\nisMatching\030\001 \001(\010\022\022\n\npropertyId" +
-      "\030\002 \001(\005\022\025\n\rpropertyTitle\030\003 \001(\t\"Z\n\031PreScre" +
-      "enExperienceObject\022\022\n\nisMatching\030\001 \001(\010\022\022" +
-      "\n\npropertyId\030\002 \001(\005\022\025\n\rpropertyTitle\030\003 \001(" +
-      "\t\"Y\n\030PreScreenEducationObject\022\022\n\nisMatch" +
-      "ing\030\001 \001(\010\022\022\n\npropertyId\030\002 \001(\005\022\025\n\rpropert" +
-      "yTitle\030\003 \001(\t\"V\n\025PreScreenGenderObject\022\022\n",
-      "\nisMatching\030\001 \001(\010\022\022\n\npropertyId\030\002 \001(\005\022\025\n" +
-      "\rpropertyTitle\030\003 \001(\t\"V\n\025PreScreenSalaryO" +
-      "bject\022\022\n\nisMatching\030\001 \001(\010\022\022\n\npropertyId\030" +
-      "\002 \001(\005\022\025\n\rpropertyTitle\030\003 \001(\t\"b\n\027IdProofO" +
-      "bjectWithNumber\0220\n\007idProof\030\001 \001(\0132\037.in.tr" +
-      "ujobs.proto.IdProofObject\022\025\n\ridProofNumb" +
-      "er\030\002 \001(\t\"I\n\rIdProofObject\022\021\n\tidProofId\030\001" +
-      " \001(\005\022\023\n\013idProofName\030\002 \001(\t\022\020\n\010isCommon\030\003 " +
-      "\001(\010\"D\n\013AssetObject\022\017\n\007assetId\030\001 \001(\005\022\022\n\na" +
-      "ssetTitle\030\002 \001(\t\022\020\n\010isCommon\030\003 \001(\010\"\242\001\n\036Up",
-      "dateCandidateDocumentRequest\022\030\n\020candidat" +
-      "e_mobile\030\001 \001(\t\022:\n\007idProof\030\002 \003(\0132).in.tru" +
-      "jobs.proto.IdProofObjectWithNumber\022\021\n\tjo" +
-      "bPostId\030\003 \001(\003\022\027\n\017isFinalFragment\030\004 \001(\010\"\252" +
-      "\001\n\036UpdateCandidateLanguageRequest\022\030\n\020can" +
-      "didate_mobile\030\001 \001(\t\022B\n\023languageKnownObje" +
-      "ct\030\002 \003(\0132%.in.trujobs.proto.LanguageKnow" +
-      "nObject\022\021\n\tjobPostId\030\003 \001(\003\022\027\n\017isFinalFra" +
-      "gment\030\004 \001(\010\"\253\002\n UpdateCandidateExperienc" +
-      "eRequest\022\030\n\020candidate_mobile\030\001 \001(\t\022\"\n\032ca",
-      "ndidate_total_experience\030\002 \001(\005\022\035\n\025candid" +
-      "ate_is_employed\030\003 \001(\005\022!\n\031candidate_curre" +
-      "nt_company\030\004 \001(\t\022 \n\030candidate_current_sa" +
-      "lary\030\005 \001(\003\0229\n\020current_job_role\030\006 \001(\0132\037.i" +
-      "n.trujobs.proto.JobRoleObject\022\021\n\tjobPost" +
-      "Id\030\007 \001(\003\022\027\n\017isFinalFragment\030\010 \001(\010\"\203\002\n\033Up" +
-      "dateCandidateOtherRequest\022\030\n\020candidate_m" +
-      "obile\030\001 \001(\t\022\026\n\npropertyId\030\002 \003(\005B\002\020\001\022\024\n\014c" +
-      "andidateDOB\030\003 \001(\t\022$\n\034candidateLastWithdr" +
-      "awnSalary\030\004 \001(\003\022 \n\030candidate_timeshift_p",
-      "ref\030\005 \001(\003\022\027\n\017candidateGender\030\006 \001(\005\022\017\n\007as" +
-      "setId\030\007 \003(\005\022\021\n\tjobPostId\030\010 \001(\003\022\027\n\017isFina" +
-      "lFragment\030\t \001(\010\"\211\001\n\017GenericResponse\0228\n\006s" +
-      "tatus\030\001 \001(\0162(.in.trujobs.proto.GenericRe" +
-      "sponse.Status\"<\n\006Status\022\013\n\007UNKNOWN\020\000\022\013\n\007" +
-      "FAILURE\020\001\022\013\n\007SUCCESS\020\002\022\013\n\007INVALID\020\003\"\250\001\n%" +
-      "UpdateCandidateInterviewDetailRequest\022\030\n" +
-      "\020candidate_mobile\030\001 \001(\t\022\022\n\ntimeSlotId\030\002 " +
-      "\001(\005\022\021\n\tjobPostId\030\004 \001(\003\022%\n\035scheduledInter" +
-      "viewDateInMills\030\005 \001(\003\022\027\n\017isFinalFragment",
-      "\030\006 \001(\010\"-\n\030GetInterviewSlotsRequest\022\021\n\tjo" +
-      "bPostId\030\001 \001(\003\"\331\001\n\031GetInterviewSlotsRespo" +
-      "nse\022]\n\021interviewSlotsMap\030\001 \003(\0132B.in.truj" +
-      "obs.proto.GetInterviewSlotsResponse.Inte" +
-      "rviewSlotsMapEntry\032]\n\026InterviewSlotsMapE" +
-      "ntry\022\013\n\003key\030\001 \001(\t\0222\n\005value\030\002 \001(\0132#.in.tr" +
-      "ujobs.proto.InterviewDateTime:\0028\001\"v\n\021Int" +
-      "erviewDateTime\022\033\n\023interviewDateMillis\030\001 " +
-      "\001(\003\022D\n\021interviewTimeSlot\030\002 \001(\0132).in.truj" +
-      "obs.proto.InterviewTimeSlotObject\"<\n\027Int",
-      "erviewTimeSlotObject\022\016\n\006slotId\030\001 \001(\005\022\021\n\t" +
-      "slotTitle\030\002 \001(\t\"(\n\025NotGoingReasonRequest" +
-      "\022\017\n\007type_id\030\001 \001(\003\"N\n\026NotGoingReasonRespo" +
-      "nse\0224\n\014reasonObject\030\001 \003(\0132\036.in.trujobs.p" +
-      "roto.ReasonObject\"5\n\014ReasonObject\022\020\n\010rea" +
-      "sonId\030\001 \001(\003\022\023\n\013reasonTitle\030\002 \001(\t\"Y\n\026Upda" +
-      "teInterviewRequest\022\030\n\020candidate_mobile\030\001" +
-      " \001(\t\022\014\n\004jpId\030\002 \001(\003\022\027\n\017interviewStatus\030\003 " +
-      "\001(\005\"\214\001\n\027UpdateInterviewResponse\022@\n\006statu" +
-      "s\030\001 \001(\01620.in.trujobs.proto.UpdateIntervi",
-      "ewResponse.Status\"/\n\006Status\022\013\n\007UNKNOWN\020\000" +
-      "\022\013\n\007SUCCESS\020\001\022\013\n\007FAILURE\020\002\"w\n\034UpdateCand" +
-      "idateStatusRequest\022\030\n\020candidate_mobile\030\001" +
-      " \001(\t\022\014\n\004jpId\030\002 \001(\003\022\027\n\017candidateStatus\030\003 " +
-      "\001(\005\022\026\n\016notGoingReason\030\004 \001(\003\"\230\001\n\035UpdateCa" +
-      "ndidateStatusResponse\022F\n\006status\030\001 \001(\01626." +
-      "in.trujobs.proto.UpdateCandidateStatusRe" +
-      "sponse.Status\"/\n\006Status\022\013\n\007UNKNOWN\020\000\022\013\n\007" +
-      "SUCCESS\020\001\022\013\n\007FAILURE\020\002\".\n\031CheckInterview" +
-      "SlotRequest\022\021\n\tjobPostId\030\001 \001(\003\"\274\001\n\032Check",
-      "InterviewSlotResponse\022\033\n\023shouldShowInter" +
-      "view\030\001 \001(\010\022C\n\006status\030\002 \001(\01623.in.trujobs." +
-      "proto.CheckInterviewSlotResponse.Status\"" +
-      "<\n\006Status\022\013\n\007UNKNOWN\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007F" +
-      "AILURE\020\002\022\013\n\007INVALID\020\003\"9\n\022UpdateTokenRequ" +
-      "est\022\024\n\014candidate_id\030\001 \001(\t\022\r\n\005token\030\002 \001(\t" +
-      "\"\204\001\n\023UpdateTokenResponse\022<\n\006status\030\001 \001(\016" +
-      "2,.in.trujobs.proto.UpdateTokenResponse." +
-      "Status\"/\n\006Status\022\013\n\007UNKNOWN\020\000\022\013\n\007SUCCESS" +
-      "\020\001\022\013\n\007FAILURE\020\002\".\n\026LogoutCandidateReques",
-      "t\022\024\n\014candidate_id\030\001 \001(\t\"\214\001\n\027LogoutCandid" +
-      "ateResponse\022@\n\006status\030\001 \001(\01620.in.trujobs" +
-      ".proto.LogoutCandidateResponse.Status\"/\n" +
-      "\006Status\022\013\n\007UNKNOWN\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007FAI" +
-      "LURE\020\002\"^\n\026FeedbackReasonResponse\022D\n\024feed" +
-      "backReasonObject\030\001 \003(\0132&.in.trujobs.prot" +
-      "o.FeedbackReasonObject\"Q\n\024FeedbackReason" +
-      "Object\022\020\n\010reasonId\030\001 \001(\003\022\023\n\013reasonTitle\030" +
-      "\002 \001(\t\022\022\n\nreasonType\030\003 \001(\005\"\237\001\n\022AddFeedbac" +
-      "kRequest\022\024\n\014candidate_id\030\001 \001(\003\022\024\n\014rating",
-      "_score\030\002 \001(\005\022D\n\024feedbackReasonObject\030\003 \003" +
-      "(\0132&.in.trujobs.proto.FeedbackReasonObje" +
-      "ct\022\027\n\017feedbackComment\030\004 \001(\t\"\204\001\n\023AddFeedb" +
-      "ackResponse\022<\n\006status\030\001 \001(\0162,.in.trujobs" +
-      ".proto.AddFeedbackResponse.Status\"/\n\006Sta" +
-      "tus\022\013\n\007UNKNOWN\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007FAILURE" +
-      "\020\002B\002P\001b\006proto3"
+      " \001(\0132\037.in.trujobs.proto.JobRoleObject\022\021\n" +
+      "\tjobPostId\030\007 \001(\003\022\027\n\017isFinalFragment\030\010 \001(" +
+      "\010\"\203\002\n\033UpdateCandidateOtherRequest\022\030\n\020can" +
+      "didate_mobile\030\001 \001(\t\022\026\n\npropertyId\030\002 \003(\005B" +
+      "\002\020\001\022\024\n\014candidateDOB\030\003 \001(\t\022$\n\034candidateLa",
+      "stWithdrawnSalary\030\004 \001(\003\022 \n\030candidate_tim" +
+      "eshift_pref\030\005 \001(\003\022\027\n\017candidateGender\030\006 \001" +
+      "(\005\022\017\n\007assetId\030\007 \003(\005\022\021\n\tjobPostId\030\010 \001(\003\022\027" +
+      "\n\017isFinalFragment\030\t \001(\010\"\211\001\n\017GenericRespo" +
+      "nse\0228\n\006status\030\001 \001(\0162(.in.trujobs.proto.G" +
+      "enericResponse.Status\"<\n\006Status\022\013\n\007UNKNO" +
+      "WN\020\000\022\013\n\007FAILURE\020\001\022\013\n\007SUCCESS\020\002\022\013\n\007INVALI" +
+      "D\020\003\"\250\001\n%UpdateCandidateInterviewDetailRe" +
+      "quest\022\030\n\020candidate_mobile\030\001 \001(\t\022\022\n\ntimeS" +
+      "lotId\030\002 \001(\005\022\021\n\tjobPostId\030\004 \001(\003\022%\n\035schedu",
+      "ledInterviewDateInMills\030\005 \001(\003\022\027\n\017isFinal" +
+      "Fragment\030\006 \001(\010\"-\n\030GetInterviewSlotsReque" +
+      "st\022\021\n\tjobPostId\030\001 \001(\003\"\331\001\n\031GetInterviewSl" +
+      "otsResponse\022]\n\021interviewSlotsMap\030\001 \003(\0132B" +
+      ".in.trujobs.proto.GetInterviewSlotsRespo" +
+      "nse.InterviewSlotsMapEntry\032]\n\026InterviewS" +
+      "lotsMapEntry\022\013\n\003key\030\001 \001(\t\0222\n\005value\030\002 \001(\013" +
+      "2#.in.trujobs.proto.InterviewDateTime:\0028" +
+      "\001\"v\n\021InterviewDateTime\022\033\n\023interviewDateM" +
+      "illis\030\001 \001(\003\022D\n\021interviewTimeSlot\030\002 \001(\0132)",
+      ".in.trujobs.proto.InterviewTimeSlotObjec" +
+      "t\"<\n\027InterviewTimeSlotObject\022\016\n\006slotId\030\001" +
+      " \001(\005\022\021\n\tslotTitle\030\002 \001(\t\"(\n\025NotGoingReaso" +
+      "nRequest\022\017\n\007type_id\030\001 \001(\003\"N\n\026NotGoingRea" +
+      "sonResponse\0224\n\014reasonObject\030\001 \003(\0132\036.in.t" +
+      "rujobs.proto.ReasonObject\"5\n\014ReasonObjec" +
+      "t\022\020\n\010reasonId\030\001 \001(\003\022\023\n\013reasonTitle\030\002 \001(\t" +
+      "\"Y\n\026UpdateInterviewRequest\022\030\n\020candidate_" +
+      "mobile\030\001 \001(\t\022\014\n\004jpId\030\002 \001(\003\022\027\n\017interviewS" +
+      "tatus\030\003 \001(\005\"\214\001\n\027UpdateInterviewResponse\022",
+      "@\n\006status\030\001 \001(\01620.in.trujobs.proto.Updat" +
+      "eInterviewResponse.Status\"/\n\006Status\022\013\n\007U" +
+      "NKNOWN\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007FAILURE\020\002\"w\n\034Up" +
+      "dateCandidateStatusRequest\022\030\n\020candidate_" +
+      "mobile\030\001 \001(\t\022\014\n\004jpId\030\002 \001(\003\022\027\n\017candidateS" +
+      "tatus\030\003 \001(\005\022\026\n\016notGoingReason\030\004 \001(\003\"\230\001\n\035" +
+      "UpdateCandidateStatusResponse\022F\n\006status\030" +
+      "\001 \001(\01626.in.trujobs.proto.UpdateCandidate" +
+      "StatusResponse.Status\"/\n\006Status\022\013\n\007UNKNO" +
+      "WN\020\000\022\013\n\007SUCCESS\020\001\022\013\n\007FAILURE\020\002\".\n\031CheckI",
+      "nterviewSlotRequest\022\021\n\tjobPostId\030\001 \001(\003\"\274" +
+      "\001\n\032CheckInterviewSlotResponse\022\033\n\023shouldS" +
+      "howInterview\030\001 \001(\010\022C\n\006status\030\002 \001(\01623.in." +
+      "trujobs.proto.CheckInterviewSlotResponse" +
+      ".Status\"<\n\006Status\022\013\n\007UNKNOWN\020\000\022\013\n\007SUCCES" +
+      "S\020\001\022\013\n\007FAILURE\020\002\022\013\n\007INVALID\020\003\"9\n\022UpdateT" +
+      "okenRequest\022\024\n\014candidate_id\030\001 \001(\t\022\r\n\005tok" +
+      "en\030\002 \001(\t\"\204\001\n\023UpdateTokenResponse\022<\n\006stat" +
+      "us\030\001 \001(\0162,.in.trujobs.proto.UpdateTokenR" +
+      "esponse.Status\"/\n\006Status\022\013\n\007UNKNOWN\020\000\022\013\n",
+      "\007SUCCESS\020\001\022\013\n\007FAILURE\020\002\".\n\026LogoutCandida" +
+      "teRequest\022\024\n\014candidate_id\030\001 \001(\t\"\214\001\n\027Logo" +
+      "utCandidateResponse\022@\n\006status\030\001 \001(\01620.in" +
+      ".trujobs.proto.LogoutCandidateResponse.S" +
+      "tatus\"/\n\006Status\022\013\n\007UNKNOWN\020\000\022\013\n\007SUCCESS\020" +
+      "\001\022\013\n\007FAILURE\020\002\"^\n\026FeedbackReasonResponse" +
+      "\022D\n\024feedbackReasonObject\030\001 \003(\0132&.in.truj" +
+      "obs.proto.FeedbackReasonObject\"Q\n\024Feedba" +
+      "ckReasonObject\022\020\n\010reasonId\030\001 \001(\003\022\023\n\013reas" +
+      "onTitle\030\002 \001(\t\022\022\n\nreasonType\030\003 \001(\005\"\237\001\n\022Ad",
+      "dFeedbackRequest\022\024\n\014candidate_id\030\001 \001(\003\022\024" +
+      "\n\014rating_score\030\002 \001(\005\022D\n\024feedbackReasonOb" +
+      "ject\030\003 \003(\0132&.in.trujobs.proto.FeedbackRe" +
+      "asonObject\022\027\n\017feedbackComment\030\004 \001(\t\"\204\001\n\023" +
+      "AddFeedbackResponse\022<\n\006status\030\001 \001(\0162,.in" +
+      ".trujobs.proto.AddFeedbackResponse.Statu" +
+      "s\"/\n\006Status\022\013\n\007UNKNOWN\020\000\022\013\n\007SUCCESS\020\001\022\013\n" +
+      "\007FAILURE\020\002B\002P\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -953,7 +954,7 @@ public final class Gen {
     internal_static_in_trujobs_proto_LogInRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_LogInRequest_descriptor,
-        new java.lang.String[] { "CandidateMobile", "CandidatePassword", });
+        new java.lang.String[] { "CandidateMobile", "CandidatePassword", "AppVersionCode", });
     internal_static_in_trujobs_proto_LogInResponse_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_in_trujobs_proto_LogInResponse_fieldAccessorTable = new
@@ -977,7 +978,7 @@ public final class Gen {
     internal_static_in_trujobs_proto_ResetPasswordRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_in_trujobs_proto_ResetPasswordRequest_descriptor,
-        new java.lang.String[] { "Mobile", "Password", });
+        new java.lang.String[] { "Mobile", "Password", "AppVersionCode", });
     internal_static_in_trujobs_proto_ResetPasswordResponse_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_in_trujobs_proto_ResetPasswordResponse_fieldAccessorTable = new
