@@ -12,7 +12,8 @@ message TestMessage {
 
 message LogInRequest {
     string candidateMobile = 1;
-    string candidatePassword = 2; 
+    string candidatePassword = 2;
+    int32 appVersionCode = 3;
 }
 
 message LogInResponse {
@@ -22,6 +23,7 @@ message LogInResponse {
         FAILURE = 2;
         NO_USER = 3;
         WRONG_PASSWORD = 4;
+        NO_AUTH = 5;
     }
     Status status = 1;
     int64 leadId = 2;
@@ -61,6 +63,7 @@ message SignUpResponse {
 message ResetPasswordRequest {
     string mobile = 1;
     string password = 2;
+    int32 appVersionCode = 3;
 }
 
 message ResetPasswordResponse {
@@ -69,6 +72,7 @@ message ResetPasswordResponse {
         SUCCESS = 1;
         FAILURE = 2;
         USER_EXISTS = 3;
+        NO_AUTH = 5;
     }
     Status status = 1;
     int32 otp = 2;
@@ -113,6 +117,7 @@ message JobPostObject {
     int32 isApplied = 22;
     int32 jobPostSource = 23;
     string recruiterName = 24;
+    string recruiterMobile = 25;
 }
 
 message JobPostDetailRequest{
@@ -146,6 +151,7 @@ message ApplyJobRequest{
     string candidateMobile = 1;
     int64 jobPostId = 2;
     int64 localityId = 3;
+    int32 appVersionCode = 4;
 }
 
 message ApplyJobResponse{
@@ -164,6 +170,10 @@ message ApplyJobResponse{
     string jobRoleTitle = 5;
     string jobTitle = 6;
     int64 jobPostId = 7;
+    bool isCandidateDeActive = 8;
+    string deActiveHeadMessage = 9;
+    string deActiveTitleMessage = 10;
+    string deActiveBodyMessage = 11;
 }
 
 message AddJobRoleRequest {

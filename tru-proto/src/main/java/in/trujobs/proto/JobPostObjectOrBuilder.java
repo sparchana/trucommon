@@ -219,4 +219,14 @@ public interface JobPostObjectOrBuilder extends
    */
   com.google.protobuf.ByteString
       getRecruiterNameBytes();
+
+  /**
+   * <code>optional string recruiterMobile = 25;</code>
+   */
+  java.lang.String getRecruiterMobile();
+  /**
+   * <code>optional string recruiterMobile = 25;</code>
+   */
+  com.google.protobuf.ByteString
+      getRecruiterMobileBytes();
 }

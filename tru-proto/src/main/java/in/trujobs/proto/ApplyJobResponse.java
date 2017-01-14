@@ -22,6 +22,10 @@ public  final class ApplyJobResponse extends
     jobRoleTitle_ = "";
     jobTitle_ = "";
     jobPostId_ = 0L;
+    isCandidateDeActive_ = false;
+    deActiveHeadMessage_ = "";
+    deActiveTitleMessage_ = "";
+    deActiveBodyMessage_ = "";
   }
 
   @java.lang.Override
@@ -85,6 +89,29 @@ public  final class ApplyJobResponse extends
           case 56: {
 
             jobPostId_ = input.readInt64();
+            break;
+          }
+          case 64: {
+
+            isCandidateDeActive_ = input.readBool();
+            break;
+          }
+          case 74: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            deActiveHeadMessage_ = s;
+            break;
+          }
+          case 82: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            deActiveTitleMessage_ = s;
+            break;
+          }
+          case 90: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            deActiveBodyMessage_ = s;
             break;
           }
         }
@@ -384,6 +411,117 @@ public  final class ApplyJobResponse extends
     return jobPostId_;
   }
 
+  public static final int ISCANDIDATEDEACTIVE_FIELD_NUMBER = 8;
+  private boolean isCandidateDeActive_;
+  /**
+   * <code>optional bool isCandidateDeActive = 8;</code>
+   */
+  public boolean getIsCandidateDeActive() {
+    return isCandidateDeActive_;
+  }
+
+  public static final int DEACTIVEHEADMESSAGE_FIELD_NUMBER = 9;
+  private volatile java.lang.Object deActiveHeadMessage_;
+  /**
+   * <code>optional string deActiveHeadMessage = 9;</code>
+   */
+  public java.lang.String getDeActiveHeadMessage() {
+    java.lang.Object ref = deActiveHeadMessage_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      deActiveHeadMessage_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>optional string deActiveHeadMessage = 9;</code>
+   */
+  public com.google.protobuf.ByteString
+      getDeActiveHeadMessageBytes() {
+    java.lang.Object ref = deActiveHeadMessage_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      deActiveHeadMessage_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int DEACTIVETITLEMESSAGE_FIELD_NUMBER = 10;
+  private volatile java.lang.Object deActiveTitleMessage_;
+  /**
+   * <code>optional string deActiveTitleMessage = 10;</code>
+   */
+  public java.lang.String getDeActiveTitleMessage() {
+    java.lang.Object ref = deActiveTitleMessage_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      deActiveTitleMessage_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>optional string deActiveTitleMessage = 10;</code>
+   */
+  public com.google.protobuf.ByteString
+      getDeActiveTitleMessageBytes() {
+    java.lang.Object ref = deActiveTitleMessage_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      deActiveTitleMessage_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int DEACTIVEBODYMESSAGE_FIELD_NUMBER = 11;
+  private volatile java.lang.Object deActiveBodyMessage_;
+  /**
+   * <code>optional string deActiveBodyMessage = 11;</code>
+   */
+  public java.lang.String getDeActiveBodyMessage() {
+    java.lang.Object ref = deActiveBodyMessage_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      deActiveBodyMessage_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>optional string deActiveBodyMessage = 11;</code>
+   */
+  public com.google.protobuf.ByteString
+      getDeActiveBodyMessageBytes() {
+    java.lang.Object ref = deActiveBodyMessage_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      deActiveBodyMessage_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -417,6 +555,18 @@ public  final class ApplyJobResponse extends
     if (jobPostId_ != 0L) {
       output.writeInt64(7, jobPostId_);
     }
+    if (isCandidateDeActive_ != false) {
+      output.writeBool(8, isCandidateDeActive_);
+    }
+    if (!getDeActiveHeadMessageBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 9, deActiveHeadMessage_);
+    }
+    if (!getDeActiveTitleMessageBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 10, deActiveTitleMessage_);
+    }
+    if (!getDeActiveBodyMessageBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 11, deActiveBodyMessage_);
+    }
   }
 
   public int getSerializedSize() {
@@ -448,6 +598,19 @@ public  final class ApplyJobResponse extends
     if (jobPostId_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(7, jobPostId_);
+    }
+    if (isCandidateDeActive_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(8, isCandidateDeActive_);
+    }
+    if (!getDeActiveHeadMessageBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(9, deActiveHeadMessage_);
+    }
+    if (!getDeActiveTitleMessageBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(10, deActiveTitleMessage_);
+    }
+    if (!getDeActiveBodyMessageBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(11, deActiveBodyMessage_);
     }
     memoizedSize = size;
     return size;
@@ -574,6 +737,14 @@ public  final class ApplyJobResponse extends
 
       jobPostId_ = 0L;
 
+      isCandidateDeActive_ = false;
+
+      deActiveHeadMessage_ = "";
+
+      deActiveTitleMessage_ = "";
+
+      deActiveBodyMessage_ = "";
+
       return this;
     }
 
@@ -603,6 +774,10 @@ public  final class ApplyJobResponse extends
       result.jobRoleTitle_ = jobRoleTitle_;
       result.jobTitle_ = jobTitle_;
       result.jobPostId_ = jobPostId_;
+      result.isCandidateDeActive_ = isCandidateDeActive_;
+      result.deActiveHeadMessage_ = deActiveHeadMessage_;
+      result.deActiveTitleMessage_ = deActiveTitleMessage_;
+      result.deActiveBodyMessage_ = deActiveBodyMessage_;
       onBuilt();
       return result;
     }
@@ -641,6 +816,21 @@ public  final class ApplyJobResponse extends
       }
       if (other.getJobPostId() != 0L) {
         setJobPostId(other.getJobPostId());
+      }
+      if (other.getIsCandidateDeActive() != false) {
+        setIsCandidateDeActive(other.getIsCandidateDeActive());
+      }
+      if (!other.getDeActiveHeadMessage().isEmpty()) {
+        deActiveHeadMessage_ = other.deActiveHeadMessage_;
+        onChanged();
+      }
+      if (!other.getDeActiveTitleMessage().isEmpty()) {
+        deActiveTitleMessage_ = other.deActiveTitleMessage_;
+        onChanged();
+      }
+      if (!other.getDeActiveBodyMessage().isEmpty()) {
+        deActiveBodyMessage_ = other.deActiveBodyMessage_;
+        onChanged();
       }
       onChanged();
       return this;
@@ -993,6 +1183,239 @@ public  final class ApplyJobResponse extends
     public Builder clearJobPostId() {
       
       jobPostId_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private boolean isCandidateDeActive_ ;
+    /**
+     * <code>optional bool isCandidateDeActive = 8;</code>
+     */
+    public boolean getIsCandidateDeActive() {
+      return isCandidateDeActive_;
+    }
+    /**
+     * <code>optional bool isCandidateDeActive = 8;</code>
+     */
+    public Builder setIsCandidateDeActive(boolean value) {
+      
+      isCandidateDeActive_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional bool isCandidateDeActive = 8;</code>
+     */
+    public Builder clearIsCandidateDeActive() {
+      
+      isCandidateDeActive_ = false;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object deActiveHeadMessage_ = "";
+    /**
+     * <code>optional string deActiveHeadMessage = 9;</code>
+     */
+    public java.lang.String getDeActiveHeadMessage() {
+      java.lang.Object ref = deActiveHeadMessage_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        deActiveHeadMessage_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>optional string deActiveHeadMessage = 9;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDeActiveHeadMessageBytes() {
+      java.lang.Object ref = deActiveHeadMessage_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        deActiveHeadMessage_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>optional string deActiveHeadMessage = 9;</code>
+     */
+    public Builder setDeActiveHeadMessage(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      deActiveHeadMessage_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional string deActiveHeadMessage = 9;</code>
+     */
+    public Builder clearDeActiveHeadMessage() {
+      
+      deActiveHeadMessage_ = getDefaultInstance().getDeActiveHeadMessage();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional string deActiveHeadMessage = 9;</code>
+     */
+    public Builder setDeActiveHeadMessageBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      deActiveHeadMessage_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object deActiveTitleMessage_ = "";
+    /**
+     * <code>optional string deActiveTitleMessage = 10;</code>
+     */
+    public java.lang.String getDeActiveTitleMessage() {
+      java.lang.Object ref = deActiveTitleMessage_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        deActiveTitleMessage_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>optional string deActiveTitleMessage = 10;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDeActiveTitleMessageBytes() {
+      java.lang.Object ref = deActiveTitleMessage_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        deActiveTitleMessage_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>optional string deActiveTitleMessage = 10;</code>
+     */
+    public Builder setDeActiveTitleMessage(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      deActiveTitleMessage_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional string deActiveTitleMessage = 10;</code>
+     */
+    public Builder clearDeActiveTitleMessage() {
+      
+      deActiveTitleMessage_ = getDefaultInstance().getDeActiveTitleMessage();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional string deActiveTitleMessage = 10;</code>
+     */
+    public Builder setDeActiveTitleMessageBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      deActiveTitleMessage_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object deActiveBodyMessage_ = "";
+    /**
+     * <code>optional string deActiveBodyMessage = 11;</code>
+     */
+    public java.lang.String getDeActiveBodyMessage() {
+      java.lang.Object ref = deActiveBodyMessage_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        deActiveBodyMessage_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>optional string deActiveBodyMessage = 11;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDeActiveBodyMessageBytes() {
+      java.lang.Object ref = deActiveBodyMessage_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        deActiveBodyMessage_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>optional string deActiveBodyMessage = 11;</code>
+     */
+    public Builder setDeActiveBodyMessage(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      deActiveBodyMessage_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional string deActiveBodyMessage = 11;</code>
+     */
+    public Builder clearDeActiveBodyMessage() {
+      
+      deActiveBodyMessage_ = getDefaultInstance().getDeActiveBodyMessage();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional string deActiveBodyMessage = 11;</code>
+     */
+    public Builder setDeActiveBodyMessageBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      deActiveBodyMessage_ = value;
       onChanged();
       return this;
     }

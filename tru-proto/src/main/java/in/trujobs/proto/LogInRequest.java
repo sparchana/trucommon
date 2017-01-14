@@ -17,6 +17,7 @@ public  final class LogInRequest extends
   private LogInRequest() {
     candidateMobile_ = "";
     candidatePassword_ = "";
+    appVersionCode_ = 0;
   }
 
   @java.lang.Override
@@ -53,6 +54,11 @@ public  final class LogInRequest extends
             java.lang.String s = input.readStringRequireUtf8();
 
             candidatePassword_ = s;
+            break;
+          }
+          case 24: {
+
+            appVersionCode_ = input.readInt32();
             break;
           }
         }
@@ -147,6 +153,15 @@ public  final class LogInRequest extends
     }
   }
 
+  public static final int APPVERSIONCODE_FIELD_NUMBER = 3;
+  private int appVersionCode_;
+  /**
+   * <code>optional int32 appVersionCode = 3;</code>
+   */
+  public int getAppVersionCode() {
+    return appVersionCode_;
+  }
+
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -165,6 +180,9 @@ public  final class LogInRequest extends
     if (!getCandidatePasswordBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessage.writeString(output, 2, candidatePassword_);
     }
+    if (appVersionCode_ != 0) {
+      output.writeInt32(3, appVersionCode_);
+    }
   }
 
   public int getSerializedSize() {
@@ -177,6 +195,10 @@ public  final class LogInRequest extends
     }
     if (!getCandidatePasswordBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(2, candidatePassword_);
+    }
+    if (appVersionCode_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(3, appVersionCode_);
     }
     memoizedSize = size;
     return size;
@@ -293,6 +315,8 @@ public  final class LogInRequest extends
 
       candidatePassword_ = "";
 
+      appVersionCode_ = 0;
+
       return this;
     }
 
@@ -317,6 +341,7 @@ public  final class LogInRequest extends
       in.trujobs.proto.LogInRequest result = new in.trujobs.proto.LogInRequest(this);
       result.candidateMobile_ = candidateMobile_;
       result.candidatePassword_ = candidatePassword_;
+      result.appVersionCode_ = appVersionCode_;
       onBuilt();
       return result;
     }
@@ -339,6 +364,9 @@ public  final class LogInRequest extends
       if (!other.getCandidatePassword().isEmpty()) {
         candidatePassword_ = other.candidatePassword_;
         onChanged();
+      }
+      if (other.getAppVersionCode() != 0) {
+        setAppVersionCode(other.getAppVersionCode());
       }
       onChanged();
       return this;
@@ -500,6 +528,32 @@ public  final class LogInRequest extends
   checkByteStringIsUtf8(value);
       
       candidatePassword_ = value;
+      onChanged();
+      return this;
+    }
+
+    private int appVersionCode_ ;
+    /**
+     * <code>optional int32 appVersionCode = 3;</code>
+     */
+    public int getAppVersionCode() {
+      return appVersionCode_;
+    }
+    /**
+     * <code>optional int32 appVersionCode = 3;</code>
+     */
+    public Builder setAppVersionCode(int value) {
+      
+      appVersionCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional int32 appVersionCode = 3;</code>
+     */
+    public Builder clearAppVersionCode() {
+      
+      appVersionCode_ = 0;
       onChanged();
       return this;
     }

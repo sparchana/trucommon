@@ -26,4 +26,9 @@ public interface LogInRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getCandidatePasswordBytes();
+
+  /**
+   * <code>optional int32 appVersionCode = 3;</code>
+   */
+  int getAppVersionCode();
 }

@@ -26,4 +26,9 @@ public interface ResetPasswordRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getPasswordBytes();
+
+  /**
+   * <code>optional int32 appVersionCode = 3;</code>
+   */
+  int getAppVersionCode();
 }
